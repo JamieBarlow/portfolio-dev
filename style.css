@@ -2,7 +2,7 @@
 
 html {                         /* ROOT */
     box-sizing: border-box;
-    font-size: 18px;
+    font-size: 100%;
     line-height: 1.56;   /* Relative to font size */
 }
 
@@ -15,12 +15,30 @@ body {
     font-family: 'Space Grotesk', sans-serif;
     background-color: var(--background);
     color: var(--text-1);
-    font-size: 18px;
+    /* font-size: 18px; */
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-1);
+    transition: color var(--transition);
+}
+
+nav a:hover {
+    color: var(--green);
+}
+
+nav svg > path {
+    transition: fill var(--transition);
+}
+
+nav svg:hover path {
+    fill: var(--green);
 }
 
 .wrapper {
     width: 100%;
-    max-width: var(--container-width-m);
+    max-width: var(--container-width-mobile);
     margin-inline: auto;
 }
 
@@ -59,28 +77,34 @@ body {
     --fs-h3-m: 1.33rem;
     --fs-p-m: 0.88rem;
     /* Layout */
-    --container-width-d: 77%;
-    --container-width-t: 92%;
-    --container-width-m: 92%;
+    --container-width-desktop: 77%;
+    --container-width-tablet: 92%;
+    --container-width-mobile: 92%;
+
+    --transition: 250ms ease-in-out;
 }
 
 h1 {
-    font-size: var(--fs-h1);
+    font-size: 2.5rem;
+    font-size: clamp(2.5rem, 1.9rem + 3vw, 5.5rem);
     font-weight: 700;
     line-height: 1em;           /* Keeping relative to element font size which translates across tablet/mobile */
 }
 h2 {
-    font-size: var(--fs-h2);
+    font-size: 2.5rem;
+    font-size: clamp(2.5rem, 2.4rem + 0.5vw, 3rem);
     font-weight: 700;
     line-height: 1.16em;
 }
 h3 {
-    font-size: var(--fs-h3);
+    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 2.1rem + -0.5vw, 2rem);
     font-weight: 700;
     line-height: 1.33em;
 }
 p {
-    font-size: var(--fs-p);
+    font-size: 1rem;
+    font-size: clamp(1rem, 0.975rem + 0.125vw, 1.125rem);
     font-weight: 500;
     line-height: 1.55em;
 }
