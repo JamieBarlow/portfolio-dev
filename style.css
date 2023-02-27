@@ -18,13 +18,55 @@ body {
     /* font-size: 18px; */
 }
 
-nav a {
+.wrapper {
+    width: 100%;
+    max-width: var(--container-width-mobile);
+    margin-inline: auto;
+}
+
+.header {
+    margin-top: 20px;
+    display: flex;
+}
+
+.header__nav {
+    display: flex;
+    flex: 1 0 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__nav a {
     text-decoration: none;
+}
+
+.header__home {
+    /* display: block; */
+    justify-self: flex-start;
+    padding: 0;
+}
+
+.header__home li a {
+    font-size: var(--fs-h3);
+    text-align: center;
     color: var(--text-1);
     transition: color var(--transition);
 }
 
-nav a:hover {
+.header__nav li {
+    list-style: none;
+}
+
+.header__logos {
+    display: flex;
+    align-items: space-between;
+    gap: 20px 25px;         /* Spacing icons */
+    padding: 0;
+}
+
+.header__home a:hover {
     color: var(--green);
 }
 
@@ -36,24 +78,6 @@ nav svg:hover path {
     fill: var(--green);
 }
 
-.wrapper {
-    width: 100%;
-    max-width: var(--container-width-mobile);
-    margin-inline: auto;
-}
-
-@media screen and (min-width: 600px) {     /* Small tablet and above */
-    .wrapper {
-        width: 92%;
-    }
-}
-
-@media screen and (min-width: 992px) {     /* Desktop */
-    .wrapper {
-        width: 77%;
-    } 
-}
-
 :root {
     --background: hsl(0, 0%, 8%);
     --dark-grey: hsl(0, 0%, 14%);
@@ -61,21 +85,11 @@ nav svg:hover path {
     --text-1: hsl(0, 0%, 100%);
     --text-2: hsl(0, 0%, 85%);
     --red: hsl(7, 100%, 68%);
-    /* Desktop font sizes */
-    --fs-h1: 4.88rem;
-    --fs-h2: 2.66rem;
-    --fs-h3: 1.77rem;
-    --fs-p: 1rem;
-    /* Tablet font sizes */
-    --fs-h1-t: 4rem;
-    --fs-h2-t: 2.66rem;
-    --fs-h3-t: 1.77rem;
-    --fs-p-t: 1rem;
-    /* Mobile font sizes */
-    --fs-h1-m: 2.22rem;
-    --fs-h2-m: 1.77rem;
-    --fs-h3-m: 1.33rem;
-    --fs-p-m: 0.88rem;
+    /* font sizes */
+    --fs-h1: clamp(2.5rem, 1.9rem + 3vw, 5.5rem);
+    --fs-h2: clamp(2.5rem, 2.4rem + 0.5vw, 3rem);
+    --fs-h3: clamp(1.5rem, 2.1rem + -0.5vw, 2rem);
+    --fs-p: clamp(1rem, 0.975rem + 0.125vw, 1.125rem);
     /* Layout */
     --container-width-desktop: 77%;
     --container-width-tablet: 92%;
@@ -107,4 +121,30 @@ p {
     font-size: clamp(1rem, 0.975rem + 0.125vw, 1.125rem);
     font-weight: 500;
     line-height: 1.55em;
+}
+
+/* Media queries */
+
+@media screen and (min-width: 600px) {     /* Small tablet and above */
+    .wrapper {
+        width: 92%;
+    }
+    .header__nav {
+        flex-direction: row;
+    }
+    .header__home {
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 992px) {     /* Desktop */
+    .wrapper {
+        width: 77%;
+    } 
+    .header__home {
+
+    }
+    .header__nav {
+        
+    }
 }
