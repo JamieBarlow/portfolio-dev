@@ -28,9 +28,24 @@
     </nav>
   </header>
   <main>
-    <div class="wrapper">
-      <h2>Nice to meet you! I'm Jamie Barlow.</h2>
-    </div>
+    <section class="hero">
+      <div class="wrapper">
+        <img 
+          src="assets/images/image-profile-mobile.webp" 
+          alt="Picture of me"
+          srcset="
+            assets/images/image-profile-desktop.webp 890w,
+            assets/images/image-profile-tablet.webp 646w,
+            assets/images/image-profile-mobile.webp 348w"
+          sizes="
+            (max-width: 599.98) 46vw,
+            (min-width: 599.98px) 42vw,
+            (min-width: 991.98px) 31vw"
+          />
+        <h1>Nice to meet you!</h1> 
+        <h1>I'm Jamie Barlow.</h1>
+      </div>
+    </section>
     <div class="wrapper">
       Based in the UK, I'm a front-end developer passionate about
       building accessible web apps that users love.

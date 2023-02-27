@@ -46,6 +46,7 @@ body {
     /* display: block; */
     justify-self: flex-start;
     padding: 0;
+    line-height: 1;
 }
 
 .header__home li a {
@@ -61,7 +62,7 @@ body {
 
 .header__logos {
     display: flex;
-    align-items: space-between;
+    /* align-items: space-between; */
     gap: 20px 25px;         /* Spacing icons */
     padding: 0;
 }
@@ -134,6 +135,9 @@ p {
     }
     .header__home {
         text-align: left;
+    }
+    .header__logos {
+        gap: 20px 32px;
     }
 }
 
