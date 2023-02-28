@@ -104,6 +104,10 @@ nav svg:hover path {
     /* outline: 1px solid lime;   */
 }
 
+.hero__image img {
+    max-width: 100%;
+}
+
 .hero__headline {
 
 }
