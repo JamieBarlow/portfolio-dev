@@ -41,94 +41,146 @@
     </nav>
   </header>
   <main>
-    <section class="hero wrapper">
-      <div class="hero__image">
-        <div class="image__wrapper">
-          <img src="assets/images/image-profile-mobile.webp" alt="Picture of me" srcset="
+    <section class="hero">
+      <div class="hero__wrapper wrapper">
+        <img class="hero__rings" src="assets/images/pattern-rings.svg" alt="" width="530" height="129">
+        <img class="hero__circle" src="assets/images/pattern-circle.svg" alt="" width="129" height="129">
+        <div class="hero__image">
+          <div class="image__wrapper">
+            <img src="assets/images/image-profile-mobile.webp" alt="Picture of me" srcset="
             assets/images/image-profile-desktop.webp 890w,
             assets/images/image-profile-tablet.webp 646w,
             assets/images/image-profile-mobile.webp 348w" sizes="
             (max-width: 600px) 46vw,
             (max-width: 992px) 41vw, 30vw">
+          </div>
+        </div>
+        <div class="hero__text">
+          <h1 class="hero__headline">Nice to meet you!<br>I'm <span>Jamie Barlow</span>.</h1>
+          <p class="hero__description">Based in the UK, I'm a front-end developer passionate about
+            building accessible web apps that users love.</p>
+          <a class="hero__contact underline" href="">Contact Me</a>
         </div>
       </div>
-      <div class="hero__text">
-        <h1 class="hero__headline">Nice to meet you!<br>I'm <span>Jamie Barlow</span>.</h1>
-        <p class="hero__description">Based in the UK, I'm a front-end developer passionate about
-          building accessible web apps that users love.</p>
-        <a class="hero__contact" href="">Contact me</a>
-      </div>
     </section>
-    <section class="experience">
-      <div class="wrapper experience__wrapper">
+    <section class="experience middle">
+      <div class="experience__wrapper wrapper">
         <p>
-          HTML
-          4 Years Experience
+        <h2>HTML</h2>
+        <p>4 Years Experience</p>
 
-          CSS
-          4 Years Experience
+        <h2>CSS</h2>
+        <p>4 Years Experience</p>
 
-          JavaScript
-          4 Years Experience
+        <h2>JavaScript</h2>
+        <p>4 Years Experience</p>
 
-          Accessibility
-          4 Years Experience
+        <h2>Accessibility</h2>
+        <p>4 Years Experience</p>
 
-          React
-          3 Years Experience
+        <h2>React</h2>
+        <p>3 Years Experience</p>
 
-          Sass
-          3 Years Experience
+        <h2>Sass</h2>
+        <p>3 Years Experience</p>
         </p>
     </section>
-    <section class="projects">
+    <section class="projects middle">
       <div class="wrapper projects__wrapper">
-        Projects
-
-        Contact me
-
-        Design portfolio
-        HTML CSS
-        View project
-        View code
-
-        E-learning landing page
-        HTML CSS
-        View project
-        View code
-
-        Todo web app
-        HTML CSS JavaScript
-        View project
-        View code
-
-        Entertainment web app
-        HTML CSS JavaScript
-        View project
-        View code
-
-        Memory Game
-        HTML CSS JavaScript
-        View project
-        View code
-
-        Art gallery showcase
-        HTML CSS JavaScript
-        View project
-        View code
-
-        Contact
-
-        I would love to hear about your project and how I could help. Please
-        fill in the form, and I’ll get back to you as soon as possible.
-
-        Name
-        Email
-        Message
-
-        Send message
-
-        adamkeyes
+        <div class="projects__header">
+          <h1>Projects</h1>
+          <a class="hero__contact underline" href="">Contact Me</a>
+        </div>
+        <div class="projects__main">
+          <div class="projects__box">
+            <img src="assets/images/thumbnail-project-1-small.webp" alt="Project 1">
+            <p class="projects__title projects__text">Design portfolio</p>
+            <div class="projects__languages">
+              <p>HTML</p>
+              <p>CSS</p>
+            </div>
+            <div class="project__links">
+              <a href="" class="underline">View project</a>
+              <a href="" class="underline">View code</a>
+            </div>
+          </div>
+          <div class="projects__box">
+            <img src="assets/images/thumbnail-project-2-small.webp" alt="Project 2">
+            <p class="projects__title projects__text">E-learning landing page</p>
+            <div class="projects__languages">
+              <p>HTML</p>
+              <p>CSS</p>
+            </div>
+            <div class="project__links">
+              <a href="" class="underline">View project</a>
+              <a href="" class="underline">View code</a>
+            </div>
+          </div>
+          <div class="projects__box">
+            <img src="assets/images/thumbnail-project-3-small.webp" alt="Project 3">
+            <p class="projects__title projects__text">Todo web app</p>
+            <div class="projects__languages">
+              <p>HTML</p>
+              <p>CSS</p>
+              <p>JavaScript</p>
+            </div>
+            <div class="project__links">
+              <a href="" class="underline">View project</a>
+              <a href="" class="underline">View code</a>
+            </div>
+          </div>
+          <div class="projects__box">
+            <img src="assets/images/thumbnail-project-4-small.webp" alt="Project 4">
+            <p class="projects__title projects__text">Entertainment web app</p>
+            <div class="projects__languages">
+              <p>HTML</p>
+              <p>CSS</p>
+              <p>JavaScript</p>
+            </div>
+            <div class="project__links">
+              <a href="" class="underline">View project</a>
+              <a href="" class="underline">View code</a>
+            </div>
+          </div>
+          <div class="projects__box">
+            <img src="assets/images/thumbnail-project-5-small.webp" alt="Project 5">
+            <p class="projects__title projects__text">Memory Game</p>
+            <div class="projects__languages">
+              <p>HTML</p>
+              <p>CSS</p>
+              <p>JavaScript</p>
+            </div>
+            <div class="project__links">
+              <a href="" class="underline">View project</a>
+              <a href="" class="underline">View code</a>
+            </div>
+          </div>
+          <div class="projects__box">
+            <img src="assets/images/thumbnail-project-6-small.webp" alt="Project 6">
+            <p class="projects__title projects__text">Art gallery showcase</p>
+            <div class="projects__languages">
+              <p>HTML</p>
+              <p>CSS</p>
+              <p>JavaScript</p>
+            </div>
+            <div class="project__links">
+              <a href="" class="underline">View project</a>
+              <a href="" class="underline">View code</a>
+            </div>
+          </div>
+        </div>
+        <section class="contact middle">
+          <div>
+            Contact
+            I would love to hear about your project and how I could help. Please
+            fill in the form, and I’ll get back to you as soon as possible.
+            Name
+            Email
+            Message
+            Send message
+            adamkeyes
+          </div>
+        </section>
       </div>
     </section>
     </div>

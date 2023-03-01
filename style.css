@@ -1,16 +1,23 @@
 /* Initial setup */
 
-html {                         /* ROOT */
+html {
+    /* ROOT */
     box-sizing: border-box;
     font-size: 100%;
-    line-height: 1.56;   /* Relative to font size */
+    line-height: 1.56;
+    /* Relative to font size */
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: inherit;
 }
 
-h1,h2,h3,p {
+h1,
+h2,
+h3,
+p {
     margin-top: 0;
 }
 
@@ -22,8 +29,14 @@ body {
     /* font-size: 18px; */
 }
 
-html, body {
+html,
+body {
     height: 100%;
+}
+
+main {
+    /* display: flex;
+    flex-direction: column; */
 }
 
 .wrapper {
@@ -36,8 +49,6 @@ html, body {
 
 .header {
     margin-top: 20px;
-    /* display: flex; */
-    /* outline: 1px solid orange; */
 }
 
 .header__nav {
@@ -47,7 +58,7 @@ html, body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    
+    /* outline: 1px solid orange; */
 }
 
 .header__nav a {
@@ -58,6 +69,7 @@ html, body {
     justify-self: flex-start;
     padding: 0;
     line-height: 1;
+    /* outline: 2px solid red; */
 }
 
 .header__home li a {
@@ -73,18 +85,16 @@ html, body {
 
 .header__logos {
     display: flex;
-    /* position: relative; */
-    /* outline: 2px solid salmon; */
-    /* align-items: space-between; */
     gap: 20px 25px;
     padding: 0;
+    /* outline: 2px solid salmon; */
 }
 
 .header__home a:hover {
     color: var(--green);
 }
 
-nav svg > path {
+nav svg>path {
     transition: fill var(--transition);
 }
 
@@ -99,15 +109,15 @@ nav svg:hover path {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
+    min-height: 120vw;
+    /* outline: 2px solid red; */
 }
 
-.hero__image {               /* Flex item */
-    flex: 1;
-    z-index: -1;
-    margin: 0;
+.hero__image {          /* Flex item */
+    flex: 2 2;
+    /* margin: -10px; */
     padding: 0;
-    outline: 4px solid lime; 
+    /* outline: 4px solid lime;  */
 }
 
 .image__wrapper {
@@ -119,23 +129,26 @@ nav svg:hover path {
     top: 0;
     left: 50%;
     translate: -50%;
+    z-index: -1;
     /* max-width: 100%; */
 }
 
-.hero__text {                   /* Flex item */
+.hero__text {           /* Flex item */
     /* margin-top: 95%; */
-    flex: 1;
+    flex: 1 1;
     text-align: center;
-    outline: 4px solid red;
-
+    padding: 10px;
+    /* outline: 2px solid green; */
 }
 
 .hero__headline {
-
+    text-underline-offset: 5px;
 }
 
-.hero__description {
+.hero__description {}
 
+.hero__contact {
+    min-width: 0;
 }
 
 .hero__headline span {
@@ -143,14 +156,90 @@ nav svg:hover path {
     text-decoration-color: var(--green);
 }
 
+.hero__rings {
+    position: absolute;
+    top: 200px;
+    right: 50%;
+    z-index: -1;
+}
+
+.hero__circle {
+    position: absolute;
+    right: -10%;
+    top: 48%;
+    z-index: -1;
+}
+
+/* EXPERIENCE */
+
 .experience {
 
 }
 
 .experience__wrapper {
-    outline: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+/* PROJECTS */
+
+.projects__wrapper {
+
+}
+
+.projects {
+    color: var(--text-1);
+}
+
+.projects__header { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.projects__box {
+    margin: 5px;
+}
+
+.projects__box img {
+    width: 100%;
+}
+
+.projects__title {
+    color: var(--text-1);
+    font-size: var(--fs-h3);
+    margin: 0;
+}
+
+.projects__text {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.projects__languages {
+    text-transform: uppercase;
+    display: flex;
+    gap: 18px;
+    min-height: 50px;
+    align-items: center;
+}
+
+.projects__languages > p {
+    /* font-size: 1rem; */
+    line-height: 1.625;
+    letter-spacing: 2.29px;
+    font-weight: 500;
+}
+
+.project__links {
+    display: flex;
+    gap: 40px;
+    min-height: 50px;
+}
+
+
+/* GENERAL STYLING */
 
 :root {
     --background: hsl(0, 0%, 8%);
@@ -161,8 +250,8 @@ nav svg:hover path {
     --red: hsl(7, 100%, 68%);
     /* font sizes */
     --fs-h1: clamp(2.5rem, 1.9rem + 3vw, 5.5rem);
-    --fs-h2: clamp(2.5rem, 2.4rem + 0.5vw, 3rem);
-    --fs-h3: clamp(1.5rem, 2.1rem + -0.5vw, 2rem);
+    --fs-h2: clamp(2rem, 1.8rem + 1vw, 3rem);
+    --fs-h3: clamp(2rem, 2rem + 0vw, 2rem);
     --fs-p: clamp(1rem, 0.975rem + 0.125vw, 1.125rem);
     /* Layout */
     --container-width-desktop: 77%;
@@ -176,52 +265,92 @@ h1 {
     font-size: 2.5rem;
     font-size: clamp(2.5rem, 1.9rem + 3vw, 5.5rem);
     font-weight: 700;
-    line-height: 1em;           /* Keeping relative to element font size which translates across tablet/mobile */
+    line-height: 1em;
+    margin: 20px;
+    /* Keeping relative to element font size which translates across tablet/mobile */
 }
+
 h2 {
-    font-size: 2.5rem;
-    font-size: clamp(2.5rem, 2.4rem + 0.5vw, 3rem);
+    font-size: 2rem;
+    font-size: clamp(2rem, 1.8rem + 1vw, 3rem);
     font-weight: 700;
     line-height: 1.16em;
 }
+
 h3 {
-    font-size: 1.5rem;
-    font-size: clamp(1.5rem, 2.1rem + -0.5vw, 2rem);
+    font-size: 2rem;
+    font-size: clamp(2rem, 2rem + 0vw, 2rem);
     font-weight: 700;
     line-height: 1.33em;
 }
+
 p {
     font-size: 1rem;
-    font-size: clamp(1rem, 0.975rem + 0.125vw, 1.125rem);
+    font-size: clamp(1rem, 0.79rem + 0.89vw, 1.125rem);
     font-weight: 500;
     line-height: 1.55em;
+    color: var(--text-2);
+}
+
+section {
+    /* border: 20px; */
+    margin: 20px;
+    /* border: 20px; */
+    display: block;
+}
+
+section.middle {
+    border-top: 1px solid var(--text-2);
+}
+
+
+a.underline {
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: 2.29px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--text-1);
+    text-decoration-color: var(--green);
+    text-underline-offset: 5px;
+    text-decoration-thickness: 2px;
+    transition: color var(--transition);
+}
+
+a.underline:hover {
+    color: var(--green);
 }
 
 /* Media queries */
 
-@media screen and (min-width: 600px) {     /* Small tablet and above */
+@media screen and (min-width: 600px) {
+
+    /* Small tablet and above */
     .wrapper {
         width: 92%;
     }
+
     .header__nav {
         flex-direction: row;
     }
+
     .header__home {
         text-align: left;
     }
+
     .header__logos {
         gap: 20px 32px;
     }
 }
 
-@media screen and (min-width: 992px) {     /* Desktop */
+@media screen and (min-width: 992px) {
+
+    /* Desktop */
     .wrapper {
         width: 77%;
-    } 
-    .header__home {
+    }
 
-    }
-    .header__nav {
-        
-    }
+    .header__home {}
+
+    .header__nav {}
 }
