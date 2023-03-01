@@ -62,7 +62,7 @@ main {
 }
 
 .header__nav a {
-    text-decoration: none;
+    
 }
 
 .header__home {
@@ -72,14 +72,15 @@ main {
     /* outline: 2px solid red; */
 }
 
-.header__home li a {
+.header__home * {
     font-size: var(--fs-h3);
     text-align: center;
     color: var(--text-1);
     transition: color var(--transition);
+    text-decoration: none;
 }
 
-.header__nav li {
+.header__nav li, footer li {
     list-style: none;
 }
 
@@ -87,6 +88,7 @@ main {
     display: flex;
     gap: 20px 25px;
     padding: 0;
+    justify-content: center;
     /* outline: 2px solid salmon; */
 }
 
@@ -94,11 +96,11 @@ main {
     color: var(--green);
 }
 
-nav svg>path {
+nav svg>path, footer svg>path {
     transition: fill var(--transition);
 }
 
-nav svg:hover path {
+nav svg:hover path, footer svg:hover path {
     fill: var(--green);
 }
 
@@ -238,6 +240,41 @@ nav svg:hover path {
 }
 
 
+/* CONTACT SECTION */
+
+.contact {
+    text-align: center;
+    background-color: var(--dark-grey);
+}
+
+.contact__title {
+    
+}
+
+.contact__fields {
+    text-align: left;
+}
+
+.contact__fields a {
+    float: right;
+}
+
+/* FOOTER */
+
+.footer__home {
+    text-align: center;
+}
+
+
+
+/* FOR CLEARING SPACE AFTER FLOATED ELEMENTS */
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
 /* GENERAL STYLING */
 
 :root {
@@ -298,7 +335,7 @@ section {
     display: block;
 }
 
-section.middle {
+.middle {
     border-top: 1px solid var(--text-2);
 }
 
