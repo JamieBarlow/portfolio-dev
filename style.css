@@ -245,6 +245,7 @@ nav svg:hover path, footer svg:hover path {
 .contact {
     text-align: center;
     background-color: var(--dark-grey);
+    padding: 20px 0;
 }
 
 .contact__title {
@@ -253,19 +254,41 @@ nav svg:hover path, footer svg:hover path {
 
 .contact__fields {
     text-align: left;
+    text-transform: uppercase;
+    gap: 18px;
+    min-height: 50px;
+    /* height: 800px; */
+    display: flex;
+    flex-direction: column;
+    /* outline: 2px solid red; */
+    justify-items: space-around;
+    vertical-align: middle;
+    padding: 10px 0;
+}
+
+.contact__fields p {
+    padding: 10px;
+    margin: 0;
+    height: 50px;
+    line-height: 50px;
 }
 
 .contact__fields a {
-    float: right;
+    align-self: flex-end;
+    /* outline: 4px solid green; */
 }
 
 /* FOOTER */
 
+footer {
+    text-align: center;
+    background-color: var(--dark-grey);
+    padding: 20px 0;
+}
+
 .footer__home {
     text-align: center;
 }
-
-
 
 /* FOR CLEARING SPACE AFTER FLOATED ELEMENTS */
 
@@ -330,7 +353,7 @@ p {
 
 section {
     /* border: 20px; */
-    margin: 20px;
+    margin-top: 10px;
     /* border: 20px; */
     display: block;
 }
