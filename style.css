@@ -27,6 +27,7 @@ body {
     background-color: var(--background);
     color: var(--text-1);
     /* font-size: 18px; */
+    overflow-x: hidden;
 }
 
 html,
@@ -278,6 +279,11 @@ nav svg:hover path, footer svg:hover path {
     /* outline: 4px solid green; */
 }
 
+#message-field {
+    height: 150px;
+    border-bottom: 1px solid var(--text-2);
+}
+
 /* FOOTER */
 
 footer {
@@ -400,6 +406,42 @@ a.underline:hover {
     .header__logos {
         gap: 20px 32px;
     }
+
+    .hero {                  /* Flex container  */
+        flex-direction: row-reverse;
+    }
+
+    .hero__image {          /* Flex item */
+        /* flex: 2 2; */
+        /* margin: -10px; */
+        /* padding: 0; */
+        flex: 1 1;
+        outline: 4px solid blue; 
+        min-height: 80vw;
+        height: 0;
+        margin-left: -60px;
+
+    }
+    
+    .image__wrapper {
+        translate: 50px;
+        /* z-index: -1; */
+    }
+
+    .image__wrapper img {
+        /* right: 0; */
+    }
+
+    .hero__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        outline: 2px solid lime;
+        min-height: 80vw;
+        height: 0;
+        /* align-self: flex-start; */
+    }
+    
 }
 
 @media screen and (min-width: 992px) {
