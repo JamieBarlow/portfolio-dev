@@ -173,6 +173,26 @@ nav svg:hover path, footer svg:hover path {
     z-index: -1;
 }
 
+.hero__logo {
+    position: absolute;
+    /* outline: 2px solid red; */
+    top: 0;
+    margin: -20px;
+    border: 1px solid white;
+    border-radius: 80px 20px;
+    transition: background 500ms ease-in, filter 200ms ease-in;
+}
+    /* transition: filter var(--transition); */
+
+.hero__logo:hover {
+    filter: invert(1);
+    background: var(--green__inverted);
+}
+
+.hero__logo:not(:hover) {
+    transition: background 200ms, filter 200ms;
+}
+
 /* EXPERIENCE */
 
 .experience {
@@ -310,6 +330,7 @@ footer {
     --background: hsl(0, 0%, 8%);
     --dark-grey: hsl(0, 0%, 14%);
     --green: hsl(153, 71%, 59%);
+    --green__inverted: hsl(333, 71%, 41%);
     --text-1: hsl(0, 0%, 100%);
     --text-2: hsl(0, 0%, 85%);
     --red: hsl(7, 100%, 68%);
@@ -433,9 +454,11 @@ a.underline:hover {
     }
 
     .hero__text {
+        text-align: start;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        gap: 20px 0;
         outline: 2px solid lime;
         min-height: 80vw;
         height: 0;
