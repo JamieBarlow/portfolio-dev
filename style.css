@@ -93,6 +93,10 @@ main {
     /* outline: 2px solid salmon; */
 }
 
+.header__home, .header__logos {
+    z-index: 1;
+}
+
 .header__home a:hover {
     color: var(--green);
 }
@@ -173,25 +177,24 @@ nav svg:hover path, footer svg:hover path {
     z-index: -1;
 }
 
-.hero__logo {
+/* .hero__logo {
     position: absolute;
-    /* outline: 2px solid red; */
+    z-index: 0;
+    width: 12.5rem;
     top: 0;
     margin: -20px;
-    border: 1px solid white;
-    border-radius: 80px 20px;
-    transition: background 500ms ease-in, filter 200ms ease-in;
-}
-    /* transition: filter var(--transition); */
+    border-radius: 140px 90%;
+    transition: background 500ms ease-in;
+} */
 
-.hero__logo:hover {
+/* .hero__logo:hover {
     filter: invert(1);
     background: var(--green__inverted);
 }
 
 .hero__logo:not(:hover) {
     transition: background 200ms, filter 200ms;
-}
+} */
 
 /* EXPERIENCE */
 
@@ -353,7 +356,6 @@ h1 {
     font-weight: 700;
     line-height: 1em;
     margin: 20px;
-    /* Keeping relative to element font size which translates across tablet/mobile */
 }
 
 h2 {
