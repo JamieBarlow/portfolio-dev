@@ -115,20 +115,26 @@ nav svg:hover path, footer svg:hover path {
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    min-height: 120vw;
+    justify-content: flex-start;
+    /* min-height: 120vw; */
     /* outline: 2px solid red; */
+    min-height: 85vh;
+    /* max-height: 100%; */
+}
+
+.hero div {
+    outline: 1px solid orange;
 }
 
 .hero__image {          /* Flex item */
-    flex: 2 2;
-    /* margin: -10px; */
+    flex-grow: 3;
+    flex-shrink: 1;
     padding: 0;
-    /* outline: 4px solid lime;  */
+    min-height: 400px;
 }
 
 .image__wrapper {
-    height: 400px;
+
 }
 
 .hero__image img {
@@ -142,9 +148,12 @@ nav svg:hover path, footer svg:hover path {
 
 .hero__text {           /* Flex item */
     /* margin-top: 95%; */
-    flex: 1 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-grow: 1;
+    flex-shrink: 1;
     text-align: center;
-    padding: 10px;
     /* outline: 2px solid green; */
 }
 
@@ -165,8 +174,8 @@ nav svg:hover path, footer svg:hover path {
 
 .hero__rings {
     position: absolute;
-    top: 200px;
-    right: 50%;
+    top: 20%;
+    right: 50vw;
     z-index: -1;
 }
 
@@ -432,6 +441,7 @@ a.underline:hover {
 
     .hero {                  /* Flex container  */
         flex-direction: row-reverse;
+        justify-content: flex-start;
     }
 
     .hero__image {          /* Flex item */
@@ -443,7 +453,22 @@ a.underline:hover {
         min-height: 80vw;
         height: 0;
         margin-left: -60px;
+    }
 
+    .hero__text {    /* flex item */
+        display: flex;
+        text-align: start;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 20px 0;
+        outline: 2px solid lime;
+        min-height: 80vw;
+        height: 0;
+    }
+
+    .hero__rings {
+        translate: -40%;
+        outline: 1px solid orange;
     }
     
     .image__wrapper {
@@ -455,17 +480,7 @@ a.underline:hover {
         /* right: 0; */
     }
 
-    .hero__text {
-        text-align: start;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 20px 0;
-        outline: 2px solid lime;
-        min-height: 80vw;
-        height: 0;
-        /* align-self: flex-start; */
-    }
+    
     
 }
 
