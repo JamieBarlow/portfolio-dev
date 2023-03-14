@@ -167,6 +167,10 @@ footer svg:hover path {
     min-width: 0;
 }
 
+.hero__contact a {
+    max-width: 100%;
+}
+
 .hero__headline span {
     text-decoration: underline;
     text-decoration-color: var(--green);
@@ -412,6 +416,34 @@ a.underline:hover {
     color: var(--green);
 }
 
+a.underline--animated {
+    text-decoration: none;
+}
+
+a.underline--animated:hover {
+    /* text-decoration: none; */
+}
+
+a.underline--animated:after {
+    display: block;
+    /* padding: 2px; */
+    content: '';
+    border-bottom: solid 2px var(--green);
+    transform: scaleX(0);
+    transform-origin: 0% 100%;
+    transition: transform 250ms ease-in-out;
+}
+
+a.underline--animated:hover:after {
+    transform: scaleX(1);
+    /* transform-origin: 0% 50%; */
+}
+
+.projects__link {
+    color: var(--green);
+    margin-right: 5px;
+}
+
 /* Media queries */
 
 @media screen and (min-width: 600px) {
@@ -437,18 +469,18 @@ a.underline:hover {
     .hero {
         /* Flex container  */
         flex-direction: row-reverse;
-        outline: 2px solid blue;
+        /* outline: 2px solid blue; */
         min-height: 0;
         height: 600px;
         align-items: center;
     }
 
     div.hero__image {
-        outline: 4px solid green;
+        /* outline: 4px solid green; */
         flex-grow: 10;
     }
     div.hero__text {
-        outline: 4px solid orange;
+        /* outline: 4px solid orange; */
         flex-grow: 1;
         max-width: 60%;
         align-self: stretch;
@@ -466,7 +498,7 @@ a.underline:hover {
         translate: 0;
         left: auto;
         right: 0;
-        outline: 2px solid pink;
+        /* outline: 2px solid pink; */
     }
 
     .hero__text {
