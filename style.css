@@ -243,11 +243,6 @@ footer svg:hover path {
     align-items: center;
 }
 
-
-.projects__box img {
-    width: 100%;
-}
-
 .projects__title {
     color: var(--text-1);
     font-size: var(--fs-h3);
@@ -260,9 +255,11 @@ footer svg:hover path {
 .projects__languages {
     text-transform: uppercase;
     display: flex;
+    flex-wrap: wrap;
     gap: 18px;
     min-height: 50px;
     align-items: center;
+    justify-content: flex-start;
 }
 
 .projects__languages>p {
@@ -272,11 +269,21 @@ footer svg:hover path {
     font-weight: 500;
 }
 
-.project__links {
+.projects__links {
     display: flex;
-    gap: 40px;
+    gap: 15px;
     min-height: 50px;
     margin-bottom: 20px;
+    justify-content: space-between;
+    margin-right: 6px;
+}
+
+.projects__icon {
+    color: var(--green);
+    display: inline-block;
+    text-decoration: none;
+    align-items: center;
+    gap: 2px;
 }
 
 .projects__img {
@@ -284,9 +291,11 @@ footer svg:hover path {
     position: relative;
     justify-content: center;
     align-content: center;
-    background-size: cover;
-    box-sizing: border-box;
     overflow: hidden;
+}
+
+.projects__img img {
+    width: 100%;
 }
 
 .img-overlay {
@@ -302,14 +311,14 @@ footer svg:hover path {
     background: rgba(0, 0, 0, 0.6);
     color: white;
     opacity: 0;     /*Hidden by default*/
-    transition: opacity 0.25s;
+    transition: all 0.2s ease-in-out;
     padding: 5%;
-    line-height: 1.5rem;
-    font-size: 0.8rem;
+    /* line-height: 1.5rem; */
+    /* font-size: 0.8rem; */
 }
 .img-overlay > * {    /*All direct children of img-overlay*/
-    transform: translateY(20px);
-    transition: transform 0.25s;
+    /* transform: translateY(20px); */
+    /* transition: transform 0.25s ease-in-out; */
 }
 .img-overlay:hover {
     opacity: 1;
@@ -321,12 +330,10 @@ footer svg:hover path {
     backdrop-filter: blur(5px);
 }
 .img-overlay a {
-    width: auto;
-    height: auto;
     text-decoration: none;
-    padding: 0;
+    padding: 0 10px;
     margin: 0;
-    font-weight: 500;
+    /* font-weight: 500; */
 }
 
 
@@ -470,7 +477,7 @@ section {
 }
 
 
-a.underline {
+.underline {
     font-size: 1rem;
     line-height: 1.625;
     letter-spacing: 2.29px;
@@ -483,19 +490,19 @@ a.underline {
     transition: color var(--transition);
 }
 
-a.underline:hover {
+.underline:hover {
     color: var(--green);
 }
 
-a.underline--animated {
+.underline--animated {
     text-decoration: none;
 }
 
-a.underline--animated:hover {
+.underline--animated:hover {
     /* text-decoration: none; */
 }
 
-a.underline--animated:after {
+.underline--animated:after {
     display: block;
     /* padding: 2px; */
     content: '';
@@ -505,15 +512,12 @@ a.underline--animated:after {
     transition: transform 250ms ease-in-out;
 }
 
-a.underline--animated:hover:after {
+.underline--animated:hover:after {
     transform: scaleX(1);
     /* transform-origin: 0% 50%; */
 }
 
-.projects__link {
-    color: var(--green);
-    margin-right: 5px;
-}
+
 
 .bg--grey {
     background-color: var(--dark-grey);
@@ -521,6 +525,25 @@ a.underline--animated:hover:after {
 
 .bg--black {
     background-color: var(--background);
+}
+
+.button {
+    justify-self: flex-start;
+}
+
+.button--outline-dark {
+    display: inline-block;
+    color: white;
+    background-color: transparent;
+    border-radius: 20px;
+    /* margin: 10px 20px; */
+    border: 1px solid #ffffff;
+    transition: background-color 250ms ease-in-out;
+    font-size: 1rem;
+}
+.button--outline-dark:hover {
+    background-color: white;
+    color: black;
 }
 
 /* Media queries */
@@ -567,7 +590,7 @@ a.underline--animated:hover:after {
     }
 
     .hero__image img {
-        width: 45%;
+        /* width: 45%; */
         translate: 0;
         left: auto;
         right: 0;
@@ -613,6 +636,9 @@ a.underline--animated:hover:after {
     .experience__box {
         flex-basis: 50%;
         margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     .projects {
         margin-top: 50px;
@@ -627,7 +653,8 @@ a.underline--animated:hover:after {
     }
     
     .projects__box {
-        flex-basis: 45%;
+        max-width: 45%;
+        /* flex-basis: 45%; */
         display: flex;
         flex-direction: column;
         justify-content: space-between;
