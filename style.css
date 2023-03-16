@@ -260,6 +260,7 @@ footer svg:hover path {
     min-height: 50px;
     align-items: center;
     justify-content: flex-start;
+    margin-bottom: 15px;
 }
 
 .projects__languages>p {
@@ -267,6 +268,7 @@ footer svg:hover path {
     line-height: 1.625;
     letter-spacing: 2.29px;
     font-weight: 500;
+    margin: 0;
 }
 
 .projects__links {
@@ -292,10 +294,15 @@ footer svg:hover path {
     justify-content: center;
     align-content: center;
     overflow: hidden;
+    /* max-height: 300px; */
+    max-height: 300px;
 }
 
 .projects__img img {
     width: 100%;
+    object-fit: cover;
+    object-position: 100% 0;
+    /* max-height: 300px; */
 }
 
 .img-overlay {
