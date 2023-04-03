@@ -231,10 +231,12 @@ footer svg:hover path {
 
 /* PROJECTS */
 
-.projects__wrapper {}
+.projects__wrapper {
+}
 
 .projects {
     color: var(--text-1);
+    margin-top: 20px;
 }
 
 .projects__header {
@@ -246,7 +248,6 @@ footer svg:hover path {
 .projects__title {
     color: var(--text-1);
     font-size: var(--fs-h3);
-    margin: 0;
     text-transform: uppercase;
     font-weight: 500;
     margin: 10px 0px;
@@ -429,7 +430,7 @@ footer {
 
 .angle-slopeup {
     padding: 100px 0;
-    clip-path: polygon(100% 0, 100% 89%, 0 100%, 0 11%);
+    clip-path: polygon(100% 0, 100% 94%, 0 100%, 0 6%);
 }
 
 .angle-slopedown {
@@ -439,7 +440,7 @@ footer {
 
 .angle-footer {
     padding: 100px 0;
-    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 11%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 6%);
 }
 
 h1 {
@@ -665,6 +666,16 @@ section {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+    }
+    
+    .angle-slopeup {
+        padding: 100px 0;
+        clip-path: polygon(100% 0, 100% 89%, 0 100%, 0 11%);
+    }
+
+    .angle-footer {
+        padding: 100px 0;
+        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 10%);
     }
 }
 
