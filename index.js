@@ -9,6 +9,20 @@ app.get('/', (req, res) => {
     res.render('home');
 });
 
+app.get('/projects', (req, res) => {
+    res.render('projects');
+})
+
+app.get('/projects/:project', (req, res) => {
+    const { project } = req.params;
+    res.render('projects', { project })
+    // res.send(`<h1>Viewing page for the ${project} project`);
+})
+
+app.get('*', (req, res) => {
+    res.send('Page not found');
+})
+
 app.listen(3000, () => {
     console.log('Serving on port 3000')
 })
