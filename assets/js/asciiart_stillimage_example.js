@@ -100,11 +100,11 @@ var cyclic_t;
 function preload() {
   // "Young man reading by candlelight", Matthias Stom, 1600-1650
   images[0] =
-    loadImage('assets/images/jamie-1.jpg');
+    loadImage('images/jamie-1.jpg');
   // "Le Penseur", Auguste Rodin, 1880
   // images[1] =loadImage('example_image_Thinking-Man.jpg');
   // "American Gothic", Grant DeVolson Wood, 1930
-  images[1] = loadImage('assets/images/jamie-2.jpg');
+  images[1] = loadImage('images/jamie-2.jpg');
   // "La Liseuse", Jean-Honoré Fragonard, 1770
   // images[3] = loadImage('example_image_young_girl_reading.jpg');
 }
