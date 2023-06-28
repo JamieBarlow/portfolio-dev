@@ -6,28 +6,26 @@ const projectData = {
         live: 'https://jamiebarlow.github.io/sliding-puzzle-p5/',
         about: 'This sliding puzzle was inspired by collaboration with a graphic designer, whose brief was to present a landing page for a healthcare organisation in an eye-catching and educational way. We chose to include a sliding puzzle, as a creative and dynamic way of displaying information, so I opted to build this interactive component for the design.',
         purpose: 'The puzzle isn\'t simply there for decoration - it would also allow the client to display a relevant fact under each tile, inspiring curiosity. At the same time, the format is immediately recognisable and intuitive to many users. The aim is to hold the user\'s interest while they attempt the puzzle, but also to not lock the user out of any key element of the experience, by making this dependent on them finishing the puzzle (which can be surprisingly difficult!) - completion is very much an optional \'bonus\' (with a small reward).',
-        features: [],
-        webStack: '',
-        description: 'This is the first project.',
+        features: ['Flexible design - the puzzle automatically cuts and shuffles any image, without needing to manually create \'tile\' assets;', 'Board length and width can also be defined as needed;', 'Manual \'reshuffle\' button (for testing purposes or as client desires);', 'Custom randomization factor'],
+        webStack: 'Written in JavaScript, with <a href="https://p5js.org/">p5.js</a> for drawing the canvas.',
         challenges: 'Building this as a functioning component was a great logical puzzle in itself. Firstly in terms of tech stack - I had just learned some of the creative applications of JavaScript\'s <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">canvas API</a>, but realised that some additional functionality (such as the visual auto-shuffle on page load) could be achieved more easily and efficiently with the p5.js library, which uses many canvas API features under the hood. This involved some refactoring, but the resulting code was easier to maintain and therefore update, ultimately saving some production time. \n\n I also needed to conceptualise how the puzzle would work with programming logic. This involved creating a fixed \'board\' of tiles which could register the position of the user\'s mouse click, as well as a means of breaking up a source image into tiles, tracked with their own index numbers as they move. When the user clicks a tile, the program would need to find the location of the blank tile, before swapping their positions (the canvas actually \'redraws\' on each click). \n\n The toughest challenge was discovered during testing- I learned that in some cases, randomised tile placement meant the puzzle was actually unsolvable. The solution involved reverse-engineering from a completed puzzle, with rules imposed so that each step of the \'shuffle\' could only happen if the randomly-selected tile was adjacent to a blank tile, and swapping with it directly. This also required a greater amount of randomization, because there are fewer possibilities for movement on each iteration. As a result I built in a randomization index to quickly test the impact of the number of individual shuffle \'attempts\' on the overall level of shuffling, and potentially the difficulty of the puzzle.',
         lessons: 'While some change will be inevitable throughout development and testing, mapping out the design logic further to anticipate issues before writing code could have helped to avoid some rewriting and refactoring. \n\n In future I would also consider where well-chosen libraries can make implementation easier, though the process of learning the canvas API, as I wrote the initial program, was also valuable.',
         images: ['imgtest-square.jpg'],
-        otherProjects: []
+        otherProjects: ['schillingerRtm', 'directDebits']
     },
     directDebits: {
         title: 'Direct Debit Processing Calendar',
-        stack: [],
-        code: '',
-        live: '',
-        about: '',
-        purpose: '',
-        features: [],
-        webStack: '',
-        description: 'This is the second project.',
+        stack: ['HTML/CSS', 'JavaScript', 'BootStrap', 'Mocha.js / Chai.js'],
+        code: 'https://github.com/JamieBarlow/weekend-bankhol',
+        live: 'https://jamiebarlow.github.io/weekend-bankhol/',
+        about: 'Single page web application deployed by a large-scale organisation to calculate Direct Debit processing days for a selected year by accounting for weekends, bank holidays and other non-work days. Uses the UK Government\'s <a href="https://www.api.gov.uk/gds/bank-holidays/#bank-holidays">Bank Holidays API</a> to fetch data dynamically.',
+        purpose: 'Companies who operate a <a href="https://www.directdebit.co.uk/">Direct Debit scheme</a> will rely on a processing calendar to determine their schedule for specific Direct Debit processes, in order to meet the <a href="https://www.directdebit.co.uk/direct-debit-explained/direct-debit-guarantee/">Direct Debit guarantee</a>). Processing dates for both Service User and bank are determined by working days, and therefore need to be adjusted to account for bank holidays, weekends, and office closures. Determining when these dates are had proven to be a manual, surprisingly complex and error-prone process, and so this app was created to meet a real challenge / need for automation. \n\n Ultimately this app is designed to provide a reliable, consistent and maintainable means of determining Direct Debit processing days, mitigating error and risk - failure to generate this data correctly may result in multiple negative impacts that are difficult and/or costly to fix: missed or delayed submissions, payment reconciliation issues, knock-on impact on future claims, damage to reputation or the company\'s Service User status. \n\n The results are laid out in a format that fits the exact requirements of the Apps Support team for data loading, and can be copied to the clipboard with a single click.',
+        features: ['Calculates and displays non-processing days (bank holidays and weekends) for a given year', 'User can manually add and display company-specific non-processing days (e.g. Christmas or other holiday office closures)', 'Displays results as processing dates for the organisation, broken down by type', '\'Copy to clipboard\' button for easy export of results table'],
+        webStack: 'JS Date object / Bank Holidays API / BootStrap / Clipboard',
         challenges: '',
         lessons: '',
         images: [],
-        otherProjects: []
+        otherProjects: ['slidingPuzzle', 'schillingerRtm']
     },
     yelpCamp: {
         title: 'YelpCamp',
@@ -42,7 +40,7 @@ const projectData = {
         challenges: '',
         lessons: '',
         images: [],
-        otherProjects: []
+        otherProjects: ['slidingPuzzle', 'schillingerRtm']
     },
     schillingerRtm: {
         title: 'Schillinger Rhythm App',
@@ -57,7 +55,7 @@ const projectData = {
         challenges: '',
         lessons: '',
         images: [],
-        otherProjects: []
+        otherProjects: ['directDebits', 'slidingPuzzle']
     },
     creditCardChecker: {
         title: 'Credit Card Checker',
@@ -72,7 +70,7 @@ const projectData = {
         challenges: '',
         lessons: '',
         images: [],
-        otherProjects: []
+        otherProjects: ['directDebits', 'schillingerRtm']
     },
     salaryCalculator: {
         title: 'Take Home Pay / Tax Calculator',
@@ -87,7 +85,7 @@ const projectData = {
         challenges: '',
         lessons: '',
         images: [],
-        otherProjects: []
+        otherProjects: ['directDebits', 'schillingerRtm']
     },
     pingPongScore: {
         title: 'Ping Pong Scorekeeper',
@@ -102,7 +100,7 @@ const projectData = {
         challenges: '',
         lessons: '',
         images: [],
-        otherProjects: []
+        otherProjects: ['directDebits', 'schillingerRtm']
     }
 }
 
