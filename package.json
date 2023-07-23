@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/JamieBarlow/portfolio-dev/issues"
   },
-  "homepage": "https://github.com/JamieBarlow/portfolio-dev#readme"
+  "homepage": "https://github.com/JamieBarlow/portfolio-dev#readme",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "ejs-mate": "^4.0.0",
+    "express": "^4.18.2"
+  }
 }
