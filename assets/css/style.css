@@ -50,6 +50,10 @@ svg {
   fill: var(--text-dark);
 }
 
+.devicon {
+  font-size: 40px;
+}
+
 /* HEADER */
 
 .header {
@@ -232,6 +236,7 @@ footer svg:hover path {
 
 .experience {
   text-align: center;
+  margin: 0;
 }
 
 .experience__wrapper {
@@ -696,6 +701,7 @@ section {
 
   .hero {
     margin-top: 0;
+    margin-bottom: 0;
     /* outline: 2px solid blue; */
   }
 
@@ -759,7 +765,7 @@ section {
 
   .experience {
     font-size: var(--fs-h1);
-    padding: 20px 0;
+    /* padding: 20px 0; */
     text-align: start;
   }
 
