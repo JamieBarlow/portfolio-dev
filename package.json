@@ -1,0 +1,19 @@
+{
+  "name": "portfolio-dev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JamieBarlow/portfolio-dev.git"
+  },
+  "author": "Jamie Barlow",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JamieBarlow/portfolio-dev/issues"
+  },
+  "homepage": "https://github.com/JamieBarlow/portfolio-dev#readme"
+}
