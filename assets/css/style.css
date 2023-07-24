@@ -50,11 +50,6 @@ svg {
   fill: var(--text-dark);
 }
 
-.devicon {
-  display: inline-block;
-  font-size: 40px;
-}
-
 /* HEADER */
 
 .header {
@@ -75,9 +70,12 @@ svg {
 }
 
 .header__home {
+  display: flex;
+  align-items: center;
   justify-self: flex-start;
   padding: 0;
   line-height: 1;
+  gap: 20px;
   /* outline: 2px solid red; */
 }
 
@@ -195,7 +193,6 @@ footer svg:hover path {
   max-width: 100%;
 }
 
-.hero__headline span,
 .experience span {
   text-decoration: underline;
   text-decoration-color: var(--green__highlight);
@@ -213,6 +210,13 @@ footer svg:hover path {
   right: -10%;
   top: 48%;
   z-index: -1;
+}
+
+.svg--underline {
+  display: inline-flex;
+  flex-direction: column;
+  /* border: 2px solid red; */
+  text-decoration: none;
 }
 
 /* .hero__logo {
@@ -254,8 +258,9 @@ footer svg:hover path {
   position: relative;
   flex-direction: column;
   min-width: 40%;
+  max-width: 50%;
   padding-bottom: 5px;
-  margin: 15px;
+  margin-bottom: 15px;
   /* border-bottom: 2px solid var(--green__highlight); */
 }
 
@@ -268,6 +273,20 @@ footer svg:hover path {
     height: 20px;
     padding: 15px;
     border-bottom: 2px solid var(--green__highlight);
+}
+
+.experience__icons {
+  /* width: 30%; */
+}
+
+.devicon {
+  display: inline-block;
+  width: 20%;
+  transition: transform 0.2s ease-in-out;
+}
+
+.devicon:hover {
+  transform: scale(1.2);
 }
 
 /* PROJECTS */
@@ -283,6 +302,10 @@ footer svg:hover path {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.projects__logo {
+  max-width: 50%;
 }
 
 .projects__box {
@@ -426,11 +449,15 @@ footer svg:hover path {
 }
 
 .projects__icon {
-  color: var(--green__highlight);
+  color: #728CDA;
   display: inline-block;
   text-decoration: none;
   align-items: center;
   gap: 2px;
+}
+
+.projects__link:hover {
+  color: var(--vibrant-blue);
 }
 
 /* CONTACT SECTION */
@@ -438,6 +465,11 @@ footer svg:hover path {
 .contact {
   background-color: var(--vibrant-blue);
   padding: 20px 0;
+  background-image: url('/images/scribble.svg');
+}
+
+.contact__wrapper {
+  border-bottom: 1px solid var(--background-offwhite);
 }
 
 .contact__title {
@@ -468,6 +500,12 @@ footer svg:hover path {
 .contact__field label {
   margin-right: 20px;
   min-width: 100px;
+}
+
+.background {
+  position: absolute;
+  z-index: -2;
+  object-fit: contain;
 }
 
 #image-container {
@@ -526,7 +564,8 @@ footer {
 }
 
 .footer__home {
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 /* FOR CLEARING SPACE AFTER FLOATED ELEMENTS */
@@ -636,13 +675,21 @@ section {
   /* font-weight: 700; */
   color: var(--text-dark);
   text-decoration-color: var(--green__highlight);
-  text-underline-offset: 6px;
+  text-underline-offset: 8px;
   text-decoration-thickness: 2px;
   transition: color var(--transition);
 }
 
+.underline--blue {
+  text-decoration-color: var(--vibrant-blue);
+}
+
 .underline:hover {
   color: var(--green__highlight);
+}
+
+.underline--blue:hover {
+  color: var(--vibrant-blue);
 }
 
 .underline--animated {
@@ -651,13 +698,14 @@ section {
 
 .underline--animated:hover {
   /* text-decoration: none; */
+  color: var(--vibrant-blue);
 }
 
 .underline--animated:after {
   display: block;
   /* padding: 2px; */
   content: '';
-  border-bottom: solid 2px var(--green__highlight);
+  border-bottom: solid 2px var(--vibrant-blue);
   transform: scaleX(0);
   transform-origin: 0% 100%;
   transition: transform 250ms ease-in-out;
@@ -826,7 +874,7 @@ section {
   }
 
   .experience__icons {
-
+    
   }
 
   .projects {
