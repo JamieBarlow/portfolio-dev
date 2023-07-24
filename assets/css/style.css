@@ -51,6 +51,7 @@ svg {
 }
 
 .devicon {
+  display: inline-block;
   font-size: 40px;
 }
 
@@ -171,6 +172,7 @@ footer svg:hover path {
   flex-grow: 1;
   flex-shrink: 1;
   text-align: center;
+  /* outline: 2px solid red; */
   /* outline: 2px solid green; */
 }
 
@@ -241,8 +243,31 @@ footer svg:hover path {
 
 .experience__wrapper {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  flex-direction: row;
   align-items: center;
+  /* gap: 20px; */
+}
+
+.experience__box {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  min-width: 40%;
+  padding-bottom: 5px;
+  margin: 15px;
+  /* border-bottom: 2px solid var(--green__highlight); */
+}
+
+.experience__box::after {
+  content: '';
+    display: block;
+    align-self: center;
+    width: 30%;
+    top: 0;
+    height: 20px;
+    padding: 15px;
+    border-bottom: 2px solid var(--green__highlight);
 }
 
 /* PROJECTS */
@@ -710,13 +735,6 @@ section {
     flex-grow: 10;
   }
 
-  div.hero__text {
-    /* outline: 4px solid green; */
-    max-width: 60%;
-    margin: 0;
-    justify-content: center;
-  }
-
   .hero__image {
     /* Flex item */
     /* flex: 1 1; */
@@ -744,6 +762,10 @@ section {
     justify-content: flex-start;
     text-align: start;
     gap: 40px 0;
+    max-width: 50%;
+    margin: 0;
+    justify-content: center;
+    min-width: 0;
     /* outline: 2px solid lime; */
     /* padding-bottom: 200px; */
     width: 58vw;
@@ -777,11 +799,12 @@ section {
   }
 
   .experience__box {
-    flex-basis: 50%;
+    flex-basis: 30%;
     margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: flex-start;
     font-size: var(--fs-h3);
     text-transform: uppercase;
     font-weight: 500;
@@ -800,6 +823,10 @@ section {
     left: 0;
     padding: 15px;
     border-bottom: 2px solid var(--green__highlight);
+  }
+
+  .experience__icons {
+
   }
 
   .projects {
