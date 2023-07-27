@@ -8,7 +8,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
   <title>Single-page developer portfolio</title>
   <script src="js/p5.min.js"></script>
   <script src="js/p5.asciiart.min.js"></script>
@@ -19,7 +21,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 </head>
 
-<body>
+<body class="ff-archivo">
   <%- include('../partials/navbar') %>
     <main>
       <section class="hero wrapper">
@@ -35,14 +37,15 @@
             (max-width: 992px) 41vw, 30vw"> -->
         </div>
         <div class="hero__text wrapper">
-          <h1 class="hero__headline">Hi there,<br>I'm <span class="svg--underline">Jamie.<svg viewbox="0 0 261 15">
+          <h1 class="hero__headline">Hi there,<br>I'm <span class="svg--underlined">Jamie.<svg viewbox="0 0 261 15"
+                class="svg--underline">
                 <path
                   d="M260.873 1.13231C261.529 3.77683 256.062 3.58368 254.362 4.35423C234.067 8.56861 196.462 11.0159 175.722 12.0618C158.958 12.8467 142.229 14.1022 125.444 14.4597C113.074 14.9857 100.688 14.4207 88.3119 14.7844C62.2162 14.9714 35.9892 15.1707 10.0571 12.0453C7.36529 11.5029 4.5057 11.4453 1.93012 10.5145C-4.66696 6.11313 7.52882 6.09053 10.2184 6.55697C87.6685 12.5261 88.6863 12.1789 147.548 10.2248C173.583 9.44806 199.451 6.27752 239.373 1.7056C240.389 1.57204 241.349 2.43711 241.192 3.42341C245.104 2.90146 248.999 2.27037 252.873 1.53094C254.881 1.05217 256.897 0.593955 258.887 0.0535445C259.3 -0.0504262 259.739 0.00403855 260.11 0.205278C260.481 0.406518 260.755 0.738539 260.873 1.13026V1.13231Z"
                   fill="hsl(153, 71%, 59%)" />
               </svg></span></h1>
-          <p class="hero__description">Based in the UK, I'm a front-end developer with a passion for
-            building high quality and accessible web apps. You can check out my work below.</p>
-          <a class="hero__contact underline underline--blue" href="#contactMe">Get in touch</a>
+          <h4 class="hero__description ">Based in the UK, I'm a front-end developer with a passion for
+            building high quality and accessible web apps. You can check out my work below.</h4>
+          <a class="hero__contact underline underline--blue fs--h3" href="#contactMe">Get in touch</a>
         </div>
 
       </section>
@@ -54,12 +57,14 @@
               d="M0 135.787L60 141.979C120 148.062 240 160.446 360 175.437C480 190.428 600 208.243 720 198.467C840 188.69 960 151.321 1080 146.65C1200 141.979 1320 169.788 1380 183.802L1440 197.706V280.265H1380C1320 280.265 1200 280.265 1080 280.265C960 280.265 840 280.265 720 280.265C600 280.265 480 280.265 360 280.265C240 280.265 120 280.265 60 280.265H0V135.787Z"
               fill="#2D6ACD" />
           </svg>
-          <h2 class="wrapper">What I work with</h2>
-          <p class="wrapper">I use the tools below regularly, and have been able to put my skills into practice through a
-            number of <a href="#projects"><span class="underline text--light">projects</span></a>. I love learning new tech, and I am continuing to add more to the stack:</p>
+          <h2 class="wrapper fw--medium">What I work with</h2>
+          <h4 class="wrapper fw--light">I use the tools below regularly, and have been able to put my skills into
+            practice through a
+            number of <a href="#projects"><span class="underline text--light fs--h4">projects</span></a>. I love
+            learning new tech, and I am continuing to add more to the stack:</h4>
           <div class="wrapper experience__wrapper">
             <div class="experience__box">
-              <p>HTML / CSS</p>
+              <h4>HTML / CSS</h4>
               <div class="experience__icons">
 
                 <svg viewBox="0 0 128 128" class="devicon">
@@ -95,7 +100,7 @@
               </div>
             </div>
             <div class="experience__box">
-              <p>JavaScript</p>
+              <h4>JavaScript</h4>
 
               <div class="experience__icons">
                 <svg viewBox="0 0 128 128" class="devicon">
@@ -108,7 +113,7 @@
 
             </div>
             <div class="experience__box">
-              <p>Git / GitHub</p>
+              <h4>Git / GitHub</h4>
               <div class="experience__icons">
                 <svg viewBox="0 0 128 128" class="devicon">
                   <path fill="#F34F29"
@@ -118,7 +123,7 @@
               </div>
             </div>
             <div class="experience__box">
-              <p>BootStrap</p>
+              <h4>BootStrap</h4>
               <div class="experience__icons">
                 <svg viewBox="0 0 128 128" class="devicon">
                   <defs>
@@ -154,7 +159,7 @@
               </div>
             </div>
             <div class="experience__box">
-              <p>Express</p>
+              <h4>Express</h4>
               <div class="experience__icons">
                 <svg viewBox="0 0 128 128" class="devicon">
                   <path fill="white"
@@ -164,7 +169,7 @@
               </div>
             </div>
             <div class="experience__box">
-              <p>MongoDB</p>
+              <h4>MongoDB</h4>
               <div class="experience__icons">
                 <svg viewBox="0 0 128 128" class="devicon">
                   <path fill-rule="evenodd" clip-rule="evenodd" fill="#439934"
@@ -216,7 +221,7 @@
               </div>
             </div>
             <div class="experience__box">
-              <p>Node.js</p>
+              <h4>Node.js</h4>
               <div class="experience__icons">
                 <svg viewBox="0 0 128 128" class="devicon">
                   <path fill="#83CD29"
@@ -226,7 +231,7 @@
               </div>
             </div>
             <div class="experience__box">
-              <p>Mocha.js</p>
+              <h4>Mocha.js</h4>
               <div class="experience__icons">
                 <svg viewBox="150.1669 156.2779 112 126.3808" class="devicon">
                   <g fill="#8d6748" transform="matrix(1, 0, 0, 1, 142.1668701171875, 155.47296142578125)">
@@ -248,7 +253,7 @@
               </div>
             </div>
             <div class="experience__box">
-              <p>Figma</p>
+              <h4>Figma</h4>
               <div class="experience__icons">
                 <svg viewBox="0 0 128 128" class="devicon">
                   <path fill="#0acf83"
@@ -284,7 +289,7 @@
           <div class="wrapper projects__wrapper">
             <div class="projects__header">
               <img src="images/projects-svg-blue.svg" alt="" class="projects__logo">
-              <a class="hero__contact underline" href="#contactMe">Contact Me</a>
+              <a class="hero__contact underline fs--h4 fw--semibold" href="#contactMe">Contact Me</a>
             </div>
             <!-- <h3>What I've been working on</h3> -->
             <div class="projects__main">
@@ -294,16 +299,16 @@
                   <div class="img-overlay img-overlay--blur">
                     <div class="img-overlay__button">
                       <a class="button--outline-dark" href="salary-calculator.html">
-                        Read More >
+                        Read More <svg width="1.5rem" viewBox="0 0 18 18" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M13.922 4.5V11.8125C13.922 11.9244 13.8776 12.0317 13.7985 12.1108C13.7193 12.1899 13.612 12.2344 13.5002 12.2344C13.3883 12.2344 13.281 12.1899 13.2018 12.1108C13.1227 12.0317 13.0783 11.9244 13.0783 11.8125V5.51953L4.79547 13.7953C4.71715 13.8736 4.61092 13.9176 4.50015 13.9176C4.38939 13.9176 4.28316 13.8736 4.20484 13.7953C4.12652 13.717 4.08252 13.6108 4.08252 13.5C4.08252 13.3892 4.12652 13.283 4.20484 13.2047L12.4806 4.92188H6.18765C6.07577 4.92188 5.96846 4.87743 5.88934 4.79831C5.81023 4.71919 5.76578 4.61189 5.76578 4.5C5.76578 4.38811 5.81023 4.28081 5.88934 4.20169C5.96846 4.12257 6.07577 4.07813 6.18765 4.07812H13.5002C13.612 4.07813 13.7193 4.12257 13.7985 4.20169C13.8776 4.28081 13.922 4.38811 13.922 4.5Z"
+                            fill="currentColor"></path>
+                        </svg>
                       </a>
 
                     </div>
-                    <div class="img-overlay__text">
-                      <ul>
-                        <li>Interactive puzzle feature for a healthcare organisation's landing page</li>
-                        <li>Uses the canvas API and p5.js</li>
-                      </ul>
-                    </div>
+
                   </div>
                 </div>
                 <div class="projects__text">
@@ -312,22 +317,38 @@
                       <p class="projects__title">Sliding Puzzle</p>
                     </div>
                   </div>
-                  <div class="projects__info caps caps">
+                  <div class="projects__info">
                     <div class="projects__languages">
                       <p>HTML/CSS</p>
                       <p>JAVASCRIPT</p>
                       <p>P5.JS</p>
+                    </div>
+                    <div class="projects__description">
+                      <p>Interactive puzzle feature for a healthcare organisation's landing page</p>
                     </div>
                     <div class="projects__links">
                       <a href="projects/slidingPuzzle" class="underline underline--animated">
                         <div class="projects__link">
                           <i class="fa-solid fa-book projects__icon"></i>
                           <span class="link">View project</span>
+                          <svg width="1.3rem" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M13.922 4.5V11.8125C13.922 11.9244 13.8776 12.0317 13.7985 12.1108C13.7193 12.1899 13.612 12.2344 13.5002 12.2344C13.3883 12.2344 13.281 12.1899 13.2018 12.1108C13.1227 12.0317 13.0783 11.9244 13.0783 11.8125V5.51953L4.79547 13.7953C4.71715 13.8736 4.61092 13.9176 4.50015 13.9176C4.38939 13.9176 4.28316 13.8736 4.20484 13.7953C4.12652 13.717 4.08252 13.6108 4.08252 13.5C4.08252 13.3892 4.12652 13.283 4.20484 13.2047L12.4806 4.92188H6.18765C6.07577 4.92188 5.96846 4.87743 5.88934 4.79831C5.81023 4.71919 5.76578 4.61189 5.76578 4.5C5.76578 4.38811 5.81023 4.28081 5.88934 4.20169C5.96846 4.12257 6.07577 4.07813 6.18765 4.07812H13.5002C13.612 4.07813 13.7193 4.12257 13.7985 4.20169C13.8776 4.28081 13.922 4.38811 13.922 4.5Z"
+                              fill="currentColor"></path>
+                          </svg>
                         </div>
                       </a>
+
                       <a href="" class="underline underline--animated">
-                        <i class="fa-solid fa-laptop-code projects__icon"></i>
-                        <span class="link">View code</span>
+                        <div class="projects__link">
+                          <i class="fa-solid fa-laptop-code projects__icon"></i>
+                          <span class="link">View code</span>
+                          <svg width="1.3rem" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M13.922 4.5V11.8125C13.922 11.9244 13.8776 12.0317 13.7985 12.1108C13.7193 12.1899 13.612 12.2344 13.5002 12.2344C13.3883 12.2344 13.281 12.1899 13.2018 12.1108C13.1227 12.0317 13.0783 11.9244 13.0783 11.8125V5.51953L4.79547 13.7953C4.71715 13.8736 4.61092 13.9176 4.50015 13.9176C4.38939 13.9176 4.28316 13.8736 4.20484 13.7953C4.12652 13.717 4.08252 13.6108 4.08252 13.5C4.08252 13.3892 4.12652 13.283 4.20484 13.2047L12.4806 4.92188H6.18765C6.07577 4.92188 5.96846 4.87743 5.88934 4.79831C5.81023 4.71919 5.76578 4.61189 5.76578 4.5C5.76578 4.38811 5.81023 4.28081 5.88934 4.20169C5.96846 4.12257 6.07577 4.07813 6.18765 4.07812H13.5002C13.612 4.07813 13.7193 4.12257 13.7985 4.20169C13.8776 4.28081 13.922 4.38811 13.922 4.5Z"
+                              fill="currentColor"></path>
+                          </svg>
+                        </div>
                       </a>
                     </div>
                   </div>
@@ -335,39 +356,61 @@
               </div>
               <div class="projects__box">
                 <div class="projects__img">
-                  <img src="images/thumbnail-project-1-small.webp" alt="Project 1">
+                  <img src="images/tile-puzzle-pitch.png" alt="Project 1">
                   <div class="img-overlay img-overlay--blur">
                     <div class="img-overlay__button">
                       <a class="button--outline-dark" href="salary-calculator.html">
-                        Read More >
+                        Read More <svg width="1.5rem" viewBox="0 0 18 18" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M13.922 4.5V11.8125C13.922 11.9244 13.8776 12.0317 13.7985 12.1108C13.7193 12.1899 13.612 12.2344 13.5002 12.2344C13.3883 12.2344 13.281 12.1899 13.2018 12.1108C13.1227 12.0317 13.0783 11.9244 13.0783 11.8125V5.51953L4.79547 13.7953C4.71715 13.8736 4.61092 13.9176 4.50015 13.9176C4.38939 13.9176 4.28316 13.8736 4.20484 13.7953C4.12652 13.717 4.08252 13.6108 4.08252 13.5C4.08252 13.3892 4.12652 13.283 4.20484 13.2047L12.4806 4.92188H6.18765C6.07577 4.92188 5.96846 4.87743 5.88934 4.79831C5.81023 4.71919 5.76578 4.61189 5.76578 4.5C5.76578 4.38811 5.81023 4.28081 5.88934 4.20169C5.96846 4.12257 6.07577 4.07813 6.18765 4.07812H13.5002C13.612 4.07813 13.7193 4.12257 13.7985 4.20169C13.8776 4.28081 13.922 4.38811 13.922 4.5Z"
+                            fill="currentColor"></path>
+                        </svg>
                       </a>
+
                     </div>
-                    <div class="img-overlay__text">
-                      <ul>
-                        <li>JavaScript web app to generate calendar data a company's Direct Debit processes</li>
-                        <li>Features unit-testing with Mocha.js and Chai, which can be run from the browser</li>
-                      </ul>
-                    </div>
+
                   </div>
                 </div>
                 <div class="projects__text">
                   <div class="projects__top">
-                    <p class="projects__title">Direct Debit Processing Calendar</p>
+                    <div class="projects__top">
+                      <p class="projects__title">Direct Debit Processing Calendar</p>
+                    </div>
                   </div>
-                  <div class="projects__info caps">
+                  <div class="projects__info">
                     <div class="projects__languages">
                       <p>HTML/CSS</p>
                       <p>JAVASCRIPT</p>
-                      <p>MOCHA.JS</p>
+                      <p>Mocha.JS</p>
+                    </div>
+                    <div class="projects__description">
+                      <p>JavaScript web app to generate calendar data a company's Direct Debit processes. Features
+                        unit-testing with Mocha.js and Chai, which can be run from the browser</p>
                     </div>
                     <div class="projects__links">
                       <a href="projects/directDebits" class="underline underline--animated">
-                        <i class="fa-solid fa-book projects__icon"></i>
-                        <span class="link">View project</span>
+                        <div class="projects__link">
+                          <i class="fa-solid fa-book projects__icon"></i>
+                          <span class="link">View project</span>
+                          <svg width="1.3rem" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M13.922 4.5V11.8125C13.922 11.9244 13.8776 12.0317 13.7985 12.1108C13.7193 12.1899 13.612 12.2344 13.5002 12.2344C13.3883 12.2344 13.281 12.1899 13.2018 12.1108C13.1227 12.0317 13.0783 11.9244 13.0783 11.8125V5.51953L4.79547 13.7953C4.71715 13.8736 4.61092 13.9176 4.50015 13.9176C4.38939 13.9176 4.28316 13.8736 4.20484 13.7953C4.12652 13.717 4.08252 13.6108 4.08252 13.5C4.08252 13.3892 4.12652 13.283 4.20484 13.2047L12.4806 4.92188H6.18765C6.07577 4.92188 5.96846 4.87743 5.88934 4.79831C5.81023 4.71919 5.76578 4.61189 5.76578 4.5C5.76578 4.38811 5.81023 4.28081 5.88934 4.20169C5.96846 4.12257 6.07577 4.07813 6.18765 4.07812H13.5002C13.612 4.07813 13.7193 4.12257 13.7985 4.20169C13.8776 4.28081 13.922 4.38811 13.922 4.5Z"
+                              fill="currentColor"></path>
+                          </svg>
+                        </div>
                       </a>
+
                       <a href="" class="underline underline--animated">
-                        <i class="fa-solid fa-laptop-code projects__icon"></i>
-                        <span class="link">View code</span>
+                        <div class="projects__link">
+                          <i class="fa-solid fa-laptop-code projects__icon"></i>
+                          <span class="link">View code</span>
+                          <svg width="1.3rem" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M13.922 4.5V11.8125C13.922 11.9244 13.8776 12.0317 13.7985 12.1108C13.7193 12.1899 13.612 12.2344 13.5002 12.2344C13.3883 12.2344 13.281 12.1899 13.2018 12.1108C13.1227 12.0317 13.0783 11.9244 13.0783 11.8125V5.51953L4.79547 13.7953C4.71715 13.8736 4.61092 13.9176 4.50015 13.9176C4.38939 13.9176 4.28316 13.8736 4.20484 13.7953C4.12652 13.717 4.08252 13.6108 4.08252 13.5C4.08252 13.3892 4.12652 13.283 4.20484 13.2047L12.4806 4.92188H6.18765C6.07577 4.92188 5.96846 4.87743 5.88934 4.79831C5.81023 4.71919 5.76578 4.61189 5.76578 4.5C5.76578 4.38811 5.81023 4.28081 5.88934 4.20169C5.96846 4.12257 6.07577 4.07813 6.18765 4.07812H13.5002C13.612 4.07813 13.7193 4.12257 13.7985 4.20169C13.8776 4.28081 13.922 4.38811 13.922 4.5Z"
+                              fill="currentColor"></path>
+                          </svg>
+                        </div>
                       </a>
                     </div>
                   </div>
@@ -375,40 +418,62 @@
               </div>
               <div class="projects__box">
                 <div class="projects__img">
-                  <img src="images/thumbnail-project-1-small.webp" alt="Project 1">
+                  <img src="images/tile-puzzle-pitch.png" alt="Project 1">
                   <div class="img-overlay img-overlay--blur">
                     <div class="img-overlay__button">
                       <a class="button--outline-dark" href="salary-calculator.html">
-                        Read More >
+                        Read More <svg width="1.5rem" viewBox="0 0 18 18" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M13.922 4.5V11.8125C13.922 11.9244 13.8776 12.0317 13.7985 12.1108C13.7193 12.1899 13.612 12.2344 13.5002 12.2344C13.3883 12.2344 13.281 12.1899 13.2018 12.1108C13.1227 12.0317 13.0783 11.9244 13.0783 11.8125V5.51953L4.79547 13.7953C4.71715 13.8736 4.61092 13.9176 4.50015 13.9176C4.38939 13.9176 4.28316 13.8736 4.20484 13.7953C4.12652 13.717 4.08252 13.6108 4.08252 13.5C4.08252 13.3892 4.12652 13.283 4.20484 13.2047L12.4806 4.92188H6.18765C6.07577 4.92188 5.96846 4.87743 5.88934 4.79831C5.81023 4.71919 5.76578 4.61189 5.76578 4.5C5.76578 4.38811 5.81023 4.28081 5.88934 4.20169C5.96846 4.12257 6.07577 4.07813 6.18765 4.07812H13.5002C13.612 4.07813 13.7193 4.12257 13.7985 4.20169C13.8776 4.28081 13.922 4.38811 13.922 4.5Z"
+                            fill="currentColor"></path>
+                        </svg>
                       </a>
+
                     </div>
-                    <div class="img-overlay__text">
-                      <ul>
-                        <li>Full-stack web application with CRUD functionality</li>
-                        <li>Allows user to add/read/update/delete reviews</li>
-                      </ul>
-                    </div>
+
                   </div>
                 </div>
                 <div class="projects__text">
                   <div class="projects__top">
-                    <p class="projects__title">YelpCamp</p>
+                    <div class="projects__top">
+                      <p class="projects__title">YelpCamp</p>
+                    </div>
                   </div>
-                  <div class="projects__info caps">
+                  <div class="projects__info">
                     <div class="projects__languages">
                       <p>HTML/CSS</p>
                       <p>JAVASCRIPT</p>
                       <p>EXPRESS</p>
                       <p>MONGO DB</p>
                     </div>
+                    <div class="projects__description">
+                      <p>Full-stack web application with CRUD functionality. Allows user to add/read/update/delete
+                        reviews.</p>
+                    </div>
                     <div class="projects__links">
                       <a href="projects/yelpCamp" class="underline underline--animated">
-                        <i class="fa-solid fa-book projects__icon"></i>
-                        <span class="link">View project</span>
+                        <div class="projects__link">
+                          <i class="fa-solid fa-book projects__icon"></i>
+                          <span class="link">View project</span>
+                          <svg width="1.3rem" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M13.922 4.5V11.8125C13.922 11.9244 13.8776 12.0317 13.7985 12.1108C13.7193 12.1899 13.612 12.2344 13.5002 12.2344C13.3883 12.2344 13.281 12.1899 13.2018 12.1108C13.1227 12.0317 13.0783 11.9244 13.0783 11.8125V5.51953L4.79547 13.7953C4.71715 13.8736 4.61092 13.9176 4.50015 13.9176C4.38939 13.9176 4.28316 13.8736 4.20484 13.7953C4.12652 13.717 4.08252 13.6108 4.08252 13.5C4.08252 13.3892 4.12652 13.283 4.20484 13.2047L12.4806 4.92188H6.18765C6.07577 4.92188 5.96846 4.87743 5.88934 4.79831C5.81023 4.71919 5.76578 4.61189 5.76578 4.5C5.76578 4.38811 5.81023 4.28081 5.88934 4.20169C5.96846 4.12257 6.07577 4.07813 6.18765 4.07812H13.5002C13.612 4.07813 13.7193 4.12257 13.7985 4.20169C13.8776 4.28081 13.922 4.38811 13.922 4.5Z"
+                              fill="currentColor"></path>
+                          </svg>
+                        </div>
                       </a>
+
                       <a href="" class="underline underline--animated">
-                        <i class="fa-solid fa-laptop-code projects__icon"></i>
-                        <span class="link">View code</span>
+                        <div class="projects__link">
+                          <i class="fa-solid fa-laptop-code projects__icon"></i>
+                          <span class="link">View code</span>
+                          <svg width="1.3rem" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M13.922 4.5V11.8125C13.922 11.9244 13.8776 12.0317 13.7985 12.1108C13.7193 12.1899 13.612 12.2344 13.5002 12.2344C13.3883 12.2344 13.281 12.1899 13.2018 12.1108C13.1227 12.0317 13.0783 11.9244 13.0783 11.8125V5.51953L4.79547 13.7953C4.71715 13.8736 4.61092 13.9176 4.50015 13.9176C4.38939 13.9176 4.28316 13.8736 4.20484 13.7953C4.12652 13.717 4.08252 13.6108 4.08252 13.5C4.08252 13.3892 4.12652 13.283 4.20484 13.2047L12.4806 4.92188H6.18765C6.07577 4.92188 5.96846 4.87743 5.88934 4.79831C5.81023 4.71919 5.76578 4.61189 5.76578 4.5C5.76578 4.38811 5.81023 4.28081 5.88934 4.20169C5.96846 4.12257 6.07577 4.07813 6.18765 4.07812H13.5002C13.612 4.07813 13.7193 4.12257 13.7985 4.20169C13.8776 4.28081 13.922 4.38811 13.922 4.5Z"
+                              fill="currentColor"></path>
+                          </svg>
+                        </div>
                       </a>
                     </div>
                   </div>
@@ -416,39 +481,61 @@
               </div>
               <div class="projects__box">
                 <div class="projects__img">
-                  <img src="images/thumbnail-project-1-small.webp" alt="Project 1">
+                  <img src="images/tile-puzzle-pitch.png" alt="Project 1">
                   <div class="img-overlay img-overlay--blur">
                     <div class="img-overlay__button">
                       <a class="button--outline-dark" href="salary-calculator.html">
-                        Read More >
+                        Read More <svg width="1.5rem" viewBox="0 0 18 18" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M13.922 4.5V11.8125C13.922 11.9244 13.8776 12.0317 13.7985 12.1108C13.7193 12.1899 13.612 12.2344 13.5002 12.2344C13.3883 12.2344 13.281 12.1899 13.2018 12.1108C13.1227 12.0317 13.0783 11.9244 13.0783 11.8125V5.51953L4.79547 13.7953C4.71715 13.8736 4.61092 13.9176 4.50015 13.9176C4.38939 13.9176 4.28316 13.8736 4.20484 13.7953C4.12652 13.717 4.08252 13.6108 4.08252 13.5C4.08252 13.3892 4.12652 13.283 4.20484 13.2047L12.4806 4.92188H6.18765C6.07577 4.92188 5.96846 4.87743 5.88934 4.79831C5.81023 4.71919 5.76578 4.61189 5.76578 4.5C5.76578 4.38811 5.81023 4.28081 5.88934 4.20169C5.96846 4.12257 6.07577 4.07813 6.18765 4.07812H13.5002C13.612 4.07813 13.7193 4.12257 13.7985 4.20169C13.8776 4.28081 13.922 4.38811 13.922 4.5Z"
+                            fill="currentColor"></path>
+                        </svg>
                       </a>
+
                     </div>
-                    <div class="img-overlay__text">
-                      <ul>
-                        <li>JS app designed to test credit card numbers</li>
-                        <li>Validation functions were created according to the Luhn algorithm</li>
-                      </ul>
-                    </div>
+
                   </div>
                 </div>
                 <div class="projects__text">
                   <div class="projects__top">
-                    <p class="projects__title">Credit Card Checker</p>
+                    <div class="projects__top">
+                      <p class="projects__title">Credit Card Checker</p>
+                    </div>
                   </div>
-                  <div class="projects__info caps">
+                  <div class="projects__info">
                     <div class="projects__languages">
                       <p>HTML/CSS</p>
                       <p>JAVASCRIPT</p>
-                      <p>MOCHA.JS</p>
+
+                    </div>
+                    <div class="projects__description">
+                      <p>JS app designed to test credit card numbers. Validation functions were created according to the
+                        Luhn algorithm.</p>
                     </div>
                     <div class="projects__links">
                       <a href="projects/creditCard" class="underline underline--animated">
-                        <i class="fa-solid fa-book projects__icon"></i>
-                        <span class="link">View project</span>
+                        <div class="projects__link">
+                          <i class="fa-solid fa-book projects__icon"></i>
+                          <span class="link">View project</span>
+                          <svg width="1.3rem" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M13.922 4.5V11.8125C13.922 11.9244 13.8776 12.0317 13.7985 12.1108C13.7193 12.1899 13.612 12.2344 13.5002 12.2344C13.3883 12.2344 13.281 12.1899 13.2018 12.1108C13.1227 12.0317 13.0783 11.9244 13.0783 11.8125V5.51953L4.79547 13.7953C4.71715 13.8736 4.61092 13.9176 4.50015 13.9176C4.38939 13.9176 4.28316 13.8736 4.20484 13.7953C4.12652 13.717 4.08252 13.6108 4.08252 13.5C4.08252 13.3892 4.12652 13.283 4.20484 13.2047L12.4806 4.92188H6.18765C6.07577 4.92188 5.96846 4.87743 5.88934 4.79831C5.81023 4.71919 5.76578 4.61189 5.76578 4.5C5.76578 4.38811 5.81023 4.28081 5.88934 4.20169C5.96846 4.12257 6.07577 4.07813 6.18765 4.07812H13.5002C13.612 4.07813 13.7193 4.12257 13.7985 4.20169C13.8776 4.28081 13.922 4.38811 13.922 4.5Z"
+                              fill="currentColor"></path>
+                          </svg>
+                        </div>
                       </a>
+
                       <a href="" class="underline underline--animated">
-                        <i class="fa-solid fa-laptop-code projects__icon"></i>
-                        <span class="link">View code</span>
+                        <div class="projects__link">
+                          <i class="fa-solid fa-laptop-code projects__icon"></i>
+                          <span class="link">View code</span>
+                          <svg width="1.3rem" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M13.922 4.5V11.8125C13.922 11.9244 13.8776 12.0317 13.7985 12.1108C13.7193 12.1899 13.612 12.2344 13.5002 12.2344C13.3883 12.2344 13.281 12.1899 13.2018 12.1108C13.1227 12.0317 13.0783 11.9244 13.0783 11.8125V5.51953L4.79547 13.7953C4.71715 13.8736 4.61092 13.9176 4.50015 13.9176C4.38939 13.9176 4.28316 13.8736 4.20484 13.7953C4.12652 13.717 4.08252 13.6108 4.08252 13.5C4.08252 13.3892 4.12652 13.283 4.20484 13.2047L12.4806 4.92188H6.18765C6.07577 4.92188 5.96846 4.87743 5.88934 4.79831C5.81023 4.71919 5.76578 4.61189 5.76578 4.5C5.76578 4.38811 5.81023 4.28081 5.88934 4.20169C5.96846 4.12257 6.07577 4.07813 6.18765 4.07812H13.5002C13.612 4.07813 13.7193 4.12257 13.7985 4.20169C13.8776 4.28081 13.922 4.38811 13.922 4.5Z"
+                              fill="currentColor"></path>
+                          </svg>
+                        </div>
                       </a>
                     </div>
                   </div>
@@ -456,40 +543,61 @@
               </div>
               <div class="projects__box">
                 <div class="projects__img">
-                  <img src="images/thumbnail-project-1-small.webp" alt="Project 1">
+                  <img src="images/tile-puzzle-pitch.png" alt="Project 1">
                   <div class="img-overlay img-overlay--blur">
                     <div class="img-overlay__button">
                       <a class="button--outline-dark" href="salary-calculator.html">
-                        Read More >
+                        Read More <svg width="1.5rem" viewBox="0 0 18 18" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M13.922 4.5V11.8125C13.922 11.9244 13.8776 12.0317 13.7985 12.1108C13.7193 12.1899 13.612 12.2344 13.5002 12.2344C13.3883 12.2344 13.281 12.1899 13.2018 12.1108C13.1227 12.0317 13.0783 11.9244 13.0783 11.8125V5.51953L4.79547 13.7953C4.71715 13.8736 4.61092 13.9176 4.50015 13.9176C4.38939 13.9176 4.28316 13.8736 4.20484 13.7953C4.12652 13.717 4.08252 13.6108 4.08252 13.5C4.08252 13.3892 4.12652 13.283 4.20484 13.2047L12.4806 4.92188H6.18765C6.07577 4.92188 5.96846 4.87743 5.88934 4.79831C5.81023 4.71919 5.76578 4.61189 5.76578 4.5C5.76578 4.38811 5.81023 4.28081 5.88934 4.20169C5.96846 4.12257 6.07577 4.07813 6.18765 4.07812H13.5002C13.612 4.07813 13.7193 4.12257 13.7985 4.20169C13.8776 4.28081 13.922 4.38811 13.922 4.5Z"
+                            fill="currentColor"></path>
+                        </svg>
                       </a>
+
                     </div>
-                    <div class="img-overlay__text">
-                      <ul>
-                        <li>Web app created with CSS & JS allowing for interactive scorekeeping.</li>
-                        <li>
-                          Includes winning conditions, tiebreak and game reset functions
-                        </li>
-                      </ul>
-                    </div>
+
                   </div>
                 </div>
                 <div class="projects__text">
                   <div class="projects__top">
-                    <p class="projects__title">Ping Pong Scorekeeper</p>
+                    <div class="projects__top">
+                      <p class="projects__title">Ping Pong Scorekeeper</p>
+                    </div>
                   </div>
-                  <div class="projects__info caps">
+                  <div class="projects__info">
                     <div class="projects__languages">
                       <p>HTML/CSS</p>
                       <p>JAVASCRIPT</p>
+
+                    </div>
+                    <div class="projects__description">
+                      <p>Web app created with CSS & JS allowing for interactive scorekeeping. Includes winning
+                        conditions, tiebreak and game reset functions</p>
                     </div>
                     <div class="projects__links">
-                      <a href="projects/pingPong=" underline underline--animated">
-                        <i class="fa-solid fa-book projects__icon"></i>
-                        <span class="link">View project</span>
+                      <a href="projects/pingPong" class="underline underline--animated">
+                        <div class="projects__link">
+                          <i class="fa-solid fa-book projects__icon"></i>
+                          <span class="link">View project</span>
+                          <svg width="1.3rem" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M13.922 4.5V11.8125C13.922 11.9244 13.8776 12.0317 13.7985 12.1108C13.7193 12.1899 13.612 12.2344 13.5002 12.2344C13.3883 12.2344 13.281 12.1899 13.2018 12.1108C13.1227 12.0317 13.0783 11.9244 13.0783 11.8125V5.51953L4.79547 13.7953C4.71715 13.8736 4.61092 13.9176 4.50015 13.9176C4.38939 13.9176 4.28316 13.8736 4.20484 13.7953C4.12652 13.717 4.08252 13.6108 4.08252 13.5C4.08252 13.3892 4.12652 13.283 4.20484 13.2047L12.4806 4.92188H6.18765C6.07577 4.92188 5.96846 4.87743 5.88934 4.79831C5.81023 4.71919 5.76578 4.61189 5.76578 4.5C5.76578 4.38811 5.81023 4.28081 5.88934 4.20169C5.96846 4.12257 6.07577 4.07813 6.18765 4.07812H13.5002C13.612 4.07813 13.7193 4.12257 13.7985 4.20169C13.8776 4.28081 13.922 4.38811 13.922 4.5Z"
+                              fill="currentColor"></path>
+                          </svg>
+                        </div>
                       </a>
+
                       <a href="" class="underline underline--animated">
-                        <i class="fa-solid fa-laptop-code projects__icon"></i>
-                        <span class="link">View code</span>
+                        <div class="projects__link">
+                          <i class="fa-solid fa-laptop-code projects__icon"></i>
+                          <span class="link">View code</span>
+                          <svg width="1.3rem" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M13.922 4.5V11.8125C13.922 11.9244 13.8776 12.0317 13.7985 12.1108C13.7193 12.1899 13.612 12.2344 13.5002 12.2344C13.3883 12.2344 13.281 12.1899 13.2018 12.1108C13.1227 12.0317 13.0783 11.9244 13.0783 11.8125V5.51953L4.79547 13.7953C4.71715 13.8736 4.61092 13.9176 4.50015 13.9176C4.38939 13.9176 4.28316 13.8736 4.20484 13.7953C4.12652 13.717 4.08252 13.6108 4.08252 13.5C4.08252 13.3892 4.12652 13.283 4.20484 13.2047L12.4806 4.92188H6.18765C6.07577 4.92188 5.96846 4.87743 5.88934 4.79831C5.81023 4.71919 5.76578 4.61189 5.76578 4.5C5.76578 4.38811 5.81023 4.28081 5.88934 4.20169C5.96846 4.12257 6.07577 4.07813 6.18765 4.07812H13.5002C13.612 4.07813 13.7193 4.12257 13.7985 4.20169C13.8776 4.28081 13.922 4.38811 13.922 4.5Z"
+                              fill="currentColor"></path>
+                          </svg>
+                        </div>
                       </a>
                     </div>
                   </div>
@@ -497,57 +605,73 @@
               </div>
               <div class="projects__box">
                 <div class="projects__img">
-                  <img src="images/thumbnail-project-1-small.webp" alt="Project 1">
+                  <img src="images/tile-puzzle-pitch.png" alt="Project 1">
                   <div class="img-overlay img-overlay--blur">
                     <div class="img-overlay__button">
                       <a class="button--outline-dark" href="salary-calculator.html">
-                        Read More >
+                        Read More <svg width="1.5rem" viewBox="0 0 18 18" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M13.922 4.5V11.8125C13.922 11.9244 13.8776 12.0317 13.7985 12.1108C13.7193 12.1899 13.612 12.2344 13.5002 12.2344C13.3883 12.2344 13.281 12.1899 13.2018 12.1108C13.1227 12.0317 13.0783 11.9244 13.0783 11.8125V5.51953L4.79547 13.7953C4.71715 13.8736 4.61092 13.9176 4.50015 13.9176C4.38939 13.9176 4.28316 13.8736 4.20484 13.7953C4.12652 13.717 4.08252 13.6108 4.08252 13.5C4.08252 13.3892 4.12652 13.283 4.20484 13.2047L12.4806 4.92188H6.18765C6.07577 4.92188 5.96846 4.87743 5.88934 4.79831C5.81023 4.71919 5.76578 4.61189 5.76578 4.5C5.76578 4.38811 5.81023 4.28081 5.88934 4.20169C5.96846 4.12257 6.07577 4.07813 6.18765 4.07812H13.5002C13.612 4.07813 13.7193 4.12257 13.7985 4.20169C13.8776 4.28081 13.922 4.38811 13.922 4.5Z"
+                            fill="currentColor"></path>
+                        </svg>
                       </a>
+
                     </div>
-                    <div class="img-overlay__text">
-                      <ul>
-                        <li>Style guide page with HTML/CSS for use with web pages</li>
-                        <li>Includes JS interactivity with customisable styling (colours) and dynamic style preview
-                          section
-                        </li>
-                      </ul>
-                    </div>
+
                   </div>
                 </div>
                 <div class="projects__text">
                   <div class="projects__top">
-                    <p class="projects__title">Website Design System</p>
+                    <div class="projects__top">
+                      <p class="projects__title">Website Design System</p>
+                    </div>
                   </div>
-                  <div class="projects__info caps">
+                  <div class="projects__info">
                     <div class="projects__languages">
                       <p>HTML/CSS</p>
                       <p>JAVASCRIPT</p>
                       <p>FIGMA</p>
                     </div>
+                    <div class="projects__description">
+                      <p>Style guide page with HTML/CSS for use with web pages. Includes JS interactivity with
+                        customisable styling (colours) and dynamic style preview section.</p>
+                    </div>
                     <div class="projects__links">
                       <a href="projects/designSystem" class="underline underline--animated">
-                        <i class="fa-solid fa-book projects__icon"></i>
-                        <span class="link">View project</span>
+                        <div class="projects__link">
+                          <i class="fa-solid fa-book projects__icon"></i>
+                          <span class="link">View project</span>
+                          <svg width="1.3rem" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M13.922 4.5V11.8125C13.922 11.9244 13.8776 12.0317 13.7985 12.1108C13.7193 12.1899 13.612 12.2344 13.5002 12.2344C13.3883 12.2344 13.281 12.1899 13.2018 12.1108C13.1227 12.0317 13.0783 11.9244 13.0783 11.8125V5.51953L4.79547 13.7953C4.71715 13.8736 4.61092 13.9176 4.50015 13.9176C4.38939 13.9176 4.28316 13.8736 4.20484 13.7953C4.12652 13.717 4.08252 13.6108 4.08252 13.5C4.08252 13.3892 4.12652 13.283 4.20484 13.2047L12.4806 4.92188H6.18765C6.07577 4.92188 5.96846 4.87743 5.88934 4.79831C5.81023 4.71919 5.76578 4.61189 5.76578 4.5C5.76578 4.38811 5.81023 4.28081 5.88934 4.20169C5.96846 4.12257 6.07577 4.07813 6.18765 4.07812H13.5002C13.612 4.07813 13.7193 4.12257 13.7985 4.20169C13.8776 4.28081 13.922 4.38811 13.922 4.5Z"
+                              fill="currentColor"></path>
+                          </svg>
+                        </div>
                       </a>
+
                       <a href="" class="underline underline--animated">
-                        <i class="fa-solid fa-laptop-code projects__icon"></i>
-                        <span class="link">View code</span>
+                        <div class="projects__link">
+                          <i class="fa-solid fa-laptop-code projects__icon"></i>
+                          <span class="link">View code</span>
+                          <svg width="1.3rem" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M13.922 4.5V11.8125C13.922 11.9244 13.8776 12.0317 13.7985 12.1108C13.7193 12.1899 13.612 12.2344 13.5002 12.2344C13.3883 12.2344 13.281 12.1899 13.2018 12.1108C13.1227 12.0317 13.0783 11.9244 13.0783 11.8125V5.51953L4.79547 13.7953C4.71715 13.8736 4.61092 13.9176 4.50015 13.9176C4.38939 13.9176 4.28316 13.8736 4.20484 13.7953C4.12652 13.717 4.08252 13.6108 4.08252 13.5C4.08252 13.3892 4.12652 13.283 4.20484 13.2047L12.4806 4.92188H6.18765C6.07577 4.92188 5.96846 4.87743 5.88934 4.79831C5.81023 4.71919 5.76578 4.61189 5.76578 4.5C5.76578 4.38811 5.81023 4.28081 5.88934 4.20169C5.96846 4.12257 6.07577 4.07813 6.18765 4.07812H13.5002C13.612 4.07813 13.7193 4.12257 13.7985 4.20169C13.8776 4.28081 13.922 4.38811 13.922 4.5Z"
+                              fill="currentColor"></path>
+                          </svg>
+                        </div>
                       </a>
                     </div>
                   </div>
                 </div>
               </div>
 
-
-            </div>
-          </div>
-        </div>
       </section>
       <section class="contact bg--blue text--light" id="contactMe">
         <div class="wrapper contact__wrapper">
           <img src="images/scribble.svg" alt="" class="background">
           <div class="contact__title">
-            <h1>Contact</h1>
+            <h2 class="fw--medium">Contact</h2>
           </div>
           <div class="contact__description">
             <p>
@@ -570,7 +694,7 @@
                 placeholder="Say hello"></textarea>
             </div>
             <div class="contact__submit">
-              <button class="btn underline underline--animated text--light"><i
+              <button class="btn underline underline--animated text--light fs--h4"><i
                   class="fa-regular fa-paper-plane projects__icon"></i>
                 Send Message</button>
             </div>
