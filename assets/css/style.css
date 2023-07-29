@@ -69,22 +69,54 @@ main {
   align-items: center;
 }
 
-.header__nav a {}
-
 .header__home {
   display: flex;
   align-items: center;
-
+  height: 4rem;
   padding: 0;
   line-height: 1;
-  gap: 20px;
+  /* gap: 20px; */
   /* outline: 2px solid red; */
+}
+
+.header__logo {
+  
 }
 
 .header__logo * {
   text-align: center;
   transition: color var(--transition);
   text-decoration: none;
+}
+
+.header__logo svg {
+  width: 3.5rem;
+  height: 100%;
+}
+
+.header__bracket {
+  width: 2rem;
+}
+
+.logo__container {
+  /* animation: in 2s linear 0s infinite reverse; */
+  /* animation-play-state: paused; */
+  transform-origin: center;
+  transition: transform 4s cubic-bezier(0.175, 0.885, 0.32, 1.18);
+}
+
+.logo__container:hover {
+  transform: rotate(720deg);
+  /* animation-play-state: running; */
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .header__nav li,
@@ -94,6 +126,7 @@ footer li {
 
 .header__name {
   align-self: center;
+  margin-left: 10px;
 }
 
 .header__icons {
@@ -147,7 +180,7 @@ button {
   max-width: 50vw;
   min-height: 100vh;
   margin: 0;
-  padding: 4rem 1rem;
+  padding: 6rem 1rem;
   /* transition: translate var(--transition); */
   opacity: 0;
   transform: translateX(100px);
@@ -221,8 +254,8 @@ button {
   rotate: -45deg;
 }
 
-.header__icons svg>path,
-footer svg>path {
+.header__icons svg path,
+footer svg path {
   transition: all var(--transition);
 }
 
@@ -685,10 +718,19 @@ footer {
   /* border: 2px solid green; */
 }
 
-.footer__logos {
+.footer__icons {
+  padding: 0;
   display: flex;
   justify-content: center;
   gap: 15px;
+}
+
+.footer__icons * {
+  fill: white;
+}
+
+.test {
+  letter-spacing: 2;
 }
 
 /* FOR CLEARING SPACE AFTER FLOATED ELEMENTS */
