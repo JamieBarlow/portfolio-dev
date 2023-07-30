@@ -48,8 +48,7 @@ main {
 }
 
 .wrapper {
-  width: 100%;
-  width: var(--container-width-mobile);
+  max-width: var(--container-width-mobile);
   margin-inline: auto;
 }
 
@@ -120,7 +119,7 @@ main {
 }
 
 .header__nav li,
-footer li {
+footer li, .header__icons li {
   list-style: none;
 }
 
@@ -131,9 +130,14 @@ footer li {
 
 .header__icons {
   display: flex;
+  z-index: -1;
+  /* flex-basis: 200px; */
   gap: 20px 25px;
   padding: 0;
   justify-content: center;
+  padding: 0;
+  margin: 0;
+  /* width: 50%; */
   /* outline: 2px solid salmon; */
 }
 
@@ -222,7 +226,7 @@ button {
 
 .active-burger {
   fill: var(--background-offwhite);
-  transform: translateX(-90px);
+  transform: translateX(calc(var(--hamburger-width) + 1rem + (-1 * var(--sidebar-width))));
 }
 
 .test {
@@ -395,7 +399,7 @@ footer svg:hover path {
 
 .experience__box {
   display: flex;
-  position: relative;
+  /* position: relative; */
   flex-direction: column;
   min-width: 40%;
   max-width: 50%;
@@ -417,11 +421,13 @@ footer svg:hover path {
 
 .experience__icons {
   /* width: 30%; */
+  padding: 0;
+  margin: 0;
 }
 
 .devicon {
   display: inline-block;
-  width: 20%;
+  width: 30%;
   transition: transform 0.2s ease-in-out;
 }
 
@@ -776,12 +782,13 @@ footer {
 
   /* Layout */
   --container-width-desktop: 77%;
-  --container-width-tablet: 92%;
+  --container-width-tablet: 80%;
   --container-width-mobile: 92%;
 
   --transition: 250ms ease-in-out;
 
-  --sidebar-width: 25%;
+  --sidebar-width: 6rem;
+  --hamburger-width: 2.5rem;
 }
 
 .angle-slopeup {
@@ -974,50 +981,47 @@ section {
   /* Small tablet and above */
 
   .wrapper {
-    min-width: var(--container-width-tablet);
+    max-width: var(--container-width-tablet);
   }
 
   .header__nav {
-    flex-direction: row;
+    /* flex-direction: row; */
   }
 
   .header__home {
     text-align: left;
   }
 
+  .hamburger {
+    background-color: rgba(0, 0, 0, 0.4);
+    fill: white;
+  }
+
+  .active-burger {
+    background-color: transparent;
+  }
+
+  .sidebar {
+    opacity: 1;
+  }
+
   .header__icons {
     gap: 20px 32px;
+    position: absolute;
+    top: 2.5rem;
+    right: 8rem;
+  }
+
+  .social-icon {
+    fill: white;
+    background-color: rgba(0, 0, 0, 0.4);
   }
 
   .hero {
-    margin-top: 0;
-    margin-bottom: 0;
+    align-items: flex-start;
     /* outline: 2px solid blue; */
+    /* min-height: 80vh; */
   }
-
-  div.hero__image {
-    /* outline: 4px solid green; */
-    flex-grow: 10;
-  }
-
-  .hero__image {
-    /* Flex item */
-    /* flex: 1 1; */
-  }
-
-  /* .hero__image img {
-    translate: 0;
-    left: auto;
-    right: 0;
-  } */
-
-  /* .hero__image img {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    translate: -50%;
-    z-index: -1;
-  } */
 
   /* Adjusts ASCII image properties */
   #profilePic {
@@ -1030,70 +1034,38 @@ section {
   }
 
   .hero__text {
+    /* align-items: flex-start; */
     justify-content: flex-start;
     text-align: start;
     gap: 40px 0;
-    max-width: 50%;
     margin: 0;
-    justify-content: center;
-    min-width: 0;
-    /* outline: 2px solid lime; */
-    /* padding-bottom: 200px; */
-    width: 58vw;
+    flex-basis: 40vw;
+    max-width: 40vw;
+    height: 100%;
   }
-
-  .hero__text * {}
-
-  .hero__headline {}
-
-  .hero__description {}
 
   .hero__rings {
     translate: -40%;
     /* outline: 1px solid orange; */
   }
 
-  .experience {
-    font-size: var(--fs-h1);
-    /* padding: 20px 0; */
+  h4 {
     text-align: start;
   }
 
-  .experience__wrapper {
-    flex-direction: row;
-    align-items: flex-end;
-    flex-wrap: wrap;
-    /* outline: 2px solid red; */
-  }
-
   .experience__box {
-    flex-basis: 30%;
-    margin-top: 20px;
+    align-items: center;
+    align-content: center;
+    flex: 1;
+  }
+
+  .experience__icons {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    font-size: var(--fs-h3);
-    text-transform: uppercase;
-    font-weight: 500;
-    /* outline: 2px solid blue; */
-    position: relative;
+    justify-content: center;
   }
 
-  .experience__box::before,
-  .experience__box::after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    width: 20%;
-    height: 20px;
-    left: 0;
-    padding: 15px;
-    border-bottom: 2px solid var(--green__highlight);
+  .devicon {
   }
-
-  .experience__icons {}
 
   .projects {
     margin-top: 50px;
