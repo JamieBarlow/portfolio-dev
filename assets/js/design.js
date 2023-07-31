@@ -1,3 +1,17 @@
+// Navbar intersection changes
+const header = document.querySelector('header');
+const scrollWatcher = document.createElement('div');
+scrollWatcher.setAttribute('data-scroll-watcher', '');
+header.before(scrollWatcher);
+
+const navObserver = new IntersectionObserver((entries) => {
+  console.log(entries);
+  header.classList.toggle('sticking', !entries[0].isIntersecting);
+}, {rootMargin: "100px 0px 0px 0px"});
+
+
+navObserver.observe(scrollWatcher);
+
 // Slide in animations
 const slideElems = document.querySelectorAll(".slide-up, .slide-right, .slide-left");
 
@@ -10,13 +24,13 @@ const callback = (entries, observer) => {
   })
 }
 
-const options = {
+const slideOptions = {
   root: null,
   rootMargin: '0px',
   threshold: 0.2
 }
 
-const observer = new IntersectionObserver(callback, options)
+const observer = new IntersectionObserver(callback, slideOptions)
 
 slideElems.forEach(elem => {
   observer.observe(elem);

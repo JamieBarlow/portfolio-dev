@@ -24,27 +24,34 @@
 <body class="ff-archivo">
   <%- include('../partials/navbar') %>
     <main>
-      <section class="hero wrapper">
-        <!-- <img class="hero__logo" src="assets/images/transparentlogo-white.png"> -->
-        <div class="hero__image" id="image-container">
-          <!-- <img src="assets/images/image-profile-mobile.webp" alt="Picture of me" srcset="
-            assets/images/image-profile-desktop.webp 890w,
-            assets/images/image-profile-tablet.webp 646w,
-            assets/images/image-profile-mobile.webp 348w" sizes="
-            (max-width: 600px) 46vw,
-            (max-width: 992px) 41vw, 30vw"> -->
+      <section class="hero">
+
+        <div class="hero__main">
+          <!-- <img class="hero__logo" src="assets/images/transparentlogo-white.png"> -->
+          <div class="hero__image" id="image-container">
+            <!-- <img src="assets/images/image-profile-mobile.webp" alt="Picture of me" srcset="
+              assets/images/image-profile-desktop.webp 890w,
+              assets/images/image-profile-tablet.webp 646w,
+              assets/images/image-profile-mobile.webp 348w" sizes="
+              (max-width: 600px) 46vw,
+              (max-width: 992px) 41vw, 30vw"> -->
+          </div>
+          <div class="hero__text wrapper">
+            <h1 class="hero__headline">Hi there,<br>I'm <span class="svg--underlined">Jamie.<svg viewbox="0 0 261 15"
+                  class="svg--underline">
+                  <path
+                    d="M260.873 1.13231C261.529 3.77683 256.062 3.58368 254.362 4.35423C234.067 8.56861 196.462 11.0159 175.722 12.0618C158.958 12.8467 142.229 14.1022 125.444 14.4597C113.074 14.9857 100.688 14.4207 88.3119 14.7844C62.2162 14.9714 35.9892 15.1707 10.0571 12.0453C7.36529 11.5029 4.5057 11.4453 1.93012 10.5145C-4.66696 6.11313 7.52882 6.09053 10.2184 6.55697C87.6685 12.5261 88.6863 12.1789 147.548 10.2248C173.583 9.44806 199.451 6.27752 239.373 1.7056C240.389 1.57204 241.349 2.43711 241.192 3.42341C245.104 2.90146 248.999 2.27037 252.873 1.53094C254.881 1.05217 256.897 0.593955 258.887 0.0535445C259.3 -0.0504262 259.739 0.00403855 260.11 0.205278C260.481 0.406518 260.755 0.738539 260.873 1.13026V1.13231Z"
+                    fill="hsl(153, 71%, 59%)" />
+                </svg></span></h1>
+            <h4 class="hero__description ">Based in the UK, I'm a front-end developer with a passion for
+              building high quality and accessible web apps. You can check out my work below.</h4>
+          </div>
         </div>
-        <div class="hero__text wrapper">
-          <h1 class="hero__headline">Hi there,<br>I'm <span class="svg--underlined">Jamie.<svg viewbox="0 0 261 15"
-                class="svg--underline">
-                <path
-                  d="M260.873 1.13231C261.529 3.77683 256.062 3.58368 254.362 4.35423C234.067 8.56861 196.462 11.0159 175.722 12.0618C158.958 12.8467 142.229 14.1022 125.444 14.4597C113.074 14.9857 100.688 14.4207 88.3119 14.7844C62.2162 14.9714 35.9892 15.1707 10.0571 12.0453C7.36529 11.5029 4.5057 11.4453 1.93012 10.5145C-4.66696 6.11313 7.52882 6.09053 10.2184 6.55697C87.6685 12.5261 88.6863 12.1789 147.548 10.2248C173.583 9.44806 199.451 6.27752 239.373 1.7056C240.389 1.57204 241.349 2.43711 241.192 3.42341C245.104 2.90146 248.999 2.27037 252.873 1.53094C254.881 1.05217 256.897 0.593955 258.887 0.0535445C259.3 -0.0504262 259.739 0.00403855 260.11 0.205278C260.481 0.406518 260.755 0.738539 260.873 1.13026V1.13231Z"
-                  fill="hsl(153, 71%, 59%)" />
-              </svg></span></h1>
-          <h4 class="hero__description ">Based in the UK, I'm a front-end developer with a passion for
-            building high quality and accessible web apps. You can check out my work below.</h4>
-          <a class="hero__contact underline underline--blue fs--h3" href="#contactMe">Get in touch</a>
-        </div>
+        <div class="hero__contact"><button class="pushable">
+          <a class="front fs--h3" href="#contactMe">Get in
+              touch</a>
+        </button>
+          </div>
 
       </section>
       <section class="experience text--light">

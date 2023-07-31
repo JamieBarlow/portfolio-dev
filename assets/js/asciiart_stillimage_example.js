@@ -308,6 +308,6 @@ typeArray2d = function(_arr2d, _dst, _x, _y, _w, _h) {
 
 function canvasSize() {
   const profilePic = document.querySelector('#profilePic');
-  profilePic.style.maxWidth = '46vw'
+  profilePic.style.maxWidth = '50vw'
   profilePic.style.height = 'auto'
 }
