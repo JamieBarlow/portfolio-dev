@@ -614,7 +614,7 @@ footer svg:hover path {
   display: inline-block;
   text-decoration: none;
   align-items: center;
-  gap: 2px;
+  padding-right: 5px;
 }
 
 /* CONTACT SECTION */
@@ -995,6 +995,7 @@ section {
   .hamburger {
     background-color: rgba(0, 0, 0, 0.4);
     fill: white;
+    z-index: 3;
   }
 
   .active-burger {
@@ -1003,13 +1004,14 @@ section {
 
   .sidebar {
     opacity: 1;
+    z-index: 2;
   }
 
   .header__icons {
     gap: 20px 32px;
     position: absolute;
-    top: 2.5rem;
-    right: 8rem;
+    top: 2.2rem;
+    right: 5rem;
   }
 
   .social-icon {
@@ -1085,6 +1087,10 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+  }
+
+  .projects__link {
+    /* align-items: flex-start; */
   }
 
   .angle-slopeup {
