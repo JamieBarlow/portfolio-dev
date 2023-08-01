@@ -1,14 +1,14 @@
 // Navbar intersection changes
 const header = document.querySelector('header');
 const headerLogos = document.querySelectorAll(
-  '.header__name > a, .header__logo, .header__bracket'
+  '.header__name > a, .header__logo, .header__bracket, .menu-button'
 );
-console.log(headerLogos);
+const heroHeadline = document.querySelector('.hero__image');
 const socialIcons = document.querySelector('.header__icons');
 const tablet = window.matchMedia('(min-width: 600px)');
-const scrollWatcher = document.createElement('div');
-scrollWatcher.setAttribute('data-scroll-watcher', '');
-header.before(scrollWatcher);
+// const scrollWatcher = document.createElement('div');
+// scrollWatcher.setAttribute('data-scroll-watcher', '');
+// header.before(scrollWatcher);
 
 const navObserver = new IntersectionObserver(
   (entries) => {
@@ -21,10 +21,10 @@ const navObserver = new IntersectionObserver(
       socialIcons.classList.toggle('invisible', !entries[0].isIntersecting);
     }
   },
-  { rootMargin: '10px 0px 0px 0px' }
+  { root: null, rootMargin: '-40px', threshold: 0.8 }
 );
 
-navObserver.observe(scrollWatcher);
+navObserver.observe(heroHeadline);
 
 // Slide in animations
 const slideElems = document.querySelectorAll(
