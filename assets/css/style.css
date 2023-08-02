@@ -217,13 +217,17 @@ button {
   margin: 0;
   padding: 6rem 1rem;
   opacity: 0;
-  transform: translateX(100px);
+  transform: translateX(400px);
   transition: transform 0.5s, opacity 1s;
   z-index: 2;
 }
 
 .sidebar__link a {
   color: var(--background-offwhite);
+}
+
+.sidebar__link a:hover {
+  color: var(--green__highlight);
 }
 
 .slide-up {
@@ -331,7 +335,7 @@ footer svg:hover path {
 /* HERO */
 
 .hero {
-  min-height: 85vw;
+  min-height: 85vh;
   margin: 0;
 }
 
@@ -839,7 +843,7 @@ footer {
 
   --transition: 250ms ease-in-out;
 
-  --sidebar-width: 6rem;
+  --sidebar-width: 30vw;
   --hamburger-width: 2.5rem;
 }
 
@@ -1383,13 +1387,22 @@ section {
     font-size: clamp(3.81rem, 0vw + 3.81rem, 3.81rem);
   }
 
+  .sidebar__link a {
+    font-size: var(--fs-h4);
+  }
 
   .hero__main {
     min-height: 0
   }
 
+  .hero__description {
+    font-size: var(--fs-h3);
+    font-weight: 300;
+  }
+
   .hero__contact {
-    max-width: 50vw;
+    padding-top: 10vh;
+    /* max-width: 50vw; */
   }
 }
 
