@@ -1,7 +1,7 @@
 // Navbar intersection changes
 const header = document.querySelector('header');
 const headerLogos = document.querySelectorAll(
-  '.header__name > a, .header__logo, .header__bracket, .menu-button'
+  '.header__name > a, .header__logo, .header__bracket, .menu-button, .hamburger, .social-icon'
 );
 const heroHeadline = document.querySelector('.hero__image');
 const socialIcons = document.querySelector('.header__icons');
