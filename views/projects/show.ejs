@@ -9,9 +9,29 @@
 <body>
     <% layout('../layouts/boilerplate')%>
     <main>
-        <section class="hero wrapper">
-            <h1><%= projectInfo.title %></h1>
-            <p><%= projectInfo.description %></p>
+        <section class="hero">
+            <div class="project__header wrapper">
+                <h1><%= projectInfo.title %></h1>
+                <p><%= projectInfo.about %></p>
+                <div class="project__info">
+                    <div class="project__stack">
+                        <h4>Tech stack</h4>
+                        <ul>
+                        <% for (tech of projectInfo.stack) { %> 
+                            <li><%= tech %></li>
+                        <% } %>
+                        </ul>
+                    </div>
+                    <div class="project__live">
+                        <h4>Live</h4>
+                        <a href="<%= projectInfo.live %>">View Site</a>
+                    </div>
+                    <div class="project__code">
+                        <h4>Code</h4>
+                        <a href="<%= projectInfo.code %>">View GitHub</a>
+                    </div>
+                </div>
+            </div>
         </section>
         <section class="wrapper">
             
