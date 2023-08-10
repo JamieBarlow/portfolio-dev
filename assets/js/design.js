@@ -3,7 +3,7 @@ const header = document.querySelector('header');
 const headerLogos = document.querySelectorAll(
   '.header__name > a, .header__logo, .header__bracket, .menu-button, .hamburger, .social-icon'
 );
-const heroHeadline = document.querySelector('.hero__image');
+const observedElem = document.querySelector('.observed');
 const socialIcons = document.querySelector('.header__icons');
 const tablet = window.matchMedia('(min-width: 600px)');
 // const scrollWatcher = document.createElement('div');
@@ -21,10 +21,10 @@ const navObserver = new IntersectionObserver(
       socialIcons.classList.toggle('invisible', !entries[0].isIntersecting);
     }
   },
-  { root: null, rootMargin: '-40px', threshold: 0.8 }
+  { root: null, rootMargin: '0px', threshold: 0.8 }
 );
 
-navObserver.observe(heroHeadline);
+navObserver.observe(observedElem);
 
 // Slide in animations
 const slideElems = document.querySelectorAll(

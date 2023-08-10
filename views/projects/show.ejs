@@ -11,7 +11,7 @@
     <main>
         <section class="hero">
             <div class="project__header wrapper">
-                <h1><%= projectInfo.title %></h1>
+                <h1 class="observed"><%= projectInfo.title %></h1>
                 <p><%= projectInfo.about %></p>
                 <div class="project__info">
                     <div class="project__stack">
@@ -32,12 +32,15 @@
                     </div>
                 </div>
             </div>
+            <div class="project__mainImg wrapper">
+                <img src="../images/<%=projectInfo.images[0]%>">
+            </div>
         </section>
         <section class="wrapper">
             
         </section>
         
     </main>
-    <!-- <img src="/images/jamie-1.jpg" alt=""> -->
+    <script src="../js/design.js"></script>
 </body>
 </html>
