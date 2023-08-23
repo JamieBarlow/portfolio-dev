@@ -1,0 +1,11 @@
+.social-icon, .hamburger {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.social-icon path, .hamburger {
+    fill: black;
+}
+
+.social-icon.whiteOnBlack path, .hamburger.whiteOnBlack {
+    fill: white;
+}
