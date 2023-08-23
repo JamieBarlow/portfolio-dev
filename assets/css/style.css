@@ -64,6 +64,10 @@ header.sticking {
   color: white;
 }
 
+.header__name > a.whiteOnBlack:hover {
+  color: var(--green__highlight);
+}
+
 .header__logo.whiteOnBlack,
 .menu-button.whiteOnBlack {
   fill: white;
@@ -177,11 +181,6 @@ footer li,
   z-index: 1;
 }
 
-.header__home:hover li *,
-.header__home:hover {
-  color: var(--green__highlight);
-}
-
 button {
   background: transparent;
   border: none;
@@ -226,10 +225,6 @@ button {
 .sidebar__link a {
   color: var(--background-offwhite);
   font-size: var(--fs-p);
-}
-
-.sidebar__link a:hover {
-  color: var(--green__highlight);
 }
 
 .slide-up {
@@ -294,7 +289,7 @@ button {
 }
 
 .header__icons svg path,
-footer svg path {
+footer svg path, .header__name a, .sidebar__link a, .footer__home a {
   transition: all var(--transition);
 }
 
@@ -334,6 +329,14 @@ footer svg:hover path {
 
 .pushable:focus:not(:focus-visible) {
   outline: none;
+}
+
+.contact__submit {
+  color: white;
+}
+
+.hover--green:hover, .sidebar__link a:hover, .contact__submit:hover {
+  color: var(--green__highlight);
 }
 
 /* HERO */
@@ -1144,10 +1147,6 @@ section {
   text-decoration-color: white;
 }
 
-.underline:hover {
-  color: var(--green__highlight);
-}
-
 .underline--blue:hover {
   color: var(--vibrant-blue);
 }
@@ -1249,8 +1248,8 @@ section {
     /* flex-direction: row; */
   }
 
-  .header__home {
-    text-align: left;
+  .header__name {
+    font-size: var(--fs-h4);
   }
 
   .menu-button {
@@ -1327,10 +1326,9 @@ section {
     text-align: start;
   }
 
-  h4,
-  .fs--h4 {
-    /* padding-top: 10vh; */
-    font-size: var(--fs-h3);
+  .header__home {
+    text-align: left;
+    font-size: var(--fs-h4);
   }
 
   .experience {
@@ -1372,7 +1370,7 @@ section {
   .projects__row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 2fr repeat(4, 0.5fr);
+    /* grid-template-rows: 2fr repeat(4, 0.5fr); */
     column-gap: 1rem;
     align-items: start;
   }
@@ -1483,12 +1481,17 @@ section {
     padding-left: var(--4);
   }
 
+  .hero__headline {
+    margin: var(--4) 0;
+  }
+
   .hero__description {
     font-size: var(--fs-h3);
   }
 
   .hero__contact {
     max-width: 50vw;
+    /* margin-left: var(--5); */
   }
 
   .social-icon {
@@ -1505,6 +1508,10 @@ section {
 
   .devicon {
     width: 15%;
+  }
+
+  .projects__img img {
+    max-height: 20rem;
   }
 
   .projects__links {
