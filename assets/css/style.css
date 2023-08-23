@@ -438,8 +438,9 @@ footer svg:hover path {
 .experience {
   text-align: center;
   margin: 0;
-  margin-top: 2rem;
-  padding-top: 5rem;
+  padding: 0;
+  /* margin-top: 2rem; */
+  /* padding-top: 5rem; */
 }
 
 .experience__wrapper {
@@ -1107,9 +1108,6 @@ a {
 /* Other */
 
 section {
-  /* border: 20px; */
-  margin-top: 10px;
-  /* border: 20px; */
   display: block;
 }
 
@@ -1287,6 +1285,8 @@ section {
 
   .hero__main {
     max-width: 50vw;
+    align-items: flex-start;
+    padding-left: var(--4);
   }
 
   /* Adjusts ASCII image properties */
@@ -1353,6 +1353,7 @@ section {
   }
 
   .devicon {
+    width: 20%;
   }
 
   .projects {
@@ -1434,6 +1435,14 @@ section {
     min-height: 0;
   }
 
+  .header__home {
+    justify-content: flex-start;
+  }
+
+  .hero__main {
+    padding-left: var(--5);
+  }
+
   .hero__description {
     font-size: var(--fs-h3);
     font-weight: 300;
@@ -1470,6 +1479,10 @@ section {
     font-size: var(--fs-h5);
   }
 
+  .header__home {
+    padding-left: var(--4);
+  }
+
   .hero__description {
     font-size: var(--fs-h3);
   }
@@ -1490,6 +1503,10 @@ section {
     width: 30%;
   }
 
+  .devicon {
+    width: 15%;
+  }
+
   .projects__links {
     justify-content: flex-start;
   }
@@ -1507,6 +1524,13 @@ section {
 
   .divider {
     min-width: 100%;
+    font-size: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  .divider path {
+    width: 100%;
   }
 
   .header__home {
@@ -1529,8 +1553,28 @@ section {
     font-size: var(--fs-h2);
   }
 
-  .experience {
+  /* .experience {
     margin-top: 15rem;
+  } */
+
+  .experience__header {
+    text-align: left;
+  }
+
+  .experience__subheader {
+    /* max-width: 70%; */
+  }
+
+  .experience__box {
+    align-items: flex-start;
+  }
+
+  .experience__icons {
+    justify-content: flex-start;
+  }
+
+  .experience__box::after {
+    align-self: flex-start;
   }
 
   .projects__languages > p {
