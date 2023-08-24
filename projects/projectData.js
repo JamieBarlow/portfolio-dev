@@ -26,7 +26,18 @@ const projectData = {
       'In future I would also consider where well-chosen libraries can make implementation easier, though the process of learning the canvas API, as I wrote the initial program, was also valuable.',
     ],
     images: ['tile-puzzle-pitch.png'],
-    otherProjects: ['schillingerRtm', 'directDebits'],
+    otherProjects: {
+      schillingerRtm: {
+        title: 'Schillinger Rhythm Generator',
+        previewImg: 'schillinger.png',
+        link: 'schillingerRtm'
+      },
+      directDebits: {
+        title: 'Direct Debit Date Calculator',
+        previewImg: 'dd-calculator.png',
+        link: 'directDebits'
+      }
+    }
   },
   directDebits: {
     title: 'Direct Debit Processing Calendar',
