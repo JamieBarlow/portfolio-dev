@@ -1,11 +1,26 @@
-.social-icon, .hamburger {
-    background-color: rgba(0, 0, 0, 0);
+/* Project show page */
+
+.project__info {
+  display: flex;
+  justify-content: space-between;
 }
 
-.social-icon path, .hamburger {
-    fill: black;
+.social-icon,
+.hamburger {
+  background-color: rgba(0, 0, 0, 0);
 }
 
-.social-icon.whiteOnBlack path, .hamburger.whiteOnBlack {
-    fill: white;
+.social-icon path,
+.hamburger {
+  fill: black;
+}
+
+.social-icon.whiteOnBlack path,
+.hamburger.whiteOnBlack,
+.hamburger.active-burger {
+  fill: white;
+}
+
+.project__stackList {
+  padding: 0;
 }
