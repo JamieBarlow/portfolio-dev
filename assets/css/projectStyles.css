@@ -1,11 +1,32 @@
-.social-icon, .hamburger {
-    background-color: rgba(0, 0, 0, 0);
+/* Project show page */
+
+.project__info {
+  display: flex;
+  justify-content: space-between;
 }
 
-.social-icon path, .hamburger {
-    fill: black;
+.social-icon,
+.hamburger {
+  background-color: rgba(0, 0, 0, 0);
 }
 
+<<<<<<< HEAD
 .social-icon.whiteOnBlack path, .hamburger.whiteOnBlack, .active-burger {
     fill: white;
 }
+=======
+.social-icon path,
+.hamburger {
+  fill: black;
+}
+
+.social-icon.whiteOnBlack path,
+.hamburger.whiteOnBlack,
+.hamburger.active-burger {
+  fill: white;
+}
+
+.project__stackList {
+  padding: 0;
+}
+>>>>>>> 73312ba9b398fba751e2aaefcf5734b738156f6d

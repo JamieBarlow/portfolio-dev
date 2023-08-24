@@ -146,7 +146,8 @@ header.sticking {
 
 .header__nav li,
 footer li,
-.header__icons li {
+.header__icons li,
+li {
   list-style: none;
 }
 
@@ -289,7 +290,10 @@ button {
 }
 
 .header__icons svg path,
-footer svg path, .header__name a, .sidebar__link a, .footer__home a {
+footer svg path,
+.header__name a,
+.sidebar__link a,
+.footer__home a {
   transition: all var(--transition);
 }
 
@@ -335,7 +339,9 @@ footer svg:hover path {
   color: white;
 }
 
-.hover--green:hover, .sidebar__link a:hover, .contact__submit:hover {
+.hover--green:hover,
+.sidebar__link a:hover,
+.contact__submit:hover {
   color: var(--green__highlight);
 }
 
@@ -1226,13 +1232,6 @@ section {
 .invisible {
   display: none;
   /* opacity: 0; */
-}
-
-/* Project show page */
-
-.project__info {
-  display: flex;
-  justify-content: space-between;
 }
 
 /* Media queries */
