@@ -919,7 +919,7 @@ h5,
 
 p,
 .fs-p,
-a {
+a, li {
   font-size: var(--fs-p);
   font-weight: 500;
   line-height: 1.55em;

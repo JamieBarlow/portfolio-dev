@@ -25,7 +25,7 @@ const projectData = {
       'While some change will be inevitable throughout development and testing, mapping out the design logic further to anticipate issues before writing code could have helped to avoid some rewriting and refactoring.',
       'In future I would also consider where well-chosen libraries can make implementation easier, though the process of learning the canvas API, as I wrote the initial program, was also valuable.',
     ],
-    images: ['tile-puzzle-pitch.png'],
+    images: ['tile-puzzle-pitch-wide.png', 'puzzle-screenshot.png', 'puzzle-complete.jpg', 'puzzle-split.png', 'puzzle-mockup.png'],
     otherProjects: {
       schillingerRtm: {
         title: 'Schillinger Rhythm Generator',
@@ -57,10 +57,16 @@ const projectData = {
     ],
     webStack:
       "JS Date object / Bank Holidays API / BootStrap / Clipboard. \n\n I chose the Chai assertion library, because it can follow a familiar 'assert' style to that provided by Node.js, but is also browser-compatible, so allowed me to display test results from the Mocha framework to end users within the app window itself, along with additional message feedback. \n\n When writing my tests, I made sure to use a '3 test phase' format - Setup, Exercise, and Verify - to make the test code easier to read and maintain. I ran them as isolated unit tests, so didn't include a teardown stage.",
-    challenges:
-      "Inconsistent playback speed - for a rhythm-based app this could be quite an issue! By default, the grid-based patterns do not play back 'on beat' but rather slow down or speed up erratically, like a drunken drummer. I therefore needed to pass in a scheduled delay time to produce a clock time that would be consistent with the sample rate, and to add some artificial latency to the playhead so that the speed matches playback. \n\n The <a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API\">Web Audio API</a>, which is used for audio playback in the browser, comes with some restrictions - understandably, auto-playback is restricted and the API therefore expects some form of explicit user interaction in order to allow permission to play audio. In practice, finding a way to consistently 'suspend' audio playback on page load across browsers (and therefore avoid errors) was unexpectedly challenging, but I was able to find a method that mimics Google's autoplay policy. \n\n Working with user-defined pattern/bar lengths, i.e. bar lengths that differ from the input pattern length - the 'interference' between the two is core to what makes Schillinger rhythms interesting, but also makes the app's logic much more complex. The visual sequencer pattern would differ on each 'cycle' and would need to be updated dynamically. \n\n See more development challenges (and solutions) in the <a href=\"https://github.com/JamieBarlow/drum-machine\">GitHub docs</a>",
-    lessons:
-      "This was a great experience in collaboration, working together to understand the aims and ideas of the client, and communicating with them the technical challenges or steps needed to translate these into functioning code. I set out a plan covering the features that were in scope for the project, and laid out the development stages needed to build a successful app, working through them iteratively. \n\n One key takeaway from this is that there are many ways that a user can 'break' an app or interact with it in unexpected ways, so creating a robust UI/UX that allows for flexible interaction is really important.",
+    challenges: [
+      "Inconsistent playback speed - for a rhythm-based app this could be quite an issue! By default, the grid-based patterns do not play back 'on beat' but rather slow down or speed up erratically, like a drunken drummer. I therefore needed to pass in a scheduled delay time to produce a clock time that would be consistent with the sample rate, and to add some artificial latency to the playhead so that the speed matches playback.", 
+      "The <a href=\'https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API\'>Web Audio API</a>, which is used for audio playback in the browser, comes with some restrictions - understandably, auto-playback is restricted and the API therefore expects some form of explicit user interaction in order to allow permission to play audio. In practice, finding a way to consistently 'suspend' audio playback on page load across browsers (and therefore avoid errors) was unexpectedly challenging, but I was able to find a method that mimics Google's autoplay policy.", 
+      "Working with user-defined pattern/bar lengths, i.e. bar lengths that differ from the input pattern length - the 'interference' between the two is core to what makes Schillinger rhythms interesting, but also makes the app's logic much more complex. The visual sequencer pattern would differ on each 'cycle' and would need to be updated dynamically.", 
+      "See more development challenges (and solutions) in the <a href=\'https://github.com/JamieBarlow/drum-machine\'>GitHub docs</a>"
+    ],
+    lessons: [
+      "This was a great experience in collaboration, working together to understand the aims and ideas of the client, and communicating with them the technical challenges or steps needed to translate these into functioning code. I set out a plan covering the features that were in scope for the project, and laid out the development stages needed to build a successful app, working through them iteratively.",
+      "One key takeaway from this is that there are many ways that a user can 'break' an app or interact with it in unexpected ways, so creating a robust UI/UX that allows for flexible interaction is really important.",
+    ],
     images: ['creditcard.jpg'],
     otherProjects: ['slidingPuzzle', 'schillingerRtm'],
   },
