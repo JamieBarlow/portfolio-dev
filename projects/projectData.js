@@ -127,7 +127,7 @@ const projectData = {
     description: '',
     challenges: '',
     lessons: '',
-    images: [],
+    images: ['rhythm-notation.png', 'rhythm-app.png', 'rhythm-type1.png', 'rhythm-symmetry.png', 'rhythm-type2.png'],
     otherProjects: ['directDebits', 'slidingPuzzle'],
   },
   creditCardChecker: {

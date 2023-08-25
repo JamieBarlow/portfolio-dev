@@ -81,6 +81,10 @@ li, a {
 }
 
 @media screen and (min-width: 768px) {
+  .project__header h1 {
+    max-width: 70%;
+  }
+  
   .col-layout {
     flex-direction: row;
   }
