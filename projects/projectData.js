@@ -6,8 +6,9 @@ const projectData = {
     live: 'https://jamiebarlow.github.io/sliding-puzzle-p5/',
     about:
       'This sliding puzzle was inspired by collaboration with a graphic designer, whose brief was to present a landing page for a healthcare organisation in an eye-catching and educational way. We chose to include a sliding puzzle, as a creative and dynamic way of displaying information, so I opted to build this interactive component for the design.',
-    purpose:
+    purpose: [
       "The puzzle isn't simply there for decoration - it would also allow the client to display a relevant fact under each tile, inspiring curiosity. At the same time, the format is immediately recognisable and intuitive to many users. The aim is to hold the user's interest while they attempt the puzzle, but also to not lock the user out of any key element of the experience, by making this dependent on them finishing the puzzle (which can be surprisingly difficult!) - completion is very much an optional 'bonus' (with a small reward).",
+    ],
     features: [
       "Flexible design - the puzzle automatically cuts and shuffles any image, without needing to manually create 'tile' assets;",
       'Board length and width can also be defined as needed;',
@@ -25,19 +26,25 @@ const projectData = {
       'While some change will be inevitable throughout development and testing, mapping out the design logic further to anticipate issues before writing code could have helped to avoid some rewriting and refactoring.',
       'In future I would also consider where well-chosen libraries can make implementation easier, though the process of learning the canvas API, as I wrote the initial program, was also valuable.',
     ],
-    images: ['tile-puzzle-pitch-wide.png', 'puzzle-screenshot.png', 'puzzle-complete.jpg', 'puzzle-split.png', 'puzzle-mockup.png'],
+    images: [
+      'tile-puzzle-pitch-wide.png',
+      'puzzle-screenshot.png',
+      'puzzle-complete.jpg',
+      'puzzle-split.png',
+      'puzzle-mockup.png',
+    ],
     otherProjects: {
       schillingerRtm: {
         title: 'Schillinger Rhythm Generator',
-        previewImg: 'schillinger.png',
-        link: 'schillingerRtm'
+        previewImg: 'rhythm-app.png',
+        link: 'schillingerRtm',
       },
       directDebits: {
         title: 'Direct Debit Date Calculator',
         previewImg: 'dd-calculator.png',
-        link: 'directDebits'
-      }
-    }
+        link: 'directDebits',
+      },
+    },
   },
   directDebits: {
     title: 'Direct Debit Processing Calendar',
@@ -46,28 +53,34 @@ const projectData = {
     live: 'https://jamiebarlow.github.io/weekend-bankhol/',
     about:
       'Single page web application deployed by a large-scale organisation to calculate Direct Debit processing days for a selected year by accounting for weekends, bank holidays and other non-work days. Uses the UK Government\'s <a href="https://www.api.gov.uk/gds/bank-holidays/#bank-holidays">Bank Holidays API</a> to fetch data dynamically.',
-    purpose:
-      'Companies who operate a <a href="https://www.directdebit.co.uk/">Direct Debit scheme</a> will rely on a processing calendar to determine their schedule for specific Direct Debit processes, in order to meet the <a href="https://www.directdebit.co.uk/direct-debit-explained/direct-debit-guarantee/">Direct Debit guarantee</a>). Processing dates for both Service User and bank are determined by working days, and therefore need to be adjusted to account for bank holidays, weekends, and office closures. Determining when these dates are had proven to be a manual, surprisingly complex and error-prone process, and so this app was created to meet a real challenge / need for automation. \n\n Ultimately this app is designed to provide a reliable, consistent and maintainable means of determining Direct Debit processing days, mitigating error and risk - failure to generate this data correctly may result in multiple negative impacts that are difficult and/or costly to fix: missed or delayed submissions, payment reconciliation issues, knock-on impact on future claims, damage to reputation or the company\'s Service User status. \n\n The results are laid out in a format that fits the exact requirements of the Apps Support team for data loading, and can be copied to the clipboard with a single click.',
+    purpose: [
+      'Companies who operate a <a href="https://www.directdebit.co.uk/">Direct Debit scheme</a> will rely on a processing calendar to determine their schedule for specific Direct Debit processes, in order to meet the <a href="https://www.directdebit.co.uk/direct-debit-explained/direct-debit-guarantee/">Direct Debit guarantee</a>). Processing dates for both Service User and bank are determined by working days, and therefore need to be adjusted to account for bank holidays, weekends, and office closures. Determining when these dates are had proven to be a manual, surprisingly complex and error-prone process, and so this app was created to meet a real challenge / need for automation.',
+      "Ultimately this app is designed to provide a reliable, consistent and maintainable means of determining Direct Debit processing days, mitigating error and risk - failure to generate this data correctly may result in multiple negative impacts that are difficult and/or costly to fix: missed or delayed submissions, payment reconciliation issues, knock-on impact on future claims, damage to reputation or the company's Service User status.",
+      'The results are laid out in a format that fits the exact requirements of the Apps Support team for data loading, and can be copied to the clipboard with a single click.',
+    ],
     features: [
       'Calculates and displays non-processing days (bank holidays and weekends) for a given year',
       'User can manually add and display company-specific non-processing days (e.g. Christmas or other holiday office closures)',
       'Displays results as processing dates for the organisation, broken down by type',
       "'Copy to clipboard' button for easy export of results table",
-      'Test suite built using <a href="https://www.codecademy.com/article/tdd-u1-good-test">MC-FIRE</a> principles',
+      'Test suite built using Mocha.js testing framework, Chai.js assertion library, and <a href="https://www.codecademy.com/article/tdd-u1-good-test">MC-FIRE</a> principles',
     ],
     webStack:
       "JS Date object / Bank Holidays API / BootStrap / Clipboard. \n\n I chose the Chai assertion library, because it can follow a familiar 'assert' style to that provided by Node.js, but is also browser-compatible, so allowed me to display test results from the Mocha framework to end users within the app window itself, along with additional message feedback. \n\n When writing my tests, I made sure to use a '3 test phase' format - Setup, Exercise, and Verify - to make the test code easier to read and maintain. I ran them as isolated unit tests, so didn't include a teardown stage.",
     challenges: [
-      "Inconsistent playback speed - for a rhythm-based app this could be quite an issue! By default, the grid-based patterns do not play back 'on beat' but rather slow down or speed up erratically, like a drunken drummer. I therefore needed to pass in a scheduled delay time to produce a clock time that would be consistent with the sample rate, and to add some artificial latency to the playhead so that the speed matches playback.", 
-      "The <a href=\'https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API\'>Web Audio API</a>, which is used for audio playback in the browser, comes with some restrictions - understandably, auto-playback is restricted and the API therefore expects some form of explicit user interaction in order to allow permission to play audio. In practice, finding a way to consistently 'suspend' audio playback on page load across browsers (and therefore avoid errors) was unexpectedly challenging, but I was able to find a method that mimics Google's autoplay policy.", 
-      "Working with user-defined pattern/bar lengths, i.e. bar lengths that differ from the input pattern length - the 'interference' between the two is core to what makes Schillinger rhythms interesting, but also makes the app's logic much more complex. The visual sequencer pattern would differ on each 'cycle' and would need to be updated dynamically.", 
-      "See more development challenges (and solutions) in the <a href=\'https://github.com/JamieBarlow/drum-machine\'>GitHub docs</a>"
+      'To generate results, the app is comparing potential processing dates against the non-working days provided via API call (weekends and bank holidays), as well as company-specific holiday dates input by the user. If the 2 match, the app needs to not only shift the date backwards or forwards, but re-calculate the shift until there is no longer a clash. This required some complex nested looping logic, and testing for edge cases, including those where a non-processing day (or days) land(s) between dates where one needs to be 3 working days prior to another.',
+      "The dates calculated in each column are dependent on each other - results are not always isolated to a specific calendar year, but can be impacted by e.g. non-processing dates in the previous calendar year, or can impact the subsequent calendar year. This therefore needed to be built into the app's logic as well.",
+      "As I built the app, I made use of unit testing with Mocha/Chai to ensure that 'pure' functions, such as JS Date conversion, would provide consistent results. I also added testing for API calls to ensure that an array of dates would be returned, as expected. However, as there are many dependencies between functions for each calculation, I knew that this type of testing would not provide enough quality assurance, even if quantity of code coverage was high. I therefore decided to create mock result data to test the app's end-to-end functionality.",
+      "For an in-depth list of this and other dev challenges, see the <a href='https://github.com/JamieBarlow/weekend-bankhol#development-challenges-and-lessons-wrench'>documentation</a>.",
     ],
-    lessons: [
-      "This was a great experience in collaboration, working together to understand the aims and ideas of the client, and communicating with them the technical challenges or steps needed to translate these into functioning code. I set out a plan covering the features that were in scope for the project, and laid out the development stages needed to build a successful app, working through them iteratively.",
-      "One key takeaway from this is that there are many ways that a user can 'break' an app or interact with it in unexpected ways, so creating a robust UI/UX that allows for flexible interaction is really important.",
+    lessons: [''],
+    images: [
+      'dd-calculator.png',
+      'dd-bankhols.png',
+      'dd-resultscopied.png',
+      'dd-companyhols.png',
+      'dd-mochatests.png',
     ],
-    images: ['creditcard.jpg'],
     otherProjects: ['slidingPuzzle', 'schillingerRtm'],
   },
   yelpCamp: {
@@ -86,7 +99,7 @@ const projectData = {
     code: 'https://github.com/JamieBarlow/myYelpCamp',
     live: '',
     about: 'Full-stack CRUD application based on RESTful routing patterns',
-    purpose: '',
+    purpose: [],
     features: [
       'CRUD (create, read, update, delete) functionality for campgrounds and reviews',
       'RESTful backend routing handled in Express',
@@ -109,13 +122,13 @@ const projectData = {
     otherProjects: ['slidingPuzzle', 'schillingerRtm'],
   },
   schillingerRtm: {
-    title: 'Schillinger Rhythm App',
+    title: 'Schillinger Rhythm Generator',
     stack: ['HTML/CSS', 'JavaScript', 'p5.js', 'p5.sound'],
     code: 'https://github.com/JamieBarlow/drum-machine',
     live: 'https://jamiebarlow.github.io/drum-machine/',
     about:
       "Working in collaboration with a composer and specialist in the Schillinger System of Musical Composition, the aim of this project is to develop an application which can generate rhythms based on a numerical user input. It can serve as a tool for sparking creative inspiration, while teaching key elements of Joseph Schillinger's rhythmic theory, which can have many creative uses for composers and songwriters.",
-    purpose: '',
+    purpose: [],
     features: [
       'Drum sequencer - can be used like a regular sequencer. Clicking any cell will add or remove a beat',
       'Numerical input for users - creates a beat against the pulse',
@@ -125,9 +138,23 @@ const projectData = {
     ],
     webStack: '',
     description: '',
-    challenges: '',
-    lessons: '',
-    images: ['rhythm-notation.png', 'rhythm-app.png', 'rhythm-type1.png', 'rhythm-symmetry.png', 'rhythm-type2.png'],
+    challenges: [
+      "Inconsistent playback speed - for a rhythm-based app this could be quite an issue! By default, the grid-based patterns do not play back 'on beat' but rather slow down or speed up erratically, like a drunken drummer. I therefore needed to pass in a scheduled delay time to produce a clock time that would be consistent with the sample rate, and to add some artificial latency to the playhead so that the speed matches playback.",
+      "The <a href='https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API'>Web Audio API</a>, which is used for audio playback in the browser, comes with some restrictions - understandably, auto-playback is restricted and the API therefore expects some form of explicit user interaction in order to allow permission to play audio. In practice, finding a way to consistently 'suspend' audio playback on page load across browsers (and therefore avoid errors) was unexpectedly challenging, but I was able to find a method that mimics Google's autoplay policy.",
+      "Working with user-defined pattern/bar lengths, i.e. bar lengths that differ from the input pattern length - the 'interference' between the two is core to what makes Schillinger rhythms interesting, but also makes the app's logic much more complex. The visual sequencer pattern would differ on each 'cycle' and would need to be updated dynamically.",
+      "See more development challenges (and solutions) in the <a href='https://github.com/JamieBarlow/drum-machine'>GitHub docs</a>",
+    ],
+    lessons: [
+      'This was a great experience in collaboration, working together to understand the aims and ideas of the client, and communicating with them the technical challenges or steps needed to translate these into functioning code. I set out a plan covering the features that were in scope for the project, and laid out the development stages needed to build a successful app, working through them iteratively.',
+      "One key takeaway from this is that there are many ways that a user can 'break' an app or interact with it in unexpected ways, so creating a robust UI/UX that allows for flexible interaction is really important.",
+    ],
+    images: [
+      'rhythm-notation.png',
+      'rhythm-app.png',
+      'rhythm-type1.png',
+      'rhythm-symmetry.png',
+      'rhythm-type2.png',
+    ],
     otherProjects: ['directDebits', 'slidingPuzzle'],
   },
   creditCardChecker: {
@@ -136,7 +163,7 @@ const projectData = {
     code: '',
     live: '',
     about: '',
-    purpose: '',
+    purpose: [],
     features: [],
     webStack: '',
     description: '',
@@ -151,7 +178,7 @@ const projectData = {
     code: '',
     live: '',
     about: '',
-    purpose: '',
+    purpose: [],
     features: [],
     webStack: '',
     description: '',
@@ -166,7 +193,7 @@ const projectData = {
     code: '',
     live: '',
     about: '',
-    purpose: '',
+    purpose: [],
     features: [],
     webStack: '',
     description: '',

@@ -1,6 +1,11 @@
 /* Project show page */
-h3, h4 {
+h3,
+h4 {
   margin-top: 0;
+}
+
+.project__underline svg {
+  max-width: 85%;
 }
 
 .project__info {
@@ -13,8 +18,10 @@ h3, h4 {
   background-color: rgba(0, 0, 0, 0);
 }
 
-.social-icon.whiteOnBlack path, .hamburger.whiteOnBlack, .active-burger {
-    fill: white;
+.social-icon.whiteOnBlack path,
+.hamburger.whiteOnBlack,
+.active-burger {
+  fill: white;
 }
 .social-icon path,
 .hamburger {
@@ -49,7 +56,8 @@ h3, h4 {
   gap: 20px;
 }
 
-li, a {
+li,
+a {
   font-size: var(--fs-p);
 }
 
@@ -75,16 +83,24 @@ li, a {
 
 .screenshot-box img {
   width: 100%;
-  object-fit:fill;
+  object-fit: fill;
   /* box-shadow: 10px 5px 20px black; */
   /* object-position: 50% 0%; */
 }
 
+.screenshot-box.challenges {
+  margin-top: 5rem;
+}
+
 @media screen and (min-width: 768px) {
   .project__header h1 {
-    max-width: 70%;
+    /* max-width: 70%; */
   }
-  
+
+  .project__underline {
+    max-width: 80%;
+  }
+
   .col-layout {
     flex-direction: row;
   }
@@ -99,7 +115,6 @@ li, a {
   }
 
   .project__challenges {
-
   }
 
   .challenges-box {
@@ -108,7 +123,8 @@ li, a {
 }
 
 @media screen and (min-width: 990px) {
-  li, a {
+  li,
+  a {
     font-size: var(--fs-h5);
   }
 }
