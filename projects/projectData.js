@@ -72,7 +72,10 @@ const projectData = {
       "As I built the app, I made use of unit testing with Mocha/Chai to ensure that 'pure' functions, such as JS Date conversion, would provide consistent results. I also added testing for API calls to ensure that an array of dates would be returned, as expected. However, as there are many dependencies between functions for each calculation, I knew that this type of testing would not provide enough quality assurance, even if quantity of code coverage was high. I therefore decided to create mock result data to test the app's end-to-end functionality.",
       "For an in-depth list of this and other dev challenges, see the <a href='https://github.com/JamieBarlow/weekend-bankhol#development-challenges-and-lessons-wrench'>documentation</a>.",
     ],
-    lessons: [''],
+    lessons: [
+      'While I gained a lot of experience working with the Date object in JavaScript, I learned that there are JS date libraries which could simplify the process of converting and working with dates, thereby speeding up production.',
+      "I also learned a great deal about testing, and the value of different types of tests; in this case, I created mock data to ensure the app's output would be correct, but I am looking to further explore the possibilities of integration and end-to-end testing using faking/stubbing tools such as <a href='https://sinonjs.org/'>Sinon.js</a>, and E2E testing suites such as <a href='https://www.cypress.io/'>Cypress</a>.",
+    ],
     images: [
       'dd-calculator.png',
       'dd-bankhols.png',
@@ -80,7 +83,18 @@ const projectData = {
       'dd-companyhols.png',
       'dd-mochatests.png',
     ],
-    otherProjects: ['slidingPuzzle', 'schillingerRtm'],
+    otherProjects: {
+      schillingerRtm: {
+        title: 'Schillinger Rhythm Generator',
+        previewImg: 'rhythm-app.png',
+        link: 'schillingerRtm',
+      },
+      slidingPuzzle: {
+        title: 'Sliding Puzzle',
+        previewImg: 'tile-puzzle-pitch.png',
+        link: 'slidingPuzzle',
+      },
+    },
   },
   yelpCamp: {
     title: 'YelpCamp',
@@ -88,7 +102,7 @@ const projectData = {
       'HTML/CSS',
       'JavaScript',
       'BootStrap',
-      'ejs',
+      'EJS',
       'Express',
       'MongoDB',
       'Mongoose',
@@ -96,7 +110,7 @@ const projectData = {
       'Passport.js',
     ],
     code: 'https://github.com/JamieBarlow/myYelpCamp',
-    live: '',
+    live: 'https://pacific-earth-60535-c613ad955830.herokuapp.com',
     about: 'Full-stack CRUD application based on RESTful routing patterns',
     purpose: [],
     features: [
@@ -117,7 +131,7 @@ const projectData = {
       "Introducing extra features, such as image uploading functionality, began to 'break' other parts of the application, such as the back-end validation required for creating new campgrounds - this was dependent on a specific data model, which had now been modified to handle file uploads. The isssue was initially difficult to diagnose, as it returned 'undefined' errors rather than standard validation errors. This really highlighted the importance of testing and debugging at every stage of development, as well as clear error handling. I found that taking a modular approach to app-building made it far easier to isolate the issue to specific files/functions, in tandem with Git version control, which allowed me to identify the specific changes triggering the issue.",
     lessons:
       "I learned a lot about the many considerations that go into building a full-stack CRUD application. The project was a really good exercise in breaking an app down into all of its component parts, while seeing how they interrelate. For example, I learned the difference between authentication - registering a user, securely storing their password (with encryption), and confirming their login - and authorization (in addition to requiring a login to access certain content or functions in general, the app also handles specific permissions depending on the user, and applies server-side security measures to restrict this access, as well as hiding content). \n\n I learned about data persistence through the browser session and cookies. \n\n I learned how to approach app-building in a modular way - through templating pages, and creating middleware that can be re-used throughout the app. This avoids duplicating code, and makes things cleaner, easier to read and maintain - really important even for personal projects! One approach taken was using the MVC (Model-View-Controller) design pattern, which taught me how to practically implement a 'separation of concerns' for different parts of the app.",
-    images: [],
+    images: ['yelpcamp-homepage.png'],
     otherProjects: ['slidingPuzzle', 'schillingerRtm'],
   },
   schillingerRtm: {
