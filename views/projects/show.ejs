@@ -97,7 +97,11 @@
             </section>
             <section class="project__webStack wrapper my-5">
                 <h3>Web Stack</h3>
-                <p><%- projectInfo.webStack %></p>
+                <div class="webstack-box text-box">
+                                <% for (stack of projectInfo.webStack) { %>
+                        <p><%- stack %></p>
+                        <% } %>
+                    </div>
             </section>
             <section class="project__challenges wrapper">
                 

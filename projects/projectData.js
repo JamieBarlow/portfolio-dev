@@ -15,8 +15,9 @@ const projectData = {
       "Manual 'reshuffle' button (for testing purposes or as client desires);",
       'Custom randomization factor',
     ],
-    webStack:
+    webStack: [
       "Written in JavaScript, with <a href='https://p5js.org/'>p5.js</a> for drawing the canvas. When beginning production of the app, I had just learned some of the creative applications of JavaScript's <a href='https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API'>canvas API</a>, but realised that some additional functionality (such as the visual auto-shuffle on page load) could be achieved more easily and efficiently with the p5.js library, which uses many canvas API features under the hood. This involved some refactoring, but the resulting code was easier to maintain and therefore update, ultimately saving some production time.",
+    ],
     challenges: [
       "Sliding puzzles are familiar, but conceptualising how the puzzle could be built with programming logic, proved to be a puzzle in itself. My solution involved creating a fixed 'board' of tiles which could register the position of the user's mouse click, as well as a means of breaking up a source image into tiles, tracked with their own index numbers as they move. When the user clicks a tile, the program would need to find the location of the blank tile, before swapping their positions (the canvas actually 'redraws' on each click).",
       "The toughest challenge was discovered during testing- I learned that in some cases, randomised tile placement meant the puzzle was actually unsolvable. The solution involved reverse-engineering from a completed puzzle, with rules imposed so that each step of the 'shuffle' could only happen if the randomly-selected tile was adjacent to a blank tile, and swapping with it directly. This also required a greater amount of randomization, because there are fewer possibilities for movement on each iteration. As a result I built in a randomization index to quickly test the impact of the number of individual shuffle 'attempts' on the overall level of shuffling, and potentially the difficulty of the puzzle.",
@@ -64,8 +65,9 @@ const projectData = {
       "'Copy to clipboard' button for easy export of results table",
       'Test suite built using Mocha.js testing framework, Chai.js assertion library, and <a href="https://www.codecademy.com/article/tdd-u1-good-test">MC-FIRE</a> principles',
     ],
-    webStack:
+    webStack: [
       "JS Date object / Bank Holidays API / BootStrap / Clipboard. \n\n I chose the Chai assertion library, because it can follow a familiar 'assert' style to that provided by Node.js, but is also browser-compatible, so allowed me to display test results from the Mocha framework to end users within the app window itself, along with additional message feedback. \n\n When writing my tests, I made sure to use a '3 test phase' format - Setup, Exercise, and Verify - to make the test code easier to read and maintain. I ran them as isolated unit tests, so didn't include a teardown stage.",
+    ],
     challenges: [
       'To generate results, the app is comparing potential processing dates against the non-working days provided via API call (weekends and bank holidays), as well as company-specific holiday dates input by the user. If the 2 match, the app needs to not only shift the date backwards or forwards, but re-calculate the shift until there is no longer a clash. This required some complex nested looping logic, and testing for edge cases, including those where a non-processing day (or days) land(s) between dates where one needs to be 3 working days prior to another.',
       "The dates calculated in each column are dependent on each other - results are not always isolated to a specific calendar year, but can be impacted by e.g. non-processing dates in the previous calendar year, or can impact the subsequent calendar year. This therefore needed to be built into the app's logic as well.",
@@ -112,26 +114,37 @@ const projectData = {
     code: 'https://github.com/JamieBarlow/myYelpCamp',
     live: 'https://pacific-earth-60535-c613ad955830.herokuapp.com',
     about: 'Full-stack CRUD application based on RESTful routing patterns',
-    purpose: [],
-    features: [
-      'CRUD (create, read, update, delete) functionality for campgrounds and reviews',
-      'RESTful backend routing handled in Express',
-      'Page templating with EJS',
-      'Client-side form validations using BootStrap, server-side validation with Express (incl. custom error-handling middleware) and JOI',
-      'Data persistence and relationships managed with MongoDB and Mongoose',
-      'User registration and login functions, customised with session/cookie data',
-      'User authentication and authorization/access permissions, with Passport.js',
-      'Flash messaging feedback for successful user interactions and errors',
-      'Image uploading functionality, using Multer middleware to parse multipart/form-data (used for submitting files), and hosting by Cloudinary API',
+    purpose: [
+      'This is a web application allowing the user to create and review campgrounds, similar to a review site like Yelp.',
+      "The project forms a major part of Colt Steele's Web Developer Bootcamp on Udemy. It features full CRUD (Create, Read, Update, Destroy) functionality, and is built using the MongoDB/Express/Node stack, with RESTful architecture (exposing CRUD functionality to users with a uniform interface). The app is styled using CSS and BootStrap components.",
+      'YelpCamp has proved to be a fantastic first-hand learning exercise, working with the many fundamental considerations that go into fully building and launching a live full-stack application. This includes building on core CRUD functionality with a number of extra technologies to enhance features like form validation, user authentication and authorization, and other means of dealing with common security issues, along with additional UI features such as geocoded cluster maps.',
+      'Experience with this app has inspired, and will form the foundation for, building future full-stack applications.',
     ],
-    webStack:
-      "Used EJS to create page templates, and to interpolate JS for dynamic content and client-side authorization/permissions - for example, showing and hiding the option to leave a review depending on the user's login status, and the option to delete a campground or review only if they are the author of that specific campground/review.",
+    features: [
+      "Register / login functionality, with server-side authentication and specific authorization/permissions for campgrounds linked to a user's id and session/cookie data",
+      'CRUD (Create, Read, Update/Edit, Destroy) functionality for campgrounds and reviews (for logged in users)',
+      'Flash success/error messages providing user feedback for login, registration, and create/edit/delete actions',
+      'Client-side form validations using BootStrap, server-side data validation with Express (incl. custom error-handling middleware) and JOI',
+      'Multiple image uploading functionality',
+      'Cluster map displaying all campgrounds',
+    ],
+    webStack: [
+      'This project taught me to use a wide range of tech, building on the MongoDB/Express/Node stack with numerous libraries, while making considered choices about the best tools for each task. For some key examples:',
+      "I used EJS to create page templates, and to interpolate JS for dynamic content and client-side authorization/permissions - for example, showing and hiding the option to leave a review depending on the user's login status, and the option to delete a campground or review only if they are the author of that specific campground/review.",
+      'I used Express for server-side routing, due to its wide support and flexibility. I was able to extend its functionality with libraries such as <a href="https://www.npmjs.com/package/express-session">express-session</a>,<a href="https://www.npmjs.com/package/connect-flash">connect-flash</a>, <a href="https://www.npmjs.com/package/passport">Passport</a>, and <a href="https://www.npmjs.com/package/express-mongo-sanitize">express-mongo-sanitize</a>, while creating my own custom middleware for error handling, handling async processes, and validation.',
+      "Data persistence and relationships were managed with MongoDB, a noSQL database, and Mongoose, which extends this with the ability to define consistent data schemas/models. While a 'relational' or SQL-based database would have sufficed, MongoDB was chosen because of its frequent pairing and compatibility with both Express and Node.js, as well as flexible 'two-way referencing' between data models, such as campgrounds and reviews. This was then ported to MongoDB Atlas, a cloud-based equivalent.",
+      'Image uploading functionality, using Multer middleware to parse multipart/form-data (used for submitting files), and hosting by Cloudinary API',
+      'User authentication and authorization/access permissions, with Passport.js',
+    ],
     description: '',
     challenges: [
       "Introducing extra features, such as image uploading functionality, began to 'break' other parts of the application, such as the back-end validation required for creating new campgrounds - this was dependent on a specific data model, which had now been modified to handle file uploads. The isssue was initially difficult to diagnose, as it returned 'undefined' errors rather than standard validation errors. This really highlighted the importance of testing and debugging at every stage of development, as well as clear error handling. I found that taking a modular approach to app-building made it far easier to isolate the issue to specific files/functions, in tandem with Git version control, which allowed me to identify the specific changes triggering the issue.",
+      'Server-side routing handled in Express',
     ],
     lessons: [
       'I learned a lot about the many considerations that go into building a full-stack CRUD application. The project was a really good exercise in breaking an app down into all of its component parts, while seeing how they interrelate. For example, I learned the difference between authentication - registering a user, securely storing their password (with encryption), and confirming their login - and authorization (in addition to requiring a login to access certain content or functions in general, the app also handles specific permissions depending on the user, and applies server-side security measures to restrict this access, as well as hiding content)',
+      'Seeding data',
+      'Security issues - salting/hashing passwords',
       'I learned about data persistence through the browser session and cookies.',
       "I learned how to approach app-building in a modular way - through templating pages, and creating middleware that can be re-used throughout the app. This avoids duplicating code, and makes things cleaner, easier to read and maintain - really important even for personal projects! One approach taken was using the MVC (Model-View-Controller) design pattern, which taught me how to practically implement a 'separation of concerns' for different parts of the app.",
     ],
@@ -170,7 +183,7 @@ const projectData = {
       'User-adjustable pattern length (default is 16 beats, or the total length of the user-input beat if entered)',
       'Regular/irregular pattern selection',
     ],
-    webStack: '',
+    webStack: [],
     description: '',
     challenges: [
       "Inconsistent playback speed - for a rhythm-based app this could be quite an issue! By default, the grid-based patterns do not play back 'on beat' but rather slow down or speed up erratically, like a drunken drummer. I therefore needed to pass in a scheduled delay time to produce a clock time that would be consistent with the sample rate, and to add some artificial latency to the playhead so that the speed matches playback.",
@@ -199,7 +212,7 @@ const projectData = {
     about: '',
     purpose: [],
     features: [],
-    webStack: '',
+    webStack: [],
     description: '',
     challenges: '',
     lessons: '',
@@ -214,7 +227,7 @@ const projectData = {
     about: '',
     purpose: [],
     features: [],
-    webStack: '',
+    webStack: [],
     description: '',
     challenges: '',
     lessons: '',
@@ -229,7 +242,7 @@ const projectData = {
     about: '',
     purpose: [],
     features: [],
-    webStack: '',
+    webStack: [],
     description: '',
     challenges: '',
     lessons: '',
