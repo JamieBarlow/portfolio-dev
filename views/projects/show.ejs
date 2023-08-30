@@ -71,7 +71,7 @@
                     <img src="../images/<%=projectInfo.images[0]%>">
                 </div>
             </section>
-            <section class="project__purpose wrapper my-4">
+            <section class="project__purpose wrapper my-5">
                 <h3>The purpose</h3>
                 <% for (purposes of projectInfo.purpose) { %>
                                 <p><%- purposes %></p>
@@ -96,14 +96,20 @@
                 </div>
             </section>
             <section class="project__webStack wrapper my-5">
-                <h3>Web Stack</h3>
+                <h3>Web Stack & Tech</h3>
                 <div class="webstack-box text-box">
                                 <% for (stack of projectInfo.webStack) { %>
                         <p><%- stack %></p>
                         <% } %>
                     </div>
             </section>
-            <section class="project__challenges wrapper">
+            <section class="project__images wrapper">
+                <div class="col-layout col-imgs-2">
+                    <div><img src="../images/<%=projectInfo.images[2]%>"></div>
+                    <div><img src="../images/<%=projectInfo.images[3]%>"></div>
+                </div>
+            </section>
+            <section class="project__challenges my-5 wrapper">
                 
                 <div class="col-layout">
                     
@@ -114,8 +120,6 @@
                                 <% } %>
                     </div>
                     <div class="screenshot-box challenges">
-                        <img src="../images/<%=projectInfo.images[2]%>">
-                        <img src="../images/<%=projectInfo.images[3]%>">
                         <img src="../images/<%=projectInfo.images[4]%>">
                     </div>
                 </div>
