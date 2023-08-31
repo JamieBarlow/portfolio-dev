@@ -50,12 +50,7 @@ h4 {
   flex: 1;
 }
 
-.col-layout {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 20px;
-}
+
 
 .col-imgs-2 div {
   /* flex: 1; */
@@ -113,11 +108,6 @@ a {
 
   .project__underline {
     max-width: 80%;
-  }
-
-  .col-layout {
-    flex-direction: row;
-    flex: 1;
   }
 
   .col-imgs-2 img {

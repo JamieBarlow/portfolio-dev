@@ -29,6 +29,10 @@ app.get('/projects/:project', (req, res) => {
       }
 })
 
+app.get('/aboutMe', (req, res) => {
+    res.render('about');
+})
+
 app.get('*', (req, res) => {
     res.send('Page not found');
 })

@@ -1,12 +1,111 @@
-<p>
-    Hi there! I’m Josh. I’m a passionate introvert who loves building things with code. 
-    My first experience with programming was when I was 12, but I didn’t last long: I was a big fan of computer-animated TV shows like Reboot, and I decided I wanted to do “computer graphics”. My mom bought me a C++ Reference Manual. It was several hundred pages, and totally inscrutable to me.
-    Years later, I decided to try learning Python. It was a radically different experience. I distinctly remember the moment it clicked; I was watching The Price is Right, and they were spinning the big wheel. A contestant landed on 0.70, and it made me wonder: statistically, what was their best move? 
-    It occurred to me: I had the skills to build a simulation! So I threw together a Python script that would run thousands of simulations to work out what the right answer was. 15 minutes later, I had the answer. My burgeoning skillset was a superpower: I could derive answers that were previously off-limits to me. It was magic. Since then, I’ve been honing my skills and learning Javascript. I recently graduated from Apex College’s 12-week intensive Web Development Bootcamp program. I’m seeking a full-time role where I can help a company achieve their goals.
-    
+<!DOCTYPE html>
+<html lang="en">
 
-    As a young teenager, I was always looking for creative projects to get stuck into. Like many kids, I was into games, so naturally I built a website related to the PlayStation 2 –  an incredibly powerful, state-of-the-art console with photo-realistic graphics (this is how it felt to a kid at the time – the leap from previous console generations was pretty staggering). I had also discovered the possibilities of the Personal Computer. I was a tinkerer, but resources (and internet access – was on dial-up) were so limited that it didn’t feel like a reasonable academic or career option. I had to build the site using a couple of tutorials on HTML, and structure the site with HTML tables, and reverse-engineering layout code built in a demo/trial copy of FrontPage Express (the grownups were using DreamWeaver).
-    Years later, focusing on music software – I realised that I was using a ‘logical editor,’ writing scripts, and programming songs with samples and beats. Technology had come a long way. I was also in a heavily process-driven role, and I enjoyed problem-solving by writing programs and macros (eventually leading to my JS DD Calendar app).
-    Wanted a new challenge, but this brought me full-circle and I found that I was really enjoying learning to code – seeing a lot of creative possibilities.
-    I still love video games.
-</p>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        About Me
+    </title>
+    <link rel="stylesheet" href="/css/projectStyles.css">
+</head>
+
+<body>
+    <% layout('../layouts/boilerplate')%>
+        <main>
+            <section class="title">
+                <div class="aboutMe__title">
+                    <h1 class="observed wrapper my-5">
+                        <span class="svg--underlined project__underline">
+                            About Me<svg viewBox="0 0 261 15" class="svg--underline">
+                                <path
+                                    d="M260.873 1.13231C261.529 3.77683 256.062 3.58368 254.362 4.35423C234.067 8.56861 196.462 11.0159 175.722 12.0618C158.958 12.8467 142.229 14.1022 125.444 14.4597C113.074 14.9857 100.688 14.4207 88.3119 14.7844C62.2162 14.9714 35.9892 15.1707 10.0571 12.0453C7.36529 11.5029 4.5057 11.4453 1.93012 10.5145C-4.66696 6.11313 7.52882 6.09053 10.2184 6.55697C87.6685 12.5261 88.6863 12.1789 147.548 10.2248C173.583 9.44806 199.451 6.27752 239.373 1.7056C240.389 1.57204 241.349 2.43711 241.192 3.42341C245.104 2.90146 248.999 2.27037 252.873 1.53094C254.881 1.05217 256.897 0.593955 258.887 0.0535445C259.3 -0.0504262 259.739 0.00403855 260.11 0.205278C260.481 0.406518 260.755 0.738539 260.873 1.13026V1.13231Z"
+                                    fill="hsl(153, 71%, 59%)"></path>
+                            </svg>
+                        </span>
+                    </h1>
+                </div>
+            </section>
+            <section class="blurb slide-right bg--blue text--light">
+                <div class="wrapper aboutMe__intro p-4">
+                    <div class="aboutMe__text">
+                        <p>Hi there, I'm Jamie.</p>
+                        <p>
+                            I'm a driven, creative individual who loves building
+                            things with code.
+                        </p>
+                    </div>
+                    <img src="../images/jamie-1.jpg" alt="Profile Picture">
+                    
+            </section>
+            <section class="blurb">
+                <div class="aboutMe__blurb wrapper">
+                    <p>
+                        I started my programming journey a while ago - as a restless teenager, I was always looking for
+                        creative projects to get stuck into, and computers seemed to offer a lot of fun possibilities -
+                        whether it was tinkering with basic music software, or amateur attempts at web dev.
+                    </p>
+
+                    <div>
+                        <div class="col-layout">
+                            <p>
+                                A good number of friends and I shared a love of video games, so naturally I went all-in and
+                                built a fan
+                                website offering and content on the PS2 - a state-of-the-art console with photo-realistic
+                                graphics, if you can imagine it - hacking a layout with the aid of HTML tables (how
+                                everything
+                                on the web was built back then) and the equally modern FrontPage Express (WYSIWGY editor
+                                discontinued as of 2006), along with some (probably very cringeworthy) tributes to the
+                                review
+                                magazines we used to read.
+                            </p>
+                            <!-- <div><img src="../images/PSM2_Issue_1.webp" alt="PSM2 magazine"></div> -->
+                        </div>
+                        <p>
+                            Despite all of this natural curiosity in the days of dial-up internet, I didn't originally
+                            pursue coding as a career - I didn't feel it was 'for me,' and had a number of interests which
+                            took me in other directions, towards studying in the arts and working for charitable
+                            organisations.
+                        </p>
+                    </div>
+
+                    <div>
+                        <p>
+                            Years later, something 'clicked.' Picking up audio software (which has come a long way, as with
+                            just about all tech), I realised that I was making heavy use of something called a ‘logical
+                            editor,’ writing scripts for software samplers, and diving deep into 'programming' tracks with
+                            sequencers or Elektron devices (conditional trigs, anyone?). In my job I gravitated towards
+                            problem-solving through process automation and by writing programs and macros (leading to my <a
+                                href="./projects/directDebits"><span class="underline fs--h4 hover--green">JavaScript Direct Debit Calendar app</span></a>).
+                        </p>
+                        <div class="imgcols-2 slide-left"><div><img src="../images/guitar.png" alt="Playing guitar"></div>
+                        <div><img src="../images/jamie-2.jpg" alt="Playing piano"></div></div>
+                    </div>
+                    <p>
+                        Since then, I've come full circle and I have been intensively self-teaching programming (thanks
+                        to a wealth of online resources, and mentors in the field) - you can see what I've been working
+                        on as I learn <a href="./#projects"><span class="underline fs--h4 hover--green">here</span></a>. I'm excited to keep learning and bring this to a
+                        career in tech.
+                    </p>
+
+                    <div>
+                        <p>
+                            If you like my work and would like to contact me or build something together, I'd love to hear
+                            from you - please:
+                        <div class="hero__contact p-4 slide-right"><button class="pushable">
+                                <a class="front fs--h4" href="./#contactMe">Get in touch</a>
+                            </button>
+                        </div>
+                        </p>
+                        <p>
+                            Or if you feel like a break from reading (and why wouldn't you, after this), you can sample some
+                            <a href="https://soundcloud.com/non_zero/sets"><span class="underline fs--h4 hover--green">music</span></a>.
+                        </p>
+                    </div>
+            </section>
+        </main>
+        <script src="../js/design.js"></script>
+</body>
+
+</html>
