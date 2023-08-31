@@ -81,9 +81,9 @@ const projectData = {
     images: [
       'dd-calculator.png',
       'dd-bankhols.png',
-      'dd-resultscopied.png',
       'dd-companyhols.png',
       'dd-mochatests.png',
+      'dd-resultscopied.png',
     ],
     otherProjects: {
       schillingerRtm: {
@@ -140,8 +140,8 @@ const projectData = {
       "Apart from being the most complex and comprehensive app I have worked on to-date, this was my first time working with a 'full-stack' of tech, from front-end layout design, to server-side frameworks like Express, and databases like MongoDB. This naturally taught me a great deal about approaches to troubleshooting and problem-solving.",
       "The interdependence between the many changing parts of a full-stack application, from front-end to back-end, definitely introduces more complexity than with a simpler single-page application. Introducing extra features began to 'break' other parts of the application in unexpected ways.", "For example, adding image uploading functionality impacted the back-end validation required for creating new campgrounds - this was dependent on a specific data model, which had now been modified to handle file uploads. The isssue was initially difficult to diagnose, as it returned 'undefined' errors rather than standard validation errors. This really highlighted the importance of testing and debugging at every stage of development, as well as clear error handling. I found that taking a modular approach to app-building made it far easier to isolate the issue to specific files/functions, in tandem with Git version control, which allowed me to identify the specific changes triggering the issue.",
       "As an 'unopinionated' framework, Express is very flexible to work with, but with this naturally comes the potential for undesired issues. Working with middleware required some careful consideration in terms of program flow. Defining my own error-handling middleware was certainly very helpful for logging and debugging, but also chaining these correctly was crucial - at one point, failing to use 'next()' in a simple logger caused a lot of extra problems!",
-      "Building an app with a large number of features not only introduces many different options, but can create some conflict when bridging the gap between different tech that can achieve similar things. For example, there are many ways to approach validation. After adding both BootStrap validation and JOI server-side validation, there was some conflict - while my front-end markup did not define certain fields as required, Joi   - leading to errors when trying to set up a new campground. I therefore had to update my Joi schema with e.g: creator: Joi.string().allow('', null),",
-      "This was also my first time deploying an app to a 'live' production environment outside of GitHub Pages, so I needed to familiarise myself with the <a href='https://www.heroku.com/'>Heroku</a> ecosystem, including how to securely apply environment variables. I also needed to consider the separation between development and production environments, in terms of securely handling 'real' user data, and testing before deployment."
+      "Building an app with a large number of features not only introduces many different options, but adds complexity when bridging the gap between different tech that can achieve similar things. For example, there are many ways to approach validation for form data. After adding both BootStrap validation and JOI server-side validation, there was some conflict - while my front-end markup did not define all fields as 'required', JOI still expected non-empty values, so would throw errors. I therefore had to update my JOI schema to explicitly allow certain empty fields, keeping the two 'in sync.' There were also some complications with review star ratings, whereby a '0' star rating would fail validations, and some extra considerations needed when working with data models that included nested objects.",
+      "This was my first time deploying an app to a 'live' production environment outside of GitHub Pages, so I needed to familiarise myself with the <a href='https://www.heroku.com/'>Heroku</a> ecosystem, including how to securely apply environment variables. I also needed to consider the separation between development and production environments, in terms of securely handling 'real' user data, and testing before deployment."
     ],
     lessons: [
       "The scope of this project was large, and I learned a lot about the many considerations that go into building a full-stack CRUD application.", "Overall, the project was a really good exercise in breaking an app down into all of its component parts, while also understanding how they interrelate. I learned how to approach app-building in a modular way - through templating pages, and by creating middleware that can be re-used throughout the app. This avoids duplicating code, and makes things cleaner, easier to read and maintain - really important for projects of any size! One approach taken was using the <a href='https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller'>MVC (Model-View-Controller)</a> design pattern, which taught me how to practically implement a 'separation of concerns' for different parts of the app.",
@@ -158,6 +158,7 @@ const projectData = {
       'yelpcamp-clustermap.PNG',
       'yelpcamp-newcamp.PNG',
       'yelpcamp-login.PNG',
+      'yelpcamp-clusterwide.png',
       'yelpcamp-edit.PNG',
     ],
     otherProjects: {
@@ -207,7 +208,18 @@ const projectData = {
       'rhythm-symmetry.png',
       'rhythm-type2.png',
     ],
-    otherProjects: ['directDebits', 'slidingPuzzle'],
+    otherProjects: {
+      yelpCamp: {
+        title: 'YelpCamp',
+        previewImg: 'yelpcamp-homepage.png',
+        link: 'yelpCamp',
+      },
+      directDebits: {
+        title: 'Direct Debit Date Calculator',
+        previewImg: 'dd-calculator.png',
+        link: 'directDebits',
+      },
+    },
   },
   creditCardChecker: {
     title: 'Credit Card Checker',
