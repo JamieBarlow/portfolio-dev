@@ -22,11 +22,18 @@ form.addEventListener('submit', (e) => {
             'Content-Type': 'application/json'
         }
     })
-    .then(response => response.json()) // Parse JSON response
+    .then(response => response.text()) // Parse JSON response
     .then(result => {
         console.log(result.message); // "Message received!"
+        name.value = '';
+        email.value = '';
+        subject.value = '';
+        message.value = '';
+        alert('Email sent!')
     })
-    // .catch(error => {
-    //     console.error('Error:', error);
-    // });
+    .catch(error => {
+        console.error('Error:', error);
+    });
+
+
 })
