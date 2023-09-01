@@ -14,6 +14,11 @@ html {
   box-sizing: inherit;
 }
 
+/* Prevents autofill from changing color */
+input:autofill, input:autofill:focus {
+  transition: background-color 0s 600000s, color 0s 600000s;
+}
+
 a {
   text-decoration: none;
   /* padding: 0 10px; */
