@@ -22,8 +22,8 @@
 </head>
 
 <body class="ff-archivo">
-  <%- include('../partials/navbar') %>
-    <main>
+  <main class="main-wrapper">
+    <%- include('../partials/navbar') %>
       <section class="hero">
 
         <div class="hero__main">
@@ -75,10 +75,12 @@
         </svg>
         <div class="experience__intro wrapper">
           <h2 class="experience__header fw--medium m-1 py-3 fs--h2">What I work with</h2>
-          <h5 class="experience__subheader fw--light my-3">I use the tools below regularly, and have been able to put my
+          <h5 class="experience__subheader fw--light my-3">I use the tools below regularly, and have been able to put
+            my
             skills into
             practice through a
-            number of <a href="#projects"><span class="underline text--light fs--h5 hover--green">projects</span></a>. I love
+            number of <a href="#projects"><span class="underline text--light fs--h5 hover--green">projects</span></a>.
+            I love
             learning new tech, and I am continuing to add more to the stack:</h5>
         </div>
         <div class="wrapper experience__wrapper">
@@ -302,7 +304,7 @@
         <path d="M1440 64H1146.2V42H852.4V56H558.6V68H264.8V76H-29V126V100H264.8V82H852.4V62H1146.2V94H1440V64Z"
           fill="#728CDA" />
         <path d="M1440 0H-29V108V78H264.8V70H558.6V58H852.4V44H1146.2V66H1440V0Z" fill="#2D6ACD" />
-      </svg> -->
+        </svg> -->
       <svg class="divider" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="visual"
         viewBox="0 0 960 200" version="1.1">
         <rect x="0" y="0" fill="#f0f5f4" />
@@ -518,7 +520,8 @@
                   <p>P5.SOUND</p>
                 </div>
                 <div class="projects__description">
-                  <p>Web app to generate complex rhythms from user input, as a compositional tool and interactive education in rhythmic theory.</p>
+                  <p>Web app to generate complex rhythms from user input, as a compositional tool and interactive
+                    education in rhythmic theory.</p>
                 </div>
                 <div class="projects__links">
                   <a href="projects/schillingerRtm" class="underline underline--animated">
@@ -549,7 +552,7 @@
       </section>
       <section class="contact bg--blue text--light" id="contactMe">
         <div class="wrapper contact__wrapper">
-          <img src="images/scribble.svg" alt="" class="background">
+          <div class="background-container"><img src="images/scribble.svg" alt="" class="background"></div>
           <div class="contact__title">
             <h2 class="fw--medium">Contact</h2>
           </div>
@@ -580,13 +583,12 @@
             </div>
           </form>
         </div>
-        </div>
       </section>
-    </main>
-    <%- include('../partials/footer') %>
-      <!-- <script src="../index.js"></script> -->
-      <script src="js/design.js"></script>
-      <script src="js/contact.js"></script>
+      <%- include('../partials/footer') %>
+  </main>
+  <!-- <script src="../index.js"></script> -->
+  <script src="js/design.js"></script>
+  <script src="js/contact.js"></script>
 </body>
 
 </html>
