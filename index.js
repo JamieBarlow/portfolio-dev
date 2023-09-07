@@ -5,6 +5,7 @@ const ejsMate = require('ejs-mate')
 const projectData = require('./projects/projectData');
 const nodemailer = require('nodemailer');
 require('dotenv').config();
+const port = process.env.PORT || 3000;
 
 app.set('view engine', 'ejs');
 app.engine('ejs', ejsMate);
@@ -73,6 +74,6 @@ app.get('*', (req, res) => {
     res.send('Page not found');
 })
 
-app.listen(3000, () => {
-    console.log('Serving on port 3000')
+app.listen(port, () => {
+    console.log(`Serving on port ${port}`)
 })
