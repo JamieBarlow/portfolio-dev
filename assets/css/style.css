@@ -1270,35 +1270,7 @@ section {
   /* opacity: 0; */
 }
 
-/* About Me page */
 
-.aboutMe__blurb p, .aboutMe__blurb p a {
-  font-size: var(--fs-h4);
-}
-
-.aboutMe__intro {
-  display: flex;
-  /* align-items: center; */
-}
-
-.aboutMe__text {
-  flex: 3;
-}
-
-.aboutMe__text > p {
-  font-size: var(--fs-h3);
-  padding-right: var(--5);
-}
-
-.aboutMe__intro > img {
-  flex: 1;
-  border-radius: 20px;
-  /* box-shadow: -8px 8px 0px 1px rgb(107, 145, 206); */
-}
-
-.aboutMe__blurb img {
-  max-width: 100%;
-}
 
 .col-layout {
   display: flex;
@@ -1361,6 +1333,10 @@ section {
   .sidebar {
     opacity: 1;
     z-index: 2;
+  }
+
+  .sidebar__link a {
+    font-size: var(--fs-h3);
   }
 
   .header__icons {
@@ -1520,10 +1496,6 @@ section {
   }
 
   .hero__description {
-    font-size: var(--fs-h3);
-  }
-
-  .sidebar__link a {
     font-size: var(--fs-h3);
   }
 
