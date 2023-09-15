@@ -59,7 +59,8 @@ app.get('/projects/:project', (req, res) => {
     let { project } = req.params;
     if (project in projectData) {
         const projectInfo = projectData[project];
-        res.render('projects/show', { projectInfo });
+        const projectTitle = projectInfo.title;
+        res.render('projects/show', { projectInfo, projectTitle });
       } else {
         // Handle case when project is not found
         res.status(404).send('Project not found');
@@ -67,7 +68,8 @@ app.get('/projects/:project', (req, res) => {
 })
 
 app.get('/aboutMe', (req, res) => {
-    res.render('about');
+    const projectTitle = 'About Me';
+    res.render('about', { projectTitle });
 })
 
 app.get('*', (req, res) => {
