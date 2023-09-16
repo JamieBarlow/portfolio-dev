@@ -237,7 +237,7 @@ button {
 
 .sidebar__link a {
   color: var(--background-offwhite);
-  font-size: var(--fs-p);
+  font-size: var(--fs-h4);
 }
 
 .slide-up {
@@ -513,6 +513,20 @@ footer svg:hover path {
 }
 
 /* PROJECTS */
+
+/* Sets offset for internal links */
+#projectsAnchor {
+  height: 10px;
+}
+
+/* #projects::before { 
+    display: block; 
+    content: " "; 
+    margin-top: -100px; 
+    height: 100px; 
+    visibility: hidden; 
+    pointer-events: none;
+} */
 
 .projects__wrapper {
 }
@@ -1292,7 +1306,7 @@ section {
 }
 
 .imgcols-2 > div {
-  flex: 3;
+  flex: 2;
 }
 
 .imgcols-2 > div:nth-of-type(2) {
@@ -1336,7 +1350,11 @@ section {
   }
 
   .sidebar__link a {
-    font-size: var(--fs-h3);
+    font-size: var(--fs-h4);
+  }
+
+  .sidebar__link {
+
   }
 
   .header__icons {

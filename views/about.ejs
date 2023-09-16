@@ -15,7 +15,7 @@
 <body>
     <% layout('../layouts/boilerplate')%>
         <main>
-            <section class="aboutMe__hero my-0">
+            <section class="aboutMe__hero wrapper my-0">
                 <div class="aboutMe__title">
                     <h1 class="observed my-4">
                         <span class="svg--underlined">
@@ -27,56 +27,48 @@
                         </span>
                     </h1>
                 </div>
-                <div class="hero__image slide-right my-2">
-                    <img src="../images/jamie-1.jpg" alt="Profile Picture">
-                </div>
-                <div class="aboutMe__greeting slide-up bg--blue text--light">
-                    <h3>Hi there, I'm Jamie.</h3>
+                <img class="aboutMe__heroImg slide-right my-2" src="../images/jamie-1.jpg" alt="Profile Picture">
+            </section>
+            <section class="aboutMe__intro my-0 slide-up bg--blue text--light">
+                <div class="aboutMe__greeting wrapper py-3">
+                    <h2>Hi there, I'm Jamie.</h2>
+                    <p>
+                        I'm a driven, creative individual who loves building
+                        things with code.
+                    </p>
                 </div>
             </section>
-            <div class="aboutMe__greeting my-0 slide-up bg--blue text--light">
-                <div class="aboutMe__intro my-0 p-4">
-                    <div class="aboutMe__text">
+            <section class="blurb">
+                <div class="aboutMe__blurb wrapper py-4">
+                    <div class="slide-up">
                         <p>
-                            I'm a driven, creative individual who loves building
-                            things with code.
+                            I started my programming journey a while ago - as a restless teenager, I was always
+                            looking for
+                            creative projects to get stuck into, and computers seemed to offer a lot of fun
+                            possibilities -
+                            whether it was tinkering with basic music software, or amateur attempts at web dev.
+                        </p>
+                        <p>
+                            A good number of friends and I shared a love of video games, so naturally I went
+                            all-in
+                            and
+                            built a fan
+                            website offering reviews and content on the PS2 - a state-of-the-art console
+                            with
+                            photo-realistic
+                            graphics, if you can imagine it. I hacked together a layout with the aid of HTML
+                            tables
+                            (how
+                            everything
+                            on the web was built back then) and the equally modern FrontPage Express
+                            (WYSIWGY editor
+                            discontinued as of 2006), along with some (probably very cringeworthy) tributes
+                            to the
+                            review
+                            magazines we used to read.
                         </p>
                     </div>
-                </div>
-            </div>
-            <section class="blurb">
-                <div class="aboutMe__blurb wrapper">
-                    <p>
-                        I started my programming journey a while ago - as a restless teenager, I was always
-                        looking for
-                        creative projects to get stuck into, and computers seemed to offer a lot of fun
-                        possibilities -
-                        whether it was tinkering with basic music software, or amateur attempts at web dev.
-                    </p>
-
-                    <div>
-                        <div class="col-layout">
-                            <p>
-                                A good number of friends and I shared a love of video games, so naturally I went
-                                all-in
-                                and
-                                built a fan
-                                website offering reviews and content on the PS2 - a state-of-the-art console
-                                with
-                                photo-realistic
-                                graphics, if you can imagine it. I hacked together a layout with the aid of HTML
-                                tables
-                                (how
-                                everything
-                                on the web was built back then) and the equally modern FrontPage Express
-                                (WYSIWGY editor
-                                discontinued as of 2006), along with some (probably very cringeworthy) tributes
-                                to the
-                                review
-                                magazines we used to read.
-                            </p>
-                            <!-- <div><img src="../images/PSM2_Issue_1.webp" alt="PSM2 magazine"></div> -->
-                        </div>
+                    <div class="slide-up">
                         <p>
                             Despite all of this natural curiosity in the days of dial-up internet, I didn't
                             originally
@@ -84,9 +76,6 @@
                             took me in other directions, towards studying in the arts and working for charitable
                             organisations.
                         </p>
-                    </div>
-
-                    <div>
                         <p>
                             Years later, something 'clicked.' Picking up audio software, I realised that I was
                             making
@@ -98,36 +87,38 @@
                             towards
                             problem-solving through process automation and by writing programs and macros
                             (leading to my
-                            <a href="./projects/directDebits"><span class="underline fs--h4 hover--green">JavaScript
-                                    Direct Debit Calendar app</span></a>).
+                            <a href="./projects/directDebits"><span class="underline hover--green">Direct Debit Calendar
+                                    app</span></a>).
                         </p>
-                        <div class="imgcols-2 slide-left">
-                            <div><img src="../images/Guitar.png" alt="Playing guitar"></div>
-                            <div><img src="../images/jamie-2.jpg" alt="Playing piano"></div>
-                        </div>
                     </div>
-                    <p>
-                        Since then, I've come full circle. I have been intensively self-teaching programming
-                        (thanks
-                        to a wealth of online resources, and mentors in the field) - you can see what I've been
-                        working
-                        on as I learn <a href="./#projects"><span class="underline fs--h4 hover--green">here</span></a>.
-                        I'm excited to keep learning and to bring this to a
-                        career in tech.
-                    </p>
+                    <div class="imgcols-2 slide-left">
+                        <div><img src="../images/Guitar.png" alt="Playing guitar"></div>
+                        <div><img src="../images/jamie-2.jpg" alt="Playing piano"></div>
+                    </div>
 
-                    <div>
+                    <div class="slide-up">
+                        <p>
+                            Since then, I've come full circle. I have been intensively self-teaching programming
+                            (thanks
+                            to a wealth of online resources, and mentors in the field) - you can see what I've been
+                            working
+                            on as I learn <a href="./#projectsAnchor"><span class="underline hover--green">here</span></a>.
+                            I'm excited to keep learning and to bring this to a
+                            career in tech.
+                        </p>
                         <p>
                             If you like my work and would like to contact me or build something together, I'd
                             love to
                             hear
                             from you - please:
-                        <div class="hero__contact p-4 slide-right"><button class="pushable">
-                                <a class="front fs--h4" href="./#contactMe">Get in touch</a>
-                            </button>
-                        </div>
                         </p>
                     </div>
+                    <div class="hero__contact p-4 slide-right"><button class="pushable">
+                            <a class="front fs--h4" href="./#contactMe">Get in touch</a>
+                        </button>
+                    </div>
+
+                </div>
             </section>
         </main>
         <script src="../js/design.js"></script>
