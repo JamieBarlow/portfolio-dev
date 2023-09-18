@@ -1,4 +1,8 @@
 /* Project show page */
+.header__icons {
+  display: none;
+}
+
 h3,
 h4 {
   margin: 0;
@@ -8,9 +12,15 @@ h4 {
   max-width: 85%;
 }
 
+.projects__link:hover, .projects__link svg {
+  color: white;
+}
+
 .project__info {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px 40px;
+  margin-inline: auto;
 }
 
 .social-icon,
@@ -34,8 +44,9 @@ h4 {
   fill: white;
 }
 
-.project__stackList {
+.project__stackList, .project__live a, .project__code a {
   padding: 0;
+  margin: 1rem 0;
 }
 
 .project__mainImg img {
