@@ -17,11 +17,9 @@
 
 .aboutMe__hero {
   min-height: 50vh;
-}
-
-.aboutMe__title {
-  width: 50%;
-  margin: auto;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
 }
 
 .aboutMe__intro {
@@ -37,6 +35,7 @@
 
 .aboutMe__greeting {
   flex: 4;
+  max-width: 60vw;
 }
 
 .aboutMe__greeting p {
@@ -52,19 +51,24 @@
   max-width: 100%;
 }
 
-
 @media screen and (min-width: 600px) {
   .aboutMe__title {
     width: 100%;
     margin: 0%;
   }
-  
+
   .aboutMe__intro {
     flex-direction: row;
     justify-content: space-between;
-    /* align-items: center; */
+    align-items: stretch;
     gap: 20px;
     /* max-width: var(--container-width-tablet); */
+  }
+
+  .aboutMe__greeting {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
   }
 
   .aboutMe__titleAndImg {
@@ -73,7 +77,8 @@
 }
 
 @media screen and (min-width: 768px) {
-  .aboutMe__heroImg {}
+  .aboutMe__heroImg {
+  }
 }
 
 @media screen and (min-width: 990px) {

@@ -8,11 +8,16 @@ h4 {
   margin: 0;
 }
 
+.underline--green.underline--animated:after {
+  padding-bottom: 0px;
+}
+
 .project__underline svg {
   max-width: 85%;
 }
 
-.projects__link:hover, .projects__link svg {
+.projects__link:hover,
+.projects__link svg {
   color: white;
 }
 
@@ -20,7 +25,7 @@ h4 {
   display: flex;
   flex-wrap: wrap;
   gap: 10px 40px;
-  margin-inline: auto;
+  justify-content: space-between;
 }
 
 .social-icon,
@@ -44,7 +49,9 @@ h4 {
   fill: white;
 }
 
-.project__stackList, .project__live a, .project__code a {
+.project__stackList,
+.project__live a,
+.project__code a {
   padding: 0;
   margin: 1rem 0;
 }
@@ -97,6 +104,7 @@ a {
   flex-direction: column;
   gap: 25px;
   justify-content: space-around;
+  align-items: center;
 }
 
 .screenshot-box img {

@@ -18,7 +18,7 @@
 
         </div>
         <div class="bg--blue text--light">
-            <div class="project__info wrapper my-4 py-3">
+            <div class="project__info wrapper my-4 p-3">
                 <div class="project__stackCol">
                     <h4>Stack</h4>
                     <ul class="project__stackList">
@@ -94,7 +94,7 @@
         </div>
     </section>
     <section class="project__images wrapper">
-        <div class="col-layout col-imgs-2">
+        <div class="screenshot-box">
             <div><img src="../images/<%=projectInfo.images[2]%>"></div>
             <div><img src="../images/<%=projectInfo.images[3]%>"></div>
         </div>
@@ -131,7 +131,7 @@
             <% for (const projectKey in projectInfo.otherProjects) { %>
                 <% const project=projectInfo.otherProjects[projectKey]; %>
                     <div class="otherProject">
-                        <h4><%- project.title %></h4>
+                        <h4 class="my-2"><%- project.title %></h4>
                         <div class="projects__img">
                             <img src="../images/<%- project.previewImg %>">
                             <div class="img-overlay img-overlay--blur">
