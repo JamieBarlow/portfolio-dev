@@ -50,7 +50,7 @@ const projectData = {
     title: "Direct Debit Processing Calendar",
     stack: ["HTML/CSS", "JavaScript", "BootStrap", "Mocha.js / Chai.js"],
     code: "https://github.com/JamieBarlow/weekend-bankhol",
-    live: "https://jamiebarlow.github.io/weekend-bankhol/",
+    live: "https://dd-calculator.web.app/",
     about:
       'Single page web application deployed by a large-scale organisation to calculate Direct Debit processing days for a selected year by accounting for weekends, bank holidays and other non-work days. Uses the UK Government\'s <a href="https://www.api.gov.uk/gds/bank-holidays/#bank-holidays">Bank Holidays API</a> to fetch data dynamically.',
     purpose: [
