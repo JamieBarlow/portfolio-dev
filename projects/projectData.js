@@ -182,8 +182,16 @@ const projectData = {
     code: 'https://github.com/JamieBarlow/drum-machine',
     live: 'https://jamiebarlow.github.io/drum-machine/',
     about:
-      "Working in collaboration with a composer and specialist in the Schillinger System of Musical Composition, the aim of this project is to develop an application which can generate rhythms based on a numerical user input. It can serve as a tool for sparking creative inspiration, while teaching key elements of Joseph Schillinger's rhythmic theory, which can have many creative uses for composers and songwriters.",
-    purpose: [],
+      "Interactive web-based sequencer, applying rhythmic theory for creative and educational use.",
+    purpose: [
+      "Working in collaboration with a composer, teacher and specialist in the Schillinger System of Musical Composition, the aim of this project is to develop an application which can generate rhythms based on a numerical user input. It can serve as a tool for sparking creative inspiration, while teaching key elements of Joseph Schillinger's rhythmic theory, which can have many creative uses for composers and songwriters.",
+      "To demonstrate that varied and effective rhythms can be created from almost any series of numbers, the app is designed to take user input in the form of a sequence of digits, which could be entered manually (e.g. 1240652) or come from a less manual/predictable 'in-world' source, such as a barcode. You really can create a rhythm from a can of beans (without needing to hit it)!",
+      "User-generated beats are represented in the sequencer, against a consistent 'pulse' rhythm. The interaction between this regular pulse and the irregular (or regular) user-generated pattern is key to the Schillinger rhythm system - the 2 patterns will go in and out of phase, or sync, but return to their original relationship at certain intervals. Schillinger calls these 'interference patterns', referring to the relationship between simultaneous rhythmic patterns. We hear many of these rhythms in nature, and this method is therefore an interesting way of conceptualising it and applying it to musical composition.",
+      "<video muted autoplay loop class='demoVid--halfPage'><source src='../images/rhythm-playback.webm' type='video/webm' /></video>",
+      "How are the user patterns generated? Each individual number in the sequence defines the length of a beat division and therefore the length of the 'rest' before each subsequent beat - for example: <ul><li>'0' contains no information for beats or rests, and is therefore ignored;</li><li>'1' defines a single beat which is followed immediately by another beat/number;</li><li>'2' defines a beat followed by a rest, taking up 2 beat divisions in total;</li><li>'3' defines a beat followed by a rest of 2 beat divisions, taking up 3 beat divisions in total;</li><li>'4 defines a beat followed by a rest of 3 beat divisions, taking up 4 beat divisions in total;</li><li>etc.</li></ul>",
+      "The pattern is translated into a pattern in the app's drum sequencer, an interface which should be familiar to many musicians. This can be edited dynamically by the user to experiment with different patterns, adding or removing beats for each instrument.",
+      "Once the pattern has been created, the intention of the app is to allow the musician to alter their in a number of interesting and idea-inspiring ways. Schillinger's 'interference patterns' work with symmetry, so the ability to convert a pattern into a symmetrical one is key for this particular approach, alongside further 'preset' tweaking options:<ul><li>Rotating the pattern;</li><li>A 'regen' option to generate an alternative version of the pattern;</li><li>Changing the instrumentation, i.e. samples;</li><li>Change the character of the pattern - e.g. slow, or offbeat;</li><li>Different musical divisions or time signatures</li></ul>"
+    ],
     features: [
       'Drum sequencer - can be used like a regular sequencer. Clicking any cell will add or remove a beat',
       'Numerical input for users - creates a beat against the pulse',
@@ -191,7 +199,10 @@ const projectData = {
       'User-adjustable pattern length (default is 16 beats, or the total length of the user-input beat if entered)',
       'Regular/irregular pattern selection',
     ],
-    webStack: [],
+    webStack: [
+      "The app was written in JavaScript, with <a href='https://p5js.org/'>p5.js</a> for drawing the sequencer grid. The goal, working with my client, was to make the app simple and accessible while building out its core features, thereby shortening the production cycle and making this quickly available for testing - therefore, web/browser-based tools were chosen.", 
+      "For audio, I identified <a href='https://p5js.org/reference/#/libraries/p5.sound'>p5.sound</a> as the most compatible tool, as it extends p5 with <a href='https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API'>Web Audio</a> functionality. Most importantly, it includes useful and flexible methods for handling playback of samples in the form of sequences or patterns."
+    ],
     description: '',
     challenges: [
       "Inconsistent playback speed - for a rhythm-based app this could be quite an issue! By default, the grid-based patterns do not play back 'on beat' but rather slow down or speed up erratically, like a drunken drummer. I therefore needed to pass in a scheduled delay time to produce a clock time that would be consistent with the sample rate, and to add some artificial latency to the playhead so that the speed matches playback.",
