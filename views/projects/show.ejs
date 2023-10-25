@@ -31,7 +31,8 @@
                 </div>
                 <div class="project__live">
                     <h4>Live</h4>
-                    <a href="<%= projectInfo.live %>" class="text--light underline underline--green underline--animated">
+                    <a href="<%= projectInfo.live %>"
+                        class="text--light underline underline--green underline--animated">
                         <div class="projects__link">
                             <span class="link">View project</span>
                             <svg width="1.3rem" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -44,7 +45,8 @@
                 </div>
                 <div class="project__code">
                     <h4>Code & Docs</h4>
-                    <a href="<%= projectInfo.code %>" class="text--light underline underline--green underline--animated">
+                    <a href="<%= projectInfo.code %>"
+                        class="text--light underline underline--green underline--animated">
                         <div class="projects__link text--light">
                             <span class="link">GitHub</span>
                             <svg width="1.3rem" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -101,18 +103,17 @@
     </section>
     <section class="project__challenges my-5 wrapper">
 
-        <div class="col-layout">
-
-            <div class="challenges-box text-box">
-                <h3>Challenges</h3>
-                <% for (challenge of projectInfo.challenges) { %>
-                    <p><%- challenge %></p>
-                    <% } %>
-            </div>
+        <div class="grid--ratio1to2">
+            <h3 class="challenges-title">Challenges</h3>
             <div class="screenshot-box challenges">
                 <img src="../images/<%=projectInfo.images[4]%>">
                 <% if (projectInfo.images[5]) { %>
                     <img src="../images/<%=projectInfo.images[5]%>">
+                    <% } %>
+            </div>
+            <div class="challenges-box text-box">
+                <% for (challenge of projectInfo.challenges) { %>
+                    <p><%- challenge %></p>
                     <% } %>
             </div>
         </div>

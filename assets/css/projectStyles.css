@@ -74,6 +74,10 @@ h4 {
   margin-right: auto;
 }
 
+.row {
+  width: 100%;
+}
+
 .col-imgs-2 div {
   /* flex: 1; */
 }
@@ -98,6 +102,15 @@ a {
 
 .features-box li::marker, .project__purpose li::marker {
   color: var(--vibrant-blue);
+}
+
+.grid--ratio1to2 {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas:
+    ". hd"
+    "imgs txt"
 }
 
 .text-box {
@@ -144,25 +157,29 @@ a {
     object-fit: cover;
     object-position: 0% 0%;
   }
-
-  .project__challenges {
-    flex-direction: row-reverse;
-  }
-
-  .challenges-box {
-    flex: 2;
-  }
-
+  
   .screenshot-box {
+    /* order: 2; */
+    flex-direction: row;
     /* margin-top: 4.5rem; */
     gap: 40px;
   }
 
-  .project__challenges {
+  .challenges-title {
+    grid-area: hd;
+  }
+
+  .screenshot-box.challenges {
+    flex-direction: column;
+    justify-content: flex-start;
+    grid-area: imgs;
   }
 
   .challenges-box {
-    order: 2;
+    grid-area: txt;
+  }
+  .challenges-box p:nth-of-type(1) {
+    margin-top: 0;
   }
 }
 
