@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', function () {
   );
   const observedElem = document.querySelector('.observed');
   const socialIcons = document.querySelector('.header__icons');
+  const sidebarLinks = document.querySelectorAll('.sidebar__link');
+  console.log(sidebarLinks);
   const tablet = window.matchMedia('(min-width: 600px)');
   // const scrollWatcher = document.createElement('div');
   // scrollWatcher.setAttribute('data-scroll-watcher', '');
@@ -62,16 +64,31 @@ document.addEventListener('DOMContentLoaded', function () {
     const currentState = button.getAttribute('data-state');
 
     if (!currentState || currentState === 'closed') {
-      button.setAttribute('data-state', 'opened');
-      button.setAttribute('aria-expanded', 'true');
-      sidebar.classList.add('active-sidebar');
-      hamburger.classList.add('active-burger');
+      openSidebar();
     } else {
-      button.setAttribute('data-state', 'closed');
-      button.setAttribute('aria-expanded', 'false');
-      sidebar.classList.remove('active-sidebar');
-      hamburger.classList.remove('active-burger');
+      closeSidebar();
     }
   });
+
+  // Ensuring sidebar closes on clicking internal links
+  sidebarLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      closeSidebar();
+    })
+  })
+
+  function openSidebar() {
+    button.setAttribute('data-state', 'opened');
+    button.setAttribute('aria-expanded', 'true');
+    sidebar.classList.add('active-sidebar');
+    hamburger.classList.add('active-burger');
+  }
+
+  function closeSidebar() {
+    button.setAttribute('data-state', 'closed');
+    button.setAttribute('aria-expanded', 'false');
+    sidebar.classList.remove('active-sidebar');
+    hamburger.classList.remove('active-burger');
+  }
 })
 
