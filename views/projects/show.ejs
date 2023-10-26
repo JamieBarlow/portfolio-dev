@@ -60,7 +60,7 @@
             </div>
         </div>
         <div class="project__mainImg wrapper">
-            <img src="../images/<%=projectInfo.images[0]%>">
+            <img src="../images/<%=projectInfo.images.header%>">
         </div>
     </section>
     <section class="project__purpose wrapper my-3">
@@ -83,7 +83,7 @@
                 </ul>
             </div>
             <div class="screenshot-box">
-                <img src="../images/<%=projectInfo.images[1]%>">
+                <img src="../images/<%=projectInfo.images.features%>">
             </div>
         </div>
     </section>
@@ -97,23 +97,21 @@
     </section>
     <section class="project__images wrapper">
         <div class="screenshot-box">
-            <div><img src="../images/<%=projectInfo.images[2]%>"></div>
-            <div><img src="../images/<%=projectInfo.images[3]%>"></div>
+            <img src="../images/<%=projectInfo.images.tech%>">
         </div>
     </section>
     <section class="project__challenges my-5 wrapper">
 
         <div class="grid--ratio1to2">
             <h3 class="challenges-title">Challenges</h3>
-            <div class="screenshot-box challenges">
-                <img src="../images/<%=projectInfo.images[4]%>">
-                <% if (projectInfo.images[5]) { %>
-                    <img src="../images/<%=projectInfo.images[5]%>">
-                    <% } %>
-            </div>
             <div class="challenges-box text-box">
                 <% for (challenge of projectInfo.challenges) { %>
                     <p><%- challenge %></p>
+                    <% } %>
+            </div>
+            <div class="screenshot-box challenges">
+                <% for (image of projectInfo.images.challenges) { %>
+                    <img src="../images/<%=image%>">
                     <% } %>
             </div>
         </div>

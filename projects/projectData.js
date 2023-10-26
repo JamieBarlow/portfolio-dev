@@ -26,13 +26,13 @@ const projectData = {
       "While some change will be inevitable throughout development and testing, mapping out the design logic further to anticipate issues before writing code could have helped to avoid some rewriting and refactoring.",
       "In future I would also consider where well-chosen libraries can make implementation easier, though the process of learning the canvas API, as I wrote the initial program, was also valuable.",
     ],
-    images: [
-      "tile-puzzle-pitch-wide.png",
-      "puzzle-screenshot.png",
-      "puzzle-complete.jpg",
-      "puzzle-split.png",
-      "puzzle-mockup.png",
-    ],
+    images: {
+      header: "tile-puzzle-pitch-wide.png",
+      features: "puzzle-screenshot.png",
+      tech: "puzzle-complete.jpg",
+      challenges: ["puzzle-split.png",
+        "puzzle-mockup.png"]
+    },
     otherProjects: {
       schillingerRtm: {
         title: "Schillinger Rhythm Generator",
@@ -66,7 +66,7 @@ const projectData = {
       'Test suite built using Mocha.js testing framework, Chai.js assertion library, and <a href="https://www.codecademy.com/article/tdd-u1-good-test">MC-FIRE</a> principles',
     ],
     webStack: [
-      "JS Date object / Bank Holidays API / BootStrap / Clipboard. \n\n I chose the Chai assertion library, because it can follow a familiar 'assert' style to that provided by Node.js, but is also browser-compatible, so allowed me to display test results from the Mocha framework to end users within the app window itself, along with additional message feedback. \n\n When writing my tests, I made sure to use a '3 test phase' format - Setup, Exercise, and Verify - to make the test code easier to read and maintain. I ran them as isolated unit tests, so didn't include a teardown stage.",
+      "For the app's core logic and functionality, I worked extensively with vanilla JavaScript, focusing on the JS Date object.", "The app makes calls to the UK Government's Bank Holidays API, which ensures that dates can be provided dynamically - for example, when extra bank holidays are created.", "The interface was built using BootStrap, which simplified formatting for its form and table elements, as well as offering a tabbed interface for a less cluttered display.", "For testing, I chose the Chai assertion library, because it can follow a familiar 'assert' style to that provided by Node.js, but is also browser-compatible, so allowed me to display test results from the Mocha framework to end users within the app window itself, along with additional message feedback.", "When writing my tests, I made sure to use a '3 test phase' format - Setup, Exercise, and Verify - to make the test code easier to read and maintain. I ran them as isolated unit tests, so didn't include a teardown stage.",
     ],
     challenges: [
       "To generate results, the app is comparing potential processing dates against the non-working days provided via API call (weekends and bank holidays), as well as company-specific holiday dates input by the user. If the 2 match, the app needs to not only shift the date backwards or forwards, but re-calculate the shift until there is no longer a clash. This required some complex nested looping logic, and testing for edge cases, including those where a non-processing day (or days) land(s) between dates where one needs to be 3 working days prior to another.",
@@ -78,13 +78,13 @@ const projectData = {
       "While I gained a lot of experience working with the Date object in JavaScript, I learned that there are JS date libraries which could simplify the process of converting and working with dates, thereby speeding up production.",
       "I also learned a great deal about testing, and the value of different types of tests; in this case, I created mock data to ensure the app's output would be correct, but I am looking to further explore the possibilities of integration and end-to-end testing using faking/stubbing tools such as <a href='https://sinonjs.org/'>Sinon.js</a>, and E2E testing suites such as <a href='https://www.cypress.io/'>Cypress</a>.",
     ],
-    images: [
-      "dd-calculator.png",
-      "dd-bankhols.png",
-      "dd-companyhols.png",
-      "dd-mochatests.png",
-      "dd-resultscopied.png",
-    ],
+    images: {
+      header: "dd-calculator.png",
+      features: "dd-bankhols.png",
+      tech: "dd-companyhols.png",
+      challenges: ["dd-companyhols.png",
+      "dd-mochatests.png","dd-resultscopied.png"]
+    },
     otherProjects: {
       schillingerRtm: {
         title: "Schillinger Rhythm Generator",
@@ -128,11 +128,13 @@ const projectData = {
     webStack: [
       "This project taught me to use a wide range of tech, building on the MongoDB/Express/Node stack with numerous libraries, while also making considered choices about the best tools for each task. For some key examples:",
       "I used <a href='https://ejs.co/'>EJS</a> to create page templates, with consistent 'partial' layout elements such as a navbar, footer and error messaging. The library also allowed me to embed or interpolate JS for dynamically updated content which could be linked to the user-specific authorization/permissions - for example, showing and hiding the option to leave a review depending on the user's login status, and the option to delete a campground or review only if they are the author of that particular campground or review.",
+      "<video muted autoplay loop class='demoVid--halfPage'><source src='../images/yelpcamp-deleteReview.webm' type='video/webm' /></video>",
       'I used Express for server-side routing, due to its wide support and flexibility. I was able to extend its functionality with libraries such as <a href="https://www.npmjs.com/package/express-session">express-session</a>, <a href="https://www.npmjs.com/package/connect-flash">connect-flash</a>, <a href="https://www.npmjs.com/package/passport">Passport</a>, and <a href="https://www.npmjs.com/package/express-mongo-sanitize">express-mongo-sanitize</a>, while creating my own custom middleware for general error handling, handling async processes, and validation. This helped from a development perspective, while also improving the user experience with more useful feedback.',
-      "Data persistence and relationships were managed with MongoDB, a noSQL database, and Mongoose, which extends this with the ability to define consistent data schemas/models. While a 'relational' or SQL-based database would also have worked, MongoDB was chosen because of its frequent pairing and compatibility with both Express and Node.js. This was then ported to MongoDB Atlas, a cloud-based equivalent, easing the transition from a local project to a web-based app.",
+      "Data persistence and relationships were managed with MongoDB, a noSQL database, and Mongoose, which extends this with the ability to define consistent data schemas/models. While a 'relational' or SQL-based database would also have worked, MongoDB was chosen because of its frequent pairing and compatibility with both Express and Node.js. This was then ported to MongoDB Atlas, a cloud-based equivalent, easing the transition from a local project to a web-based app. Using Atlas also allowed me to separate my development environment from my production environment, when testing features of the database.",
       "I implemented client-side validations using BootStrap, with 'toast' pop-up notifications to provide user feedback, and added some server-side data validations using <a href='https://mongoosejs.com/docs/guide.html'>Mongoose schemas</a>. For added security, this functionality was extended with the <a href='https://joi.dev/'>joi</a> library, which allowed me to include further server-side validations in the event of any incoming data that bypasses the app's form submission layer, e.g. those made via external API requests.",
       "The course taught me some very useful fundamentals in terms of authenticating a user from scratch, but to simplify the process I used <a href='https://www.passportjs.org/'>Passport.js</a> middleware, which provides pre-defined 'strategies' for authenticating usernames/passwords. This was extended with <a href='https://www.npmjs.com/package/passport-local-mongoose'>passport-local-mongoose</a>, which adds useful methods to the Mongoose data model, while allowing sensitive user data to be stored in secure, encrypted (salted and hashed) form. The end result is a robust and secure registration and login process.",
       "The app includes uploading functionality for multiple images, for which I used <a href='https://www.npmjs.com/package/multer'>Multer</a> middleware to parse the multipart/form-data (used for submitting image files). The images are hosted and accessed via the <a href='https://cloudinary.com/'>Cloudinary API</a> using <a href='https://www.npmjs.com/package/multer-storage-cloudinary'>multer-storage-cloudinary</a>, rather than directly in the database, which would have limited their file size.",
+      "<video muted autoplay loop class='demoVid--halfPage'><source src='../images/yelpcamp-clusterInteractive.webm' type='video/webm' /></video>",
       "I used Mapbox's <a href='https://docs.mapbox.com/help/getting-started/geocoding/'>geocoding API</a> to produce GeoJSON coordinates, and the <a href='https://docs.mapbox.com/mapbox-gl-js/guides/'>Mapbox GL JS</a> API for displaying campgrounds on individual maps, as well as a combined cluster map, to which I added customized styling, popup navigation links, and additional controls.",
     ],
     description: "",
@@ -155,14 +157,14 @@ const projectData = {
       "While there is plenty more to expore in this area, the project taught me how to address many security concerns, such as database injections, cross-site scripting, and cookie theft. Methods for addressing this included but were not limited to: 'sanitizing' form inputs to prevent unwanted HTML scripting, protecting cookie data by making it accessible via HTTP only, hiding stack trace errors, encrypting password and user data, setting HTTP response headers and a content security policy for resources (using <a href='https://www.npmjs.com/package/helmet?activeTab=readme'>Helmet</a>), and protecting server-side routes from unwanted or unauthorized requests.",
       "Finally, the scope for improving any app is huge, and there are many potential future considerations - for example, further security concerns, requiring server-side limits image uploads and other app usage, and many potential design/UX improvements.",
     ],
-    images: [
-      "yelpcamp-homepage.PNG",
-      "yelpcamp-clustermap.PNG",
-      "yelpcamp-newcamp.PNG",
-      "yelpcamp-login.PNG",
-      "yelpcamp-clusterwide.png",
-      "yelpcamp-edit.PNG",
-    ],
+    images: {
+      header: "yelpcamp-homepage.PNG",
+      features: "yelpcamp-login.PNG",
+      tech: "yelpcamp-clustermap.PNG",
+      challenges: ["yelpcamp-newcamp.PNG",
+        "yelpcamp-clusterwide.png",
+        "yelpcamp-edit.PNG"]
+    },
     otherProjects: {
       schillingerRtm: {
         title: "Schillinger Rhythm Generator",
@@ -214,13 +216,13 @@ const projectData = {
       "This was a great experience in collaboration, working together to understand the aims and ideas of the client, and communicating with them the technical challenges or steps needed to translate these into functioning code. I set out a plan covering the features that were in scope for the project, and laid out the development stages needed to build a successful app, working through them iteratively.",
       "One key takeaway from this is that there are many ways that a user can 'break' an app or interact with it in unexpected ways, so creating a robust UI/UX that allows for flexible interaction is really important.",
     ],
-    images: [
-      "rhythm-notation.png",
-      "rhythm-app.png",
-      "rhythm-type1.png",
-      "rhythm-symmetry.png",
-      "rhythm-type2.png",
-    ],
+    images: {
+      header: "rhythm-notation.png",
+      features: "rhythm-app.png",
+      tech: "rhythm-type1.png",
+      challenges: ["rhythm-symmetry.png",
+      "rhythm-type2.png"]
+    },
     otherProjects: {
       yelpCamp: {
         title: "YelpCamp",
@@ -246,7 +248,7 @@ const projectData = {
     description: "",
     challenges: "",
     lessons: "",
-    images: [],
+    images: {},
     otherProjects: ["directDebits", "schillingerRtm"],
   },
   salaryCalculator: {
@@ -261,7 +263,7 @@ const projectData = {
     description: "",
     challenges: "",
     lessons: "",
-    images: [],
+    images: {},
     otherProjects: ["directDebits", "schillingerRtm"],
   },
   pingPongScore: {
@@ -276,7 +278,7 @@ const projectData = {
     description: "",
     challenges: "",
     lessons: "",
-    images: [],
+    images: {},
     otherProjects: ["directDebits", "schillingerRtm"],
   },
 };
