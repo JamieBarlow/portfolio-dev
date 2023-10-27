@@ -27,11 +27,11 @@ const projectData = {
       "In future I would also consider where well-chosen libraries can make implementation easier, though the process of learning the canvas API, as I wrote the initial program, was also valuable.",
     ],
     images: {
-      header: "tile-puzzle-pitch-wide.png",
-      features: "puzzle-screenshot.png",
-      tech: "puzzle-complete.jpg",
-      challenges: ["puzzle-split.png",
-        "puzzle-mockup.png"]
+      header: "puzzle-pitch",
+      features: "puzzle-screenshot",
+      tech: "puzzle-complete",
+      challenges: ["puzzle-split",
+        "puzzle-mockup"]
     },
     otherProjects: {
       schillingerRtm: {
@@ -79,7 +79,7 @@ const projectData = {
       "I also learned a great deal about testing, and the value of different types of tests; in this case, I created mock data to ensure the app's output would be correct, but I am looking to further explore the possibilities of integration and end-to-end testing using faking/stubbing tools such as <a href='https://sinonjs.org/'>Sinon.js</a>, and E2E testing suites such as <a href='https://www.cypress.io/'>Cypress</a>.",
     ],
     images: {
-      header: "dd-calculator.png",
+      header: "dd-calculator",
       features: "dd-bankhols.png",
       tech: "dd-companyhols.png",
       challenges: ["dd-companyhols.png",
@@ -158,12 +158,12 @@ const projectData = {
       "Finally, the scope for improving any app is huge, and there are many potential future considerations - for example, further security concerns, requiring server-side limits image uploads and other app usage, and many potential design/UX improvements.",
     ],
     images: {
-      header: "yelpcamp-homepage.PNG",
-      features: "yelpcamp-login.PNG",
-      tech: "yelpcamp-clustermap.PNG",
-      challenges: ["yelpcamp-newcamp.PNG",
-        "yelpcamp-clusterwide.png",
-        "yelpcamp-edit.PNG"]
+      header: "yelpcamp-homepage",
+      features: "yelpcamp-login",
+      tech: "yelpcamp-clustermap",
+      challenges: ["yelpcamp-newcamp",
+        "yelpcamp-clusterwide",
+        "yelpcamp-edit"]
     },
     otherProjects: {
       schillingerRtm: {
@@ -217,11 +217,11 @@ const projectData = {
       "One key takeaway from this is that there are many ways that a user can 'break' an app or interact with it in unexpected ways, so creating a robust UI/UX that allows for flexible interaction is really important.",
     ],
     images: {
-      header: "rhythm-notation.png",
-      features: "rhythm-app.png",
-      tech: "rhythm-type1.png",
-      challenges: ["rhythm-symmetry.png",
-      "rhythm-type2.png"]
+      header: "rhythm-notation",
+      features: "rhythm-app",
+      tech: "rhythm-type1",
+      challenges: ["rhythm-symmetry",
+      "rhythm-type2"]
     },
     otherProjects: {
       yelpCamp: {

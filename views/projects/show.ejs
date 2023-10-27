@@ -59,8 +59,16 @@
                 </div>
             </div>
         </div>
+
         <div class="project__mainImg wrapper">
-            <img src="../images/<%=projectInfo.images.header%>">
+            <!-- <img src="../images/<%=projectInfo.images.header%>-small.png" alt=""> -->
+            <picture>
+                <source media="(max-width: 768px)" srcset="../images/<%=projectInfo.images.header%>-small.webp 400w">
+                <source media="(min-width: 768px)" srcset="../images/<%=projectInfo.images.header%>-medium.webp 1105w">
+                <source media="(min-width: 990px)" srcset="../images/<%=projectInfo.images.header%>-large.webp 1577w"">
+                <img src=" ../images/<%=projectInfo.images.header%>-fallback.png" alt="<%=projectInfo.title%> home page">
+            </picture>
+
         </div>
     </section>
     <section class="project__purpose wrapper my-3">
