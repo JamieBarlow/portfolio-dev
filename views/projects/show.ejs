@@ -61,14 +61,12 @@
         </div>
 
         <div class="project__mainImg wrapper">
-            <!-- <img src="../images/<%=projectInfo.images.header%>-small.png" alt=""> -->
             <picture>
-                <source media="(max-width: 768px)" srcset="../images/<%=projectInfo.images.header%>-small.webp 400w">
-                <source media="(min-width: 768px)" srcset="../images/<%=projectInfo.images.header%>-medium.webp 1105w">
-                <source media="(min-width: 990px)" srcset="../images/<%=projectInfo.images.header%>-large.webp 1577w"">
-                <img src=" ../images/<%=projectInfo.images.header%>-fallback.png" alt="<%=projectInfo.title%> home page">
+                <source media="(min-width: 990px)" srcset="https://res.cloudinary.com/dakgl7s9n/image/upload/f_auto,q_auto:best,c_scale,w_1400/portfolio/<%=projectInfo.images.header%> 1400w">
+                <source media="(min-width: 768px)" srcset="https://res.cloudinary.com/dakgl7s9n/image/upload/f_auto,q_auto:best,c_scale,w_800/portfolio/<%=projectInfo.images.header%> 800w">
+                <source media="(min-width: 200px)" srcset="https://res.cloudinary.com/dakgl7s9n/image/upload/f_auto,q_auto:best,c_scale,w_600/portfolio/<%=projectInfo.images.header%> 600w">
+                <img src=" ../images/<%=projectInfo.images.header%>.png" alt="<%=projectInfo.title%> home page">
             </picture>
-
         </div>
     </section>
     <section class="project__purpose wrapper my-3">
@@ -91,7 +89,11 @@
                 </ul>
             </div>
             <div class="screenshot-box">
-                <img src="../images/<%=projectInfo.images.features%>">
+                <picture>
+                    <source media="(min-width: 768px)" srcset="https://res.cloudinary.com/dakgl7s9n/image/upload/f_auto,q_auto:best,c_scale,w_800/portfolio/<%=projectInfo.images.features%> 800w">
+                    <source media="(min-width: 200px)" srcset="https://res.cloudinary.com/dakgl7s9n/image/upload/f_auto,q_auto:best,c_scale,w_600/portfolio/<%=projectInfo.images.features%> 600w">
+                    <img src=" ../images/<%=projectInfo.images.features%>" alt="<%=projectInfo.title%> features">
+                </picture>
             </div>
         </div>
     </section>
@@ -105,7 +107,11 @@
     </section>
     <section class="project__images wrapper">
         <div class="screenshot-box">
-            <img src="../images/<%=projectInfo.images.tech%>">
+            <picture>
+                <source media="(min-width: 768px)" srcset="https://res.cloudinary.com/dakgl7s9n/image/upload/f_auto,q_auto:best,c_scale,w_800/portfolio/<%=projectInfo.images.tech%> 800w">
+                <source media="(min-width: 200px)" srcset="https://res.cloudinary.com/dakgl7s9n/image/upload/f_auto,q_auto:best,c_scale,w_600/portfolio/<%=projectInfo.images.tech%> 600w">
+                <img src=" ../images/<%=projectInfo.images.tech%>-fallback" alt="<%=projectInfo.title%> tech">
+            </picture>
         </div>
     </section>
     <section class="project__challenges my-5 wrapper">
@@ -118,8 +124,12 @@
                     <% } %>
             </div>
             <div class="screenshot-box challenges">
-                <% for (image of projectInfo.images.challenges) { %>
-                    <img src="../images/<%=image%>">
+                <% for (let i = 0; i < projectInfo.images.challenges.length; i++) { %>
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="https://res.cloudinary.com/dakgl7s9n/image/upload/f_auto,q_auto:best,c_scale,w_800/portfolio/<%=projectInfo.images.challenges[i]%> 800w">
+                        <source media="(min-width: 200px)" srcset="https://res.cloudinary.com/dakgl7s9n/image/upload/f_auto,q_auto:best,c_scale,w_600/portfolio/<%=projectInfo.images.challenges[i]%> 600w">
+                        <img src=" ../images/<%=projectInfo.images.challenges[i]%>" alt="<%=projectInfo.title%> challenges">
+                    </picture>
                     <% } %>
             </div>
         </div>
@@ -140,7 +150,11 @@
                     <div class="otherProject">
                         <h4 class="my-2"><%- project.title %></h4>
                         <div class="projects__img">
-                            <img src="../images/<%- project.previewImg %>">
+                            <picture>
+                                <source media="(min-width: 768px)" srcset="https://res.cloudinary.com/dakgl7s9n/image/upload/f_auto,q_auto:best,c_scale,w_800/portfolio/<%=project.previewImg%> 800w">
+                                <source media="(min-width: 200px)" srcset="https://res.cloudinary.com/dakgl7s9n/image/upload/f_auto,q_auto:best,c_scale,w_600/portfolio/<%=project.previewImg%> 600w">
+                                <img src=" ../images/<%=project.previewImg%>" alt="<%=project%>">
+                            </picture>
                             <div class="img-overlay img-overlay--blur">
                                 <div class="img-overlay__button">
                                     <a class="button--outline-dark" href="<%= project.link %>">

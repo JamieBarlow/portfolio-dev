@@ -36,12 +36,12 @@ const projectData = {
     otherProjects: {
       schillingerRtm: {
         title: "Schillinger Rhythm Generator",
-        previewImg: "rhythm-app.png",
+        previewImg: "rhythm-app",
         link: "schillingerRtm",
       },
       directDebits: {
         title: "Direct Debit Date Calculator",
-        previewImg: "dd-calculator.png",
+        previewImg: "dd-calculator",
         link: "directDebits",
       },
     },
@@ -80,20 +80,20 @@ const projectData = {
     ],
     images: {
       header: "dd-calculator",
-      features: "dd-bankhols.png",
-      tech: "dd-companyhols.png",
-      challenges: ["dd-companyhols.png",
-      "dd-mochatests.png","dd-resultscopied.png"]
+      features: "dd-bankhols",
+      tech: "dd-companyhols",
+      challenges: ["dd-companyhols",
+      "dd-mochatests","dd-resultscopied"]
     },
     otherProjects: {
       schillingerRtm: {
         title: "Schillinger Rhythm Generator",
-        previewImg: "rhythm-app.png",
+        previewImg: "rhythm-app",
         link: "schillingerRtm",
       },
       slidingPuzzle: {
         title: "Sliding Puzzle",
-        previewImg: "tile-puzzle-pitch.png",
+        previewImg: "puzzle-pitch",
         link: "slidingPuzzle",
       },
     },
@@ -168,12 +168,12 @@ const projectData = {
     otherProjects: {
       schillingerRtm: {
         title: "Schillinger Rhythm Generator",
-        previewImg: "rhythm-app.png",
+        previewImg: "rhythm-app",
         link: "schillingerRtm",
       },
       slidingPuzzle: {
         title: "Sliding Puzzle",
-        previewImg: "tile-puzzle-pitch.png",
+        previewImg: "puzzle-pitch",
         link: "slidingPuzzle",
       },
     },
@@ -226,12 +226,12 @@ const projectData = {
     otherProjects: {
       yelpCamp: {
         title: "YelpCamp",
-        previewImg: "yelpcamp-homepage.PNG",
+        previewImg: "yelpcamp-homepage",
         link: "yelpCamp",
       },
       directDebits: {
         title: "Direct Debit Date Calculator",
-        previewImg: "dd-calculator.png",
+        previewImg: "dd-calculator",
         link: "directDebits",
       },
     },
