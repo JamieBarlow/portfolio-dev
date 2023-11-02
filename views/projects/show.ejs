@@ -62,9 +62,9 @@
 
         <div class="project__mainImg wrapper">
             <picture>
-                <source media="(min-width: 990px)" srcset="https://res.cloudinary.com/dakgl7s9n/image/upload/q_auto:best,c_scale,w_1400/portfolio/<%=projectInfo.images.header%> 1400w">
-                <source media="(min-width: 768px)" srcset="https://res.cloudinary.com/dakgl7s9n/image/upload/q_auto:best,c_scale,w_800/portfolio/<%=projectInfo.images.header%> 800w">
-                <source media="(min-width: 200px)" srcset="https://res.cloudinary.com/dakgl7s9n/image/upload/q_auto:best,c_scale,w_600/portfolio/<%=projectInfo.images.header%> 600w">
+                <source media="(min-width: 990px)" srcset="https://res.cloudinary.com/dakgl7s9n/image/upload/f_auto,q_auto:best,c_scale,w_1400/portfolio/<%=projectInfo.images.header%> 1400w">
+                <source media="(min-width: 768px)" srcset="https://res.cloudinary.com/dakgl7s9n/image/upload/f_auto,q_auto:best,c_scale,w_800/portfolio/<%=projectInfo.images.header%> 800w">
+                <source media="(min-width: 200px)" srcset="https://res.cloudinary.com/dakgl7s9n/image/upload/f_auto,q_auto:best,c_scale,w_600/portfolio/<%=projectInfo.images.header%> 600w">
                 <img src=" ../images/<%=projectInfo.images.header%>.png" alt="<%=projectInfo.title%> home page">
             </picture>
         </div>
@@ -90,8 +90,8 @@
             </div>
             <div class="screenshot-box">
                 <picture>
-                    <source media="(min-width: 768px)" srcset="https://res.cloudinary.com/dakgl7s9n/image/upload/q_auto:best,c_scale,w_800/portfolio/<%=projectInfo.images.features%> 800w">
-                    <source media="(min-width: 200px)" srcset="https://res.cloudinary.com/dakgl7s9n/image/upload/q_auto:best,c_scale,w_600/portfolio/<%=projectInfo.images.features%> 600w">
+                    <source media="(min-width: 768px)" srcset="https://res.cloudinary.com/dakgl7s9n/image/upload/f_auto,q_auto:best,c_scale,w_800/portfolio/<%=projectInfo.images.features%> 800w">
+                    <source media="(min-width: 200px)" srcset="https://res.cloudinary.com/dakgl7s9n/image/upload/f_auto,q_auto:best,c_scale,w_600/portfolio/<%=projectInfo.images.features%> 600w">
                     <img src=" ../images/<%=projectInfo.images.features%>" alt="<%=projectInfo.title%> features">
                 </picture>
             </div>
@@ -108,8 +108,9 @@
     <section class="project__images wrapper">
         <div class="screenshot-box">
             <picture>
-                <source media="(min-width: 768px)" srcset="https://res.cloudinary.com/dakgl7s9n/image/upload/q_auto:best,c_scale,w_800/portfolio/<%=projectInfo.images.tech%> 800w">
-                <source media="(min-width: 200px)" srcset="https://res.cloudinary.com/dakgl7s9n/image/upload/q_auto:best,c_scale,w_600/portfolio/<%=projectInfo.images.tech%> 600w">
+                <source media="(min-width: 990px)" srcset="https://res.cloudinary.com/dakgl7s9n/image/upload/f_auto,q_auto:best,c_scale,w_1400/portfolio/<%=projectInfo.images.tech%> 1400w">
+                <source media="(min-width: 768px)" srcset="https://res.cloudinary.com/dakgl7s9n/image/upload/f_auto,q_auto:best,c_scale,w_800/portfolio/<%=projectInfo.images.tech%> 800w">
+                <source media="(min-width: 200px)" srcset="https://res.cloudinary.com/dakgl7s9n/image/upload/f_auto,q_auto:best,c_scale,w_600/portfolio/<%=projectInfo.images.tech%> 600w">
                 <img src=" ../images/<%=projectInfo.images.tech%>-fallback" alt="<%=projectInfo.title%> tech">
             </picture>
         </div>
@@ -126,8 +127,8 @@
             <div class="screenshot-box challenges">
                 <% for (let i = 0; i < projectInfo.images.challenges.length; i++) { %>
                     <picture>
-                        <source media="(min-width: 768px)" srcset="https://res.cloudinary.com/dakgl7s9n/image/upload/q_auto:best,c_scale,w_800/portfolio/<%=projectInfo.images.challenges[i]%> 800w">
-                        <source media="(min-width: 200px)" srcset="https://res.cloudinary.com/dakgl7s9n/image/upload/q_auto:best,c_scale,w_600/portfolio/<%=projectInfo.images.challenges[i]%> 600w">
+                        <source media="(min-width: 768px)" srcset="https://res.cloudinary.com/dakgl7s9n/image/upload/f_auto,q_auto:best,c_scale,w_800/portfolio/<%=projectInfo.images.challenges[i]%> 800w">
+                        <source media="(min-width: 200px)" srcset="https://res.cloudinary.com/dakgl7s9n/image/upload/f_auto,q_auto:best,c_scale,w_600/portfolio/<%=projectInfo.images.challenges[i]%> 600w">
                         <img src=" ../images/<%=projectInfo.images.challenges[i]%>" alt="<%=projectInfo.title%> challenges">
                     </picture>
                     <% } %>
@@ -151,8 +152,8 @@
                         <h4 class="my-2"><%- project.title %></h4>
                         <div class="projects__img">
                             <picture>
-                                <source media="(min-width: 768px)" srcset="https://res.cloudinary.com/dakgl7s9n/image/upload/q_auto:best,c_scale,w_800/portfolio/<%=project.previewImg%> 800w">
-                                <source media="(min-width: 200px)" srcset="https://res.cloudinary.com/dakgl7s9n/image/upload/q_auto:best,c_scale,w_600/portfolio/<%=project.previewImg%> 600w">
+                                <source media="(min-width: 768px)" srcset="https://res.cloudinary.com/dakgl7s9n/image/upload/f_auto,q_auto:best,c_scale,w_800/portfolio/<%=project.previewImg%> 800w">
+                                <source media="(min-width: 200px)" srcset="https://res.cloudinary.com/dakgl7s9n/image/upload/f_auto,q_auto:best,c_scale,w_600/portfolio/<%=project.previewImg%> 600w">
                                 <img src=" ../images/<%=project.previewImg%>" alt="<%=project%>">
                             </picture>
                             <div class="img-overlay img-overlay--blur">

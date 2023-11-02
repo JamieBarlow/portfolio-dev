@@ -158,7 +158,7 @@ const projectData = {
       "Finally, the scope for improving any app is huge, and there are many potential future considerations - for example, further security concerns, requiring server-side limits image uploads and other app usage, and many potential design/UX improvements.",
     ],
     images: {
-      header: "yelpcamp-homepage",
+      header: "yelpcamp-homepage2",
       features: "yelpcamp-login",
       tech: "yelpcamp-clustermap",
       challenges: ["yelpcamp-newcamp",

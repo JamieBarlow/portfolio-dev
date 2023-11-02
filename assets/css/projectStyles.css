@@ -194,4 +194,8 @@ a {
   a {
     font-size: var(--fs-h5);
   }
+
+  .project__features .screenshot-box {
+    max-width: 30%;
+  }
 }
