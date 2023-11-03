@@ -40,7 +40,7 @@ const projectData = {
       },
       directDebits: {
         title: "Direct Debit Date Calculator",
-        previewImg: "dd-calculator",
+        previewImg: "dd-calculator-preview",
         link: "directDebits",
       },
     },
@@ -162,12 +162,12 @@ const projectData = {
     images: {
       header: "yelpcamp-homepage2",
       features: "yelpcamp-login",
-      tech: "yelpcamp-update",
+      tech: "yelpcamp-campeditgroup",
       challenges: [
         "yelpcamp-review",
         "yelpcamp-clustermap",
-        "yelpcamp-campedit",
         "yelpcamp-allcamps",
+        "yelpcamp-update",
       ],
     },
     otherProjects: {
@@ -222,20 +222,20 @@ const projectData = {
       "One key takeaway from this is that there are many ways that a user can 'break' an app or interact with it in unexpected ways, so creating a robust UI/UX that allows for flexible interaction is really important.",
     ],
     images: {
-      header: "rhythm-notation",
+      header: "rhythm-browser",
       features: "rhythm-app",
       tech: "rhythm-type1",
-      challenges: ["rhythm-symmetry", "rhythm-type2"],
+      challenges: ["rhythm-symmetry", "rhythm-type2", "rhythm-notation"],
     },
     otherProjects: {
       yelpCamp: {
         title: "YelpCamp",
-        previewImg: "yelpcamp-homepage",
+        previewImg: "yelpcamp-homepage2",
         link: "yelpCamp",
       },
       directDebits: {
         title: "Direct Debit Date Calculator",
-        previewImg: "dd-calculator",
+        previewImg: "dd-calculator-preview",
         link: "directDebits",
       },
     },

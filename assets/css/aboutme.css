@@ -12,6 +12,7 @@
 }
 
 .hero__description {
+  font-size: var(--fs-h2);
   font-weight: 300;
 }
 
@@ -40,6 +41,12 @@
 
 .aboutMe__greeting p {
   font-size: var(--fs-h4);
+}
+
+.aboutMe__blurb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .aboutMe__blurb p,
@@ -77,8 +84,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .aboutMe__heroImg {
-  }
+  .aboutMe__heroImg {}
 }
 
 @media screen and (min-width: 990px) {
