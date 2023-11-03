@@ -30,8 +30,7 @@ const projectData = {
       header: "puzzle-pitch",
       features: "puzzle-screenshot",
       tech: "puzzle-complete",
-      challenges: ["puzzle-split",
-        "puzzle-mockup"]
+      challenges: ["puzzle-split", "puzzle-mockup"],
     },
     otherProjects: {
       schillingerRtm: {
@@ -66,7 +65,11 @@ const projectData = {
       'Test suite built using Mocha.js testing framework, Chai.js assertion library, and <a href="https://www.codecademy.com/article/tdd-u1-good-test">MC-FIRE</a> principles',
     ],
     webStack: [
-      "For the app's core logic and functionality, I worked extensively with vanilla JavaScript, focusing on the JS Date object.", "The app makes calls to the UK Government's Bank Holidays API, which ensures that dates can be provided dynamically - for example, when extra bank holidays are created.", "The interface was built using BootStrap, which simplified formatting for its form and table elements, as well as offering a tabbed interface for a less cluttered display.", "For testing, I chose the Chai assertion library, because it can follow a familiar 'assert' style to that provided by Node.js, but is also browser-compatible, so allowed me to display test results from the Mocha framework to end users within the app window itself, along with additional message feedback.", "When writing my tests, I made sure to use a '3 test phase' format - Setup, Exercise, and Verify - to make the test code easier to read and maintain. I ran them as isolated unit tests, so didn't include a teardown stage.",
+      "For the app's core logic and functionality, I worked extensively with vanilla JavaScript, focusing on the JS Date object.",
+      "The app makes calls to the UK Government's Bank Holidays API, which ensures that dates can be provided dynamically - for example, when extra bank holidays are created.",
+      "The interface was built using BootStrap, which simplified formatting for its form and table elements, as well as offering a tabbed interface for a less cluttered display.",
+      "For testing, I chose the Chai assertion library, because it can follow a familiar 'assert' style to that provided by Node.js, but is also browser-compatible, so allowed me to display test results from the Mocha framework to end users within the app window itself, along with additional message feedback.",
+      "When writing my tests, I made sure to use a '3 test phase' format - Setup, Exercise, and Verify - to make the test code easier to read and maintain. I ran them as isolated unit tests, so didn't include a teardown stage.",
     ],
     challenges: [
       "To generate results, the app is comparing potential processing dates against the non-working days provided via API call (weekends and bank holidays), as well as company-specific holiday dates input by the user. If the 2 match, the app needs to not only shift the date backwards or forwards, but re-calculate the shift until there is no longer a clash. This required some complex nested looping logic, and testing for edge cases, including those where a non-processing day (or days) land(s) between dates where one needs to be 3 working days prior to another.",
@@ -82,8 +85,7 @@ const projectData = {
       header: "dd-calculator",
       features: "dd-bankhols",
       tech: "dd-companyhols",
-      challenges: ["dd-companyhols",
-      "dd-mochatests","dd-resultscopied"]
+      challenges: ["dd-companyhols", "dd-mochatests", "dd-resultscopied"],
     },
     otherProjects: {
       schillingerRtm: {
@@ -160,10 +162,13 @@ const projectData = {
     images: {
       header: "yelpcamp-homepage2",
       features: "yelpcamp-login",
-      tech: "yelpcamp-clustermap",
-      challenges: ["yelpcamp-newcamp",
-        "yelpcamp-clusterwide",
-        "yelpcamp-edit"]
+      tech: "yelpcamp-update",
+      challenges: [
+        "yelpcamp-review",
+        "yelpcamp-clustermap",
+        "yelpcamp-edit",
+        "yelpcamp-allcamps",
+      ],
     },
     otherProjects: {
       schillingerRtm: {
@@ -220,8 +225,7 @@ const projectData = {
       header: "rhythm-notation",
       features: "rhythm-app",
       tech: "rhythm-type1",
-      challenges: ["rhythm-symmetry",
-      "rhythm-type2"]
+      challenges: ["rhythm-symmetry", "rhythm-type2"],
     },
     otherProjects: {
       yelpCamp: {

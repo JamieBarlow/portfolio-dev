@@ -97,11 +97,13 @@ a {
   font-size: var(--fs-p);
 }
 
-.features-box li, .project__purpose li {
+.features-box li,
+.project__purpose li {
   list-style: square outside;
 }
 
-.features-box li::marker, .project__purpose li::marker {
+.features-box li::marker,
+.project__purpose li::marker {
   color: var(--vibrant-blue);
 }
 
@@ -129,6 +131,10 @@ a {
   /* margin-top: 5rem; */
 }
 
+.project__features .screenshot-box {
+  max-width: 60%;
+}
+
 @media screen and (min-width: 768px) {
   .project__header h1 {
     /* max-width: 70%; */
@@ -149,7 +155,7 @@ a {
     object-fit: cover;
     object-position: 0% 0%;
   }
-  
+
   .screenshot-box {
     /* order: 2; */
     flex-direction: row;
@@ -162,7 +168,7 @@ a {
     grid-template-columns: 1fr 2fr;
     grid-template-areas:
       ". hd"
-      "imgs txt"
+      "imgs txt";
   }
 
   .grid--ratio2to1 {
