@@ -82,9 +82,9 @@ const projectData = {
       "I also learned a great deal about testing, and the value of different types of tests; in this case, I created mock data to ensure the app's output would be correct, but I am looking to further explore the possibilities of integration and end-to-end testing using faking/stubbing tools such as <a href='https://sinonjs.org/'>Sinon.js</a>, and E2E testing suites such as <a href='https://www.cypress.io/'>Cypress</a>.",
     ],
     images: {
-      header: "dd-calculator",
-      features: "dd-bankhols",
-      tech: "dd-companyhols",
+      header: "dd-calculator-preview",
+      features: "dd-companyhols",
+      tech: "dd-bankholidays",
       challenges: ["dd-companyhols", "dd-mochatests", "dd-resultscopied"],
     },
     otherProjects: {
@@ -166,7 +166,7 @@ const projectData = {
       challenges: [
         "yelpcamp-review",
         "yelpcamp-clustermap",
-        "yelpcamp-edit",
+        "yelpcamp-campedit",
         "yelpcamp-allcamps",
       ],
     },
