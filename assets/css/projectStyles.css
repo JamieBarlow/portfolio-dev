@@ -8,6 +8,13 @@ h4 {
   margin: 0;
 }
 
+p,
+.fs--p,
+li,
+a {
+  font-size: var(--fs-p);
+}
+
 .underline--green.underline--animated:after {
   padding-bottom: 0px;
 }
@@ -196,11 +203,6 @@ a {
 }
 
 @media screen and (min-width: 990px) {
-  li,
-  a {
-    font-size: var(--fs-h5);
-  }
-
   .project__features .screenshot-box {
     max-width: 30%;
   }
