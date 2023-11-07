@@ -11,11 +11,6 @@
   text-align: start;
 }
 
-.hero__description {
-  font-size: var(--fs-h2);
-  font-weight: 300;
-}
-
 .aboutMe__hero {
   min-height: 50vh;
   display: flex;
@@ -36,11 +31,6 @@
 
 .aboutMe__greeting {
   flex: 4;
-  max-width: 60vw;
-}
-
-.aboutMe__greeting p {
-  font-size: var(--fs-h4);
 }
 
 .aboutMe__blurb {
@@ -75,7 +65,6 @@
   .aboutMe__greeting {
     display: flex;
     flex-flow: column wrap;
-    justify-content: space-around;
   }
 
   .aboutMe__titleAndImg {
@@ -84,7 +73,8 @@
 }
 
 @media screen and (min-width: 768px) {
-  .aboutMe__heroImg {}
+  .aboutMe__heroImg {
+  }
 }
 
 @media screen and (min-width: 990px) {

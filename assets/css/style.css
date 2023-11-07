@@ -16,8 +16,11 @@ html {
 }
 
 /* Prevents autofill from changing color */
-input:autofill, input:autofill:focus {
-  transition: background-color 0s 600000s, color 0s 600000s;
+input:autofill,
+input:autofill:focus {
+  transition:
+    background-color 0s 600000s,
+    color 0s 600000s;
 }
 
 a {
@@ -28,7 +31,7 @@ a {
 
 body {
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   background-color: var(--background-offwhite);
   color: var(--text-dark);
   /* overflow-x: hidden; */
@@ -231,7 +234,10 @@ button {
   padding: 6rem 1rem;
   opacity: 0;
   transform: translateX(100%);
-  transition: transform 0.5s, opacity 1s, display 1s;
+  transition:
+    transform 0.5s,
+    opacity 1s,
+    display 1s;
   z-index: 2;
 }
 
@@ -243,19 +249,25 @@ button {
 .slide-up {
   opacity: 0;
   transform: translateY(100px);
-  transition: transform 1s, opacity 1s;
+  transition:
+    transform 1s,
+    opacity 1s;
 }
 
 .slide-right {
   opacity: 0;
   transform: translateX(-100px);
-  transition: transform 1s, opacity 1s;
+  transition:
+    transform 1s,
+    opacity 1s;
 }
 
 .slide-left {
   opacity: 0;
   transform: translateX(100px);
-  transition: transform 1s, opacity 1s;
+  transition:
+    transform 1s,
+    opacity 1s;
 }
 
 .active {
@@ -278,27 +290,33 @@ button {
 }
 
 .menu-button .line {
-  transition: y 100ms ease-in 100ms, rotate 100ms ease-in, opacity 0ms 100ms;
+  transition:
+    y 100ms ease-in 100ms,
+    rotate 100ms ease-in,
+    opacity 0ms 100ms;
   transform-origin: center;
 }
 
-.menu-button[aria-expanded='true'] .line {
-  transition: y 100ms ease-in, rotate 100ms ease-in 100ms, opacity 0ms 100ms;
+.menu-button[aria-expanded="true"] .line {
+  transition:
+    y 100ms ease-in,
+    rotate 100ms ease-in 100ms,
+    opacity 0ms 100ms;
 }
 
-.menu-button[aria-expanded='true'] :is(.top, .bottom) {
+.menu-button[aria-expanded="true"] :is(.top, .bottom) {
   y: 45;
 }
 
-.menu-button[aria-expanded='true'] .top {
+.menu-button[aria-expanded="true"] .top {
   rotate: 45deg;
 }
 
-.menu-button[aria-expanded='true'] .middle {
+.menu-button[aria-expanded="true"] .middle {
   opacity: 0;
 }
 
-.menu-button[aria-expanded='true'] .bottom {
+.menu-button[aria-expanded="true"] .bottom {
   rotate: -45deg;
 }
 
@@ -485,7 +503,7 @@ footer svg:hover path {
 }
 
 .experience__box::after {
-  content: '';
+  content: "";
   display: block;
   align-self: center;
   width: 30%;
@@ -672,7 +690,7 @@ footer svg:hover path {
 }
 
 .projects__box::after {
-  content: '';
+  content: "";
   display: block;
   width: 60%;
   height: 10px;
@@ -717,7 +735,7 @@ footer svg:hover path {
   background-color: var(--vibrant-blue);
   margin-top: var(--4);
   padding: 20px 0;
-  background-image: url('/images/scribble.svg');
+  background-image: url("/images/scribble.svg");
 }
 
 .contact__wrapper {
@@ -854,7 +872,7 @@ footer {
 /* FOR CLEARING SPACE AFTER FLOATED ELEMENTS */
 
 .clearfix:after {
-  content: '';
+  content: "";
   display: block;
   clear: both;
 }
@@ -933,7 +951,7 @@ h1,
   font-size: var(--fs-h1);
   font-weight: 700;
   line-height: 1.2em;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 h2,
@@ -941,7 +959,7 @@ h2,
   font-size: var(--fs-h2);
   font-weight: 700;
   line-height: 1.16em;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 h3,
@@ -967,30 +985,31 @@ h5,
 
 p,
 .fs-p,
-a, li {
+a,
+li {
   font-size: var(--fs-p);
   font-weight: 500;
   line-height: 1.55em;
 }
 
 .fw--bold {
-  font-weight: 700;
+  font-weight: var(--fw-bold);
 }
 
 .fw--semibold {
-  font-weight: 600;
+  font-weight: var(--fw-semibold);
 }
 
 .fw--medium {
-  font-weight: 500;
+  font-weight: var(--fw-medium);
 }
 
 .fw--normal {
-  font-weight: 400;
+  font-weight: var(--fw-normal);
 }
 
 .fw--light {
-  font-weight: 300;
+  font-weight: var(--fw-light);
 }
 
 /* Spacing */
@@ -1223,7 +1242,7 @@ section {
 .underline--animated:after {
   display: block;
   /* padding: 2px; */
-  content: '';
+  content: "";
   border-bottom: solid 2px var(--vibrant-blue);
   transform: scaleX(0);
   transform-origin: 0% 100%;
@@ -1353,7 +1372,6 @@ section {
   }
 
   .sidebar__link {
-
   }
 
   .header__icons {
@@ -1628,11 +1646,11 @@ section {
   }
 
   br {
-    content: '';
+    content: "";
   }
 
   br:after {
-    content: ' ';
+    content: " ";
   }
 
   h1 {
