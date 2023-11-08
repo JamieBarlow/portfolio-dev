@@ -105,12 +105,16 @@ a {
 }
 
 .features-box li,
-.project__purpose li {
+.project__purpose li,
+.lessons-box li,
+.challenges-box li {
   list-style: square outside;
 }
 
 .features-box li::marker,
-.project__purpose li::marker {
+.project__purpose li::marker,
+.lessons-box li::marker,
+.challenges-box li::marker {
   color: var(--vibrant-blue);
 }
 
