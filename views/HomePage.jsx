@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Head from "./components/Head";
 import Scripts from "./components/Scripts";
+import ExperienceIcons from "./components/Experience-Icons";
 
 function HomePage(props) {
   return (
