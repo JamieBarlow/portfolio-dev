@@ -48,7 +48,7 @@ app.post("/email", (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.render("homerefactor");
+  res.render("HomePage");
 });
 
 app.get("/projects", (req, res) => {
@@ -69,7 +69,8 @@ app.get("/projects/:project", (req, res) => {
 
 app.get("/aboutMe", (req, res) => {
   const projectTitle = "About Me";
-  res.render("about", { projectTitle });
+  // res.render("about", { projectTitle });
+  res.render("AboutPage");
 });
 
 app.get("*", (req, res) => {

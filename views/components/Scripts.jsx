@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Scripts() {
+function Scripts() {
   return (
     <>
       <script src="js/design.js"></script>
@@ -8,3 +8,5 @@ export default function Scripts() {
     </>
   );
 }
+
+module.exports = Scripts;
