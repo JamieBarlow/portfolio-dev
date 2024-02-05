@@ -1,6 +1,6 @@
 import React from "react";
 import HeroSection from "./components/HeroSection";
-import Experience from "./components/Experience";
+import ExperienceSection from "./components/ExperienceSection";
 import Divider from "./components/Divider";
 import Projects from "./components/Projects";
 import ContactMe from "./components/ContactMe";
@@ -8,7 +8,6 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Head from "./components/Head";
 import Scripts from "./components/Scripts";
-import ExperienceIcons from "./components/Experience-Icons";
 
 function HomePage(props) {
   return (
@@ -18,7 +17,7 @@ function HomePage(props) {
         <main className="main-wrapper">
           <Navbar />
           <HeroSection />
-          <Experience />
+          <ExperienceSection />
           <Divider />
           <div id="projectsAnchor"></div>
           <Projects />

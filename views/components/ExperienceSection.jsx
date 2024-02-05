@@ -1,7 +1,7 @@
 import React from "react";
 import ExperienceIcons from "./Experience-Icons";
 
-export default function Experience() {
+export default function ExperienceSection() {
   return (
     <section className="experience bg--blue text--light">
       <svg id="visual" viewBox="0 0 960 120" version="1.1">
