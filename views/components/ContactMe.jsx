@@ -1,4 +1,5 @@
 import React from "react";
+import Button3D from "./Button3D";
 
 export default function ContactMe() {
   return (
@@ -49,13 +50,12 @@ export default function ContactMe() {
             ></textarea>
           </div>
           <div className="contact__submit">
-            <button
-              className="btn underline--green underline--animated text--light fs--h4"
+            <Button3D
+              text="Send Message"
+              size="fs--h5"
               type="submit"
-            >
-              <i className="fa-regular fa-paper-plane"></i>
-              Send Message
-            </button>
+              icon={<i className="fa-regular fa-paper-plane"></i>}
+            />
           </div>
         </form>
       </div>

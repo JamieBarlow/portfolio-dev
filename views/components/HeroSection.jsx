@@ -1,4 +1,5 @@
 import React from "react";
+import Button3D from "./Button3D";
 
 export default function HeroSection() {
   return (
@@ -27,11 +28,7 @@ export default function HeroSection() {
         </div>
       </div>
       <div className="hero__contact p-4">
-        <button className="pushable">
-          <a className="front fs--h4" href="#contactMe">
-            Get in touch
-          </a>
-        </button>
+        <Button3D text="Get in touch" link="#contactMe" size="fs--h4" />
       </div>
     </section>
   );

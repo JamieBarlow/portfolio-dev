@@ -1,5 +1,6 @@
 import React from "react";
 import ProjectsRows from "./ProjectsRows";
+import Button3D from "./Button3D";
 
 export default function Projects() {
   return (
@@ -12,11 +13,7 @@ export default function Projects() {
             className="projects__logo"
           />
           <div className="projects__contact fs--p py-2">
-            <button className="pushable">
-              <a className="front p-2" href="#contactMe">
-                Contact Me
-              </a>
-            </button>
+            <Button3D text="Contact Me" link="#contactMe" size="p-2" />
           </div>
         </div>
         <div className="projects__main">
