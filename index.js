@@ -7,8 +7,8 @@ const nodemailer = require("nodemailer");
 require("dotenv").config();
 const port = process.env.PORT || 3000;
 
-app.set("view engine", "jsx");
-app.engine("jsx", require("express-react-views").createEngine());
+app.set("view engine", "ejs");
+app.engine("ejs", ejsMate);
 app.set("views", path.join(__dirname, "views"));
 // Serve static assets
 app.use(express.static(path.join(__dirname, "assets")));
@@ -48,7 +48,7 @@ app.post("/email", (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.render("HomePage");
+  res.render("home");
 });
 
 app.get("/projects", (req, res) => {
