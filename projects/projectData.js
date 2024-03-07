@@ -32,18 +32,18 @@ const projectData = {
       tech: "puzzle-complete",
       challenges: ["puzzle-split", "puzzle-mockup"],
     },
-    otherProjects: {
-      schillingerRtm: {
+    otherProjects: [
+      {
         title: "Schillinger Rhythm Generator",
         previewImg: "rhythm-app",
         link: "schillingerRtm",
       },
-      directDebits: {
+      {
         title: "Direct Debit Date Calculator",
         previewImg: "dd-calculator-preview",
         link: "directDebits",
       },
-    },
+    ],
   },
   directDebits: {
     title: "Direct Debit Processing Calendar",
@@ -87,18 +87,18 @@ const projectData = {
       tech: "dd-bankholidays",
       challenges: ["dd-companyhols", "dd-mochatests", "dd-resultscopied"],
     },
-    otherProjects: {
-      schillingerRtm: {
+    otherProjects: [
+      {
         title: "Schillinger Rhythm Generator",
         previewImg: "rhythm-app",
         link: "schillingerRtm",
       },
-      slidingPuzzle: {
+      {
         title: "Sliding Puzzle",
         previewImg: "puzzle-pitch",
         link: "slidingPuzzle",
       },
-    },
+    ],
   },
   yelpCamp: {
     title: "YelpCamp",
@@ -170,18 +170,18 @@ const projectData = {
         "yelpcamp-update",
       ],
     },
-    otherProjects: {
-      schillingerRtm: {
+    otherProjects: [
+      {
         title: "Schillinger Rhythm Generator",
         previewImg: "rhythm-app",
         link: "schillingerRtm",
       },
-      slidingPuzzle: {
+      {
         title: "Sliding Puzzle",
         previewImg: "puzzle-pitch",
         link: "slidingPuzzle",
       },
-    },
+    ],
   },
   schillingerRtm: {
     title: "Schillinger Rhythm Generator",
@@ -228,18 +228,18 @@ const projectData = {
       tech: "rhythm-type1",
       challenges: ["rhythm-symmetry", "rhythm-type2", "rhythm-notation"],
     },
-    otherProjects: {
-      yelpCamp: {
+    otherProjects: [
+      {
         title: "YelpCamp",
         previewImg: "yelpcamp-homepage2",
         link: "yelpCamp",
       },
-      directDebits: {
+      {
         title: "Direct Debit Date Calculator",
         previewImg: "dd-calculator-preview",
         link: "directDebits",
       },
-    },
+    ],
   },
   creditCardChecker: {
     title: "Credit Card Checker",

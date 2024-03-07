@@ -26,6 +26,7 @@ function HomePage(props) {
         </main>
       </body>
       <Scripts />
+      <script src="js/contact.js"></script>
     </>
   );
 }

@@ -59,11 +59,8 @@ app.get("/projects/:project", (req, res) => {
   let { project } = req.params;
   if (project in projectData) {
     const projectInfo = projectData[project];
-    const projectTitle = projectInfo.title;
-    console.log(JSON.stringify(projectInfo));
     res.render("ShowPage", {
       projectInfo: JSON.stringify(projectInfo),
-      projectTitle,
     });
   } else {
     // Handle case when project is not found
