@@ -1,4 +1,10 @@
 import React from "react";
+import ReactHtmlParser, {
+  processNodes,
+  convertNodeToElement,
+  htmlparser2,
+} from "react-html-parser";
+
 export default function ProjectShowFeatures({ title, features, images }) {
   return (
     <section class="project__features wrapper">
@@ -7,7 +13,7 @@ export default function ProjectShowFeatures({ title, features, images }) {
         <div class="features-box text-box">
           <ul>
             {features.map((feature) => {
-              return <li>{feature}</li>;
+              return <li>{ReactHtmlParser(feature)}</li>;
             })}
           </ul>
         </div>

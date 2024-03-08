@@ -1,4 +1,9 @@
 import React from "react";
+import ReactHtmlParser, {
+  processNodes,
+  convertNodeToElement,
+  htmlparser2,
+} from "react-html-parser";
 
 export default function ProjectShowHero({
   title,
@@ -23,7 +28,7 @@ export default function ProjectShowHero({
               </svg>
             </span>
           </h1>
-          <p>{about}</p>
+          <p>{ReactHtmlParser(about)}</p>
         </div>
         <div class="bg--blue text--light">
           <div class="project__info wrapper my-4 p-3">
