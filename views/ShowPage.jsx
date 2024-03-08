@@ -9,6 +9,8 @@ import ProjectShowImages from "./components/ProjectShowImages";
 import ProjectShowChallenges from "./components/ProjectShowChallenges";
 import ProjectShowLessons from "./components/ProjectShowLessons";
 import ProjectShowOther from "./components/ProjectShowOther";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 export default function ShowPage({ projectInfo }) {
   const parsedProjectInfo = JSON.parse(projectInfo);
@@ -31,26 +33,35 @@ export default function ShowPage({ projectInfo }) {
   return (
     <>
       <HeadBoilerPlate />
-      <link rel="stylesheet" href="css/projectStyles.css" />
-      <ProjectShowHero
-        title={title}
-        about={about}
-        stack={stack}
-        live={live}
-        code={code}
-        images={images}
-      />
-      <ProjectShowPurpose purpose={purpose} />
-      <ProjectShowFeatures title={title} features={features} images={images} />
-      <ProjectShowWebStack webStack={webStack} />
-      <ProjectShowImages images={images} title={title} />
-      <ProjectShowChallenges
-        challenges={challenges}
-        images={images}
-        title={title}
-      />
-      <ProjectShowLessons lessons={lessons} />
-      <ProjectShowOther otherProjects={otherProjects} />
+      <body>
+        <main class="main-wrapper">
+          <Navbar />
+          <ProjectShowHero
+            title={title}
+            about={about}
+            stack={stack}
+            live={live}
+            code={code}
+            images={images}
+          />
+          <ProjectShowPurpose purpose={purpose} />
+          <ProjectShowFeatures
+            title={title}
+            features={features}
+            images={images}
+          />
+          <ProjectShowWebStack webStack={webStack} />
+          <ProjectShowImages images={images} title={title} />
+          <ProjectShowChallenges
+            challenges={challenges}
+            images={images}
+            title={title}
+          />
+          <ProjectShowLessons lessons={lessons} />
+          <ProjectShowOther otherProjects={otherProjects} />
+          <Footer />
+        </main>
+      </body>
       <Scripts />
     </>
   );
