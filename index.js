@@ -48,18 +48,18 @@ app.post("/email", (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.render("HomePage");
+  res.render("pages/HomePage");
 });
 
 app.get("/projects", (req, res) => {
-  res.render("projects");
+  res.render("pages/projects");
 });
 
 app.get("/projects/:project", (req, res) => {
   let { project } = req.params;
   if (project in projectData) {
     const projectInfo = projectData[project];
-    res.render("ShowPage", {
+    res.render("pages/ShowPage", {
       projectInfo: JSON.stringify(projectInfo),
     });
   } else {
@@ -71,7 +71,7 @@ app.get("/projects/:project", (req, res) => {
 app.get("/aboutMe", (req, res) => {
   const projectTitle = "About Me";
   // res.render("about", { projectTitle });
-  res.render("AboutPage");
+  res.render("pages/AboutPage");
 });
 
 app.get("*", (req, res) => {

@@ -1,10 +1,10 @@
 import React from "react";
-import AboutMeHero from "./components/AboutMeHero";
-import AboutMeBlurb from "./components/AboutMeBlurb";
-import HeadBoilerPlate from "./components/HeadBoilerplate";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Scripts from "./components/Scripts";
+import AboutMeHero from "../components/AboutMe/AboutMeHero";
+import AboutMeBlurb from "../components/AboutMe/AboutMeBlurb";
+import HeadBoilerPlate from "../components/layout/HeadBoilerplate";
+import Navbar from "../components/layout/Navbar";
+import Footer from "../components/layout/Footer";
+import Scripts from "../components/layout/Scripts";
 
 export default function AboutPage() {
   return (

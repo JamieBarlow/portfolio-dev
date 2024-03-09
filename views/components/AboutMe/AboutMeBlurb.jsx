@@ -38,7 +38,7 @@ export default function AboutMeBlurb() {
             'programming' tracks with sequencers or Elektron devices
             (conditional trigs, anyone?). In my job, I gravitated towards
             problem-solving through process automation and by writing programs
-            and macros (leading to my
+            and macros (leading to my&nbsp;
             <a href="./projects/directDebits">
               <span className="underline hover--green">
                 Direct Debit Calendar app
@@ -61,7 +61,7 @@ export default function AboutMeBlurb() {
             Since then, I've come full circle. I have been intensively
             self-teaching programming (thanks to a wealth of online resources,
             and mentors in the field) - you can see what I've been working on as
-            I learn
+            I learn&nbsp;
             <a href="./#projectsAnchor">
               <span className="underline hover--green">here</span>
             </a>

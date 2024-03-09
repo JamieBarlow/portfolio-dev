@@ -1,16 +1,16 @@
 import React from "react";
-import HeadBoilerPlate from "./components/HeadBoilerplate";
-import ProjectShowHero from "./components/ProjectShowHero";
-import ProjectShowPurpose from "./components/ProjectShowPurpose";
-import Scripts from "./components/Scripts";
-import ProjectShowFeatures from "./components/ProjectShowFeatures";
-import ProjectShowWebStack from "./components/ProjectShowWebstack";
-import ProjectShowImages from "./components/ProjectShowImages";
-import ProjectShowChallenges from "./components/ProjectShowChallenges";
-import ProjectShowLessons from "./components/ProjectShowLessons";
-import ProjectShowOther from "./components/ProjectShowOther";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import HeadBoilerPlate from "../components/layout/HeadBoilerplate";
+import ProjectShowHero from "../components/ShowPage/ProjectShowHero";
+import ProjectShowPurpose from "../components/ShowPage/ProjectShowPurpose";
+import Scripts from "../components/layout/Scripts";
+import ProjectShowFeatures from "../components/ShowPage/ProjectShowFeatures";
+import ProjectShowWebStack from "../components/ShowPage/ProjectShowWebstack";
+import ProjectShowImages from "../components/ShowPage/ProjectShowImages";
+import ProjectShowChallenges from "../components/ShowPage/ProjectShowChallenges";
+import ProjectShowLessons from "../components/ShowPage/ProjectShowLessons";
+import ProjectShowOther from "../components/ShowPage/ProjectShowOther";
+import Navbar from "../components/layout/Navbar";
+import Footer from "../components/layout/Footer";
 
 export default function ShowPage({ projectInfo }) {
   const parsedProjectInfo = JSON.parse(projectInfo);
@@ -33,6 +33,7 @@ export default function ShowPage({ projectInfo }) {
   return (
     <>
       <HeadBoilerPlate />
+      <link rel="stylesheet" href="/css/projectStyles.css" />
       <body>
         <main class="main-wrapper">
           <Navbar />

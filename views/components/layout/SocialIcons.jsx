@@ -53,7 +53,7 @@ export default function SocialIcons() {
         </a>
       </li>
       <li>
-        <a href="">
+        <a href="https://twitter.com/JayBarls">
           <svg
             className="social-icon"
             role="img"

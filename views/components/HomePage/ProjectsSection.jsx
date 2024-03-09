@@ -1,6 +1,6 @@
 import React from "react";
 import ProjectsRows from "./ProjectsRows";
-import Button3D from "./Button3D";
+import Button3D from "../Button3D";
 
 export default function Projects() {
   return (

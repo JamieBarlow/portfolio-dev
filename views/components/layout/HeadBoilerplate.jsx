@@ -13,7 +13,6 @@ export default function HeadBoilerPlate({ projectTitle }) {
       />
       <title>{projectTitle ? projectTitle : "My Portfolio"}</title>
       <link rel="stylesheet" href="/css/style.css" />
-      <link rel="stylesheet" href="/css/projectStyles.css" />
     </head>
   );
 }

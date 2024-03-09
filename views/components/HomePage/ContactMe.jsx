@@ -1,5 +1,5 @@
 import React from "react";
-import Button3D from "./Button3D";
+import Button3D from "../Button3D";
 
 export default function ContactMe() {
   return (
