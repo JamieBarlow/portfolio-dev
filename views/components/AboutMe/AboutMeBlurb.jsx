@@ -1,4 +1,6 @@
 import React from "react";
+import Button3D from "../common/Button3D";
+import LinkUnderline from "../common/LinkUnderline";
 
 export default function AboutMeBlurb() {
   return (
@@ -38,12 +40,11 @@ export default function AboutMeBlurb() {
             'programming' tracks with sequencers or Elektron devices
             (conditional trigs, anyone?). In my job, I gravitated towards
             problem-solving through process automation and by writing programs
-            and macros (leading to my&nbsp;
-            <a href="./projects/directDebits">
-              <span className="underline hover--green">
-                Direct Debit Calendar app
-              </span>
-            </a>
+            and macros (leading to my
+            <LinkUnderline
+              text="Direct Debit Calendar app"
+              href="./projects/directDebits"
+            />
             ).
           </p>
         </div>
@@ -61,12 +62,9 @@ export default function AboutMeBlurb() {
             Since then, I've come full circle. I have been intensively
             self-teaching programming (thanks to a wealth of online resources,
             and mentors in the field) - you can see what I've been working on as
-            I learn&nbsp;
-            <a href="./#projectsAnchor">
-              <span className="underline hover--green">here</span>
-            </a>
-            . I'm excited to keep learning and to bring this to a career in
-            tech.
+            I learn
+            <LinkUnderline text="here" href="./#projectsAnchor" />. I'm excited
+            to keep learning and to bring this to a career in tech.
           </p>
           <p>
             If you like my work and would like to contact me or build something
@@ -74,11 +72,7 @@ export default function AboutMeBlurb() {
           </p>
         </div>
         <div className="hero__contact p-4 slide-right">
-          <button className="pushable">
-            <a className="front fs--h4" href="./#contactMe">
-              Get in touch
-            </a>
-          </button>
+          <Button3D text="Get in touch" size="fs--h5" link="./#contactMe" />
         </div>
       </div>
     </section>

@@ -1,5 +1,5 @@
 import React from "react";
-import ArrowIcon from "../ArrowIcon";
+import ArrowIcon from "../common/ArrowIcon";
 
 export default function ButtonProject({ link, name, icon }) {
   return (

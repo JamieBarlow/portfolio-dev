@@ -1,5 +1,6 @@
 import React from "react";
 import ExperienceIcons from "./Experience-Icons";
+import LinkUnderline from "../common/LinkUnderline";
 
 export default function ExperienceSection() {
   return (
@@ -19,13 +20,14 @@ export default function ExperienceSection() {
         </h2>
         <h5 className="experience__subheader fw--light my-3">
           I use the tools below regularly, and have been able to put my skills
-          into practice through a number of{" "}
-          <a href="#projects">
-            <span className="underline text--light fs--h5 hover--green">
-              projects
-            </span>
-          </a>
-          . I love learning new tech, and I am continuing to add more to the
+          into practice through a number of
+          <LinkUnderline
+            text="projects."
+            href="/#projectsAnchor"
+            size="fs--h5"
+            variation="text--light"
+          />{" "}
+          I love learning new tech, and I am continuing to add more to the
           stack:
         </h5>
       </div>
