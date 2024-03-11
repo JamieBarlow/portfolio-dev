@@ -4,7 +4,7 @@ import ProjectCard from "./ProjectCard";
 const projectData = [
   {
     title: "YelpCamp",
-    languages: ["HTML/CSS", "JAVASCRIPT", "EXPRESS", "MONGO DB"],
+    languages: ["HTML/CSS", "JavaScript", "Express", "MongoDB", "Node.js"],
     description:
       "Full-stack web application with CRUD functionality. Allows user to add/read/update/delete reviews.",
     picL: "https://res.cloudinary.com/dakgl7s9n/image/upload/f_auto,q_auto:best,c_scale,w_600/portfolio/yelpcamp-homepage2 600w",
@@ -15,7 +15,14 @@ const projectData = [
   },
   {
     title: "Direct Debit Processing Calendar",
-    languages: ["HTML/CSS", "JAVASCRIPT", "Mocha.JS"],
+    languages: [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "React-BootStrap",
+      "Jest",
+      "Vitest",
+    ],
     description:
       "JavaScript web app to generate calendar data a company's Direct Debit processes. Features unit-testing with Mocha.js and Chai, which can be run from the browser",
     picL: "https://res.cloudinary.com/dakgl7s9n/image/upload/f_auto,q_auto:best,c_scale,w_800/portfolio/dd-calculator-preview 800w",
@@ -26,7 +33,7 @@ const projectData = [
   },
   {
     title: "Sliding Puzzle",
-    languages: ["HTML/CSS", "JAVASCRIPT", "P5.JS"],
+    languages: ["HTML/CSS", "JavaScript", "P5.js"],
     description:
       "Interactive puzzle feature for a healthcare organisation's landing page",
     picL: "https://res.cloudinary.com/dakgl7s9n/image/upload/f_auto,q_auto:best,c_scale,w_800/portfolio/puzzle-pitch 800w",
@@ -37,7 +44,7 @@ const projectData = [
   },
   {
     title: "Schillinger Rhythm Generator",
-    languages: ["HTML/CSS", "JAVASCRIPT", "P5.JS", "P5.SOUND"],
+    languages: ["HTML/CSS", "JavaScript", "P5.js", "P5.sound"],
     description:
       "Web app to generate complex rhythms from user input, as a compositional tool and interactive education in rhythmic theory.",
     picL: "https://res.cloudinary.com/dakgl7s9n/image/upload/f_auto,q_auto:best,c_scale,w_800/portfolio/rhythm-app 800w",
