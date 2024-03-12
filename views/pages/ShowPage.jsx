@@ -11,7 +11,6 @@ import ProjectShowLessons from "../components/ShowPage/ProjectShowLessons";
 import ProjectShowOther from "../components/ShowPage/ProjectShowOther";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
-import ProjectShowDDConversion from "../components/ShowPage/ProjectShowDDConversion";
 
 export default function ShowPage({ projectInfo }) {
   const parsedProjectInfo = JSON.parse(projectInfo);
@@ -55,7 +54,6 @@ export default function ShowPage({ projectInfo }) {
           />
           <ProjectShowWebStack webStack={webStack} />
           <ProjectShowImages images={images} title={title} />
-          {conversion && <ProjectShowDDConversion conversion={conversion} images={images} title={title} />}
           <ProjectShowChallenges
             challenges={challenges}
             images={images}
