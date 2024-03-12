@@ -47,12 +47,14 @@ const projectData = {
   },
   directDebits: {
     title: "Direct Debit Processing Calendar",
-    stack: ["HTML/CSS", "JavaScript", "BootStrap", "Mocha.js / Chai.js"],
-    code: "https://github.com/JamieBarlow/weekend-bankhol",
-    live: "https://dd-calculator.web.app/",
+    stack: ["HTML/CSS", "JavaScript", "React", "React-BootStrap", "Vitest / Jest"],
+    code: "https://github.com/JamieBarlow/dd-calculator-v2",
+    live: "https://dd-calculator.netlify.app/",
     about:
       'Single page web application deployed by a large-scale organisation to calculate Direct Debit processing days for a selected year by accounting for weekends, bank holidays and other non-work days. Uses the UK Government\'s <a href="https://www.api.gov.uk/gds/bank-holidays/#bank-holidays">Bank Holidays API</a> to fetch data dynamically.',
     purpose: [
+      "This is v2 of a browser app that can be used to determine Direct Debit processing days for a selected year by accounting for weekends, bank holidays and other non-work days. The original can be found <a href='https://github.com/JamieBarlow/weekend-bankhol'>here</a>.",
+      "The UI has since been refactored to use React components (including CRUK's React component library, built using styled-components), and the app's functional layer now makes use of React state management instead of traditional JS DOM manipulation. This has greatly improved the visual interface and provides a robust user experience, allowing for results to be updated dynamically without the need to refresh the browser.",
       'Companies who operate a <a href="https://www.directdebit.co.uk/">Direct Debit scheme</a> will rely on a processing calendar to determine their schedule for specific Direct Debit processes, in order to meet the <a href="https://www.directdebit.co.uk/direct-debit-explained/direct-debit-guarantee/">Direct Debit guarantee</a>). Processing dates for both Service User and bank are determined by working days, and therefore need to be adjusted to account for bank holidays, weekends, and office closures. Determining when these dates are had proven to be a manual, surprisingly complex and error-prone process, and so this app was created to meet a real challenge / need for automation.',
       "Ultimately this app is designed to provide a reliable, consistent and maintainable means of determining Direct Debit processing days, mitigating error and risk - failure to generate this data correctly may result in multiple negative impacts that are difficult and/or costly to fix: missed or delayed submissions, payment reconciliation issues, knock-on impact on future claims, damage to reputation or the company's Service User status.",
       "The results are laid out in a format that fits the exact requirements of the Apps Support team for data loading, and can be copied to the clipboard with a single click.",
@@ -81,11 +83,19 @@ const projectData = {
       "While I gained a lot of experience working with the Date object in JavaScript, I learned that there are JS date libraries which could simplify the process of converting and working with dates, thereby speeding up production.",
       "I also learned a great deal about testing, and the value of different types of tests; in this case, I created mock data to ensure the app's output would be correct, but I am looking to further explore the possibilities of integration and end-to-end testing using faking/stubbing tools such as <a href='https://sinonjs.org/'>Sinon.js</a>, and E2E testing suites such as <a href='https://www.cypress.io/'>Cypress</a>.",
     ],
+    conversion: [
+      "This app was originally built using vanilla JS, with a basic BootStrap interface, focusing on functionality over form. It has since undergone a major revamp - the UI has been refactored to use <a href='https://react.dev/'>React</a> components (including <a href='https://www.npmjs.com/package/@cruk/cruk-react-components'>CRUK's React component library</a>, built using styled-components), and the app's functional layer now makes use of React state management instead of traditional JS DOM manipulation. This has greatly improved the visual interface and provides a robust user experience, allowing for results to be updated dynamically without the need to refresh the browser.",
+      "To bridge the gap between the original app's UI elements and React, I made use of some of the original BootStrap components, rebuilt for React with the <a href='https://react-bootstrap.netlify.app/'>React-BootStrap</a> library.",
+      "Unit tests (originally Mocha/Chai) have been been rewritten in <a href='https://vitest.dev/'>Vitest</a>, due to its integration with my React build tool of choice, <a href='https://vitejs.dev/'>Vite</a>, and compatibility with the popular <a href='https://jestjs.io/'>Jest</a> API. Further advantages of this setup included clear assertions, integrated mocking, and visualisation of code coverage.",
+      "For a simplified deployment process and built-in continuous integration and continuous deployment(CI/CD), I deployed with <a href='https://www.netlify.com/'>Netlify</a>.",
+      "You can find the original repo <a href='https://github.com/JamieBarlow/weekend-bankhol'>here</a>, and see below for a visual comparison:",
+    ],
     images: {
-      header: "dd-calculator-preview",
+      header: "dd-calculator-v2",
       features: "dd-companyhols",
       tech: "dd-bankholidays",
       challenges: ["dd-companyhols", "dd-mochatests", "dd-resultscopied"],
+      conversion: ["dd-calculator-preview-v1", "dd-calculator-v2"]
     },
     otherProjects: [
       {
