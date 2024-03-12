@@ -1502,10 +1502,6 @@ section {
     margin-top: var(--5);
   }
 
-  .projects__box {
-    /* Required for grid with nested elements */
-    /* display: contents; */
-  }
   .projects__img {
     grid-row: 1;
   }
