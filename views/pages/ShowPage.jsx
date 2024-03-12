@@ -29,6 +29,7 @@ export default function ShowPage({ projectInfo }) {
     lessons,
     images,
     otherProjects,
+    conversion
   } = parsedProjectInfo;
   return (
     <>
