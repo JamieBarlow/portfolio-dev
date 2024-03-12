@@ -546,7 +546,7 @@ footer svg:hover path {
   max-width: 50%;
 }
 
-.projects__box {
+.card {
   background-color: var(--background-card);
   /* border: 1px solid red; */
   border-radius: 20px;
@@ -666,7 +666,7 @@ footer svg:hover path {
   justify-content: flex-start;
 }
 
-.projects__languages > p {
+.pill {
   font-size: var(--fs-p);
   line-height: 1.625;
   letter-spacing: 2.29px;

@@ -7,7 +7,7 @@ import ReactHtmlParser, {
 
 export default function ProjectShowFeatures({ title, features, images }) {
   return (
-    <section class="project__features wrapper">
+    <section class="card project__features wrapper">
       <h3>Features</h3>
       <div class="col-layout">
         <div class="features-box text-box">

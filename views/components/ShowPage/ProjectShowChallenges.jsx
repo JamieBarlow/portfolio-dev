@@ -7,18 +7,18 @@ import ReactHtmlParser, {
 
 export default function ProjectShowChallenges({ challenges, images, title }) {
   return (
-    <section class="project__challenges my-5 wrapper">
-      <div class="grid--ratio1to2">
-        <h3 class="challenges-title">Challenges</h3>
+    <section className="project__challenges my-5 wrapper">
+      <div>
+        <h3>Challenges</h3>
         <div class="challenges-box text-box">
           {challenges.map((para) => {
             return <p>{ReactHtmlParser(para)}</p>;
           })}
         </div>
-        <div class="screenshot-box challenges">
+        <div className="screenshot-box challenges">
           {images.challenges.map((image) => {
             return (
-              <picture>
+              <picture className="challenges-img">
                 <source
                   media="(min-width: 768px)"
                   srcset={`https://res.cloudinary.com/dakgl7s9n/image/upload/f_auto,q_auto:best,c_scale,w_800/portfolio/${image} 800w

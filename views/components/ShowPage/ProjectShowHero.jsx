@@ -4,6 +4,7 @@ import ReactHtmlParser, {
   convertNodeToElement,
   htmlparser2,
 } from "react-html-parser";
+import ButtonUnderline from "../common/ButtonUnderline";
 
 export default function ProjectShowHero({
   title,
@@ -36,53 +37,17 @@ export default function ProjectShowHero({
               <h4>Stack</h4>
               <ul class="project__stackList">
                 {stack.map((tech) => (
-                  <li>{tech}</li>
+                  <li className="pill">{tech}</li>
                 ))}
               </ul>
             </div>
             <div class="project__live">
               <h4>Live</h4>
-              <a
-                href={live}
-                class="text--light underline underline--green underline--animated"
-              >
-                <div class="projects__link">
-                  <span class="link">View project</span>
-                  <svg
-                    width="1.3rem"
-                    viewBox="0 0 18 18"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M13.922 4.5V11.8125C13.922 11.9244 13.8776 12.0317 13.7985 12.1108C13.7193 12.1899 13.612 12.2344 13.5002 12.2344C13.3883 12.2344 13.281 12.1899 13.2018 12.1108C13.1227 12.0317 13.0783 11.9244 13.0783 11.8125V5.51953L4.79547 13.7953C4.71715 13.8736 4.61092 13.9176 4.50015 13.9176C4.38939 13.9176 4.28316 13.8736 4.20484 13.7953C4.12652 13.717 4.08252 13.6108 4.08252 13.5C4.08252 13.3892 4.12652 13.283 4.20484 13.2047L12.4806 4.92188H6.18765C6.07577 4.92188 5.96846 4.87743 5.88934 4.79831C5.81023 4.71919 5.76578 4.61189 5.76578 4.5C5.76578 4.38811 5.81023 4.28081 5.88934 4.20169C5.96846 4.12257 6.07577 4.07813 6.18765 4.07812H13.5002C13.612 4.07813 13.7193 4.12257 13.7985 4.20169C13.8776 4.28081 13.922 4.38811 13.922 4.5Z"
-                      fill="currentColor"
-                    ></path>
-                  </svg>
-                </div>
-              </a>
+              <ButtonUnderline link={live} name="View live" variation="green" />
             </div>
             <div class="project__code">
               <h4>Code & Docs</h4>
-              <a
-                href={code}
-                class="text--light underline underline--green underline--animated"
-              >
-                <div class="projects__link text--light">
-                  <span class="link">GitHub</span>
-                  <svg
-                    width="1.3rem"
-                    viewBox="0 0 18 18"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M13.922 4.5V11.8125C13.922 11.9244 13.8776 12.0317 13.7985 12.1108C13.7193 12.1899 13.612 12.2344 13.5002 12.2344C13.3883 12.2344 13.281 12.1899 13.2018 12.1108C13.1227 12.0317 13.0783 11.9244 13.0783 11.8125V5.51953L4.79547 13.7953C4.71715 13.8736 4.61092 13.9176 4.50015 13.9176C4.38939 13.9176 4.28316 13.8736 4.20484 13.7953C4.12652 13.717 4.08252 13.6108 4.08252 13.5C4.08252 13.3892 4.12652 13.283 4.20484 13.2047L12.4806 4.92188H6.18765C6.07577 4.92188 5.96846 4.87743 5.88934 4.79831C5.81023 4.71919 5.76578 4.61189 5.76578 4.5C5.76578 4.38811 5.81023 4.28081 5.88934 4.20169C5.96846 4.12257 6.07577 4.07813 6.18765 4.07812H13.5002C13.612 4.07813 13.7193 4.12257 13.7985 4.20169C13.8776 4.28081 13.922 4.38811 13.922 4.5Z"
-                      fill="currentColor"
-                    ></path>
-                  </svg>
-                </div>
-              </a>
+              <ButtonUnderline link={code} name="GitHub" variation="green" />
             </div>
           </div>
         </div>

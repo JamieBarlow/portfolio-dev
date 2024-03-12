@@ -3,10 +3,10 @@ export default function ProjectShowOther({ otherProjects }) {
   return (
     <section class="project__other wrapper">
       <h3>Other Projects</h3>
-      <div class="project__otherProjects col-layout my-3">
+      <div class="project__otherProjects my-3">
         {otherProjects.map((project) => {
           return (
-            <div class="otherProject">
+            <div class="card otherProject">
               <h4 class="my-2">{project.title}</h4>
               <div class="projects__img">
                 <picture>

@@ -1,5 +1,5 @@
 import React from "react";
-import ButtonProject from "./ButtonProject";
+import ButtonUnderline from "../common/ButtonUnderline";
 import ProjectPreviewImg from "./ProjectPreviewImg";
 
 export default function ProjectCard({
@@ -13,20 +13,20 @@ export default function ProjectCard({
   gitHubLink,
 }) {
   return (
-    <div className="projects__box">
+    <div className="card">
       <ProjectPreviewImg {...{ picL, picM, src, title, pageLink }} />
       <p className="projects__title">{title}</p>
       <div className="projects__languages">
         {languages.map((lang) => (
-          <p>{lang}</p>
+          <p className="pill">{lang}</p>
         ))}
       </div>
       <div className="projects__description">
         <p>{description}</p>
       </div>
       <div className="projects__links">
-        <ButtonProject link={pageLink} name="View project" icon="fa-book" />
-        <ButtonProject
+        <ButtonUnderline link={pageLink} name="View project" icon="fa-book" />
+        <ButtonUnderline
           link={gitHubLink}
           name="View code"
           icon="fa-laptop-code"

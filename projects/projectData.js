@@ -47,11 +47,17 @@ const projectData = {
   },
   directDebits: {
     title: "Direct Debit Processing Calendar",
-    stack: ["HTML/CSS", "JavaScript", "React", "React-BootStrap", "Vitest / Jest"],
+    stack: [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "React-BootStrap",
+      "Vitest / Jest",
+    ],
     code: "https://github.com/JamieBarlow/dd-calculator-v2",
     live: "https://dd-calculator.netlify.app/",
     about:
-      "Single page web application developed for <a href='https://www.cancerresearchuk.org/'>Cancer Research UK</a> to calculate Direct Debit processing days for a selected year by accounting for weekends, bank holidays and other non-work days. Uses the UK Government\'s <a href='https://www.api.gov.uk/gds/bank-holidays/#bank-holidays'>Bank Holidays API</a> to fetch data dynamically.",
+      "Single page web application developed for <a href='https://www.cancerresearchuk.org/'>Cancer Research UK</a> to calculate Direct Debit processing days for a selected year by accounting for weekends, bank holidays and other non-work days. Uses the UK Government's <a href='https://www.api.gov.uk/gds/bank-holidays/#bank-holidays'>Bank Holidays API</a> to fetch data dynamically.",
     purpose: [
       "This is v2 of a browser app that can be used to determine Direct Debit processing days for a selected year by accounting for weekends, bank holidays and other non-work days. The original repo can be found <a href='https://github.com/JamieBarlow/weekend-bankhol'>here</a>.",
       'Companies who operate a <a href="https://www.directdebit.co.uk/">Direct Debit scheme</a> will rely on a processing calendar to determine their schedule for specific Direct Debit processes, in order to meet the <a href="https://www.directdebit.co.uk/direct-debit-explained/direct-debit-guarantee/">Direct Debit guarantee</a>). Processing dates for both Service User and bank are determined by working days, and therefore need to be adjusted to account for bank holidays, weekends, and office closures. Determining when these dates are had proven to be a manual, surprisingly complex and error-prone process, and so this app was created to meet a real challenge / need for automation.',
@@ -82,7 +88,7 @@ const projectData = {
       "Refactoring was helped by having already written unit tests, expressing what each function should achieve. Conditional rendering logic could now be handled by components themselves, rather than arising from other functions, allowing for a clearer separation of concerns. The React <a href='https://react.dev/reference/react/createContext'>Context API</a> also allowed me to maintain greater control and a clearer overview of state management throughout the app, without overly complicated interactions and unwanted side effects.",
       "Testing the 'copy to clipboard' function in Vitest involved some extra complexity without certain DOM elements in a testing environment. I nonetheless managed this by: <li>Mocking the navigator object using 'vi' in Vitest;</li><li>Mocking the document object using <a href='https://www.npmjs.com/package/jsdom'>JSDOM</a></li>",
       "To make the app's output more predictable, I opted to change the <b>data structure</b> of each function's returned output so that they followed a consistent schema. In turn, my tests greatly supported my overall debugging process, as they involved checking the data structure as well as type-checking.",
-      "For some further app-specific challenges, as well as complications and lessons from working with the JavaScript Date object, see my original repo <https://github.com/JamieBarlow/weekend-bankhol?tab=readme-ov-file#development-challenges-and-lessons-wrench'>here</a>."
+      "For some further app-specific challenges, as well as complications and lessons from working with the JavaScript Date object, see my original repo <https://github.com/JamieBarlow/weekend-bankhol?tab=readme-ov-file#development-challenges-and-lessons-wrench'>here</a>.",
     ],
     lessons: [
       "While I gained a lot of experience working with the Date object in JavaScript, I discovered that there are JS date libraries which could simplify the process of converting and working with dates, thereby speeding up production. For example, <a href='https://date-fns.org/'>date-fns</a> or <a href='https://momentjs.com/'>Moment.js</a>.",
@@ -90,9 +96,14 @@ const projectData = {
     ],
     images: {
       header: "dd-calculator-v2",
-      features: "dd-v2-company",
+      features: "dd-v2-results",
       tech: "dd-v2-compare",
-      challenges: ["dd-v2-company", "dd-v2-results", "dd-v2"],
+      challenges: [
+        "dd-v2-company",
+        "dd-v2-vitest-dashboard",
+        // "dd-v2",
+        "dd-v2-vitest-coverage",
+      ],
     },
     otherProjects: [
       {

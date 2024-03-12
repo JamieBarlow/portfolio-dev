@@ -69,10 +69,16 @@ a {
   max-width: 100%;
 }
 
+.project__otherProjects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
 .otherProject {
   display: flex;
   flex-direction: column;
-  flex: 1;
+  flex: 1 0 45%;
 }
 
 .demoVid--halfPage {
@@ -93,10 +99,6 @@ a {
 .col-imgs-2 div img {
   /* flex: 1; */
   max-height: 600px;
-}
-
-.project__otherProjects.col-layout {
-  gap: 30%;
 }
 
 li,
@@ -138,13 +140,11 @@ a {
 
 .screenshot-box.challenges {
   display: flex;
-  flex-direction: column;
-  /* margin-top: 5rem; */
+  flex-wrap: wrap;
 }
 
 .project__features .screenshot-box {
   max-width: 60%;
-  align-self: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -193,21 +193,39 @@ a {
   }
 
   .screenshot-box.challenges {
-    flex-direction: column;
     align-items: flex-start;
-    grid-area: imgs;
   }
 
-  .challenges-box {
-    grid-area: txt;
+  .challenges-img {
+    flex: 1 0 45%;
+    margin: 5px;
   }
-  .challenges-box p:nth-of-type(1) {
-    margin-top: 0;
+
+  .project__otherProjects {
+    flex-wrap: nowrap;
   }
 }
 
 @media screen and (min-width: 990px) {
+  .project__features .col-layout {
+    flex-direction: column;
+  }
+
   .project__features .screenshot-box {
-    max-width: 30%;
+    max-width: 80%;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .project__features .col-layout {
+    flex-direction: row;
+  }
+  .project__features .screenshot-box {
+    max-width: 40%;
+  }
+
+  .challenges-img {
+    flex: 1 0 30%;
+    margin: 5px;
   }
 }
