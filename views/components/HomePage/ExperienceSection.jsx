@@ -27,8 +27,7 @@ export default function ExperienceSection() {
             size="fs--h5"
             variation="text--light"
           />{" "}
-          I love learning new tech, and I am continuing to add more to the
-          stack:
+          My current tech stack includes:
         </h5>
       </div>
       <ExperienceIcons />

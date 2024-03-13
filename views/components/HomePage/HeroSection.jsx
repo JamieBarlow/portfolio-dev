@@ -22,8 +22,8 @@ export default function HeroSection() {
             </span>
           </h1>
           <h5 className="hero__description m-0 py-4">
-            Based in the UK, I'm a developer with a passion for building high
-            quality and accessible web apps. You can check out my work below.
+            I'm a full-stack developer with a passion for building high quality
+            web apps. You can check out my work below, or:
           </h5>
         </div>
       </div>
