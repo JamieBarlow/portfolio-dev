@@ -215,7 +215,7 @@ const projectData = [
     stack: ["HTML/CSS", "JavaScript", "p5.js", "p5.sound"],
     pageLink: "projects/schillingerRtm",
     code: "https://github.com/JamieBarlow/schillinger-rhythm",
-    live: "https://jamiebarlow.github.io/drum-machine/",
+    live: "https://jamiebarlow.github.io/schillinger-rhythm/",
     homeDescription:
       "Web app to generate complex rhythms from user input, as a compositional tool and interactive education in rhythmic theory.",
     about:

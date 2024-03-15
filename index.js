@@ -78,7 +78,7 @@ app.get("/projects/:project", (req, res) => {
 app.get("/aboutMe", (req, res) => {
   const projectTitle = "About Me";
   // res.render("about", { projectTitle });
-  res.render("AboutPage");
+  res.render("pages/AboutPage");
 });
 
 app.get("*", (req, res) => {
