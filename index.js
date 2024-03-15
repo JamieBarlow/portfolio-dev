@@ -8,7 +8,7 @@ const nodemailer = require("nodemailer");
 require("dotenv").config();
 const port = process.env.PORT || 3000;
 
-app.set("view engine", "ejs");
+// app.set("view engine", "ejs");
 app.set("view engine", "jsx");
 app.engine("jsx", require("express-react-views").createEngine());
 // Serve static assets
@@ -58,10 +58,11 @@ app.get("/projects", (req, res) => {
 
 app.get("/projects/:project", (req, res) => {
   let { project } = req.params;
+  const href = `projects/${project}`;
   let projectFound = false; // Flag to track whether project is found
   for (let i = 0; i < displayProjects.length; i++) {
     const projectInfo = displayProjects[i];
-    if (project === projectInfo.pageLink) {
+    if (href === projectInfo.pageLink) {
       projectFound = true;
       res.render("pages/ShowPage", {
         projectInfo: JSON.stringify(projectInfo),

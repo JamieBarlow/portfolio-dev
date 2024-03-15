@@ -10,7 +10,7 @@ export default function ButtonUnderline({ link, name, icon, variation }) {
   }
   return (
     <a
-      href={`projects/${link}`}
+      href={link}
       className={`underline underline--animated ${variationClass}`}
     >
       <div className="projects__link">

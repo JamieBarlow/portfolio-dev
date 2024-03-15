@@ -8,7 +8,7 @@ const projectData = [
       "React-BootStrap",
       "Vitest / Jest",
     ],
-    pageLink: "directDebits",
+    pageLink: "projects/directDebits",
     code: "https://github.com/JamieBarlow/dd-calculator-v2",
     live: "https://dd-calculator.netlify.app/",
     homeDescription:
@@ -85,7 +85,7 @@ const projectData = [
       "MongoDB",
       "Node.js",
     ],
-    pageLink: "yelpCamp",
+    pageLink: "projects/yelpCamp",
     code: "https://github.com/JamieBarlow/myYelpCamp",
     live: "https://myyelpcamp-c74110eebe2c.herokuapp.com/",
     homeDescription:
@@ -164,7 +164,7 @@ const projectData = [
   {
     title: "Sliding Puzzle",
     stack: ["HTML", "JavaScript", "p5.js"],
-    pageLink: "slidingPuzzle",
+    pageLink: "projects/slidingPuzzle",
     code: "https://github.com/JamieBarlow/sliding-puzzle-p5",
     live: "https://jamiebarlow.github.io/sliding-puzzle-p5/",
     homeDescription:
@@ -205,7 +205,7 @@ const projectData = [
       },
       {
         title: "Direct Debit Date Calculator",
-        previewImg: "dd-calculator-preview",
+        previewImg: "dd-calculator-v2",
         link: "directDebits",
       },
     ],
@@ -213,7 +213,7 @@ const projectData = [
   {
     title: "Schillinger Rhythm Generator",
     stack: ["HTML/CSS", "JavaScript", "p5.js", "p5.sound"],
-    pageLink: "schillingerRtm",
+    pageLink: "projects/schillingerRtm",
     code: "https://github.com/JamieBarlow/schillinger-rhythm",
     live: "https://jamiebarlow.github.io/drum-machine/",
     homeDescription:
@@ -266,7 +266,7 @@ const projectData = [
       },
       {
         title: "Direct Debit Date Calculator",
-        previewImg: "dd-calculator-preview",
+        previewImg: "dd-calculator-v2",
         link: "directDebits",
       },
     ],

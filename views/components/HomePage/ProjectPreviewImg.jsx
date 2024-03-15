@@ -17,7 +17,7 @@ export default function ProjectPreviewImg({
       </picture>
       <div className="img-overlay img-overlay--blur">
         <div className="img-overlay__button">
-          <a className="button--outline-dark" href={`projects/${pageLink}`}>
+          <a className="button--outline-dark" href={pageLink}>
             Read More <ArrowIcon />
           </a>
         </div>
