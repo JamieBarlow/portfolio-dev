@@ -3,6 +3,7 @@ const app = express();
 const path = require("path");
 const ejsMate = require("ejs-mate");
 const projectData = require("./projects/projectData");
+const displayProjects = projectData.slice(0, 4);
 const nodemailer = require("nodemailer");
 require("dotenv").config();
 const port = process.env.PORT || 3000;
@@ -57,13 +58,18 @@ app.get("/projects", (req, res) => {
 
 app.get("/projects/:project", (req, res) => {
   let { project } = req.params;
-  if (project in projectData) {
-    const projectInfo = projectData[project];
-    res.render("pages/ShowPage", {
-      projectInfo: JSON.stringify(projectInfo),
-    });
-  } else {
-    // Handle case when project is not found
+  let projectFound = false; // Flag to track whether project is found
+  for (let i = 0; i < displayProjects.length; i++) {
+    const projectInfo = displayProjects[i];
+    if (project === projectInfo.pageLink) {
+      projectFound = true;
+      res.render("pages/ShowPage", {
+        projectInfo: JSON.stringify(projectInfo),
+      });
+      break; // Exit the loop once project is found
+    }
+  }
+  if (!projectFound) {
     res.status(404).send("Project not found");
   }
 });

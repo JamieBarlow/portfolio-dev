@@ -14,7 +14,7 @@ import Footer from "../components/layout/Footer";
 
 export default function ShowPage({ projectInfo }) {
   const parsedProjectInfo = JSON.parse(projectInfo);
-  console.log(parsedProjectInfo);
+  // console.log(parsedProjectInfo);
   const {
     title,
     stack,
