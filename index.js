@@ -48,19 +48,20 @@ app.post("/email", (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.render("home");
+  res.render("pages/HomePage");
 });
 
 app.get("/projects", (req, res) => {
-  res.render("projects");
+  res.render("pages/projects");
 });
 
 app.get("/projects/:project", (req, res) => {
   let { project } = req.params;
   if (project in projectData) {
     const projectInfo = projectData[project];
-    const projectTitle = projectInfo.title;
-    res.render("projects/show", { projectInfo, projectTitle });
+    res.render("pages/ShowPage", {
+      projectInfo: JSON.stringify(projectInfo),
+    });
   } else {
     // Handle case when project is not found
     res.status(404).send("Project not found");
@@ -69,7 +70,8 @@ app.get("/projects/:project", (req, res) => {
 
 app.get("/aboutMe", (req, res) => {
   const projectTitle = "About Me";
-  res.render("about", { projectTitle });
+  // res.render("about", { projectTitle });
+  res.render("AboutPage");
 });
 
 app.get("*", (req, res) => {

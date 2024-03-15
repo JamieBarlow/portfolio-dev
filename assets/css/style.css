@@ -18,9 +18,7 @@ html {
 /* Prevents autofill from changing color */
 input:autofill,
 input:autofill:focus {
-  transition:
-    background-color 0s 600000s,
-    color 0s 600000s;
+  transition: background-color 0s 600000s, color 0s 600000s;
 }
 
 a {
@@ -234,10 +232,7 @@ button {
   padding: 6rem 1rem;
   opacity: 0;
   transform: translateX(100%);
-  transition:
-    transform 0.5s,
-    opacity 1s,
-    display 1s;
+  transition: transform 0.5s, opacity 1s, display 1s;
   z-index: 2;
 }
 
@@ -249,25 +244,19 @@ button {
 .slide-up {
   opacity: 0;
   transform: translateY(100px);
-  transition:
-    transform 1s,
-    opacity 1s;
+  transition: transform 1s, opacity 1s;
 }
 
 .slide-right {
   opacity: 0;
   transform: translateX(-100px);
-  transition:
-    transform 1s,
-    opacity 1s;
+  transition: transform 1s, opacity 1s;
 }
 
 .slide-left {
   opacity: 0;
   transform: translateX(100px);
-  transition:
-    transform 1s,
-    opacity 1s;
+  transition: transform 1s, opacity 1s;
 }
 
 .active {
@@ -290,18 +279,12 @@ button {
 }
 
 .menu-button .line {
-  transition:
-    y 100ms ease-in 100ms,
-    rotate 100ms ease-in,
-    opacity 0ms 100ms;
+  transition: y 100ms ease-in 100ms, rotate 100ms ease-in, opacity 0ms 100ms;
   transform-origin: center;
 }
 
 .menu-button[aria-expanded="true"] .line {
-  transition:
-    y 100ms ease-in,
-    rotate 100ms ease-in 100ms,
-    opacity 0ms 100ms;
+  transition: y 100ms ease-in, rotate 100ms ease-in 100ms, opacity 0ms 100ms;
 }
 
 .menu-button[aria-expanded="true"] :is(.top, .bottom) {
@@ -353,7 +336,7 @@ footer svg:hover path {
   border-radius: 12px;
   background: rgb(114, 140, 218);
   color: white;
-  transition: all 500ms;
+  transition: all 180ms;
   transform: translate(6px, -8px);
 }
 
@@ -563,9 +546,13 @@ footer svg:hover path {
   max-width: 50%;
 }
 
-.projects__box {
-  /* display: flex; */
-  /* flex: 1 1; */
+.card {
+  background-color: var(--background-card);
+  /* border: 1px solid red; */
+  border-radius: 20px;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  margin-bottom: 2rem;
+  padding: 1rem;
 }
 
 .projects__img {
@@ -577,6 +564,21 @@ footer svg:hover path {
   /* max-height: 300px; */
   /* flex: 1; */
   height: 100%;
+  border: 4px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.projects__img:hover {
+  border-color: var(--green__highlight);
+}
+.projects__img:hover picture {
+  transform: scale(1.2);
+  transition: all 0.3s ease-out;
+}
+
+.projects__img picture {
+  transition: all 0.2s;
 }
 
 .projects__text {
@@ -611,7 +613,7 @@ footer svg:hover path {
   color: white;
   opacity: 0;
   /*Hidden by default*/
-  transition: all 0.4s ease-in-out;
+  transition: all 0.3s ease-in-out;
   padding: 5%;
   /* line-height: 1.5rem; */
   font-size: 0.6rem;
@@ -627,6 +629,9 @@ footer svg:hover path {
   height: 100%;
   display: flex;
   align-items: center;
+  position: absolute;
+  bottom: 50%;
+  transition: transform 0.3s ease-in-out;
 }
 
 .img-overlay__text {
@@ -639,11 +644,11 @@ footer svg:hover path {
 }
 
 .img-overlay:hover > * {
-  transform: translateY(0);
+  transform: translateY(50%);
 }
 
 .img-overlay--blur {
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(2px);
 }
 
 .projects__title {
@@ -656,21 +661,22 @@ footer svg:hover path {
 }
 
 .projects__languages {
-  text-transform: uppercase;
   display: flex;
   flex-wrap: wrap;
-  gap: 0 1.5rem;
-  min-height: 50px;
-  align-items: center;
   justify-content: flex-start;
 }
 
-.projects__languages > p {
+.pill {
   font-size: var(--fs-p);
   line-height: 1.625;
   letter-spacing: 2.29px;
   font-weight: 400;
   margin: 0;
+  background-color: hsl(225, 58%, 70%);
+  border-radius: 20px;
+  padding: 0px 16px;
+  margin: 0px 8px 8px 0px;
+  color: white;
 }
 
 .projects__links {
@@ -689,14 +695,14 @@ footer svg:hover path {
   font-weight: 600;
 }
 
-.projects__box::after {
+.projects__description::after {
   content: "";
   display: block;
-  width: 60%;
+  width: 90%;
   height: 10px;
   padding: 0;
-  /* margin: 20px; */
-  border-top: 2px solid var(--green__highlight);
+  margin: 0 auto;
+  border-top: 1px solid var(--green__highlight);
 }
 
 .projects__button {
@@ -891,7 +897,8 @@ footer {
   --text-light: white;
   --red: hsl(7, 100%, 68%);
   --faded: hsl(0, 0%, 81%);
-  --background-offwhite: #f0f5f4;
+  --background-offwhite: hsl(168, 20%, 95%);
+  --background-card: hsl(168, 20%, 97%);
   --vibrant-blue: #2d6acd;
   /* font sizes */
   --fs-p: clamp(1rem, 0vw + 1rem, 1rem);
@@ -1235,6 +1242,17 @@ section {
   color: var(--vibrant-blue);
 }
 
+.underline--animated:hover .arrowLink {
+  translate: 2px -2px;
+  transition: translate 0.2s;
+}
+
+.arrowLink {
+  scale: 0.8;
+  translate: 0 2px;
+  transition: translate 0.2s;
+}
+
 .underline--green.underline--animated:hover {
   color: white;
 }
@@ -1296,6 +1314,11 @@ section {
 .button--outline-dark:hover {
   background-color: white;
   color: black;
+}
+
+.button--outline-dark:hover .arrowLink {
+  translate: 2px -2px;
+  transition: translate 0.2s;
 }
 
 .invisible {
@@ -1479,10 +1502,6 @@ section {
     margin-top: var(--5);
   }
 
-  .projects__box {
-    /* Required for grid with nested elements */
-    display: contents;
-  }
   .projects__img {
     grid-row: 1;
   }
