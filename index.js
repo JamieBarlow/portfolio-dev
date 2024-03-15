@@ -8,8 +8,8 @@ require("dotenv").config();
 const port = process.env.PORT || 3000;
 
 app.set("view engine", "ejs");
-app.engine("ejs", ejsMate);
-app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "jsx");
+app.engine("jsx", require("express-react-views").createEngine());
 // Serve static assets
 app.use(express.static(path.join(__dirname, "assets")));
 
