@@ -193,9 +193,9 @@ const projectData = [
     ],
     images: {
       header: "puzzle-pitch",
-      features: "puzzle-screenshot",
-      tech: "puzzle-complete",
-      challenges: ["puzzle-split", "puzzle-mockup"],
+      features: "puzzle-ampersand-shuffled",
+      tech: "puzzle-ampersand-complete",
+      challenges: ["puzzle-ampersand-words", "puzzle-ampersand-promo"],
     },
     otherProjects: [
       {

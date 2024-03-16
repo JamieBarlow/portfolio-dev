@@ -2,7 +2,7 @@ import React from "react";
 export default function ProjectShowImages({ images, title }) {
   return (
     <section class="project__images wrapper">
-      <div class="screenshot-box">
+      <div class="screenshot-box constrain">
         <picture>
           <source
             media="(min-width: 990px)"

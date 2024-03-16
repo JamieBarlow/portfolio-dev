@@ -138,10 +138,6 @@ a {
   flex-wrap: wrap;
 }
 
-.project__features .screenshot-box {
-  max-width: 60%;
-}
-
 @media screen and (min-width: 768px) {
   .project__header h1 {
     /* max-width: 70%; */
@@ -199,6 +195,10 @@ a {
   .project__otherProjects {
     flex-wrap: nowrap;
   }
+
+  .screenshot-box.constrain img {
+    max-width: 60%;
+  }
 }
 
 @media screen and (min-width: 990px) {
@@ -207,14 +207,6 @@ a {
   }
 
   .project__features .screenshot-box {
-    max-width: 80%;
-  }
-
-  .challenges-img {
-    max-width: 60%;
-  }
-
-  .screenshot-box img {
     max-width: 80%;
   }
 }
