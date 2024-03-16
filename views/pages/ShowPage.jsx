@@ -46,11 +46,9 @@ export default function ShowPage({ projectInfo }) {
             code={code}
             images={images}
           />
-          <ProjectShowPurpose purpose={purpose} />
+          <ProjectShowPurpose purpose={purpose} images={images} title={title} />
           <ProjectShowFeatures
-            title={title}
             features={features}
-            images={images}
           />
           <ProjectShowWebStack webStack={webStack} />
           <ProjectShowImages images={images} title={title} />

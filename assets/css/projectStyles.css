@@ -214,6 +214,10 @@ a {
   .project__features .screenshot-box {
     max-width: 80%;
   }
+
+  .challenges-img {
+    max-width: 60%;
+  }
 }
 
 @media screen and (min-width: 1600px) {
