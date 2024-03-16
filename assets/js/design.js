@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
         socialIcons.classList.toggle("invisible", !entries[0].isIntersecting);
       }
     },
-    { root: null, rootMargin: "0px", threshold: 0.8 }
+    { root: null, rootMargin: "-40px", threshold: 1.0 }
   );
 
   navObserver.observe(observedElem);

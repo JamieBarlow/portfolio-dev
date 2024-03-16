@@ -959,6 +959,7 @@ h1,
   font-weight: 700;
   line-height: 1.2em;
   font-family: "Inter", sans-serif;
+  margin: 2rem 0;
 }
 
 h2,
@@ -1469,6 +1470,7 @@ section {
     align-items: center;
     align-content: center;
     flex: 1;
+    min-width: 30%;
   }
 
   .experience__icons {
@@ -1483,6 +1485,10 @@ section {
   .projects {
     margin-top: 50px;
     border: none;
+  }
+
+  .projects__logo {
+    max-width: 30%;
   }
 
   .projects__main {
@@ -1673,7 +1679,7 @@ section {
   }
 
   h1 {
-    font-size: clamp(6.5rem, 0vw + 6.5rem, 6.5rem);
+    /* font-size: clamp(6.5rem, 0vw + 6.5rem, 6.5rem); */
   }
 
   .hero__description {
@@ -1693,15 +1699,15 @@ section {
   }
 
   .experience__box {
-    align-items: flex-start;
+    /* align-items: flex-start; */
   }
 
   .experience__icons {
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
   }
 
   .experience__box::after {
-    align-self: flex-start;
+    /* align-self: flex-start; */
   }
 
   .projects__row {
