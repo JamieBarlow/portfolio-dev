@@ -533,7 +533,7 @@ footer svg:hover path {
 }
 
 .projects {
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 .projects__header {
@@ -1483,7 +1483,7 @@ section {
   }
 
   .projects {
-    margin-top: 50px;
+    /* margin-top: 50px; */
     border: none;
   }
 

@@ -139,7 +139,7 @@ const projectData = [
     ],
     images: {
       header: "yelpcamp-homepage2",
-      features: "yelpcamp-login",
+      features: "yelpcamp-loginpage",
       tech: "yelpcamp-campeditgroup",
       challenges: [
         "yelpcamp-review",

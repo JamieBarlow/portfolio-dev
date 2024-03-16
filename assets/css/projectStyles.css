@@ -126,16 +126,11 @@ a {
 
 .screenshot-box {
   flex: 1;
-  /* display: flex; */
-  /* flex-direction: column; */
   gap: 25px;
 }
 
 .screenshot-box img {
   max-width: 100%;
-  /* object-fit: cover; */
-  /* box-shadow: 10px 5px 20px black; */
-  /* object-position: 80% 0%; */
 }
 
 .screenshot-box.challenges {
@@ -217,6 +212,10 @@ a {
 
   .challenges-img {
     max-width: 60%;
+  }
+
+  .screenshot-box img {
+    max-width: 80%;
   }
 }
 
