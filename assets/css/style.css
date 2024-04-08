@@ -478,6 +478,7 @@ footer svg:hover path {
   display: flex;
   /* position: relative; */
   flex-direction: column;
+  justify-content: center;
   min-width: 40%;
   max-width: 50%;
   padding-bottom: 5px;
@@ -1471,6 +1472,7 @@ section {
     align-content: center;
     flex: 1;
     min-width: 30%;
+    max-width: 30%;
   }
 
   .experience__icons {
