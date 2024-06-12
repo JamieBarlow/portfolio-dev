@@ -24,9 +24,9 @@ function HomePage(props) {
           <ContactMe />
           <Footer />
         </main>
+        <Scripts />
+        <script src="js/contact.js"></script>
       </body>
-      <Scripts />
-      <script src="js/contact.js"></script>
     </>
   );
 }

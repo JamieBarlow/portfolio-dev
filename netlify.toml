@@ -1,8 +1,10 @@
+[build]
+    functions="functions"
+    publish="assets"
 [functions]
   external_node_modules = ["express"]
-  node_bundler = "esbuild"
 [[redirects]]
-  force = true
-  from = "/api/*"
+  from = "/*"
+  to = "/.netlify/functions/index/:splat"
   status = 200
-  to = "/.netlify/functions/api/:splat"
+  force = true

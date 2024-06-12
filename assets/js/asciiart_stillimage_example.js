@@ -66,7 +66,8 @@ var myAsciiArt;
 /*
   The size of generated ASCII graphics expressed in characters and lines.
 */
-var asciiart_width = 40; var asciiart_height = 80;
+var asciiart_width = 40;
+var asciiart_height = 80;
 //Default:
 // var asciiart_width = 120; var asciiart_height = 60;
 
@@ -99,20 +100,23 @@ var cyclic_t;
 */
 function preload() {
   // "Young man reading by candlelight", Matthias Stom, 1600-1650
-  images[0] =
-    loadImage('images/jamie-1.jpg');
+  images[0] = loadImage(
+    "https://res.cloudinary.com/dakgl7s9n/image/upload/v1718175905/portfolio/jamie-1.jpg"
+  );
   // "Le Penseur", Auguste Rodin, 1880
   // images[1] =loadImage('example_image_Thinking-Man.jpg');
   // "American Gothic", Grant DeVolson Wood, 1930
-  images[1] = loadImage('images/jamie-2.jpg');
+  images[1] = loadImage(
+    "https://res.cloudinary.com/dakgl7s9n/image/upload/v1718175905/portfolio/jamie-2.jpg"
+  );
   // "La Liseuse", Jean-Honoré Fragonard, 1770
   // images[3] = loadImage('example_image_young_girl_reading.jpg');
 }
 
 function setup() {
   let profilePic = createCanvas(600, 912); // we need some space...
-  profilePic.parent('image-container');
-  profilePic.id('profilePic');
+  profilePic.parent("image-container");
+  profilePic.id("profilePic");
   // profilePic.attribute('sizes', '(max-width: 600px) 46vw, (max-width: 992px) 41vw, 30vw');
   // profilePic.position(0, 0, 'absolute')
   /*
@@ -142,8 +146,11 @@ function setup() {
     is using 'monospace' font, so we want to apply the same setting to our
     sketch.
   */
-  textAlign(CENTER, CENTER); textFont('monospace', 8); textStyle(NORMAL);
-  noStroke(); fill(255);
+  textAlign(CENTER, CENTER);
+  textFont("monospace", 8);
+  textStyle(NORMAL);
+  noStroke();
+  fill(255);
   /*
     Finally we set the framerate.
   */
@@ -152,32 +159,31 @@ function setup() {
   canvasSize();
 }
 
-
 function draw() {
-    background(0);
-    /*
+  background(0);
+  /*
       First, let's calculate which image from the images[] array should now be
       displayed. The floor part of the calculated value will indicate the index
       of the image to be displayed. The decimal part will be used to calculate
       the tint.
     */
-    cyclic_t = millis() * 0.0002 % images.length;
-    /*
+  cyclic_t = (millis() * 0.0002) % images.length;
+  /*
       Let's prepare the image for conversion. Although the object derived from
       the AsciiArt pseudo-class has it's own mechanism of changing the size of
       the image, we will use the external one. Thanks to this we will be able -
       before transferring the image for conversion - to perform the posterize
       effect on it, which will make the final effect better.
     */
-    gfx.image(images[floor(cyclic_t)], 0, 0, gfx.width, gfx.height);
-    /*
+  gfx.image(images[floor(cyclic_t)], 0, 0, gfx.width, gfx.height);
+  /*
       It is worth experimenting with the value of the parameter defining the
       level of posterization. Depending on the characteristics of the image,
       different values may have the best effect. And sometimes it is worth not
       to apply the effect of posterization on the image.
     */
-    gfx.filter(POSTERIZE, 2);
-    /*
+  gfx.filter(POSTERIZE, 2);
+  /*
       Here the processed image is converted to the ASCII art. The convert()
       function in this case is used with just one parameter (image we want to
       convert), so the resultant ASCII graphics will have the same resolution
@@ -190,8 +196,8 @@ function draw() {
       form of the ASCII art. If the conversion fails, the function returns
       null
     */
-    ascii_arr = myAsciiArt.convert(gfx, 80, 80);
-    /*
+  ascii_arr = myAsciiArt.convert(gfx, 80, 80);
+  /*
       Now it's time to show ASCII art on the screen. First, we set drawing
       parametrs. Next, we call the function typeArray2d() embedded in the
       ASCII Art library, that writes the contents of a two-dimensional array
@@ -215,13 +221,13 @@ function draw() {
       function code from a non-minimized version of the library - it can be
       used as a base for your own experiments.
     */
-    myAsciiArt.typeArray2d(ascii_arr, this);
-    /*
+  myAsciiArt.typeArray2d(ascii_arr, this);
+  /*
       Finally, let's display the source image, too.
     */
-    tint(255, pow(1.0 - (cyclic_t % 1.0), 4) * 255);
-    image(images[floor(cyclic_t)], 0, 0, width, height);
-    noTint();
+  tint(255, pow(1.0 - (cyclic_t % 1.0), 4) * 255);
+  image(images[floor(cyclic_t)], 0, 0, width, height);
+  noTint();
 }
 
 function mouseReleased() {
@@ -251,23 +257,30 @@ function mouseReleased() {
   glyphs, _dst is destinetion (basically anything with 'canvas' property, such
   as p5js sketch or p5.Graphics).
 */
-typeArray2d = function(_arr2d, _dst, _x, _y, _w, _h) {
-  if(_arr2d === null) {
-    console.log('[typeArray2d] _arr2d === null');
+typeArray2d = function (_arr2d, _dst, _x, _y, _w, _h) {
+  if (_arr2d === null) {
+    console.log("[typeArray2d] _arr2d === null");
     return;
   }
-  if(_arr2d === undefined) {
-    console.log('[typeArray2d] _arr2d === undefined');
+  if (_arr2d === undefined) {
+    console.log("[typeArray2d] _arr2d === undefined");
     return;
   }
-  switch(arguments.length) {
-    case 2: _x = 0; _y = 0; _w = width; _h = height; break;
-    case 4: _w = width; _h = height; break;
-    case 6: /* nothing to do */ break;
+  switch (arguments.length) {
+    case 2:
+      _x = 0;
+      _y = 0;
+      _w = width;
+      _h = height;
+      break;
+    case 4:
+      _w = width;
+      _h = height;
+      break;
+    case 6:
+      /* nothing to do */ break;
     default:
-      console.log(
-        '[typeArray2d] bad number of arguments: ' + arguments.length
-      );
+      console.log("[typeArray2d] bad number of arguments: " + arguments.length);
       return;
   }
   /*
@@ -276,38 +289,38 @@ typeArray2d = function(_arr2d, _dst, _x, _y, _w, _h) {
     directly to the mechanism for handling the canvas tag through the "pure"
     JavaScript.
   */
-  if(_dst.canvas === null) {
-    console.log('[typeArray2d] _dst.canvas === null');
+  if (_dst.canvas === null) {
+    console.log("[typeArray2d] _dst.canvas === null");
     return;
   }
-  if(_dst.canvas === undefined) {
-    console.log('[typeArray2d] _dst.canvas === undefined');
+  if (_dst.canvas === undefined) {
+    console.log("[typeArray2d] _dst.canvas === undefined");
     return;
   }
-  var temp_ctx2d = _dst.canvas.getContext('2d');
-  if(temp_ctx2d === null) {
-    console.log('[typeArray2d] _dst canvas 2d context is null');
+  var temp_ctx2d = _dst.canvas.getContext("2d");
+  if (temp_ctx2d === null) {
+    console.log("[typeArray2d] _dst canvas 2d context is null");
     return;
   }
-  if(temp_ctx2d === undefined) {
-    console.log('[typeArray2d] _dst canvas 2d context is undefined');
+  if (temp_ctx2d === undefined) {
+    console.log("[typeArray2d] _dst canvas 2d context is undefined");
     return;
   }
   var dist_hor = _w / _arr2d.length;
   var dist_ver = _h / _arr2d[0].length;
   var offset_x = _x + dist_hor * 0.5;
   var offset_y = _y + dist_ver * 0.5;
-  for(var temp_y = 0; temp_y < _arr2d[0].length; temp_y++)
-    for(var temp_x = 0; temp_x < _arr2d.length; temp_x++)
-      /*text*/temp_ctx2d.fillText(
+  for (var temp_y = 0; temp_y < _arr2d[0].length; temp_y++)
+    for (var temp_x = 0; temp_x < _arr2d.length; temp_x++)
+      /*text*/ temp_ctx2d.fillText(
         _arr2d[temp_x][temp_y],
         offset_x + temp_x * dist_hor,
         offset_y + temp_y * dist_ver
       );
-}
+};
 
 function canvasSize() {
-  const profilePic = document.querySelector('#profilePic');
-  profilePic.style.maxWidth = '50vw'
-  profilePic.style.height = 'auto'
+  const profilePic = document.querySelector("#profilePic");
+  profilePic.style.maxWidth = "50vw";
+  profilePic.style.height = "auto";
 }

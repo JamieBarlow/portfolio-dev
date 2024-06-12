@@ -88,3 +88,5 @@ app.get("*", (req, res) => {
 app.listen(port, () => {
   console.log(`Serving on port ${port}`);
 });
+
+module.exports = app;

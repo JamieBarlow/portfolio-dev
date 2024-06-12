@@ -59,8 +59,8 @@ export default function ShowPage({ projectInfo }) {
           <ProjectShowOther otherProjects={otherProjects} />
           <Footer />
         </main>
+        <Scripts />
       </body>
-      <Scripts />
     </>
   );
 }
