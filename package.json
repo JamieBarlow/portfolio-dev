@@ -1,36 +1,26 @@
 {
   "name": "portfolio-dev",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JamieBarlow/portfolio-dev.git"
-  },
-  "author": "Jamie Barlow",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/JamieBarlow/portfolio-dev/issues"
-  },
-  "homepage": "https://github.com/JamieBarlow/portfolio-dev#readme",
   "dependencies": {
-    "dotenv": "^16.3.1",
-    "ejs": "^3.1.9",
-    "ejs-mate": "^4.0.0",
-    "express": "^4.19.2",
-    "express-react-views": "^0.11.0",
-    "nodemailer": "^6.9.4",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
-    "react-html-parser": "^2.0.2",
-    "serverless-http": "^3.2.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "webpack": "^5.92.0",
-    "webpack-cli": "^5.1.4"
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "vite": "^5.2.0"
   }
 }
