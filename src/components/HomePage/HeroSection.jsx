@@ -1,11 +1,24 @@
 import React from "react";
 import Button3D from "../common/Button3D";
+import { useRef, useEffect, useContext } from "react";
+import { ObserverContext } from "../../context/ObserverContext"
 
 export default function HeroSection() {
+  const {isIntersecting, setIsIntersecting} = useContext(ObserverContext);
+  // Observer used to update navbar styling on scroll
+  const observedElem = useRef();
+  console.log(isIntersecting)
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      setIsIntersecting(entry.isIntersecting)
+    })
+    observer.observe(observedElem.current)
+  }, [])
   return (
     <section className="hero">
       <div className="hero__main">
-        <div className="hero__image observed" id="image-container"></div>
+        <div className="hero__image observed" id="image-container" ref={observedElem}></div>
         <div className="hero__text">
           <h1 className="hero__headline py-3">
             Hi there,
