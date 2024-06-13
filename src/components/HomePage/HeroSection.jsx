@@ -4,17 +4,7 @@ import { useRef, useEffect, useContext } from "react";
 import { ObserverContext } from "../../context/ObserverContext"
 
 export default function HeroSection() {
-  const {isIntersecting, setIsIntersecting} = useContext(ObserverContext);
-  // Observer used to update navbar styling on scroll
-  const observedElem = useRef();
-  console.log(isIntersecting)
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      const entry = entries[0];
-      setIsIntersecting(entry.isIntersecting)
-    })
-    observer.observe(observedElem.current)
-  }, [])
+  const {isIntersecting, setIsIntersecting, observedElem} = useContext(ObserverContext);
   return (
     <section className="hero">
       <div className="hero__main">

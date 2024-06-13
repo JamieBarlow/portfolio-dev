@@ -7,7 +7,7 @@ import { ObserverContext } from "../../context/ObserverContext"
 export default function Navbar() {
   const {isIntersecting} = useContext(ObserverContext);
   return (
-    <header className={!isIntersecting ? "sticking" : ""}>
+    <header className={!isIntersecting && "sticking"}>
       <nav className="header__nav">
         <div className="header__topline">
           <HeaderHome />

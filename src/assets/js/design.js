@@ -1,30 +1,30 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Navbar intersection changes
-  const header = document.querySelector("header");
-  const headerLogos = document.querySelectorAll(
-    ".header__name > a, .header__logo, .header__bracket, .menu-button, .hamburger, .social-icon"
-  );
-  const observedElem = document.querySelector(".observed");
-  const socialIcons = document.querySelector(".header__icons");
+  // const header = document.querySelector("header");
+  // const headerLogos = document.querySelectorAll(
+  //   ".header__name > a, .header__logo, .header__bracket, .menu-button, .hamburger, .social-icon"
+  // );
+  // const observedElem = document.querySelector(".observed");
+  // const socialIcons = document.querySelector(".header__icons");
   const sidebarLinks = document.querySelectorAll(".sidebar__link");
   console.log(sidebarLinks);
-  const tablet = window.matchMedia("(min-width: 600px)");
+  // const tablet = window.matchMedia("(min-width: 600px)");
 
-  const navObserver = new IntersectionObserver(
-    (entries) => {
-      console.log(entries);
-      header.classList.toggle("sticking", !entries[0].isIntersecting);
-      headerLogos.forEach((logo) => {
-        logo.classList.toggle("whiteOnBlack", !entries[0].isIntersecting);
-      });
-      if (!tablet.matches) {
-        socialIcons.classList.toggle("invisible", !entries[0].isIntersecting);
-      }
-    },
-    { root: null, rootMargin: "-40px", threshold: 1.0 }
-  );
+  // const navObserver = new IntersectionObserver(
+  //   (entries) => {
+  //     console.log(entries);
+  //     header.classList.toggle("sticking", !entries[0].isIntersecting);
+  //     headerLogos.forEach((logo) => {
+  //       logo.classList.toggle("whiteOnBlack", !entries[0].isIntersecting);
+  //     });
+  //     if (!tablet.matches) {
+  //       socialIcons.classList.toggle("invisible", !entries[0].isIntersecting);
+  //     }
+  //   },
+  //   { root: null, rootMargin: "-40px", threshold: 1.0 }
+  // );
 
-  navObserver.observe(observedElem);
+  // navObserver.observe(observedElem);
 
   // Slide in animations
   const slideElems = document.querySelectorAll(

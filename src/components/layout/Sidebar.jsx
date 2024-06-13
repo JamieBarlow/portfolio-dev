@@ -1,14 +1,16 @@
-import React from "react";
+import React, {useContext} from "react";
+import { ObserverContext } from "../../context/ObserverContext"
 
 export default function Sidebar() {
+  const {isIntersecting} = useContext(ObserverContext);
   return (
     <>
       <button
-        className="menu-button py-0"
+        className={`menu-button py-0 ${!isIntersecting && "whiteOnBlack"}`} 
         aria-controls="primary-navigation"
         aria-expanded="false"
       >
-        <svg className="hamburger" viewBox="0 0 100 100" width="40">
+        <svg className={`hamburger ${!isIntersecting && "whiteOnBlack"}`} viewBox="0 0 100 100" width="40">
           <rect
             className="line top"
             width="80"
