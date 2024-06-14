@@ -1,5 +1,6 @@
-import React from "react";
+import React, {useContext} from "react";
 import ExperienceIcon from "./Experience-Icon";
+import { ObserverContext } from "../../context/ObserverContext";
 
 const svgElements = [
   <React.Fragment key={"html-css"}>
@@ -318,7 +319,10 @@ const svgElements = [
   </svg>,
 ];
 
-export default function ExperienceIcons() {
+
+
+const ExperienceIcons = () => {
+  const {slideElems} = useContext(ObserverContext);
   const techList = [
     "HTML / CSS",
     "JavaScript",
@@ -337,10 +341,12 @@ export default function ExperienceIcons() {
   return (
     <div className="wrapper experience__wrapper">
       {techList.map((tech, index) => (
-        <ExperienceIcon key={tech} tech={tech}>
+        <ExperienceIcon key={tech} tech={tech} ref={(el) => el && slideElems.current.push(el)}>
           {svgElements[index]}
         </ExperienceIcon>
       ))}
     </div>
   );
 }
+
+export default ExperienceIcons;

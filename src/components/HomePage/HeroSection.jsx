@@ -1,10 +1,10 @@
 import React from "react";
 import Button3D from "../common/Button3D";
-import { useRef, useEffect, useContext } from "react";
+import { useContext } from "react";
 import { ObserverContext } from "../../context/ObserverContext"
 
 export default function HeroSection() {
-  const {isIntersecting, setIsIntersecting, observedElem} = useContext(ObserverContext);
+  const {observedElem} = useContext(ObserverContext);
   return (
     <section className="hero">
       <div className="hero__main">

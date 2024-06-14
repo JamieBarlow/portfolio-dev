@@ -2,19 +2,19 @@ import React, {useContext} from "react";
 import { ObserverContext } from "../../context/ObserverContext";
 
 export default function HeaderHome() {
-  const {isIntersecting} = useContext(ObserverContext);
+  const {navIsIntersecting} = useContext(ObserverContext);
   return (
     <ul className="header__home">
       <svg width="1.8rem" viewBox="7 0 10 24" fill="none">
         <path
-          className={`header__bracket ${!isIntersecting && "whiteOnBlack"}`}
+          className={`header__bracket ${!navIsIntersecting && "whiteOnBlack"}`}
           d="M14 3H10V21H14"
           stroke="#000000"
           strokeWidth="0.8"
         />
       </svg>
       <div className="logo__container">
-        <li className={`header__logo ${!isIntersecting && "whiteOnBlack"}`}>
+        <li className={`header__logo ${!navIsIntersecting && "whiteOnBlack"}`}>
           <svg
             viewBox="205.9497 197.3684 123.5698 123.5698"
             width="123.5698"
@@ -31,14 +31,14 @@ export default function HeaderHome() {
       </div>
       <svg width="1.8rem" viewBox="7 0 10 24" fill="none">
         <path
-          className={`header__bracket ${!isIntersecting && "whiteOnBlack"}`}
+          className={`header__bracket ${!navIsIntersecting && "whiteOnBlack"}`}
           d="M10 21H14L14 3H10"
           stroke="#000000"
           strokeWidth="0.8"
         />
       </svg>
       <li className="header__name">
-        <a href="/" className={`text--dark fs--h4 fw--medium hover--green ${!isIntersecting && "whiteOnBlack"}`}>
+        <a href="/" className={`text--dark fs--h4 fw--medium hover--green ${!navIsIntersecting && "whiteOnBlack"}`}>
           jamiebarlow
         </a>
       </li>

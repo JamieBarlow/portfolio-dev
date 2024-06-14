@@ -21,11 +21,11 @@ function App() {
         <ObserverProvider>
         <Navbar />
         <HeroSection />
-        </ObserverProvider>
         <ExperienceSection />
         <Divider />
         <div id="projectsAnchor"></div>
         <ProjectsSection />
+        </ObserverProvider>
         <ContactMe />
         <Footer />
       </main>
