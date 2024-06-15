@@ -1,8 +1,9 @@
-import React, {forwardRef} from "react";
+import React, { forwardRef } from "react";
 
 const ExperienceIcon = forwardRef(({ tech, children }, ref) => {
   return (
-    <div ref={ref}
+    <div
+      ref={ref}
       className={`experience__box slide-up ${
         tech === "HTML / CSS" ? "doubleicon" : ""
       }`}
@@ -11,6 +12,6 @@ const ExperienceIcon = forwardRef(({ tech, children }, ref) => {
       <div className="experience__icons">{children}</div>
     </div>
   );
-})
+});
 
 export default ExperienceIcon;

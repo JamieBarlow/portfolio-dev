@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import ExperienceIcon from "./Experience-Icon";
 import { ObserverContext } from "../../context/ObserverContext";
 
@@ -319,10 +319,8 @@ const svgElements = [
   </svg>,
 ];
 
-
-
 const ExperienceIcons = () => {
-  const {slideElems} = useContext(ObserverContext);
+  const { slideElems } = useContext(ObserverContext);
   const techList = [
     "HTML / CSS",
     "JavaScript",
@@ -341,12 +339,16 @@ const ExperienceIcons = () => {
   return (
     <div className="wrapper experience__wrapper">
       {techList.map((tech, index) => (
-        <ExperienceIcon key={tech} tech={tech} ref={(el) => el && slideElems.current.push(el)}>
+        <ExperienceIcon
+          key={tech}
+          tech={tech}
+          ref={(el) => el && slideElems.current.push(el)}
+        >
           {svgElements[index]}
         </ExperienceIcon>
       ))}
     </div>
   );
-}
+};
 
 export default ExperienceIcons;

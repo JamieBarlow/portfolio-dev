@@ -1,7 +1,3 @@
-// import reactLogo from "./assets/react.svg";
-// import viteLogo from "/vite.svg";
-import "./App.css";
-
 import React from "react";
 import HeroSection from "./components/HomePage/HeroSection";
 import ExperienceSection from "./components/HomePage/ExperienceSection";
@@ -11,7 +7,7 @@ import ContactMe from "./components/HomePage/ContactMe";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import Head from "./components/HomePage/Head";
-import ObserverProvider from "./context/ObserverContext"
+import ObserverProvider from "./context/ObserverContext";
 // import Scripts from "./components/layout/Scripts";
 
 function App() {
@@ -19,12 +15,12 @@ function App() {
     <>
       <main className="main-wrapper">
         <ObserverProvider>
-        <Navbar />
-        <HeroSection />
-        <ExperienceSection />
-        <Divider />
-        <div id="projectsAnchor"></div>
-        <ProjectsSection />
+          <Navbar />
+          <HeroSection />
+          <ExperienceSection />
+          <Divider />
+          <div id="projectsAnchor"></div>
+          <ProjectsSection />
         </ObserverProvider>
         <ContactMe />
         <Footer />
