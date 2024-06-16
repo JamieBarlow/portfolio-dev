@@ -28,8 +28,8 @@ export default function ASCII() {
   const profilePic = useRef(null);
   useEffect(() => {
     if (profilePic.current) {
-      profilePic.current.style.maxWidth = "20vw";
-      profilePic.current.style.height = "auto";
+      //   profilePic.current.style.maxWidth = "20vw";
+      //   console.log(cnv.elt);
     }
   }, [profilePic]);
 
@@ -38,8 +38,7 @@ export default function ASCII() {
     let asciiart_width = 40;
     let asciiart_height = 80;
     let images = [];
-    let gfx, ascii_arr, cyclic_t, profilePic;
-
+    let cnv, gfx, ascii_arr, cyclic_t;
     p.preload = () => {
       images[0] = p.loadImage(
         "https://res.cloudinary.com/dakgl7s9n/image/upload/v1718175905/portfolio/jamie-1.jpg"
@@ -50,9 +49,21 @@ export default function ASCII() {
     };
 
     p.setup = () => {
-      p.createCanvas(600, 912); // we need some space...
+      cnv = p.createCanvas(600, 912); // we need some space...
       gfx = p.createGraphics(asciiart_width, asciiart_height);
+      console.log(gfx);
       gfx.pixelDensity(1);
+
+      // Update styling
+      const canvasElement = cnv.canvas;
+      canvasElement.getContext("2d", {
+        willReadFrequently: true,
+      });
+      canvasElement.style.height = "auto";
+      const gfxCanvasElement = gfx.elt;
+      gfxCanvasElement.getContext("2d", {
+        willReadFrequently: true,
+      });
       myAsciiArt = new p5.prototype.AsciiArt(p);
       //   myAsciiArt.printWeightTable();
       p.textAlign(p.CENTER, p.CENTER);
