@@ -13,8 +13,9 @@ export default function HeroSection() {
           className="hero__image observed"
           id="image-container"
           ref={observedElem}
-        ></div>
-        <ASCII />
+        >
+          <ASCII />
+        </div>
         <div className="hero__text">
           <h1 className="hero__headline py-3">
             Hi there,

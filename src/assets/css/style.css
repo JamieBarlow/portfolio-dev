@@ -320,6 +320,14 @@ footer svg:hover path {
   text-transform: uppercase;
 }
 
+.p5Canvas {
+  display: block;
+  width: 600px;
+  height: auto;
+  max-width: 50vw;
+  box-sizing: border-box;
+}
+
 .pushable {
   background: var(--green__highlight);
   border-radius: 12px;
@@ -1634,8 +1642,13 @@ section {
     font-size: var(--fs-h2);
   }
 
-  .hero__image img {
-    width: 30%;
+  .p5Canvas {
+    position: absolute;
+    top: 0;
+    left: auto;
+    right: 0;
+    z-index: -1;
+    margin-top: 0;
   }
 
   .devicon {

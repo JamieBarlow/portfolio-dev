@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useCallback } from "react";
 import { ReactP5Wrapper } from "@p5-wrapper/react";
 import useScript from "react-script-hook";
 import p5 from "p5";
@@ -6,10 +6,6 @@ import p5 from "p5";
 export default function ASCII() {
   // Attach p5 to the window object
   const [p5Attached, setP5Attached] = useState(false);
-  useEffect(() => {
-    window.p5 = p5;
-    setP5Attached(true);
-  });
   const [loading, error] = useScript({
     src: p5Attached ? "js/p5.asciiart.min.js" : null,
     onload: () => console.log("p5 attached"),
@@ -22,16 +18,27 @@ export default function ASCII() {
   useEffect(() => {
     if (!loading && !error) {
       // Ensure p5 is available globally for the custom script
+      window.p5 = p5;
+      setP5Attached(true);
       console.log("ASCII JS script loaded!");
     }
   }, [loading, error]);
 
-  function sketch(p) {
+  // Apply styles after mount
+  const profilePic = useRef(null);
+  useEffect(() => {
+    if (profilePic.current) {
+      profilePic.current.style.maxWidth = "20vw";
+      profilePic.current.style.height = "auto";
+    }
+  }, [profilePic]);
+
+  const sketch = useCallback((p) => {
     let myAsciiArt;
     let asciiart_width = 40;
     let asciiart_height = 80;
     let images = [];
-    let gfx, ascii_arr, cyclic_t;
+    let gfx, ascii_arr, cyclic_t, profilePic;
 
     p.preload = () => {
       images[0] = p.loadImage(
@@ -54,7 +61,6 @@ export default function ASCII() {
       p.noStroke();
       p.fill(255);
       p.frameRate(30);
-      //   p.canvasSize();
     };
     p.draw = () => {
       p.background(0);
@@ -130,9 +136,13 @@ export default function ASCII() {
       p.image(images[p.floor(cyclic_t)], 0, 0, p.width, p.height);
       p.noTint();
     };
-  }
+  }, []);
 
-  return <ReactP5Wrapper sketch={sketch} />;
+  return (
+    <div ref={profilePic}>
+      <ReactP5Wrapper sketch={sketch} id="profilePic" />
+    </div>
+  );
 }
 
 // export default function ASCII() {
