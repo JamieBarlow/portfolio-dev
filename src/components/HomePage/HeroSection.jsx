@@ -2,6 +2,7 @@ import React from "react";
 import Button3D from "../common/Button3D";
 import { useContext } from "react";
 import { ObserverContext } from "../../context/ObserverContext";
+import ASCII from "./ASCII";
 
 export default function HeroSection() {
   const { observedElem } = useContext(ObserverContext);
@@ -13,6 +14,7 @@ export default function HeroSection() {
           id="image-container"
           ref={observedElem}
         ></div>
+        <ASCII />
         <div className="hero__text">
           <h1 className="hero__headline py-3">
             Hi there,

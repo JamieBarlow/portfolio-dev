@@ -18,9 +18,9 @@ export default function Head() {
         rel="stylesheet"
       />
       <title>Jamie Barlow</title>
-      <script src="js/p5.min.js"></script>
+      {/* <script src="js/p5.min.js"></script> */}
       <script src="js/p5.asciiart.min.js"></script>
-      <script src="js/asciiart_stillimage_example.js"></script>
+      {/* <script src="js/asciiart_stillimage_example.js"></script> */}
       <script
         src="https://kit.fontawesome.com/762a7ebf5f.js"
         crossOrigin="anonymous"

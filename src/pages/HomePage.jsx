@@ -7,7 +7,6 @@ import ContactMe from "../components/HomePage/ContactMe";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 import Head from "../components/HomePage/Head";
-import Scripts from "../components/layout/Scripts";
 
 function HomePage(props) {
   return (
@@ -24,8 +23,7 @@ function HomePage(props) {
           <ContactMe />
           <Footer />
         </main>
-        <Scripts />
-        <script src="js/contact.js"></script>
+        {/* <script src="js/contact.js"></script> */}
       </body>
     </>
   );
