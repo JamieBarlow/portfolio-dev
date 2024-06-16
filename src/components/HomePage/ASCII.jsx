@@ -53,15 +53,7 @@ export default function ASCII() {
       canvasElement.getContext("2d", {
         willReadFrequently: true,
       });
-      const tablet = window.matchMedia("(min-width: 600px)");
-      const desktop = window.matchMedia("(min-width: 768px)");
-      if (desktop.matches) {
-        canvasElement.style.width = "35%";
-      } else if (tablet.matches) {
-        canvasElement.style.width = "50%";
-      }
-      canvasElement.style.height = "auto";
-      canvasElement.style.maxWidth = "50vw";
+      applyMediaQueryStyles();
       // Setup gfx
       gfx = p.createGraphics(asciiart_width, asciiart_height);
       gfx.pixelDensity(1);
@@ -152,6 +144,24 @@ export default function ASCII() {
       p.image(images[p.floor(cyclic_t)], 0, 0, p.width, p.height);
       p.noTint();
     };
+
+    p.windowResized = () => {
+      p.resizeCanvas(600, 912);
+      images.forEach((img) => img.resize(600, 912));
+      applyMediaQueryStyles();
+    };
+
+    const applyMediaQueryStyles = () => {
+      const tablet = window.matchMedia("(min-width: 600px)");
+      const desktop = window.matchMedia("(min-width: 768px)");
+      if (desktop.matches) {
+        canvasElement.style.width = "35%";
+      } else if (tablet.matches) {
+        canvasElement.style.width = "50%";
+      }
+      canvasElement.style.height = "auto";
+      canvasElement.style.maxWidth = "50vw";
+    };
   }, []);
 
   return (
@@ -160,33 +170,3 @@ export default function ASCII() {
     </div>
   );
 }
-
-// export default function ASCII() {
-//   const renderRef = useRef();
-//   const canvasCreated = useRef(false);
-//   useEffect(() => {
-//     // Conditional to prevent multiple canvases being created
-//     if (!canvasCreated.current) {
-//       const p = new p5();
-//       p.setup = () => {
-//         p.createCanvas(500, 400).parent(renderRef.current);
-//       };
-//       p.draw = () => {
-//         p.background(80);
-//         p.stroke("gray");
-//         p.strokeWeight(2);
-//         p.fill("white");
-//       };
-//       canvasCreated.current = true;
-//     }
-//     // Cleanup function to remove canvas when component unmounts
-//     return () => {
-//       const canvas = renderRef.current.querySelector("canvas");
-//       if (canvas) {
-//         canvas.remove();
-//         canvasCreated.current = false;
-//       }
-//     };
-//   }, []);
-//   return <div style={{ border: "1px solid red" }} ref={renderRef}></div>;
-// }
