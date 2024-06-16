@@ -24,42 +24,47 @@ export default function ASCII() {
     }
   }, [loading, error]);
 
-  // Apply styles after mount
   const profilePic = useRef(null);
-  useEffect(() => {
-    if (profilePic.current) {
-      //   profilePic.current.style.maxWidth = "20vw";
-      //   console.log(cnv.elt);
-    }
-  }, [profilePic]);
 
   const sketch = useCallback((p) => {
     let myAsciiArt;
     let asciiart_width = 40;
     let asciiart_height = 80;
     let images = [];
-    let cnv, gfx, ascii_arr, cyclic_t;
+    let cnv, canvasElement, gfx, ascii_arr, cyclic_t;
     p.preload = () => {
       images[0] = p.loadImage(
-        "https://res.cloudinary.com/dakgl7s9n/image/upload/v1718175905/portfolio/jamie-1.jpg"
+        "https://res.cloudinary.com/dakgl7s9n/image/upload/v1718175905/portfolio/jamie-1.jpg",
+        handleImage
       );
       images[1] = p.loadImage(
-        "https://res.cloudinary.com/dakgl7s9n/image/upload/v1718175905/portfolio/jamie-2.jpg"
+        "https://res.cloudinary.com/dakgl7s9n/image/upload/v1718175905/portfolio/jamie-2.jpg",
+        handleImage
       );
+      function handleImage(img) {
+        console.log(img);
+      }
     };
 
     p.setup = () => {
-      cnv = p.createCanvas(600, 912); // we need some space...
-      gfx = p.createGraphics(asciiart_width, asciiart_height);
-      console.log(gfx);
-      gfx.pixelDensity(1);
-
-      // Update styling
-      const canvasElement = cnv.canvas;
+      cnv = p.createCanvas(600, 912, p.P2D);
+      // Setup canvas context and update styling
+      canvasElement = cnv.canvas;
       canvasElement.getContext("2d", {
         willReadFrequently: true,
       });
+      const tablet = window.matchMedia("(min-width: 600px)");
+      const desktop = window.matchMedia("(min-width: 768px)");
+      if (desktop.matches) {
+        canvasElement.style.width = "35%";
+      } else if (tablet.matches) {
+        canvasElement.style.width = "50%";
+      }
       canvasElement.style.height = "auto";
+      canvasElement.style.maxWidth = "50vw";
+      // Setup gfx
+      gfx = p.createGraphics(asciiart_width, asciiart_height);
+      gfx.pixelDensity(1);
       const gfxCanvasElement = gfx.elt;
       gfxCanvasElement.getContext("2d", {
         willReadFrequently: true,

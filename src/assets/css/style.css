@@ -1425,7 +1425,8 @@ section {
   }
 
   /* Adjusts ASCII image properties */
-  #profilePic {
+  #profilePic,
+  .p5Canvas {
     position: absolute;
     top: 0;
     left: auto;
