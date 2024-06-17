@@ -1,7 +1,59 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Button3D from "../common/Button3D";
 
 export default function ContactMe() {
+  const initialFormData = {
+    name: "",
+    email: "",
+    message: "",
+    subject: "",
+  };
+  const [formData, setFormData] = useState(initialFormData);
+
+  const handleChange = (e) => {
+    console.log(formData);
+    const fieldName = e.target.name;
+    const value = e.target.value;
+    setFormData((currData) => {
+      return {
+        ...currData,
+        [fieldName]: value,
+      };
+    });
+  };
+
+  useEffect(() => {
+    setFormData((currData) => {
+      return {
+        ...currData,
+        subject: `${currData.name} at ${currData.email} gets in touch`,
+      };
+    });
+  }, [formData.name, formData.email]);
+
+  const resetForm = () => {
+    setFormData(initialFormData);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    fetch("/email", {
+      method: "POST",
+      body: JSON.stringify(formData),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.text()) // Parse JSON response
+      .then((result) => {
+        console.log(result.message);
+        resetForm();
+        alert("Email sent!");
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  };
   return (
     <section className="contact bg--blue text--light" id="contactMe">
       <div className="wrapper contact__wrapper">
@@ -17,7 +69,12 @@ export default function ContactMe() {
             get back to you as soon as possible.
           </p>
         </div>
-        <form className="contact__form" action="/email" method="POST">
+        <form
+          className="contact__form"
+          action="/email"
+          method="POST"
+          onSubmit={handleSubmit}
+        >
           <div className="contact__field">
             <label htmlFor="name">Name</label>
             <input
@@ -25,6 +82,8 @@ export default function ContactMe() {
               type="text"
               name="name"
               id="name"
+              value={formData.name}
+              onChange={handleChange}
             />
           </div>
           <div className="contact__field middle">
@@ -34,6 +93,8 @@ export default function ContactMe() {
               type="email"
               name="email"
               id="email"
+              value={formData.email}
+              onChange={handleChange}
             />
           </div>
           <div className="contact__field message__field middle">
@@ -47,6 +108,8 @@ export default function ContactMe() {
               rows="10"
               cols="80"
               placeholder="Say hello"
+              value={formData.message}
+              onChange={handleChange}
             ></textarea>
           </div>
           <div className="contact__submit">
