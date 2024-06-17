@@ -11,7 +11,7 @@ export default function ObserverProvider({ children }) {
       const entry = entries[0];
       setNavIsIntersecting(entry.isIntersecting);
     };
-    const options = { root: null, rootMargin: "-40px", threshold: 1.0 };
+    const options = { root: null, rootMargin: "-20px", threshold: 1.0 };
     const observer = new IntersectionObserver(callback, options);
     observer.observe(observedElem.current);
   }, []);

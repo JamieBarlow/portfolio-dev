@@ -152,11 +152,17 @@ export default function ASCII() {
     };
 
     const applyMediaQueryStyles = () => {
-      const tablet = window.matchMedia("(min-width: 600px)");
-      const desktop = window.matchMedia("(min-width: 768px)");
+      const smallTab = window.matchMedia("(min-width: 600px)");
+      const tablet = window.matchMedia("(min-width: 768px)");
+      const largeTab = window.matchMedia("(min-width: 990px)");
+      const desktop = window.matchMedia("(min-width: 1200px)");
       if (desktop.matches) {
         canvasElement.style.width = "35%";
+      } else if (largeTab.matches) {
+        canvasElement.style.width = "48%";
       } else if (tablet.matches) {
+        canvasElement.style.width = "60%";
+      } else if (smallTab.matches) {
         canvasElement.style.width = "50%";
       }
       canvasElement.style.height = "auto";

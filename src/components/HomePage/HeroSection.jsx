@@ -9,14 +9,10 @@ export default function HeroSection() {
   return (
     <section className="hero">
       <div className="hero__main">
-        <div
-          className="hero__image observed"
-          id="image-container"
-          ref={observedElem}
-        >
+        <div className="hero__image observed" id="image-container">
           <ASCII />
         </div>
-        <div className="hero__text">
+        <div className="hero__text" ref={observedElem}>
           <h1 className="hero__headline py-3">
             Hi there,
             <br />
