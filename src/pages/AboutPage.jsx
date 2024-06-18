@@ -8,7 +8,7 @@ import ObserverProvider from "../context/ObserverContext";
 export default function AboutPage() {
   return (
     <>
-      <link rel="stylesheet" href="/css/aboutme.css" />
+      <link rel="stylesheet" href="css/aboutme.css" />
       <ObserverProvider>
         <Navbar />
         <AboutMeHero />

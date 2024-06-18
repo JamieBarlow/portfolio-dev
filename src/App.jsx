@@ -7,7 +7,6 @@ import ContactMe from "./components/HomePage/ContactMe";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import ObserverProvider from "./context/ObserverContext";
-// import Scripts from "./components/layout/Scripts";
 
 function App() {
   return (
@@ -27,8 +26,6 @@ function App() {
       <script src="js/p5.min.js"></script>
       <script src="js/p5.asciiart.min.js"></script>
       <script src="js/asciiart_stillimage_example.js"></script>
-      {/* <Scripts /> */}
-      {/* <script src="js/contact.js"></script> */}
     </>
   );
 }

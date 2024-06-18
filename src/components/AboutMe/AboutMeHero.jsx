@@ -4,9 +4,9 @@ import { ObserverContext } from "../../context/ObserverContext";
 export default function AboutMeHero() {
   const { observedElem } = useContext(ObserverContext);
   return (
-    <section className="aboutMe__hero wrapper">
+    <section className="aboutMe__hero wrapper" ref={observedElem}>
       <div className="aboutMe__title">
-        <h1 className="observed my-4" ref={observedElem}>
+        <h1 className="observed my-4">
           <span className="svg--underlined">
             About Me
             <svg viewBox="0 0 261 15" className="svg--underline">
@@ -20,8 +20,8 @@ export default function AboutMeHero() {
       </div>
       <div className="aboutMe__intro my-0">
         <img
-          className="aboutMe__heroImg slide-right my-2"
-          src="../images/jamie-1.jpg"
+          className="aboutMe__heroImg my-2"
+          src="images/jamie-1.jpg"
           alt="Profile Picture"
         />
         <div className="aboutMe__greeting py-3">
