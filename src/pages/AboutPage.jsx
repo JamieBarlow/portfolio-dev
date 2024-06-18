@@ -1,25 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import AboutMeHero from "../components/AboutMe/AboutMeHero";
 import AboutMeBlurb from "../components/AboutMe/AboutMeBlurb";
-import HeadBoilerPlate from "../components/layout/HeadBoilerplate";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
-import Scripts from "../components/layout/Scripts";
+import ObserverProvider from "../context/ObserverContext";
 
 export default function AboutPage() {
   return (
     <>
-      <HeadBoilerPlate />
       <link rel="stylesheet" href="/css/aboutme.css" />
-      <body>
-        <main>
-          <Navbar />
-          <AboutMeHero />
-          <AboutMeBlurb />
-          <Footer />
-        </main>
-      </body>
-      <Scripts />
+      <ObserverProvider>
+        <Navbar />
+        <AboutMeHero />
+        <AboutMeBlurb />
+      </ObserverProvider>
+      <Footer />
     </>
   );
 }

@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
 import Button3D from "../common/Button3D";
-import { useContext } from "react";
 import { ObserverContext } from "../../context/ObserverContext";
 import ASCII from "./ASCII";
 

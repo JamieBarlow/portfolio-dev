@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ObserverContext } from "../../context/ObserverContext";
 
 export default function AboutMeHero() {
+  const { observedElem } = useContext(ObserverContext);
   return (
     <section className="aboutMe__hero wrapper">
       <div className="aboutMe__title">
-        <h1 className="observed my-4">
+        <h1 className="observed my-4" ref={observedElem}>
           <span className="svg--underlined">
             About Me
             <svg viewBox="0 0 261 15" className="svg--underline">
