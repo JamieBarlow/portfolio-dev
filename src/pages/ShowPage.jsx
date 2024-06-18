@@ -1,8 +1,6 @@
 import React from "react";
-import HeadBoilerPlate from "../components/layout/HeadBoilerplate";
 import ProjectShowHero from "../components/ShowPage/ProjectShowHero";
 import ProjectShowPurpose from "../components/ShowPage/ProjectShowPurpose";
-import Scripts from "../components/layout/Scripts";
 import ProjectShowFeatures from "../components/ShowPage/ProjectShowFeatures";
 import ProjectShowWebStack from "../components/ShowPage/ProjectShowWebstack";
 import ProjectShowImages from "../components/ShowPage/ProjectShowImages";
@@ -33,8 +31,7 @@ export default function ShowPage({ projectInfo }) {
   } = parsedProjectInfo;
   return (
     <>
-      <HeadBoilerPlate />
-      <link rel="stylesheet" href="/css/projectStyles.css" />
+      <link rel="stylesheet" href="css/projectStyles.css" />
       <body>
         <main class="main-wrapper">
           <Navbar />
@@ -59,7 +56,6 @@ export default function ShowPage({ projectInfo }) {
           <ProjectShowOther otherProjects={otherProjects} />
           <Footer />
         </main>
-        <Scripts />
       </body>
     </>
   );

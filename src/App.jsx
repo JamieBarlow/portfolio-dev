@@ -23,9 +23,6 @@ function App() {
         <ContactMe />
         <Footer />
       </main>
-      <script src="js/p5.min.js"></script>
-      <script src="js/p5.asciiart.min.js"></script>
-      <script src="js/asciiart_stillimage_example.js"></script>
     </>
   );
 }
