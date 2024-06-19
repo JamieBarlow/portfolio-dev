@@ -1,4 +1,5 @@
 import React from "react";
+import "../assets/css/projectStyles.css";
 import ProjectShowHero from "../components/ShowPage/ProjectShowHero";
 import ProjectShowPurpose from "../components/ShowPage/ProjectShowPurpose";
 import ProjectShowFeatures from "../components/ShowPage/ProjectShowFeatures";
@@ -9,10 +10,20 @@ import ProjectShowLessons from "../components/ShowPage/ProjectShowLessons";
 import ProjectShowOther from "../components/ShowPage/ProjectShowOther";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
+import ObserverProvider from "../context/ObserverContext";
 
-export default function ShowPage({ projectInfo }) {
-  const parsedProjectInfo = JSON.parse(projectInfo);
-  // console.log(parsedProjectInfo);
+import { useParams } from "react-router-dom";
+import projectData from "../assets/js/projects/projectData";
+const displayProjects = projectData.slice(0, 4);
+
+export default function ShowPage() {
+  const { project } = useParams();
+  const projectInfo = displayProjects.find(
+    (p) => p.pageLink === `projects/${project}`
+  );
+  if (!projectInfo) {
+    return <div>Project not found</div>;
+  }
   const {
     title,
     stack,
@@ -28,12 +39,12 @@ export default function ShowPage({ projectInfo }) {
     images,
     otherProjects,
     conversion,
-  } = parsedProjectInfo;
+  } = projectInfo;
   return (
     <>
       <link rel="stylesheet" href="css/projectStyles.css" />
-      <body>
-        <main class="main-wrapper">
+      <main className="main-wrapper projectPage">
+        <ObserverProvider>
           <Navbar />
           <ProjectShowHero
             title={title}
@@ -45,18 +56,18 @@ export default function ShowPage({ projectInfo }) {
           />
           <ProjectShowPurpose purpose={purpose} images={images} title={title} />
           <ProjectShowFeatures features={features} />
-          <ProjectShowWebStack webStack={webStack} />
-          <ProjectShowImages images={images} title={title} />
-          <ProjectShowChallenges
-            challenges={challenges}
-            images={images}
-            title={title}
-          />
-          <ProjectShowLessons lessons={lessons} />
-          <ProjectShowOther otherProjects={otherProjects} />
-          <Footer />
-        </main>
-      </body>
+        </ObserverProvider>
+        <ProjectShowWebStack webStack={webStack} />
+        <ProjectShowImages images={images} title={title} />
+        <ProjectShowChallenges
+          challenges={challenges}
+          images={images}
+          title={title}
+        />
+        <ProjectShowLessons lessons={lessons} />
+        <ProjectShowOther otherProjects={otherProjects} />
+        <Footer />
+      </main>
     </>
   );
 }

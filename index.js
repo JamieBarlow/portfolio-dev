@@ -1,18 +1,18 @@
 const express = require("express");
 const app = express();
 const path = require("path");
-const ejsMate = require("ejs-mate");
-const projectData = require("./projects/projectData");
-const displayProjects = projectData.slice(0, 4);
+// const ejsMate = require("ejs-mate");
+// const projectData = require("./projects/projectData");
+// const displayProjects = projectData.slice(0, 4);
 const nodemailer = require("nodemailer");
 require("dotenv").config();
 const port = process.env.PORT || 3000;
 
 // app.set("view engine", "ejs");
-app.set("view engine", "jsx");
-app.engine("jsx", require("express-react-views").createEngine());
+// app.set("view engine", "jsx");
+// app.engine("jsx", require("express-react-views").createEngine());
 // Serve static assets
-app.use(express.static(path.join(__dirname, "assets")));
+// app.use(express.static(path.join(__dirname, "assets")));
 
 // Handling POST requests
 app.use(express.urlencoded({ extended: true }));

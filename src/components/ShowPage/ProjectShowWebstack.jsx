@@ -1,9 +1,5 @@
 import React from "react";
-import ReactHtmlParser, {
-  processNodes,
-  convertNodeToElement,
-  htmlparser2,
-} from "react-html-parser";
+import parse from "html-react-parser";
 
 export default function ProjectShowWebStack({ webStack }) {
   return (
@@ -11,7 +7,7 @@ export default function ProjectShowWebStack({ webStack }) {
       <h3>Web Stack & Tech</h3>
       <div class="webstack-box text-box">
         {webStack.map((tech) => {
-          return <p>{ReactHtmlParser(tech)}</p>;
+          return <p>{parse(tech)}</p>;
         })}
       </div>
     </section>

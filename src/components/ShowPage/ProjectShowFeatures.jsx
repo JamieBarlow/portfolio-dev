@@ -1,9 +1,5 @@
 import React from "react";
-import ReactHtmlParser, {
-  processNodes,
-  convertNodeToElement,
-  htmlparser2,
-} from "react-html-parser";
+import parse from "html-react-parser";
 
 export default function ProjectShowFeatures({ features }) {
   return (
@@ -13,7 +9,7 @@ export default function ProjectShowFeatures({ features }) {
         <div class="features-box text-box">
           <ul>
             {features.map((feature) => {
-              return <li>{ReactHtmlParser(feature)}</li>;
+              return <li>{parse(feature)}</li>;
             })}
           </ul>
         </div>

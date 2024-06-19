@@ -1,9 +1,5 @@
 import React from "react";
-import ReactHtmlParser, {
-  processNodes,
-  convertNodeToElement,
-  htmlparser2,
-} from "react-html-parser";
+import parse from "html-react-parser";
 
 export default function ProjectShowChallenges({ challenges, images, title }) {
   return (
@@ -12,7 +8,7 @@ export default function ProjectShowChallenges({ challenges, images, title }) {
         <h3>Challenges</h3>
         <div class="challenges-box text-box">
           {challenges.map((para) => {
-            return <p>{ReactHtmlParser(para)}</p>;
+            return <p>{parse(para)}</p>;
           })}
         </div>
         <div className="screenshot-box challenges">

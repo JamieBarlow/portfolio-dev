@@ -1,10 +1,7 @@
-import React from "react";
-import ReactHtmlParser, {
-  processNodes,
-  convertNodeToElement,
-  htmlparser2,
-} from "react-html-parser";
+import React, { useContext } from "react";
+import parse from "html-react-parser";
 import ButtonUnderline from "../common/ButtonUnderline";
+import { ObserverContext } from "../../context/ObserverContext";
 
 export default function ProjectShowHero({
   title,
@@ -14,9 +11,10 @@ export default function ProjectShowHero({
   code,
   images,
 }) {
+  const { observedElem } = useContext(ObserverContext);
   return (
     <>
-      <section class="projects__hero">
+      <section class="projects__hero" ref={observedElem}>
         <div class="project__header wrapper">
           <h1 class="observed">
             <span class="svg--underlined project__underline">
@@ -29,7 +27,7 @@ export default function ProjectShowHero({
               </svg>
             </span>
           </h1>
-          <p>{ReactHtmlParser(about)}</p>
+          <p>{parse(about)}</p>
         </div>
         <div class="bg--blue text--light">
           <div class="project__info wrapper my-4 p-3">

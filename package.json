@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@p5-wrapper/react": "^4.4.2",
+    "html-react-parser": "^5.1.10",
     "p5": "^1.9.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
