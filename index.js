@@ -18,6 +18,14 @@ app.use(express.static(path.join(__dirname, "assets")));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+// Setup CORS
+const cors = require("cors");
+const corsOptions = {
+  origin: "https://supreme-space-zebra-9grg4p7pw4v27wp5-5173.app.github.dev/",
+  methods: ["POST"],
+};
+app.use(cors(corsOptions));
+
 app.post("/email", (req, res) => {
   console.log(req.body);
   // res.json({message: 'Message received!'})
