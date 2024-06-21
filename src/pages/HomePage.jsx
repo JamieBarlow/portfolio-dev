@@ -11,7 +11,7 @@ import ObserverProvider from "../context/ObserverContext";
 function App() {
   return (
     <>
-      <main className="main-wrapper">
+      <main className="main-wrapper homePage">
         <ObserverProvider>
           <Navbar />
           <HeroSection />

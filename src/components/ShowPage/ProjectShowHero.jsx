@@ -14,8 +14,8 @@ export default function ProjectShowHero({
   const { observedElem } = useContext(ObserverContext);
   return (
     <>
-      <section class="projects__hero" ref={observedElem}>
-        <div class="project__header wrapper">
+      <section class="projects__hero">
+        <div class="project__header wrapper" ref={observedElem}>
           <h1 class="observed">
             <span class="svg--underlined project__underline">
               {title}

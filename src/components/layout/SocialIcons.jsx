@@ -1,10 +1,10 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import { ObserverContext } from "../../context/ObserverContext";
 
 export default function SocialIcons() {
-  const {navIsIntersecting, isTablet} = useContext(ObserverContext);
+  const { navIsIntersecting, isTablet } = useContext(ObserverContext);
   return (
-    <ul className={`header__icons ${!isTablet && !navIsIntersecting && "invisible"}`}>
+    <ul className={`header__icons ${!isTablet ? "invisible" : ""}`}>
       <li>
         <a href="https://github.com/JamieBarlow/">
           <svg

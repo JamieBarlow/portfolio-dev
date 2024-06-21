@@ -89,6 +89,7 @@ header.sticking {
 .hamburger.whiteOnBlack,
 .social-icon.whiteOnBlack {
   background: transparent;
+  fill: white;
 }
 
 .header__nav {
@@ -1386,10 +1387,12 @@ section {
     order: 3;
   }
 
-  .hamburger {
-    background-color: rgba(0, 0, 0, 0.4);
-    fill: white;
-    z-index: 3;
+  .homePage {
+    .hamburger {
+      background-color: rgba(0, 0, 0, 0.4);
+      fill: white;
+      z-index: 3;
+    }
   }
 
   .active-burger {
@@ -1414,9 +1417,16 @@ section {
     margin: 0;
   }
 
-  .social-icon {
-    fill: white;
-    background-color: rgba(0, 0, 0, 0.4);
+  .homePage {
+    .social-icon {
+      fill: white;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+    .social-icon.whiteOnBlack,
+    .hamburger.whiteOnBlack {
+      fill: white;
+      background-color: transparent;
+    }
   }
 
   .hero__main {
@@ -1636,8 +1646,10 @@ section {
     /* margin-left: var(--5); */
   }
 
-  .social-icon {
-    background-color: rgba(0, 0, 0, 0.7);
+  .homePage {
+    .social-icon {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
   }
 
   .sidebar__link a {

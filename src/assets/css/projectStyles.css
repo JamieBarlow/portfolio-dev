@@ -9,13 +9,6 @@
     margin: 0;
   }
 
-  p,
-  .fs--p,
-  li,
-  a {
-    font-size: var(--fs-p);
-  }
-
   .underline--green.underline--animated:after {
     padding-bottom: 0px;
   }
@@ -100,11 +93,6 @@
   .col-imgs-2 div img {
     /* flex: 1; */
     max-height: 600px;
-  }
-
-  li,
-  a {
-    font-size: var(--fs-p);
   }
 
   .features-box li,
