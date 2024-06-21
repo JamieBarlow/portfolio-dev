@@ -529,6 +529,7 @@ footer svg:hover path {
 /* Sets offset for internal links */
 #projectsAnchor {
   height: 10px;
+  margin-bottom: 80px;
 }
 
 /* #projects::before { 
@@ -1625,8 +1626,11 @@ section {
   }
 
   p,
-  .fs--p {
+  .fs--p,
+  a,
+  li {
     font-size: var(--fs-h5);
+    font-weight: var(--fw-normal);
   }
 
   .header__home {

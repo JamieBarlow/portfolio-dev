@@ -82,7 +82,7 @@ export default function Sidebar() {
       <aside className="sidebar" ref={sidebarRef}>
         <nav>
           {links.map((link, index) => (
-            <div className="sidebar__link" key={index} onClick={closeSidebar}>
+            <div className="sidebar__link" key={index} onClick={handleClick}>
               <a href={link.href}>{link.text}</a>
             </div>
           ))}

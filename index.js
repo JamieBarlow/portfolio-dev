@@ -48,42 +48,42 @@ app.post("/email", (req, res) => {
   });
 });
 
-app.get("/", (req, res) => {
-  res.render("pages/HomePage");
-});
+// app.get("/", (req, res) => {
+//   res.render("pages/HomePage");
+// });
 
-app.get("/projects", (req, res) => {
-  res.render("pages/projects");
-});
+// app.get("/projects", (req, res) => {
+//   res.render("pages/projects");
+// });
 
-app.get("/projects/:project", (req, res) => {
-  let { project } = req.params;
-  const href = `projects/${project}`;
-  let projectFound = false; // Flag to track whether project is found
-  for (let i = 0; i < displayProjects.length; i++) {
-    const projectInfo = displayProjects[i];
-    if (href === projectInfo.pageLink) {
-      projectFound = true;
-      res.render("pages/ShowPage", {
-        projectInfo: JSON.stringify(projectInfo),
-      });
-      break; // Exit the loop once project is found
-    }
-  }
-  if (!projectFound) {
-    res.status(404).send("Project not found");
-  }
-});
+// app.get("/projects/:project", (req, res) => {
+//   let { project } = req.params;
+//   const href = `projects/${project}`;
+//   let projectFound = false; // Flag to track whether project is found
+//   for (let i = 0; i < displayProjects.length; i++) {
+//     const projectInfo = displayProjects[i];
+//     if (href === projectInfo.pageLink) {
+//       projectFound = true;
+//       res.render("pages/ShowPage", {
+//         projectInfo: JSON.stringify(projectInfo),
+//       });
+//       break; // Exit the loop once project is found
+//     }
+//   }
+//   if (!projectFound) {
+//     res.status(404).send("Project not found");
+//   }
+// });
 
-app.get("/aboutMe", (req, res) => {
-  const projectTitle = "About Me";
-  // res.render("about", { projectTitle });
-  res.render("pages/AboutPage");
-});
+// app.get("/aboutMe", (req, res) => {
+//   const projectTitle = "About Me";
+//   // res.render("about", { projectTitle });
+//   res.render("pages/AboutPage");
+// });
 
-app.get("*", (req, res) => {
-  res.send("Page not found");
-});
+// app.get("*", (req, res) => {
+//   res.send("Page not found");
+// });
 
 app.listen(port, () => {
   console.log(`Serving on port ${port}`);
