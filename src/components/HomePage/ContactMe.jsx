@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Button3D from "../common/Button3D";
+import emailjs from "@emailjs/browser";
 
 export default function ContactMe() {
+  const form = useRef();
   const initialFormData = {
     name: "",
     email: "",
@@ -35,24 +37,44 @@ export default function ContactMe() {
     setFormData(initialFormData);
   };
 
-  const handleSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
-    fetch("/email", {
-      method: "POST",
-      body: JSON.stringify(formData),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((response) => response.text()) // Parse JSON response
-      .then((result) => {
-        console.log(result.message);
-        resetForm();
-        alert("Email sent!");
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        form.current,
+        {
+          publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_API_KEY,
+        }
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESS!");
+          alert("Email sent!");
+          resetForm();
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+
+    // fetch("/email", {
+    //   method: "POST",
+    //   body: JSON.stringify(formData),
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    // })
+    //   .then((response) => response.text()) // Parse JSON response
+    //   .then((result) => {
+    //     console.log(result.message);
+    //     resetForm();
+    //     alert("Email sent!");
+    //   })
+    //   .catch((error) => {
+    //     console.error("Error:", error);
+    //   });
   };
   return (
     <section className="contact bg--blue text--light" id="contactMe">
@@ -73,7 +95,8 @@ export default function ContactMe() {
           className="contact__form"
           action="/email"
           method="POST"
-          onSubmit={handleSubmit}
+          onSubmit={sendEmail}
+          ref={form}
         >
           <div className="contact__field">
             <label htmlFor="name">Name</label>
