@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import Button3D from "../common/Button3D";
-import emailjs from "@emailjs/browser";
 
 export default function ContactMe() {
   const form = useRef();
@@ -8,12 +7,10 @@ export default function ContactMe() {
     name: "",
     email: "",
     message: "",
-    subject: "",
   };
   const [formData, setFormData] = useState(initialFormData);
 
   const handleChange = (e) => {
-    console.log(formData);
     const fieldName = e.target.name;
     const value = e.target.value;
     setFormData((currData) => {
@@ -24,57 +21,30 @@ export default function ContactMe() {
     });
   };
 
-  useEffect(() => {
-    setFormData((currData) => {
-      return {
-        ...currData,
-        subject: `${currData.name} at ${currData.email} gets in touch`,
-      };
-    });
-  }, [formData.name, formData.email]);
-
   const resetForm = () => {
     setFormData(initialFormData);
   };
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
-    emailjs
-      .sendForm(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        form.current,
-        {
-          publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_API_KEY,
-        }
-      )
-      .then(
-        (response) => {
-          console.log("SUCCESS!");
-          alert("Email sent!");
-          resetForm();
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
-        }
-      );
-
-    // fetch("/email", {
-    //   method: "POST",
-    //   body: JSON.stringify(formData),
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    // })
-    //   .then((response) => response.text()) // Parse JSON response
-    //   .then((result) => {
-    //     console.log(result.message);
-    //     resetForm();
-    //     alert("Email sent!");
-    //   })
-    //   .catch((error) => {
-    //     console.error("Error:", error);
-    //   });
+    try {
+      const response = await fetch("/.netlify/functions/sendEmail", {
+        method: "POST",
+        body: JSON.stringify(formData),
+        headers: { "Content-Type": "application/json" },
+      });
+      console.log(response);
+      const data = await response.json();
+      if (response.ok) {
+        console.log("SUCCESS!", data);
+        alert("Email sent!");
+        resetForm();
+      } else {
+        console.log("FAILED...", data.error);
+      }
+    } catch (error) {
+      console.log("FAILED...", error);
+    }
   };
   return (
     <section className="contact bg--blue text--light" id="contactMe">
