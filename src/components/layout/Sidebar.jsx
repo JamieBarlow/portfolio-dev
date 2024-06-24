@@ -32,14 +32,6 @@ export default function Sidebar() {
     }
     const clicked = event.target.innerText;
     setClicked(clicked);
-    // switch (clicked) {
-    //   case "Projects":
-    //     smoothScrollToRef(projectsSectionRef);
-    //     break;
-    //   case "Contact":
-    //     smoothScrollToRef(contactMeRef);
-    //     break;
-    // }
   }
   function closeSidebar(button, sidebar, hamburger) {
     button.setAttribute("data-state", "closed");

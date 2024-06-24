@@ -529,7 +529,6 @@ footer svg:hover path {
 /* Sets offset for internal links */
 #projectsAnchor {
   height: 10px;
-  margin-bottom: 80px;
 }
 
 /* #projects::before { 
@@ -754,6 +753,7 @@ footer svg:hover path {
   margin-top: var(--4);
   padding: 20px 0;
   background-image: url("/images/scribble.svg");
+  scroll-margin-top: 40px;
 }
 
 .contact__wrapper {
@@ -938,6 +938,7 @@ footer {
   --3: 1rem;
   --4: 1.5rem;
   --5: 3rem;
+  --6: 4rem;
   --container-width-desktop: 70%;
   --container-width-tablet: 86%;
   --container-width-mobile: 92%;
@@ -1506,8 +1507,8 @@ section {
   }
 
   .projects {
-    /* margin-top: 50px; */
     border: none;
+    scroll-margin-top: 60px;
   }
 
   .projects__logo {
@@ -1528,7 +1529,7 @@ section {
     /* grid-template-rows: 2fr repeat(4, 0.5fr); */
     column-gap: 3rem;
     align-items: start;
-    margin-top: var(--5);
+    margin-top: var(--6);
   }
 
   .projects__img {

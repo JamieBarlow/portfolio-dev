@@ -10,7 +10,6 @@ import ProjectShowLessons from "../components/ShowPage/ProjectShowLessons";
 import ProjectShowOther from "../components/ShowPage/ProjectShowOther";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
-import ObserverProvider from "../context/ObserverContext";
 
 import { useParams } from "react-router-dom";
 import projectData from "../assets/js/projects/projectData";
@@ -44,19 +43,17 @@ export default function ShowPage() {
     <>
       <link rel="stylesheet" href="css/projectStyles.css" />
       <main className="main-wrapper projectPage">
-        <ObserverProvider>
-          <Navbar />
-          <ProjectShowHero
-            title={title}
-            about={about}
-            stack={stack}
-            live={live}
-            code={code}
-            images={images}
-          />
-          <ProjectShowPurpose purpose={purpose} images={images} title={title} />
-          <ProjectShowFeatures features={features} />
-        </ObserverProvider>
+        <Navbar />
+        <ProjectShowHero
+          title={title}
+          about={about}
+          stack={stack}
+          live={live}
+          code={code}
+          images={images}
+        />
+        <ProjectShowPurpose purpose={purpose} images={images} title={title} />
+        <ProjectShowFeatures features={features} />
         <ProjectShowWebStack webStack={webStack} />
         <ProjectShowImages images={images} title={title} />
         <ProjectShowChallenges
