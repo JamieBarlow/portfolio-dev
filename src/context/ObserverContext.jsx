@@ -3,6 +3,17 @@ import React, { createContext, useState, useEffect, useRef } from "react";
 export const ObserverContext = createContext();
 
 export default function ObserverProvider({ children }) {
+  // Handle smooth scrolling
+  const projectsSectionRef = useRef(null);
+  const contactMeRef = useRef(null);
+  const smoothScrollToRef = (ref) => {
+    if (ref && ref.current) {
+      ref.current.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  };
+
   // Intersection Observer for navbar style changes on scroll (updated in HeaderHome.jsx)
   const [navIsIntersecting, setNavIsIntersecting] = useState();
   const observedElem = useRef();
@@ -70,6 +81,9 @@ export default function ObserverProvider({ children }) {
         isTablet,
         observedElem,
         slideElems,
+        projectsSectionRef,
+        contactMeRef,
+        smoothScrollToRef,
       }}
     >
       {children}

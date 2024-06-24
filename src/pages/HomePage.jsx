@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect, useContext } from "react";
 import HeroSection from "../components/HomePage/HeroSection";
 import ExperienceSection from "../components/HomePage/ExperienceSection";
 import Divider from "../components/HomePage/Divider";
@@ -19,9 +19,9 @@ function App() {
           <Divider />
           <div id="projectsAnchor"></div>
           <ProjectsSection />
+          <ContactMe />
+          <Footer />
         </ObserverProvider>
-        <ContactMe />
-        <Footer />
       </main>
     </>
   );

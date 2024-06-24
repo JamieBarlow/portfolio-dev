@@ -1,8 +1,10 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useContext, useRef } from "react";
 import Button3D from "../common/Button3D";
+import { ObserverContext } from "../../context/ObserverContext";
 
-export default function ContactMe() {
-  const form = useRef();
+const ContactMe = () => {
+  const { contactMeRef } = useContext(ObserverContext);
+  const form = useRef(null);
   const initialFormData = {
     name: "",
     email: "",
@@ -47,7 +49,11 @@ export default function ContactMe() {
     }
   };
   return (
-    <section className="contact bg--blue text--light" id="contactMe">
+    <section
+      className="contact bg--blue text--light"
+      id="contactMe"
+      ref={contactMeRef}
+    >
       <div className="wrapper contact__wrapper">
         <div className="background-container">
           <img src="images/scribble.svg" alt="" className="background" />
@@ -117,4 +123,6 @@ export default function ContactMe() {
       </div>
     </section>
   );
-}
+};
+
+export default ContactMe;

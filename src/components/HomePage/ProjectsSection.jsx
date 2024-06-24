@@ -1,10 +1,13 @@
-import React from "react";
+import React, { forwardRef, useRef, useContext } from "react";
 import ProjectsRows from "./ProjectsRows";
 import Button3D from "../common/Button3D";
+import { ObserverContext } from "../../context/ObserverContext";
 
-export default function Projects() {
+const Projects = () => {
+  const { projectsSectionRef } = useContext(ObserverContext);
+
   return (
-    <section className="projects">
+    <section className="projects" ref={projectsSectionRef}>
       <div className="wrapper projects__wrapper">
         <div className="projects__header my-2">
           <img
@@ -22,4 +25,6 @@ export default function Projects() {
       </div>
     </section>
   );
-}
+};
+
+export default Projects;

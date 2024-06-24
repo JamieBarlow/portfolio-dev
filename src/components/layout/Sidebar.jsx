@@ -1,20 +1,26 @@
 import React, { useContext, useRef, useEffect } from "react";
 import { ObserverContext } from "../../context/ObserverContext";
+import { Link } from "react-router-dom";
 
 export default function Sidebar() {
   const links = [
     { href: "/", text: "Home" },
-    { href: "/#projectsAnchor", text: "Projects" },
+    { href: "/", text: "Projects" },
     { href: "/aboutMe", text: "About" },
-    { href: "/#contactMe", text: "Contact" },
+    { href: "/", text: "Contact" },
   ];
 
-  const { navIsIntersecting } = useContext(ObserverContext);
+  const {
+    navIsIntersecting,
+    projectsSectionRef,
+    contactMeRef,
+    smoothScrollToRef,
+  } = useContext(ObserverContext);
   const buttonRef = useRef(null);
   const sidebarRef = useRef(null);
   const hamburgerRef = useRef(null);
 
-  function handleClick() {
+  function handleClick(event) {
     const button = buttonRef.current;
     const sidebar = sidebarRef.current;
     const hamburger = hamburgerRef.current;
@@ -23,6 +29,14 @@ export default function Sidebar() {
       openSidebar(button, sidebar, hamburger);
     } else {
       closeSidebar(button, sidebar, hamburger);
+    }
+    switch (event.target.innerText) {
+      case "Projects":
+        smoothScrollToRef(projectsSectionRef);
+        break;
+      case "Contact":
+        smoothScrollToRef(contactMeRef);
+        break;
     }
   }
   function closeSidebar(button, sidebar, hamburger) {
@@ -83,7 +97,7 @@ export default function Sidebar() {
         <nav>
           {links.map((link, index) => (
             <div className="sidebar__link" key={index} onClick={handleClick}>
-              <a href={link.href}>{link.text}</a>
+              <Link to={link.href}>{link.text}</Link>
             </div>
           ))}
         </nav>
