@@ -1,12 +1,19 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-export default function Button3D({ text, link, size, type = "button", icon }) {
+export default function Button3D({
+  text,
+  onClick,
+  size,
+  type = "button",
+  icon,
+}) {
   return (
     <button className="pushable" type={type}>
-      <a className={`front ${size}`} href={link}>
+      <Link className={`front ${size}`} onClick={onClick}>
         {icon ? icon : null}
         {text}
-      </a>
+      </Link>
     </button>
   );
 }

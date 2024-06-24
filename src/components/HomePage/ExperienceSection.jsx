@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import ExperienceIcons from "./Experience-Icons";
 import LinkUnderline from "../common/LinkUnderline";
+import { ObserverContext } from "../../context/ObserverContext";
 
 export default function ExperienceSection() {
+  const { setClicked } = useContext(ObserverContext);
+  function handleClick() {
+    setClicked("Projects");
+  }
   return (
     <section className="experience bg--blue text--light">
       <svg id="visual" viewBox="0 0 960 120" version="1.1">
@@ -23,9 +28,9 @@ export default function ExperienceSection() {
           into practice through a number of
           <LinkUnderline
             text="projects."
-            href="/#projectsAnchor"
             size="fs--h5"
             variation="text--light"
+            onClick={handleClick}
           />{" "}
           My current tech stack includes:
         </h5>

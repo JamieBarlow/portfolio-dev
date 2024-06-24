@@ -4,7 +4,10 @@ import { ObserverContext } from "../../context/ObserverContext";
 import ASCII from "./ASCII";
 
 export default function HeroSection() {
-  const { observedElem } = useContext(ObserverContext);
+  const { observedElem, setClicked } = useContext(ObserverContext);
+  function handleClick() {
+    setClicked("Contact");
+  }
   return (
     <section className="hero">
       <div className="hero__main">
@@ -33,7 +36,7 @@ export default function HeroSection() {
         </div>
       </div>
       <div className="hero__contact p-4">
-        <Button3D text="Get in touch" link="#contactMe" size="fs--h4" />
+        <Button3D text="Get in touch" onClick={handleClick} size="fs--h4" />
       </div>
     </section>
   );

@@ -1,12 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-export default function LinkUnderline({ text, href, variation, size }) {
+export default function LinkUnderline({ text, onClick, variation, size }) {
   return (
-    <a href={href}>
+    <Link onClick={onClick}>
       {" "}
       <span className={`underline hover--green ${size} ${variation}`}>
         {text}
       </span>
-    </a>
+    </Link>
   );
 }
