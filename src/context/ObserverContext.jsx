@@ -6,6 +6,7 @@ export default function ObserverProvider({ children }) {
   // Handle smooth scrolling
   const projectsSectionRef = useRef(null);
   const contactMeRef = useRef(null);
+  const [clicked, setClicked] = useState("");
   const smoothScrollToRef = (ref) => {
     if (ref && ref.current) {
       ref.current.scrollIntoView({
@@ -84,6 +85,8 @@ export default function ObserverProvider({ children }) {
         projectsSectionRef,
         contactMeRef,
         smoothScrollToRef,
+        clicked,
+        setClicked,
       }}
     >
       {children}

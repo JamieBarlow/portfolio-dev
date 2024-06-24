@@ -9,12 +9,12 @@ export default function Sidebar() {
     { href: "/aboutMe", text: "About" },
     { href: "/", text: "Contact" },
   ];
-
   const {
     navIsIntersecting,
     projectsSectionRef,
     contactMeRef,
     smoothScrollToRef,
+    setClicked,
   } = useContext(ObserverContext);
   const buttonRef = useRef(null);
   const sidebarRef = useRef(null);
@@ -30,14 +30,16 @@ export default function Sidebar() {
     } else {
       closeSidebar(button, sidebar, hamburger);
     }
-    switch (event.target.innerText) {
-      case "Projects":
-        smoothScrollToRef(projectsSectionRef);
-        break;
-      case "Contact":
-        smoothScrollToRef(contactMeRef);
-        break;
-    }
+    const clicked = event.target.innerText;
+    setClicked(clicked);
+    // switch (clicked) {
+    //   case "Projects":
+    //     smoothScrollToRef(projectsSectionRef);
+    //     break;
+    //   case "Contact":
+    //     smoothScrollToRef(contactMeRef);
+    //     break;
+    // }
   }
   function closeSidebar(button, sidebar, hamburger) {
     button.setAttribute("data-state", "closed");
@@ -97,7 +99,9 @@ export default function Sidebar() {
         <nav>
           {links.map((link, index) => (
             <div className="sidebar__link" key={index} onClick={handleClick}>
-              <Link to={link.href}>{link.text}</Link>
+              <Link to={link.href} preventScrollReset={true}>
+                {link.text}
+              </Link>
             </div>
           ))}
         </nav>

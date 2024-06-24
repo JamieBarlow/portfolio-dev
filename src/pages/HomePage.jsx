@@ -6,25 +6,43 @@ import ProjectsSection from "../components/HomePage/ProjectsSection";
 import ContactMe from "../components/HomePage/ContactMe";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
-import ObserverProvider from "../context/ObserverContext";
+import { ObserverContext } from "../context/ObserverContext";
+import { useLocation } from "react-router-dom";
 
-function App() {
+function HomePage() {
+  const {
+    smoothScrollToRef,
+    projectsSectionRef,
+    contactMeRef,
+    clicked,
+    setClicked,
+  } = useContext(ObserverContext);
+  let location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === "/" && clicked) {
+      if (clicked === "Projects") {
+        smoothScrollToRef(projectsSectionRef);
+      } else if (clicked === "Contact") {
+        smoothScrollToRef(contactMeRef);
+      }
+      setClicked("");
+    }
+  }, [location.pathname, clicked]);
   return (
     <>
       <main className="main-wrapper homePage">
-        <ObserverProvider>
-          <Navbar />
-          <HeroSection />
-          <ExperienceSection />
-          <Divider />
-          <div id="projectsAnchor"></div>
-          <ProjectsSection />
-          <ContactMe />
-          <Footer />
-        </ObserverProvider>
+        <Navbar />
+        <HeroSection />
+        <ExperienceSection />
+        <Divider />
+        <div id="projectsAnchor"></div>
+        <ProjectsSection />
+        <ContactMe />
+        <Footer />
       </main>
     </>
   );
 }
 
-export default App;
+export default HomePage;
