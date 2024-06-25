@@ -60,17 +60,27 @@ export default function ObserverProvider({ children }) {
     };
   }, []);
 
-  // Check window size - if smaller than tablet, will use to make icons invisible on scroll (state passed down to SocialIcons)
+  // Check window size - if smaller than tablet, will use to make icons invisible on scroll (state passed down to SocialIcons). Also used for some dynamic styling of other elems e.g. experience icons
   const [isTablet, setIsTablet] = useState();
+  const [isDesktop, setIsDesktop] = useState();
   useEffect(() => {
-    const tabletMediaQuery = window.matchMedia("(min-width: 600px)");
-    const handleMediaChange = (event) => {
+    const tabletMediaQuery = window.matchMedia(
+      "(min-width: 600px) and (max-width: 1199px)"
+    );
+    const desktopMediaQuery = window.matchMedia("(min-width: 1200px");
+    const handleTabletChange = (event) => {
       setIsTablet(event.matches);
     };
+    const handleDesktopChange = (event) => {
+      setIsDesktop(event.matches);
+    };
     setIsTablet(tabletMediaQuery.matches);
-    tabletMediaQuery.addEventListener("change", handleMediaChange);
+    setIsDesktop(desktopMediaQuery.matches);
+    tabletMediaQuery.addEventListener("change", handleTabletChange);
+    desktopMediaQuery.addEventListener("change", handleDesktopChange);
     return () => {
-      tabletMediaQuery.removeEventListener("change", handleMediaChange);
+      tabletMediaQuery.removeEventListener("change", handleTabletChange);
+      desktopMediaQuery.removeEventListener("change", handleDesktopChange);
     };
   }, []);
 
@@ -80,6 +90,7 @@ export default function ObserverProvider({ children }) {
         navIsIntersecting,
         setNavIsIntersecting,
         isTablet,
+        isDesktop,
         observedElem,
         slideElems,
         projectsSectionRef,

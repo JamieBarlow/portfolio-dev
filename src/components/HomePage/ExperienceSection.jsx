@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import ExperienceIcons from "./Experience-Icons";
 import LinkUnderline from "../common/LinkUnderline";
 import { ObserverContext } from "../../context/ObserverContext";
+import { RoughNotation } from "react-rough-notation";
 
 export default function ExperienceSection() {
   const { setClicked } = useContext(ObserverContext);
@@ -25,13 +26,25 @@ export default function ExperienceSection() {
         </h2>
         <h5 className="experience__subheader fw--light my-3">
           I use the tools below regularly, and have been able to put my skills
-          into practice through a number of
-          <LinkUnderline
+          into practice through a number of{" "}
+          <RoughNotation
+            style={{ cursor: "pointer" }}
+            type="underline"
+            show={true}
+            color="#4CE19E"
+            padding={[0, 0]}
+          >
+            <a className="fs--h5" onClick={handleClick}>
+              projects
+            </a>
+          </RoughNotation>
+          {/* <LinkUnderline
             text="projects."
             size="fs--h5"
             variation="text--light"
             onClick={handleClick}
-          />{" "}
+          /> */}
+          {". "}
           My current tech stack includes:
         </h5>
       </div>
