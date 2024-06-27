@@ -1,4 +1,3 @@
-import React from "react";
 export default function ProjectShowImages({ images, title }) {
   return (
     <section class="project__images wrapper">

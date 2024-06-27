@@ -1,16 +1,9 @@
-import React from "react";
-import parse from "html-react-parser";
-
 export default function ProjectShowChallenges({ challenges, images, title }) {
   return (
     <section className="project__challenges my-5 wrapper">
       <div>
         <h3>Challenges</h3>
-        <div class="challenges-box text-box">
-          {challenges.map((para) => {
-            return <p>{parse(para)}</p>;
-          })}
-        </div>
+        <div class="challenges-box text-box">{challenges}</div>
         <div className="screenshot-box challenges">
           {images.challenges.map((image) => {
             return (

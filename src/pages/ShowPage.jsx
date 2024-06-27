@@ -12,7 +12,7 @@ import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 
 import { useParams } from "react-router-dom";
-import projectData from "../assets/js/projects/projectData";
+import projectData from "../pagedata/pageData";
 const displayProjects = projectData.slice(0, 4);
 
 export default function ShowPage() {

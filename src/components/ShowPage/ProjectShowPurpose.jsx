@@ -1,13 +1,10 @@
 import React from "react";
-import parse from "html-react-parser";
 
 export default function ProjectShowPurpose({ purpose, images, title }) {
   return (
     <section class="project__purpose wrapper my-3">
       <h3>The purpose</h3>
-      {purpose.map((para) => {
-        return <p>{parse(para)}</p>;
-      })}
+      <div>{purpose}</div>
       <div class="screenshot-box constrain">
         <picture>
           <source

@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import parse from "html-react-parser";
 import ButtonUnderline from "../common/ButtonUnderline";
 import { ObserverContext } from "../../context/ObserverContext";
 
@@ -27,7 +26,7 @@ export default function ProjectShowHero({
               </svg>
             </span>
           </h1>
-          <p>{parse(about)}</p>
+          <div>{about}</div>
         </div>
         <div class="bg--blue text--light">
           <div class="project__info wrapper my-4 p-3">
