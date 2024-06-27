@@ -1,9 +1,9 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
-import projectData from "../../assets/js/projects/projectData";
+import pageData from "../../pagedata/pageData";
 
 export default function ProjectsRows() {
-  const displayProjects = projectData.slice(0, 4);
+  const displayProjects = pageData.slice(0, 4);
   // Create array 'chunks' from data to populate rows depending on rowLength
   const rowLength = 2;
   const dataChunk = [];

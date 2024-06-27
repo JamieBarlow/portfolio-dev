@@ -35,16 +35,15 @@ export default function ExperienceSection() {
             padding={[0, 0]}
           >
             <a className="fs--h5" onClick={handleClick}>
-              projects
+              projects.
             </a>
-          </RoughNotation>
+          </RoughNotation>{" "}
           {/* <LinkUnderline
             text="projects."
             size="fs--h5"
             variation="text--light"
             onClick={handleClick}
           /> */}
-          {". "}
           My current tech stack includes:
         </h5>
       </div>
