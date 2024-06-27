@@ -144,11 +144,12 @@ export default function ASCII() {
       p.image(images[p.floor(cyclic_t)], 0, 0, p.width, p.height);
       p.noTint();
     };
-
     p.windowResized = () => {
-      p.resizeCanvas(600, 912);
-      images.forEach((img) => img.resize(600, 912));
-      applyMediaQueryStyles();
+      if (location.pathname === "/") {
+        p.resizeCanvas(600, 912);
+        images.forEach((img) => img.resize(600, 912));
+        applyMediaQueryStyles();
+      }
     };
 
     const applyMediaQueryStyles = () => {

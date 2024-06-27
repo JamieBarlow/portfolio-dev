@@ -1,8 +1,10 @@
 import React, { createContext, useState, useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
 
 export const ObserverContext = createContext();
 
 export default function ObserverProvider({ children }) {
+  const location = useLocation();
   // Handle smooth scrolling
   const projectsSectionRef = useRef(null);
   const contactMeRef = useRef(null);
@@ -26,7 +28,7 @@ export default function ObserverProvider({ children }) {
     const options = { root: null, rootMargin: "-20px", threshold: 1.0 };
     const observer = new IntersectionObserver(callback, options);
     observer.observe(observedElem.current);
-  }, []);
+  }, [location]);
 
   // Observer for slide in animations
   const [elemsIntersecting, setElemsIntersecting] = useState({});
@@ -58,7 +60,7 @@ export default function ObserverProvider({ children }) {
         }
       });
     };
-  }, []);
+  }, [location]);
 
   // Check window size - if smaller than tablet, will use to make icons invisible on scroll (state passed down to SocialIcons). Also used for some dynamic styling of other elems e.g. experience icons
   const [isTablet, setIsTablet] = useState();

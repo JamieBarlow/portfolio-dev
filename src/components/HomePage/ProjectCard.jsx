@@ -23,9 +23,7 @@ export default function ProjectCard({
           <p className="pill">{lang}</p>
         ))}
       </div>
-      <div className="projects__description">
-        <p>{homeDescription}</p>
-      </div>
+      <div className="projects__description">{homeDescription}</div>
       <div className="projects__links">
         <ButtonUnderline link={pageLink} name="View project" icon="fa-book" />
         <ButtonUnderline link={code} name="View code" icon="fa-laptop-code" />

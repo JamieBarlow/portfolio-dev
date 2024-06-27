@@ -4,8 +4,8 @@ import { ObserverContext } from "../../context/ObserverContext";
 export default function AboutMeHero() {
   const { observedElem } = useContext(ObserverContext);
   return (
-    <section className="aboutMe__hero wrapper" ref={observedElem}>
-      <div className="aboutMe__title">
+    <section className="aboutMe__hero wrapper">
+      <div className="aboutMe__title" ref={observedElem}>
         <h1 className="observed my-4">
           <span className="svg--underlined">
             About Me
