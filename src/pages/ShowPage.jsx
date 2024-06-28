@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../assets/css/projectStyles.css";
 import ProjectShowHero from "../components/ShowPage/ProjectShowHero";
 import ProjectShowPurpose from "../components/ShowPage/ProjectShowPurpose";
@@ -16,6 +16,10 @@ import projectData from "../pagedata/pageData";
 const displayProjects = projectData.slice(0, 4);
 
 export default function ShowPage() {
+  // Always render from top of page
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const { project } = useParams();
   const projectInfo = displayProjects.find(
     (p) => p.pageLink === `projects/${project}`

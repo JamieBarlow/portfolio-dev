@@ -12,11 +12,7 @@ const Projects = () => {
     <section className="projects" ref={projectsSectionRef}>
       <div className="wrapper projects__wrapper">
         <div className="projects__header my-2">
-          <img
-            src="images/projects-svg-blue.svg"
-            alt=""
-            className="projects__logo"
-          />
+          <h2>Projects</h2>
           <div className="projects__contact fs--p py-2">
             <Button3D text="Contact Me" onClick={handleClick} size="p-2" />
           </div>

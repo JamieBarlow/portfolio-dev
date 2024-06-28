@@ -1,5 +1,6 @@
 import React from "react";
 import ArrowIcon from "../common/ArrowIcon";
+import ButtonOutline from "../common/ButtonOutline";
 
 export default function ProjectPreviewImg({
   picL,
@@ -17,9 +18,9 @@ export default function ProjectPreviewImg({
       </picture>
       <div className="img-overlay img-overlay--blur">
         <div className="img-overlay__button">
-          <a className="button--outline-dark" href={pageLink}>
+          <ButtonOutline href={pageLink} variation="dark">
             Read More <ArrowIcon />
-          </a>
+          </ButtonOutline>
         </div>
       </div>
     </div>

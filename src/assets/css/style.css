@@ -561,6 +561,20 @@ footer svg:hover path {
   padding: 1rem;
 }
 
+.card--outline {
+  background-color: hsl(231, 56%, 98%);
+  padding: 1rem;
+  box-sizing: border-box;
+  width: 100%;
+  border: 4px solid transparent;
+  border-radius: 5px;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+}
+
+.card--outline:hover {
+  border: 4px solid rgba(30, 240, 150, 1);
+}
+
 .projects__img {
   display: flex;
   position: relative;
@@ -575,9 +589,6 @@ footer svg:hover path {
   overflow: hidden;
 }
 
-.projects__img:hover {
-  border-color: var(--green__highlight);
-}
 .projects__img:hover picture {
   transform: scale(1.2);
   transition: all 0.3s ease-out;
@@ -672,7 +683,7 @@ footer svg:hover path {
   justify-content: flex-start;
 }
 
-.pill {
+/* .pill {
   font-size: var(--fs-p);
   line-height: 1.625;
   letter-spacing: 2.29px;
@@ -683,7 +694,7 @@ footer svg:hover path {
   padding: 0px 16px;
   margin: 0px 8px 8px 0px;
   color: white;
-}
+} */
 
 .projects__links {
   display: flex;
@@ -1306,18 +1317,21 @@ section {
   color: var(--text-dark);
 }
 
-.button--outline-dark {
+.button--outline {
   display: flex;
   gap: 5px;
-  color: white;
-  background-color: transparent;
-  border-radius: 20px;
+  border-radius: 5px;
   padding: 10px;
-  /* border: 1px solid #ffffff; */
   transition: background-color 250ms ease-in-out;
   font-size: var(--fs-p);
   line-height: 1.5rem;
   text-transform: uppercase;
+}
+
+.button--outline-dark {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid #ffffff;
 }
 
 .button--outline-dark:hover {
@@ -1325,7 +1339,19 @@ section {
   color: black;
 }
 
-.button--outline-dark:hover .arrowLink {
+.button--outline-light {
+  color: black;
+  background-color: white;
+}
+
+.button--outline-light:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  border: 1px solid white;
+}
+
+.button--outline-dark:hover .arrowLink,
+.button--outline-light:hover .arrowLink {
   translate: 2px -2px;
   transition: translate 0.2s;
 }

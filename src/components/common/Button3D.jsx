@@ -7,10 +7,11 @@ export default function Button3D({
   size,
   type = "button",
   icon,
+  href,
 }) {
   return (
     <button className="pushable" type={type}>
-      <Link className={`front ${size}`} onClick={onClick}>
+      <Link className={`front ${size}`} onClick={onClick} to={href}>
         {icon ? icon : null}
         {text}
       </Link>

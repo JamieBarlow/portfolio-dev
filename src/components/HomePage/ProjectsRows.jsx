@@ -15,7 +15,11 @@ export default function ProjectsRows() {
       {dataChunk.map((chunk, rowIndex) => (
         <div key={`${rowIndex}`} className="projects__row">
           {chunk.map((project) => (
-            <ProjectCard key={`${project.title}`} {...project} />
+            <ProjectCard
+              key={`${project.title}`}
+              variation="outline"
+              {...project}
+            />
           ))}
         </div>
       ))}

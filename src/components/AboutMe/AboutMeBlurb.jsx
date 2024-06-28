@@ -4,7 +4,7 @@ import LinkUnderline from "../common/LinkUnderline";
 import { ObserverContext } from "../../context/ObserverContext";
 
 export default function AboutMeBlurb() {
-  const { slideElems } = useContext(ObserverContext);
+  const { slideElems, setClicked } = useContext(ObserverContext);
   return (
     <section className="blurb">
       <div className="aboutMe__blurb wrapper">
@@ -48,7 +48,7 @@ export default function AboutMeBlurb() {
             and macros (leading to my
             <LinkUnderline
               text="Direct Debit Calendar app"
-              href="./projects/directDebits"
+              href="../projects/directDebits"
             />
             ).
           </p>
@@ -74,8 +74,13 @@ export default function AboutMeBlurb() {
             self-teaching programming (thanks to a wealth of online resources,
             and mentors in the field) - you can see what I've been working on as
             I learn
-            <LinkUnderline text="here" href="./#projectsAnchor" />. I'm excited
-            to keep learning and to bring this to a career in tech.
+            <LinkUnderline
+              text="here"
+              href="/"
+              onClick={() => setClicked("Projects")}
+            />
+            . I'm excited to keep learning and to bring this to a career in
+            tech.
           </p>
           <p>
             If you like my work and would like to contact me or build something
@@ -86,7 +91,12 @@ export default function AboutMeBlurb() {
           className="hero__contact p-4 slide-right"
           ref={(el) => el && slideElems.current.push(el)}
         >
-          <Button3D text="Get in touch" size="fs--h5" link="./#contactMe" />
+          <Button3D
+            text="Get in touch"
+            size="fs--h5"
+            href="/"
+            onClick={() => setClicked("Contact")}
+          />
         </div>
       </div>
     </section>
