@@ -7,17 +7,17 @@ import ContactMe from "../components/HomePage/ContactMe";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 import { ObserverContext } from "../context/ObserverContext";
-import { useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
 
-function HomePage() {
+export default function HomePage({ pageVariants }) {
   const {
     smoothScrollToRef,
     projectsSectionRef,
     contactMeRef,
     clicked,
     setClicked,
+    location,
   } = useContext(ObserverContext);
-  let location = useLocation();
 
   useEffect(() => {
     if (location.pathname === "/" && clicked) {
@@ -25,13 +25,21 @@ function HomePage() {
         smoothScrollToRef(projectsSectionRef);
       } else if (clicked === "Contact") {
         smoothScrollToRef(contactMeRef);
+      } else if (clicked === "Home") {
+        window.scrollTo(0, 0);
       }
       setClicked("");
     }
   }, [location.pathname, clicked]);
   return (
     <>
-      <main className="main-wrapper homePage">
+      <motion.main
+        className="main-wrapper homePage"
+        variants={pageVariants}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+      >
         <Navbar />
         <HeroSection />
         <ExperienceSection />
@@ -40,9 +48,7 @@ function HomePage() {
         <ProjectsSection />
         <ContactMe />
         <Footer />
-      </main>
+      </motion.main>
     </>
   );
 }
-
-export default HomePage;

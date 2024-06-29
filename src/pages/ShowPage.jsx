@@ -10,12 +10,13 @@ import ProjectShowLessons from "../components/ShowPage/ProjectShowLessons";
 import ProjectShowOther from "../components/ShowPage/ProjectShowOther";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
+import { motion } from "framer-motion";
 
 import { useParams } from "react-router-dom";
 import projectData from "../pagedata/pageData";
 const displayProjects = projectData.slice(0, 4);
 
-export default function ShowPage() {
+export default function ShowPage({ pageVariants }) {
   // Always render from top of page
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -46,7 +47,13 @@ export default function ShowPage() {
   return (
     <>
       <link rel="stylesheet" href="css/projectStyles.css" />
-      <main className="main-wrapper projectPage">
+      <motion.main
+        className="main-wrapper projectPage"
+        variants={pageVariants}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+      >
         <Navbar />
         <ProjectShowHero
           title={title}
@@ -68,7 +75,7 @@ export default function ShowPage() {
         <ProjectShowLessons lessons={lessons} />
         <ProjectShowOther otherProjects={otherProjects} />
         <Footer />
-      </main>
+      </motion.main>
     </>
   );
 }

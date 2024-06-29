@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef, useEffect } from "react";
 import Sidebar from "./Sidebar";
 import SocialIcons from "./SocialIcons";
 import HeaderHome from "./HeaderHome";

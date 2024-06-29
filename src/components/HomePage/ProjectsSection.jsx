@@ -14,7 +14,12 @@ const Projects = () => {
         <div className="projects__header my-2">
           <h2>Projects</h2>
           <div className="projects__contact fs--p py-2">
-            <Button3D text="Contact Me" onClick={handleClick} size="p-2" />
+            <Button3D
+              text="Contact Me"
+              onClick={handleClick}
+              size="p-2"
+              isInternalLink={true}
+            />
           </div>
         </div>
         <div className="projects__main">

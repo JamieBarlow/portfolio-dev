@@ -1,5 +1,6 @@
 import React from "react";
 import ArrowIcon from "./ArrowIcon";
+import { Link } from "react-router-dom";
 
 export default function ButtonUnderline({ link, name, icon, variation }) {
   let variationClass = "";
@@ -9,8 +10,8 @@ export default function ButtonUnderline({ link, name, icon, variation }) {
       break;
   }
   return (
-    <a
-      href={link}
+    <Link
+      to={link}
       className={`underline underline--animated ${variationClass}`}
     >
       <div className="projects__link">
@@ -18,6 +19,6 @@ export default function ButtonUnderline({ link, name, icon, variation }) {
         <span className="link">{name}</span>
         <ArrowIcon />
       </div>
-    </a>
+    </Link>
   );
 }

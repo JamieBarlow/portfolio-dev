@@ -1,5 +1,6 @@
 import React, { createContext, useState, useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
+import { useInView } from "framer-motion";
 
 export const ObserverContext = createContext();
 
@@ -8,7 +9,8 @@ export default function ObserverProvider({ children }) {
   // Handle smooth scrolling
   const projectsSectionRef = useRef(null);
   const contactMeRef = useRef(null);
-  const [clicked, setClicked] = useState("");
+
+  const [clicked, setClicked] = useState("Home");
   const smoothScrollToRef = (ref) => {
     if (ref && ref.current) {
       ref.current.scrollIntoView({
@@ -17,18 +19,17 @@ export default function ObserverProvider({ children }) {
     }
   };
 
-  // Intersection Observer for navbar style changes on scroll (updated in HeaderHome.jsx)
+  // Intersection Observer for navbar style changes on scroll (styles updated in HeaderHome.jsx)
   const [navIsIntersecting, setNavIsIntersecting] = useState();
-  const observedElem = useRef();
-  useEffect(() => {
-    const callback = (entries, observer) => {
-      const entry = entries[0];
-      setNavIsIntersecting(entry.isIntersecting);
-    };
-    const options = { root: null, rootMargin: "-20px", threshold: 1.0 };
-    const observer = new IntersectionObserver(callback, options);
-    observer.observe(observedElem.current);
-  }, [location]);
+
+  const setupNavbarIntersection = (ref) => {
+    const isInView = useInView(ref, {
+      amount: 1,
+    });
+    useEffect(() => {
+      !setNavIsIntersecting(isInView);
+    }, [isInView]);
+  };
 
   // Observer for slide in animations
   const [elemsIntersecting, setElemsIntersecting] = useState({});
@@ -91,15 +92,16 @@ export default function ObserverProvider({ children }) {
       value={{
         navIsIntersecting,
         setNavIsIntersecting,
+        setupNavbarIntersection,
         isTablet,
         isDesktop,
-        observedElem,
         slideElems,
         projectsSectionRef,
         contactMeRef,
         smoothScrollToRef,
         clicked,
         setClicked,
+        location,
       }}
     >
       {children}

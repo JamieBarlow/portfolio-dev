@@ -1,11 +1,15 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef } from "react";
 import { ObserverContext } from "../../context/ObserverContext";
 
 export default function AboutMeHero() {
-  const { observedElem } = useContext(ObserverContext);
+  const { setupNavbarIntersection } = useContext(ObserverContext);
+  // Setup navbar observer
+  const navRef = useRef(null);
+  setupNavbarIntersection(navRef);
+
   return (
     <section className="aboutMe__hero wrapper">
-      <div className="aboutMe__title" ref={observedElem}>
+      <div className="aboutMe__title" ref={navRef}>
         <h1 className="observed my-4">
           <span className="svg--underlined">
             About Me

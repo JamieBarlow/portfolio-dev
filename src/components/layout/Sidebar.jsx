@@ -1,6 +1,7 @@
 import React, { useContext, useRef, useEffect } from "react";
 import { ObserverContext } from "../../context/ObserverContext";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export default function Sidebar() {
   const links = [
@@ -15,6 +16,7 @@ export default function Sidebar() {
     contactMeRef,
     smoothScrollToRef,
     setClicked,
+    location,
   } = useContext(ObserverContext);
   const buttonRef = useRef(null);
   const sidebarRef = useRef(null);
@@ -45,6 +47,18 @@ export default function Sidebar() {
     sidebar.classList.add("active-sidebar");
     hamburger.classList.add("active-burger");
   }
+
+  const linkVariants = {
+    hover: {
+      x: 10,
+      transition: {
+        type: "spring",
+        mass: 0.4,
+        damping: 8,
+        stiffness: 300,
+      },
+    },
+  };
 
   return (
     <>
@@ -90,11 +104,27 @@ export default function Sidebar() {
       <aside className="sidebar" ref={sidebarRef}>
         <nav>
           {links.map((link, index) => (
-            <div className="sidebar__link" key={index} onClick={handleClick}>
-              <Link to={link.href} preventScrollReset={true}>
-                {link.text}
-              </Link>
-            </div>
+            <motion.div
+              className="sidebar__link"
+              key={index}
+              onClick={handleClick}
+              variants={linkVariants}
+              whileHover="hover"
+            >
+              {/* Renders either an internal or external link depending on
+              current location */}
+              {(location.pathname === "/" &&
+                (link.text === "Home" ||
+                  link.text === "Projects" ||
+                  link.text === "Contact")) ||
+              (location.pathname === "/aboutMe" && link.text === "About") ? (
+                <a href={link.href} onClick={(e) => e.preventDefault()}>
+                  {link.text}
+                </a>
+              ) : (
+                <Link to={link.href}>{link.text}</Link>
+              )}
+            </motion.div>
           ))}
         </nav>
       </aside>

@@ -8,13 +8,21 @@ export default function Button3D({
   type = "button",
   icon,
   href,
+  isInternalLink,
 }) {
   return (
     <button className="pushable" type={type}>
-      <Link className={`front ${size}`} onClick={onClick} to={href}>
-        {icon ? icon : null}
-        {text}
-      </Link>
+      {isInternalLink ? (
+        <a className={`front ${size}`} onClick={onClick} href={href}>
+          {icon ? icon : null}
+          {text}
+        </a>
+      ) : (
+        <Link className={`front ${size}`} onClick={onClick} to={href}>
+          {icon ? icon : null}
+          {text}
+        </Link>
+      )}
     </button>
   );
 }

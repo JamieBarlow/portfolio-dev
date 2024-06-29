@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef, useEffect } from "react";
 import ExperienceIcons from "./Experience-Icons";
 import LinkUnderline from "../common/LinkUnderline";
 import { ObserverContext } from "../../context/ObserverContext";
@@ -6,6 +6,7 @@ import { RoughNotation } from "react-rough-notation";
 
 export default function ExperienceSection() {
   const { setClicked } = useContext(ObserverContext);
+
   function handleClick() {
     setClicked("Projects");
   }

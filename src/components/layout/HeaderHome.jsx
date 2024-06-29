@@ -1,8 +1,17 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import { ObserverContext } from "../../context/ObserverContext";
+import { Link } from "react-router-dom";
 
 export default function HeaderHome() {
-  const {navIsIntersecting} = useContext(ObserverContext);
+  const { navIsIntersecting, location } = useContext(ObserverContext);
+
+  const handleClick = (e) => {
+    if (location.pathname === "/") {
+      e.preventDefault();
+      window.scroll({ top: 0, left: 0, behavior: "smooth" });
+    }
+  };
+
   return (
     <ul className="header__home">
       <svg width="1.8rem" viewBox="7 0 10 24" fill="none">
@@ -38,9 +47,15 @@ export default function HeaderHome() {
         />
       </svg>
       <li className="header__name">
-        <a href="/" className={`text--dark fs--h4 fw--medium hover--green ${!navIsIntersecting && "whiteOnBlack"}`}>
+        <Link
+          to="/"
+          className={`text--dark fs--h4 fw--medium hover--green ${
+            !navIsIntersecting && "whiteOnBlack"
+          }`}
+          onClick={handleClick}
+        >
           jamiebarlow
-        </a>
+        </Link>
       </li>
     </ul>
   );

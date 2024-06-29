@@ -1,10 +1,15 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import Button3D from "../common/Button3D";
 import { ObserverContext } from "../../context/ObserverContext";
 import ASCII from "./ASCII";
+import { motion } from "framer-motion";
 
 export default function HeroSection() {
-  const { observedElem, setClicked } = useContext(ObserverContext);
+  const { setClicked, setupNavbarIntersection } = useContext(ObserverContext);
+  // Setup navbar observer
+  const navRef = useRef(null);
+  setupNavbarIntersection(navRef);
+
   function handleClick() {
     setClicked("Contact");
   }
@@ -14,8 +19,13 @@ export default function HeroSection() {
         <div className="hero__image observed" id="image-container">
           <ASCII />
         </div>
-        <div className="hero__text" ref={observedElem}>
-          <h1 className="hero__headline py-3">
+        <div className="hero__text" ref={navRef}>
+          <motion.h1
+            className="hero__headline py-3"
+            initial={{ x: -200, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ type: "spring", mass: 2, stiffness: 60 }}
+          >
             Hi there,
             <br />
             I'm{" "}
@@ -28,7 +38,7 @@ export default function HeroSection() {
                 />
               </svg>
             </span>
-          </h1>
+          </motion.h1>
           <h5 className="hero__description m-0 py-4">
             I'm a full-stack developer with a passion for building high quality
             web apps. You can check out my work below, or:
@@ -36,7 +46,12 @@ export default function HeroSection() {
         </div>
       </div>
       <div className="hero__contact p-4">
-        <Button3D text="Get in touch" onClick={handleClick} size="fs--h4" />
+        <Button3D
+          text="Get in touch"
+          onClick={handleClick}
+          size="fs--h4"
+          isInternalLink={true}
+        />
       </div>
     </section>
   );

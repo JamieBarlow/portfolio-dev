@@ -42,6 +42,7 @@ body {
 }
 
 main {
+  transform-origin: top;
   /* display: flex;
     flex-direction: column; */
 }
@@ -236,6 +237,10 @@ button {
   transform: translateX(100%);
   transition: transform 0.5s, opacity 1s, display 1s;
   z-index: 2;
+}
+
+.sidebar__link {
+  width: max-content;
 }
 
 .sidebar__link a {
@@ -1429,9 +1434,6 @@ section {
 
   .sidebar__link a {
     font-size: var(--fs-h4);
-  }
-
-  .sidebar__link {
   }
 
   .header__icons {

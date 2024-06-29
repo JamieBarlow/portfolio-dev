@@ -1,13 +1,28 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import { ObserverContext } from "../../context/ObserverContext";
 
 export default function Footer() {
+  const { location, smoothScrollToRef, projectsSectionRef } =
+    useContext(ObserverContext);
+
+  const handleClick = (e) => {
+    if (location.pathname === "/") {
+      e.preventDefault();
+      window.scroll({ top: 0, left: 0, behavior: "smooth" });
+    }
+  };
   return (
     <footer className="footer middle bg--blue">
       <div className="footer__home wrapper">
         <div className="">
-          <a href="/" className="text--light fs--h4 fw--medium hover--green">
+          <Link
+            to="/"
+            className="text--light fs--h4 fw--medium hover--green"
+            onClick={handleClick}
+          >
             jamiebarlow
-          </a>
+          </Link>
         </div>
         <ul className="footer__icons">
           <li>
