@@ -1,12 +1,13 @@
 import styles from "./Sidebar.module.css";
 import SidebarLinks from "./SidebarLinks";
 import SidebarToggle from "./SidebarToggle";
-import { useState } from "react";
+import { useContext } from "react";
+import { ObserverContext } from "../../context/ObserverContext";
 import { motion } from "framer-motion";
 
 const variants = {
   closed: {
-    clipPath: "circle(30px at 350px 32px)",
+    clipPath: "circle(30px at 365px 32px)",
     transition: {
       delay: 0.5,
       type: "spring",
@@ -15,7 +16,7 @@ const variants = {
     },
   },
   open: {
-    clipPath: "circle(1200px at 350px 50px)",
+    clipPath: "circle(1200px at 365px 50px)",
     transition: {
       type: "spring",
       stiffness: 20,
@@ -24,14 +25,17 @@ const variants = {
 };
 
 export default function Sidebar() {
-  const [open, setOpen] = useState(false);
+  const { sidebarOpen, setSidebarOpen } = useContext(ObserverContext);
 
   return (
-    <motion.div className={styles.sidebar} animate={open ? "open" : "closed"}>
+    <motion.div
+      className={styles.sidebar}
+      animate={sidebarOpen ? "open" : "closed"}
+    >
       <motion.div className={styles.bg} variants={variants}>
         <SidebarLinks className={styles.links} />
       </motion.div>
-      <SidebarToggle setOpen={setOpen} />
+      <SidebarToggle setSidebarOpen={setSidebarOpen} />
     </motion.div>
   );
 }

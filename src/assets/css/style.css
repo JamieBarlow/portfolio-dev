@@ -104,7 +104,7 @@ header.sticking {
 .header__topline {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
 }
 
@@ -115,7 +115,7 @@ header.sticking {
   padding: 0;
   margin: 0;
   line-height: 1;
-  order: 1;
+  /* order: 1; */
   /* background: var(--background-offwhite); */
 }
 
@@ -179,7 +179,7 @@ li {
   display: flex;
   flex-basis: 100%;
   z-index: -1;
-  order: 3;
+  /* order: 3; */
   gap: 25px;
   padding: 0;
   justify-content: center;
@@ -213,7 +213,7 @@ button {
   /* top: 10px; */
   z-index: 3;
   cursor: pointer;
-  order: 2;
+  /* order: 2; */
   /* flex-basis: 50%; */
 }
 
@@ -377,7 +377,7 @@ footer svg:hover path {
 /* HERO */
 
 .hero {
-  min-height: 85vh;
+  min-height: 100vh;
   margin: 0;
 }
 
@@ -1412,7 +1412,7 @@ section {
   }
 
   .menu-button {
-    order: 3;
+    /* order: 3; */
   }
 
   .homePage {
@@ -1438,14 +1438,16 @@ section {
 
   .header__icons {
     flex-basis: 0;
-    order: 2;
-    margin: 0;
+    /* order: 2; */
+    margin-left: auto;
+    /* margin-right: 100px; */
   }
 
   .homePage {
     .social-icon {
       fill: white;
       background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 2px;
     }
     .social-icon.whiteOnBlack,
     .hamburger.whiteOnBlack {
@@ -1469,6 +1471,7 @@ section {
     right: 0;
     z-index: -1;
     margin-top: 0;
+    clip-path: ellipse(65% 57% at 67% 42%);
   }
 
   .hero__text {

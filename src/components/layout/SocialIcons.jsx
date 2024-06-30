@@ -2,13 +2,16 @@ import React, { useContext } from "react";
 import { ObserverContext } from "../../context/ObserverContext";
 
 export default function SocialIcons() {
-  const { navIsIntersecting, isTablet } = useContext(ObserverContext);
+  const { navIsIntersecting, isTablet, sidebarOpen } =
+    useContext(ObserverContext);
   return (
     <ul className={`header__icons ${!isTablet ? "invisible" : ""}`}>
       <li>
         <a href="https://github.com/JamieBarlow/">
           <svg
-            className={`social-icon ${!navIsIntersecting && "whiteOnBlack"}`}
+            className={`social-icon ${
+              (!navIsIntersecting || sidebarOpen) && "whiteOnBlack"
+            }`}
             role="img"
             aria-label="GitHub"
             width="25"
@@ -24,7 +27,9 @@ export default function SocialIcons() {
       <li>
         <a href="https://soundcloud.com/non_zero/sets">
           <svg
-            className={`social-icon ${!navIsIntersecting && "whiteOnBlack"}`}
+            className={`social-icon ${
+              (!navIsIntersecting || sidebarOpen) && "whiteOnBlack"
+            }`}
             role="img"
             aria-label="SoundCloud"
             width="26px"
@@ -41,7 +46,9 @@ export default function SocialIcons() {
       <li>
         <a href="http://www.linkedin.com/in/jamie-barlow-2b4b3648">
           <svg
-            className={`social-icon ${!navIsIntersecting && "whiteOnBlack"}`}
+            className={`social-icon ${
+              (!navIsIntersecting || sidebarOpen) && "whiteOnBlack"
+            }`}
             role="img"
             aria-label="LinkedIn"
             width="25"
@@ -57,7 +64,9 @@ export default function SocialIcons() {
       <li>
         <a href="https://twitter.com/JayBarls">
           <svg
-            className={`social-icon ${!navIsIntersecting && "whiteOnBlack"}`}
+            className={`social-icon ${
+              (!navIsIntersecting || sidebarOpen) && "whiteOnBlack"
+            }`}
             role="img"
             aria-label="Twitter"
             width="24"

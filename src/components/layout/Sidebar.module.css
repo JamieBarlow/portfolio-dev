@@ -4,7 +4,9 @@
   align-items: center;
   justify-content: center;
   color: white;
-  order: 3;
+  /* order: 3; */
+  min-width: 60px;
+  margin-left: 3rem;
 
   .bg {
     position: fixed;
@@ -21,7 +23,7 @@
     border-radius: 50%;
     position: fixed;
     top: 10px;
-    right: 25px;
+    right: 10px;
     background-color: transparent;
     cursor: pointer;
     color: white;
@@ -35,7 +37,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20px;
 
     a {
       font-size: 40px;

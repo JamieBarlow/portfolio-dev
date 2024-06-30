@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 
-export default function SidebarToggle({ setOpen }) {
+export default function SidebarToggle({ setSidebarOpen }) {
   return (
-    <button onClick={() => setOpen((prev) => !prev)}>
+    <button onClick={() => setSidebarOpen((prev) => !prev)}>
       <svg width="23" height="23" viewBox="0 0 23 23">
         <motion.path
           strokeWidth="3"

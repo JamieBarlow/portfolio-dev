@@ -11,8 +11,8 @@ export default function Navbar() {
       <nav className="header__nav">
         <div className="header__topline">
           <HeaderHome />
-          <Sidebar />
           <SocialIcons />
+          <Sidebar />
         </div>
       </nav>
     </header>

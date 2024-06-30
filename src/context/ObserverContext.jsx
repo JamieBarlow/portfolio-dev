@@ -5,6 +5,9 @@ import { useInView } from "framer-motion";
 export const ObserverContext = createContext();
 
 export default function ObserverProvider({ children }) {
+  // Sidebar open or closed
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
   const location = useLocation();
   // Handle smooth scrolling
   const projectsSectionRef = useRef(null);
@@ -119,6 +122,8 @@ export default function ObserverProvider({ children }) {
         setClicked,
         location,
         slideUpVariant,
+        sidebarOpen,
+        setSidebarOpen,
       }}
     >
       {children}
