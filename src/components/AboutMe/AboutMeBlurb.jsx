@@ -2,9 +2,11 @@ import React, { useContext } from "react";
 import Button3D from "../common/Button3D";
 import LinkUnderline from "../common/LinkUnderline";
 import { ObserverContext } from "../../context/ObserverContext";
+import { motion } from "framer-motion";
 
 export default function AboutMeBlurb() {
-  const { slideElems, setClicked } = useContext(ObserverContext);
+  const { slideElems, setClicked, slideUpVariant } =
+    useContext(ObserverContext);
   return (
     <section className="blurb">
       <div className="aboutMe__blurb wrapper">
@@ -27,7 +29,8 @@ export default function AboutMeBlurb() {
             cringeworthy) tributes to the review magazines we used to read.
           </p>
         </div>
-        <div
+        <motion.div
+          variant={slideUpVariant}
           className="slide-up"
           ref={(el) => el && slideElems.current.push(el)}
         >
@@ -52,8 +55,8 @@ export default function AboutMeBlurb() {
             />
             ).
           </p>
-        </div>
-        <div
+        </motion.div>
+        <motion.div
           className="imgcols-2 slide-left"
           ref={(el) => el && slideElems.current.push(el)}
         >
@@ -63,9 +66,9 @@ export default function AboutMeBlurb() {
           <div>
             <img src="../images/jamie-2.jpg" alt="Playing piano" />
           </div>
-        </div>
+        </motion.div>
 
-        <div
+        <motion.div
           className="slide-up"
           ref={(el) => el && slideElems.current.push(el)}
         >
@@ -86,8 +89,8 @@ export default function AboutMeBlurb() {
             If you like my work and would like to contact me or build something
             together, I'd love to hear from you - please:
           </p>
-        </div>
-        <div
+        </motion.div>
+        <motion.div
           className="hero__contact p-4 slide-right"
           ref={(el) => el && slideElems.current.push(el)}
         >
@@ -97,7 +100,7 @@ export default function AboutMeBlurb() {
             href="/"
             onClick={() => setClicked("Contact")}
           />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

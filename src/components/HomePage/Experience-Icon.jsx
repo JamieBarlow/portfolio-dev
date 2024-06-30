@@ -1,9 +1,16 @@
-import React, { forwardRef, useEffect, useContext, useState } from "react";
+import React, {
+  forwardRef,
+  useEffect,
+  useContext,
+  useState,
+  useRef,
+} from "react";
 import { RoughNotation } from "react-rough-notation";
 import { ObserverContext } from "../../context/ObserverContext";
+import { motion } from "framer-motion";
 
 const ExperienceIcon = forwardRef(({ tech, children }, ref) => {
-  const { isTablet, isDesktop } = useContext(ObserverContext);
+  const { isTablet, isDesktop, slideUpVariant } = useContext(ObserverContext);
   const [underlineWidth, setUnderlineWidth] = useState("--------");
   useEffect(() => {
     if (isDesktop) {
@@ -14,9 +21,14 @@ const ExperienceIcon = forwardRef(({ tech, children }, ref) => {
       setUnderlineWidth("--");
     }
   }, [isTablet, isDesktop]);
+
   return (
-    <div
+    <motion.div
       ref={ref}
+      variants={slideUpVariant}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
       className={`experience__box slide-up ${
         tech === "HTML / CSS" ? "doubleicon" : ""
       }`}
@@ -36,7 +48,7 @@ const ExperienceIcon = forwardRef(({ tech, children }, ref) => {
           {underlineWidth}
         </RoughNotation>
       ) : null}
-    </div>
+    </motion.div>
   );
 });
 

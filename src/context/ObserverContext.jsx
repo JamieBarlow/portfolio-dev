@@ -34,34 +34,50 @@ export default function ObserverProvider({ children }) {
   // Observer for slide in animations
   const [elemsIntersecting, setElemsIntersecting] = useState({});
   const slideElems = useRef([]);
-  useEffect(() => {
-    const callback = (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("active");
-          observer.unobserve(entry.target);
-        }
-      });
-    };
-    const options = {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.2,
-    };
-    const slideObserver = new IntersectionObserver(callback, options);
-    slideElems.current.forEach((elem) => {
-      if (elem) {
-        slideObserver.observe(elem);
-      }
-    });
-    return () => {
-      slideElems.current.forEach((elem) => {
-        if (elem) {
-          slideObserver.unobserve(elem);
-        }
-      });
-    };
-  }, [location]);
+  // useEffect(() => {
+  //   const callback = (entries, observer) => {
+  //     entries.forEach((entry) => {
+  //       if (entry.isIntersecting) {
+  //         entry.target.classList.add("active");
+  //         observer.unobserve(entry.target);
+  //       }
+  //     });
+  //   };
+  //   const options = {
+  //     root: null,
+  //     rootMargin: "0px",
+  //     threshold: 0.2,
+  //   };
+  //   const slideObserver = new IntersectionObserver(callback, options);
+  //   slideElems.current.forEach((elem) => {
+  //     if (elem) {
+  //       slideObserver.observe(elem);
+  //     }
+  //   });
+  //   return () => {
+  //     slideElems.current.forEach((elem) => {
+  //       if (elem) {
+  //         slideObserver.unobserve(elem);
+  //       }
+  //     });
+  //   };
+  // }, [location]);
+
+  const slideUpVariant = {
+    hidden: {
+      opacity: 0,
+      scale: 0,
+      y: 200,
+    },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      y: 0,
+      transition: {
+        duration: 0.1,
+      },
+    },
+  };
 
   // Check window size - if smaller than tablet, will use to make icons invisible on scroll (state passed down to SocialIcons). Also used for some dynamic styling of other elems e.g. experience icons
   const [isTablet, setIsTablet] = useState();
@@ -102,6 +118,7 @@ export default function ObserverProvider({ children }) {
         clicked,
         setClicked,
         location,
+        slideUpVariant,
       }}
     >
       {children}
