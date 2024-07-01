@@ -137,27 +137,14 @@ header.sticking {
   width: 2rem;
 }
 
-.logo__container {
-  /* animation: in 2s linear 0s infinite reverse; */
-  /* animation-play-state: paused; */
+/* .logo__container {
   transform-origin: center;
   transition: transform 4s cubic-bezier(0.175, 0.885, 0.32, 1.18);
 }
 
 .logo__container:hover {
   transform: rotate(720deg);
-  /* animation-play-state: running; */
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
+} */
 
 .header__nav li,
 footer li,

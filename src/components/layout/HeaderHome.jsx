@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { ObserverContext } from "../../context/ObserverContext";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export default function HeaderHome() {
   const { navIsIntersecting, location, sidebarOpen } =
@@ -25,10 +26,13 @@ export default function HeaderHome() {
       </svg>
       <div className="logo__container">
         <li className={`header__logo ${!navIsIntersecting && "whiteOnBlack"}`}>
-          <svg
+          <motion.svg
             viewBox="205.9497 197.3684 123.5698 123.5698"
             width="123.5698"
             height="123.5698"
+            initial={{ rotate: 0 }}
+            whileHover={{ rotate: 720 }}
+            transition={{ loop: Infinity, duration: 1, ease: "linear" }}
           >
             <g transform="matrix(1.5446220636367798, 0, 0, 1.5446220636367798, 190.50343322753903, 181.9221954345703)">
               <path d="M50,14c19.851,0,36,16.149,36,36S69.851,86,50,86S14,69.851,14,50S30.149,14,50,14 M50,10c-22.092,0-40,17.909-40,40  c0,22.092,17.908,40,40,40s40-17.908,40-40C90,27.909,72.092,10,50,10L50,10z"></path>
@@ -36,7 +40,7 @@ export default function HeaderHome() {
               <path d="M72.63,27.37L59.9,40.1C62.43,42.64,64,46.14,64,50h18C82,41.16,78.42,33.16,72.63,27.37z"></path>
               <path d="M64.31,21.37l-8.05,16.11c0.75,0.38,1.471,0.82,2.141,1.32l10.8-14.4C67.67,23.24,66.03,22.23,64.31,21.37z"></path>
             </g>
-          </svg>
+          </motion.svg>
         </li>
       </div>
       <svg width="1.8rem" viewBox="7 0 10 24" fill="none">
