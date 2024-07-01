@@ -13,7 +13,7 @@ const links = [
 const variants = {
   open: {
     transition: {
-      staggerChildren: 0.1,
+      staggerChildren: 0.3,
     },
   },
   closed: {
@@ -45,11 +45,12 @@ const linkVariants = {
 };
 
 export default function SidebarLinks({ className }) {
-  const { setClicked, location } = useContext(ObserverContext);
+  const { setClicked, location, setSidebarOpen } = useContext(ObserverContext);
   // Sets state for handling smooth scroll
   function handleClick(event) {
     const clicked = event.target.innerText;
     setClicked(clicked);
+    setSidebarOpen(false);
   }
   return (
     <motion.div className={className} variants={variants}>

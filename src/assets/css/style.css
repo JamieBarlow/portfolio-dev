@@ -496,7 +496,7 @@ footer svg:hover path {
   /* border-bottom: 2px solid var(--green__highlight); */
 }
 
-/* .experience__box::after {
+.experience__box::after {
   content: "";
   display: block;
   align-self: center;
@@ -505,7 +505,7 @@ footer svg:hover path {
   height: 20px;
   padding: 15px;
   border-bottom: 2px solid var(--green__highlight);
-} */
+}
 
 .experience__icons {
   width: 100%;

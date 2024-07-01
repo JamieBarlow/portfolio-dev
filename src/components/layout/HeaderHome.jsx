@@ -3,7 +3,8 @@ import { ObserverContext } from "../../context/ObserverContext";
 import { Link } from "react-router-dom";
 
 export default function HeaderHome() {
-  const { navIsIntersecting, location } = useContext(ObserverContext);
+  const { navIsIntersecting, location, sidebarOpen } =
+    useContext(ObserverContext);
 
   const handleClick = (e) => {
     if (location.pathname === "/") {
@@ -46,17 +47,19 @@ export default function HeaderHome() {
           strokeWidth="0.8"
         />
       </svg>
-      <li className="header__name">
-        <Link
-          to="/"
-          className={`text--dark fs--h4 fw--medium hover--green ${
-            !navIsIntersecting && "whiteOnBlack"
-          }`}
-          onClick={handleClick}
-        >
-          jamiebarlow
-        </Link>
-      </li>
+      {!sidebarOpen && (
+        <li className="header__name">
+          <Link
+            to="/"
+            className={`text--dark fs--h4 fw--medium hover--green ${
+              !navIsIntersecting && "whiteOnBlack"
+            }`}
+            onClick={handleClick}
+          >
+            jamiebarlow
+          </Link>
+        </li>
+      )}
     </ul>
   );
 }

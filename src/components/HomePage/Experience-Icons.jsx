@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import ExperienceIcon from "./Experience-Icon";
+import { motion } from "framer-motion";
 import { ObserverContext } from "../../context/ObserverContext";
 
 const svgElements = [
@@ -320,7 +321,7 @@ const svgElements = [
 ];
 
 const ExperienceIcons = () => {
-  const { slideElems } = useContext(ObserverContext);
+  const { popInVariant, staggerSlide } = useContext(ObserverContext);
   const techList = [
     "HTML / CSS",
     "JavaScript",
@@ -339,13 +340,21 @@ const ExperienceIcons = () => {
   return (
     <div className="wrapper experience__wrapper">
       {techList.map((tech, index) => (
-        <ExperienceIcon
+        <motion.div
+          className={`experience__box slide-up ${
+            tech === "HTML / CSS" ? "doubleicon" : ""
+          }`}
           key={tech}
           tech={tech}
-          ref={(el) => el && slideElems.current.push(el)}
+          variants={popInVariant}
+          initial="hidden"
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 0.2, delay: index * 0.05 }}
+          viewport={{ once: true, margin: "100px", amount: 0.3 }}
         >
-          {svgElements[index]}
-        </ExperienceIcon>
+          <h4>{tech}</h4>
+          <div className="experience__icons">{svgElements[index]}</div>
+        </motion.div>
       ))}
     </div>
   );

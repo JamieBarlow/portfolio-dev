@@ -34,43 +34,25 @@ export default function ObserverProvider({ children }) {
     }, [isInView]);
   };
 
-  // Observer for slide in animations
-  const [elemsIntersecting, setElemsIntersecting] = useState({});
-  const slideElems = useRef([]);
-  // useEffect(() => {
-  //   const callback = (entries, observer) => {
-  //     entries.forEach((entry) => {
-  //       if (entry.isIntersecting) {
-  //         entry.target.classList.add("active");
-  //         observer.unobserve(entry.target);
-  //       }
-  //     });
-  //   };
-  //   const options = {
-  //     root: null,
-  //     rootMargin: "0px",
-  //     threshold: 0.2,
-  //   };
-  //   const slideObserver = new IntersectionObserver(callback, options);
-  //   slideElems.current.forEach((elem) => {
-  //     if (elem) {
-  //       slideObserver.observe(elem);
-  //     }
-  //   });
-  //   return () => {
-  //     slideElems.current.forEach((elem) => {
-  //       if (elem) {
-  //         slideObserver.unobserve(elem);
-  //       }
-  //     });
-  //   };
-  // }, [location]);
-
-  const slideUpVariant = {
+  // For slide-in animations
+  const stagger = {
+    hidden: {
+      transition: {
+        staggerChildren: 0.3,
+        staggerDirection: -1,
+      },
+    },
+    visible: {
+      transition: {
+        staggerChildren: 0.3,
+      },
+    },
+  };
+  const popInVariant = {
     hidden: {
       opacity: 0,
-      scale: 0,
-      y: 200,
+      scale: 0.5,
+      y: 100,
     },
     visible: {
       opacity: 1,
@@ -78,6 +60,45 @@ export default function ObserverProvider({ children }) {
       y: 0,
       transition: {
         duration: 0.1,
+      },
+    },
+  };
+  const slideUpVariant = {
+    hidden: {
+      opacity: 0,
+      y: 100,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
+  const slideRightVariant = {
+    hidden: {
+      opacity: 0,
+      x: -100,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
+  const slideLeftVariant = {
+    hidden: {
+      opacity: 0,
+      x: 100,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.5,
       },
     },
   };
@@ -114,14 +135,17 @@ export default function ObserverProvider({ children }) {
         setupNavbarIntersection,
         isTablet,
         isDesktop,
-        slideElems,
         projectsSectionRef,
         contactMeRef,
         smoothScrollToRef,
         clicked,
         setClicked,
         location,
+        popInVariant,
         slideUpVariant,
+        slideRightVariant,
+        slideLeftVariant,
+        stagger,
         sidebarOpen,
         setSidebarOpen,
       }}

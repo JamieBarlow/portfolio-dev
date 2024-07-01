@@ -1,11 +1,11 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import Button3D from "../common/Button3D";
 import LinkUnderline from "../common/LinkUnderline";
 import { ObserverContext } from "../../context/ObserverContext";
 import { motion } from "framer-motion";
 
 export default function AboutMeBlurb() {
-  const { slideElems, setClicked, slideUpVariant } =
+  const { setClicked, slideUpVariant, slideRightVariant, slideLeftVariant } =
     useContext(ObserverContext);
   return (
     <section className="blurb">
@@ -30,9 +30,10 @@ export default function AboutMeBlurb() {
           </p>
         </div>
         <motion.div
-          variant={slideUpVariant}
-          className="slide-up"
-          ref={(el) => el && slideElems.current.push(el)}
+          variants={slideUpVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "100px", amount: 0.3 }}
         >
           <p>
             Despite all of this natural curiosity in the days of dial-up
@@ -57,8 +58,11 @@ export default function AboutMeBlurb() {
           </p>
         </motion.div>
         <motion.div
-          className="imgcols-2 slide-left"
-          ref={(el) => el && slideElems.current.push(el)}
+          className="imgcols-2"
+          variants={slideRightVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "100px", amount: 0.5 }}
         >
           <div>
             <img src="../images/Guitar.png" alt="Playing guitar" />
@@ -69,8 +73,10 @@ export default function AboutMeBlurb() {
         </motion.div>
 
         <motion.div
-          className="slide-up"
-          ref={(el) => el && slideElems.current.push(el)}
+          variants={slideLeftVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "100px", amount: 0.5 }}
         >
           <p>
             Since then, I've come full circle. I have been intensively
@@ -87,12 +93,15 @@ export default function AboutMeBlurb() {
           </p>
           <p>
             If you like my work and would like to contact me or build something
-            together, I'd love to hear from you - please:
+            together, I'd love to hear from you:
           </p>
         </motion.div>
         <motion.div
-          className="hero__contact p-4 slide-right"
-          ref={(el) => el && slideElems.current.push(el)}
+          className="hero__contact p-4"
+          variants={slideUpVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "100px", amount: 0.5 }}
         >
           <Button3D
             text="Get in touch"

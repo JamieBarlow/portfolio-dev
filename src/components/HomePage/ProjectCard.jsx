@@ -2,6 +2,7 @@ import React from "react";
 import ButtonUnderline from "../common/ButtonUnderline";
 import ProjectPreviewImg from "./ProjectPreviewImg";
 import Pill from "../common/Pill";
+import { motion } from "framer-motion";
 
 export default function ProjectCard({
   title,
@@ -32,8 +33,17 @@ export default function ProjectCard({
       <ProjectPreviewImg {...{ picL, picM, src, title, pageLink }} />
       <p className="projects__title">{title}</p>
       <div className="projects__languages">
-        {stack.map((lang) => (
-          <Pill variation="outline">{lang}</Pill>
+        {stack.map((lang, index) => (
+          <motion.div
+            initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50, y: -50 }}
+            whileInView={{ opacity: 1, x: 0, y: 0 }}
+            transition={{ duration: 0.8, delay: index * 0.05 }}
+            viewport={{ once: true, margin: "100px", amount: 0.3 }}
+          >
+            <Pill variation="outline" key={index}>
+              {lang}
+            </Pill>
+          </motion.div>
         ))}
       </div>
       <div className="projects__description">{homeDescription}</div>
