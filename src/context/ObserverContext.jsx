@@ -112,13 +112,19 @@ export default function ObserverProvider({ children }) {
     );
     const desktopMediaQuery = window.matchMedia("(min-width: 1200px");
     const handleTabletChange = (event) => {
+      console.log("Tablet media query change:", event.matches);
       setIsTablet(event.matches);
     };
     const handleDesktopChange = (event) => {
+      console.log("Desktop media query change:", event.matches);
       setIsDesktop(event.matches);
     };
     setIsTablet(tabletMediaQuery.matches);
     setIsDesktop(desktopMediaQuery.matches);
+    console.log("Initial state:", {
+      isTablet: tabletMediaQuery.matches,
+      isDesktop: desktopMediaQuery.matches,
+    });
     tabletMediaQuery.addEventListener("change", handleTabletChange);
     desktopMediaQuery.addEventListener("change", handleDesktopChange);
     return () => {

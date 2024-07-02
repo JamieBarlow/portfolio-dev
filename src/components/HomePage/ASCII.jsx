@@ -1,9 +1,30 @@
-import React, { useEffect, useRef, useState, useCallback } from "react";
+import React, {
+  useEffect,
+  useRef,
+  useState,
+  useCallback,
+  useContext,
+} from "react";
 import { ReactP5Wrapper } from "@p5-wrapper/react";
 import useScript from "react-script-hook";
 import p5 from "p5";
+import { ObserverContext } from "../../context/ObserverContext";
+
+let imgSize;
 
 export default function ASCII() {
+  // Use to fetch different sized images
+  const { isTablet, isDesktop } = useContext(ObserverContext);
+  if (isTablet) {
+    imgSize = "400";
+    console.log("TABLET");
+  } else if (isDesktop) {
+    imgSize = "600";
+    console.log("DESKTOP");
+  } else {
+    imgSize = "200";
+    console.log("MOBILE");
+  }
   // Attach p5 to the window object
   const [p5Attached, setP5Attached] = useState(false);
   const [loading, error] = useScript({
@@ -34,11 +55,11 @@ export default function ASCII() {
     let cnv, canvasElement, gfx, ascii_arr, cyclic_t;
     p.preload = () => {
       images[0] = p.loadImage(
-        "https://res.cloudinary.com/dakgl7s9n/image/upload/v1718175905/portfolio/jamie-1.jpg",
+        `https://res.cloudinary.com/dakgl7s9n/image/upload/f_auto,q_auto:best,c_scale,w_${imgSize}/v1718175905/portfolio/jamie-1.jpg`,
         handleImage
       );
       images[1] = p.loadImage(
-        "https://res.cloudinary.com/dakgl7s9n/image/upload/v1718175905/portfolio/jamie-2.jpg",
+        `https://res.cloudinary.com/dakgl7s9n/image/upload/f_auto,q_auto:best,c_scale,w_${imgSize}/v1718175905/portfolio/jamie-2.jpg`,
         handleImage
       );
       function handleImage(img) {
