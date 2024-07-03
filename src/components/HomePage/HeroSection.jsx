@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import Button3D from "../common/Button3D";
 import { ObserverContext } from "../../context/ObserverContext";
 import ASCII from "./ASCII";
@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 
 export default function HeroSection() {
   const { setClicked, setupNavbarIntersection } = useContext(ObserverContext);
+
   // Setup navbar observer
   const navRef = useRef(null);
   setupNavbarIntersection(navRef);
@@ -16,8 +17,17 @@ export default function HeroSection() {
   return (
     <section className="hero">
       <div className="hero__main">
-        <div className="hero__image observed" id="image-container">
-          <ASCII />
+        <div id="image-container">
+          {/* <ASCII /> */}
+          <div id="profilePic">
+            <video autoPlay loop muted playsInline class="ascii">
+              <source
+                src={`https://res.cloudinary.com/dakgl7s9n/video/upload/q_auto,w_600/v1719964605/portfolio/jamieASCII-1.webm`}
+                type="video/webm"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
         <div className="hero__text" ref={navRef}>
           <motion.h1

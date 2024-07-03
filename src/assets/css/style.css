@@ -384,8 +384,10 @@ footer svg:hover path {
 }
 
 /* needed for ASCII effect */
-#profilePic {
-  display: block;
+#profilePic video {
+  width: 600px;
+  height: auto;
+  max-width: 50vw;
 }
 
 .hero__text {
@@ -1449,6 +1451,11 @@ section {
     padding-left: var(--4);
   }
 
+  .image-container {
+    width: 200px;
+    position: absolute;
+  }
+
   /* Adjusts ASCII image properties */
   #profilePic,
   .p5Canvas {
@@ -1459,6 +1466,17 @@ section {
     z-index: -1;
     margin-top: 0;
     clip-path: ellipse(65% 57% at 67% 42%);
+    max-width: 50vw;
+  }
+
+  #profilePic video {
+    max-width: 50vw;
+    height: auto;
+  }
+
+  .ascii {
+    /* max-height: 100vh; */
+    /* width: 35%; */
   }
 
   .hero__text {
@@ -1683,6 +1701,11 @@ section {
     margin-top: 0;
   }
 
+  #profilePic video {
+    max-width: 48vw;
+    height: auto;
+  }
+
   .devicon {
     width: 15%;
   }
@@ -1731,6 +1754,11 @@ section {
 
   .hero__description {
     font-size: var(--fs-h2);
+  }
+
+  #profilePic video {
+    max-width: 40vw;
+    height: auto;
   }
 
   /* .experience {

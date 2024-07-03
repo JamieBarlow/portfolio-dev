@@ -93,7 +93,7 @@ export default function ASCII() {
     };
     p.draw = () => {
       p.background(0);
-      cyclic_t = (p.millis() * 0.0002) % images.length;
+      cyclic_t = (p.millis() * 0.00017) % images.length;
       gfx.image(images[p.floor(cyclic_t)], 0, 0, gfx.width, gfx.height);
       gfx.filter(p.POSTERIZE, 2);
       ascii_arr = myAsciiArt.convert(gfx, 80, 80);
@@ -168,7 +168,7 @@ export default function ASCII() {
     p.windowResized = () => {
       if (location.pathname === "/") {
         p.resizeCanvas(600, 912);
-        images.forEach((img) => img.resize(600, 912));
+        // images.forEach((img) => img.resize(600, 912));
         applyMediaQueryStyles();
       }
     };
