@@ -3,6 +3,9 @@ import Underline from "../components/common/annotation/Underline";
 import Box from "../components/common/annotation/Box";
 import Brackets from "../components/common/annotation/Brackets";
 import Circle from "../components/common/annotation/Circle";
+import ResponsiveImg from "../components/common/ResponsiveImg";
+import ResponsiveImages from "../components/common/ResponsiveImages";
+import ResponsiveVideo from "../components/common/ResponsiveVideo";
 
 const projectData = [
   {
@@ -12,6 +15,7 @@ const projectData = [
       "JavaScript",
       "React",
       "React-BootStrap",
+      "Styled Components",
       "Vitest / Jest",
     ],
     pageLink: "projects/directDebits",
@@ -25,65 +29,48 @@ const projectData = [
     ),
     about: (
       <p>
-        <Highlight color="hl_accent">Single page web application</Highlight>{" "}
-        developed for{" "}
+        Single page web application developed for{" "}
         <a href="https://www.cancerresearchuk.org/">Cancer Research UK</a> to
         calculate Direct Debit processing days for a selected year by accounting
         for weekends, bank holidays and other non-work days. Uses the UK
         Government's{" "}
-        <Box>
+        <Underline>
           <a href="https://www.api.gov.uk/gds/bank-holidays/#bank-holidays">
             Bank Holidays API
           </a>
-        </Box>{" "}
+        </Underline>{" "}
         to fetch data dynamically.
       </p>
     ),
     purpose: (
       <>
         <p>
-          This is <Circle color="ln_darkred">v2</Circle> of a browser app that
-          can be used to determine Direct Debit processing days for a selected
-          year.
+          This is v2 of a browser app that determines Direct Debit processing
+          days for a selected year.
         </p>
         <p>
-          Companies who operate a{" "}
-          <a href="https://www.directdebit.co.uk/">Direct Debit scheme</a> will
-          rely on a{" "}
-          <Highlight color="hl_secondary">processing calendar</Highlight> to
-          determine their schedule for specific Direct Debit processes, in order
-          to meet the{" "}
-          <a href="https://www.directdebit.co.uk/direct-debit-explained/direct-debit-guarantee/">
-            Direct Debit guarantee
-          </a>
-          . Processing dates for both Service User and bank are determined by
-          working days, and therefore need to be adjusted to account for{" "}
-          <Highlight color="hl_primary">
-            bank holidays, weekends, and office closures.
-          </Highlight>{" "}
-          Determining when these dates are had proven to be a manual,
-          surprisingly complex and error-prone process, and so this app was
-          created to meet{" "}
-          <Underline color="ln_darkred">
-            a real challenge / need for automation
-          </Underline>
-          .
-        </p>
-
-        <p>
-          Ultimately this app is designed to provide a reliable means of
-          determining Direct Debit processing days, mitigating error and risk -
-          failure to generate this data correctly may result in multiple
-          negative impacts that are difficult and/or costly to fix: missed or
-          delayed submissions, payment reconciliation issues, knock-on impact on
-          future claims, damage to reputation or the company's Service User
-          status.
-        </p>
-        <p>
-          The results are laid out in a format that fits the exact requirements
-          of the Apps Support team for data loading, and can be{" "}
-          <Highlight color="hl_muted">copied to the clipboard</Highlight> with a
-          single click.
+          Companies using the{" "}
+          <a href="https://www.directdebit.co.uk/">Direct Debit scheme</a> rely
+          on a processing calendar to schedule these processes accurately,
+          accounting for working days, bank holidays, weekends, and office
+          closures.
+          <p>
+            Previously, determining these dates was a manual, complex, and
+            error-prone task. This app <Highlight>automates</Highlight> the
+            process, reducing potential errors and risks such as missed or
+            delayed submissions, payment reconciliation issues, and reputational
+            damage from failing to meet terms of the{" "}
+            <Underline>
+              <a href="https://www.directdebit.co.uk/direct-debit-explained/direct-debit-guarantee/">
+                Direct Debit guarantee.
+              </a>
+            </Underline>
+          </p>
+          <p>
+            The app generates results in a format tailored for the Apps Support
+            team, allowing one-click copying to the clipboard and easy data
+            loading.
+          </p>
         </p>
       </>
     ),
@@ -91,205 +78,145 @@ const projectData = [
       <ul>
         <li>
           Calculates and displays non-processing days (bank holidays and
-          weekends) for a given year, using{" "}
-          <Highlight color="hl_accent">JavaScript</Highlight> to manage data
-          from the UK Bank Holidays API;
+          weekends) for a given year.
         </li>
         <li>
-          User can manually add and delete company-specific non-processing days
-          (e.g. Christmas or other holiday office closures). The results table
-          will update dynamically to account for changes, making use of{" "}
-          <Highlight color>React state management;</Highlight>
+          Allows users to manually add or delete company-specific non-processing
+          days (e.g. office closures), with the results table updating
+          dynamically.
         </li>
         <li>
-          Display built with custom{" "}
-          <Highlight color="hl_tertiary">styled-components</Highlight>, with
-          results broken down by type in a tabbed{" "}
-          <Highlight color="hl_muted">React-BootStrap</Highlight> UI;
-        </li>
-        <li>'Copy to clipboard' button for easy export of results table;</li>
-        <li>
-          'Toast' UI notifications for each user interaction, providing visual
-          feedback. These stack with repeated actions, and auto-clear after a
-          set time interval;
+          Displays results in a tabbed UI, with a clean and organized layout.
         </li>
         <li>
-          <Underline>Test suite</Underline> built using{" "}
-          <Highlight color="hl_secondary">
-            <a href="https://vitest.dev/">Vitest</a>
-          </Highlight>
-          , the{" "}
-          <Highlight color="hl_tertiary">
-            <a href="https://jestjs.io/">Jest</a>
-          </Highlight>{" "}
-          API for assertions, and{" "}
-          <a href="https://www.codecademy.com/article/tdd-u1-good-test">
-            MC-FIRE
-          </a>{" "}
-          testing principles, achieving c.100% unit test coverage;
+          Includes a 'Copy to clipboard' button for easy export of the results
+          table.
+        </li>
+        <li>
+          Provides visual feedback for user interactions with 'toast'
+          notifications that stack and auto-clear.
+        </li>
+        <li>
+          Features a comprehensive test suite to ensure high reliability and
+          near 100% unit test coverage.
         </li>
       </ul>
     ),
     webStack: (
       <>
         <p>
-          For the app's core logic and functionality, I worked extensively with
-          vanilla <Highlight color="hl_accent">JavaScript</Highlight>, focusing
-          on the{" "}
+          For the app's core functionality, I used{" "}
+          <Highlight color="hl_accent">JavaScript</Highlight>, focusing on the{" "}
           <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">
             JS Date object
           </a>{" "}
-          to make calculations.
+          for accurate date calculations. The app dynamically retrieves dates
+          from the UK Government's Bank Holidays API, accommodating changes like
+          extra bank holidays.
         </p>
         <p>
-          The app makes calls to the UK Government's Bank Holidays API, which
-          ensures that dates can be provided dynamically - for example, when
-          extra bank holidays are created.
-        </p>
-        <p>
-          This app was originally built using vanilla JS, with a basic BootStrap
-          interface, focusing on functionality over form. It has since undergone
-          a major revamp - the UI has been <Underline>refactored</Underline> to
-          use{" "}
-          <Highlight>
-            <a href="https://react.dev/">React</a>
-          </Highlight>{" "}
-          components (including{" "}
+          Originally, the app was built with vanilla JS and a basic Bootstrap
+          interface, prioritizing functionality over aesthetics. It has since
+          undergone a significant <Circle color="ln_lightred">refactor:</Circle>{" "}
+          the UI now uses <a href="https://react.dev/">React</a> components,
+          including{" "}
           <a href="https://www.npmjs.com/package/@cruk/cruk-react-components">
             CRUK's React component library
-          </a>
-          , built using{" "}
-          <Highlight color="hl_tertiary">styled-components</Highlight>), and the
-          app's functional layer now makes use of React state management instead
-          of traditional JS DOM manipulation. This has greatly improved the
-          visual interface and provides a robust user experience, allowing for
-          results to be updated dynamically without the need to refresh the
-          browser.
+          </a>{" "}
+          built with{" "}
+          <Highlight color="hl_secondary">styled-components</Highlight>.{" "}
+          <Highlight color="hl_tertiary">React state management</Highlight>{" "}
+          replaced traditional JS DOM manipulation, enabling dynamic updates
+          without refreshing the browser, greatly enhancing the user experience.
         </p>
         <p>
-          To bridge the gap between the original app's UI elements and React, I
-          made use of some of the original BootStrap components, rebuilt for
-          React with the{" "}
+          To integrate the original UI elements, I employed{" "}
           <Highlight color="hl_muted">
             <a href="https://react-bootstrap.netlify.app/">React-BootStrap</a>
           </Highlight>{" "}
-          library.
-        </p>
-        <p>
-          <Underline>Unit tests</Underline> (originally{" "}
-          <Highlight color="hl_accent">Mocha/Chai</Highlight>) have been been
-          rewritten in{" "}
-          <Highlight color="hl_secondary">
+          for familiar Bootstrap components. The unit tests were updated from
+          Mocha/Chai to{" "}
+          <Highlight>
             <a href="https://vitest.dev/">Vitest</a>
           </Highlight>
-          , due to its integration with my React build tool of choice,{" "}
-          <a href="https://vitejs.dev/">Vite</a>, and compatibility with the
-          popular{" "}
-          <Highlight color="hl_tertiary">
-            <a href="https://jestjs.io/">Jest</a>
+          , benefiting from Vite integration and{" "}
+          <Highlight>
+            <a href="https://jestjs.io/">Jest API</a>
           </Highlight>{" "}
-          API. Further advantages of this setup included clear assertions,
-          integrated mocking, and visualisation of code coverage.
+          compatibility. This setup offers clear assertions, integrated mocking,
+          and code coverage visualization.
         </p>
         <p>
-          For a simplified deployment process and built-in continuous
-          integration and continuous deployment(CI/CD), I deployed with{" "}
+          Deployment is handled via{" "}
           <Highlight color="hl_alt">
             <a href="https://www.netlify.com/">Netlify</a>
           </Highlight>
-          .
+          , streamlining the CI/CD process.
         </p>
         <p>
-          You can find the original repo{" "}
-          <Circle color="ln_darkred">
-            <a href="https://github.com/JamieBarlow/weekend-bankhol">here</a>
-          </Circle>
-          , and see below for a visual comparison:
+          You can find the original repo here and see below for a visual
+          comparison:
         </p>
       </>
     ),
     challenges: (
       <div>
         <p>
-          To generate results, the app is comparing potential processing dates
-          against the non-working days provided via API call (weekends and bank
-          holidays), as well as company-specific holiday dates input by the
-          user. If the 2 match, the app needs to not only shift the date
-          backwards or forwards, but re-calculate the shift until there is no
-          longer a clash. This required some complex nested looping logic, and
-          <Highlight color="hl_primary"> testing for edge cases</Highlight>,
-          including those where a non-processing day (or days) land(s) between
-          dates where one needs to be 3 working days prior to another.
+          The app generates results by comparing potential processing dates
+          against non-working days from the API (weekends and bank holidays) and
+          user-inputted company-specific holidays. If there's a clash, the app
+          needs to shift the date and recalculate until no conflicts remain,
+          which involved some <Highlight>complex nested loops.</Highlight>
         </p>
         <p>
-          The dates calculated in each column are dependent on each other -
-          results are not always isolated to a specific calendar year, but can
-          be impacted by e.g. non-processing dates in the previous calendar
-          year, or can impact the subsequent calendar year. This therefore
-          needed to be built into the app's logic as well.
+          Dates in each column are interdependent, and sometimes affected by
+          <Highlight>edge cases</Highlight> such as non-processing dates from
+          previous or subsequent years, which the app's logic also accounts for.
         </p>
         <p>
-          Updating from vanilla JS/BootStrap to a fully-fledged React
-          application meant not only a <Box color="ln_darkred">refactoring</Box>{" "}
-          of UI elements (taking advantage of modular component structure and
-          dynamic rendering), but restructuring the app's functionality, as
-          React works with a virtual DOM rather than the traditional DOM. This
-          was a challenge but at the same time, a great exercise in{" "}
-          <Highlight color="hl_secondary">design thinking</Highlight> -
+          Upgrading to a React application involved refactoring UI elements for
+          modularity and dynamic rendering, and restructuring functionality to
+          work with React's virtual DOM. This was a challenge but at the same
+          time, a great exercise in <Highlight>design thinking</Highlight> -
           analysing the app's process flow, simplifying and breaking down
           functions and UI elements further where necessary, improving clarity
           and reusability.
         </p>
         <p>
-          Refactoring was helped by having already written{" "}
-          <Highlight color="hl_accebt">unit tests</Highlight>, so that I could
-          follow a more <Underline>test-driven</Underline> approach. React's
-          modular structure helped me to further isolate functions to components
-          themselves, rather than as side effects arising from other functions,
-          allowing for a clearer separation of concerns. The{" "}
-          <Highlight color="hl_muted">
-            React{" "}
-            <a href="https://react.dev/reference/react/createContext">
-              Context API
-            </a>
-          </Highlight>{" "}
-          provided better control and a clearer overview of state management,
-          reducing complexity and unwanted side effects.
-        </p>
-        <Brackets>
-          <p>
-            <Underline>Testing the 'copy to clipboard' function</Underline> in
-            Vitest involved some extra complexity without certain DOM elements
-            in a testing environment. I nonetheless managed this by:{" "}
-          </p>
-
-          <ul>
-            <li>
-              <Highlight color="hl_primary">Mocking</Highlight> the navigator
-              object using 'vi' in Vitest;
-            </li>
-            <li>
-              Mocking the document object using{" "}
-              <a href="https://www.npmjs.com/package/jsdom">JSDOM</a>;
-            </li>
-          </ul>
-        </Brackets>
-        <p>
-          To make the app's output more predictable, I opted to change the{" "}
-          <Highlight color="hl_primary">data structure</Highlight> of each
-          function's returned output so that they followed a consistent schema.
-          In turn, my tests greatly supported my overall debugging process, as
-          they involved checking the data structure as well as type-checking.
+          Refactoring was aided by existing unit tests, facilitating a
+          <Highlight>test-driven</Highlight> approach. React's modular structure
+          helped me to further isolate functions to components themselves,
+          rather than as side effects arising from other functions, allowing for
+          a clearer separation of concerns. The{" "}
+          <Highlight color="hl_tertiary">React Context API</Highlight> provided
+          clearer state management.
         </p>
         <p>
-          For some further app-specific challenges, as well as complications and
-          lessons from working with the JavaScript Date object, see my original
-          repo{" "}
-          <Circle color="ln_lightred">
+          Testing the 'copy to clipboard' function in Vitest involved some extra
+          complexity without certain DOM elements in a testing environment. I
+          nonetheless managed this by <Highlight>mocking:</Highlight>
+        </p>
+        <ul>
+          <li>The navigator object using 'vi' in Vitest;</li>
+          <li>
+            The document object using{" "}
+            <a href="https://www.npmjs.com/package/jsdom">JSDOM</a>;
+          </li>
+        </ul>
+        <p>
+          To ensure consistent output, I standardized the{" "}
+          <Highlight>data structure</Highlight>
+          returned by functions. This made the app's output more predictable and
+          supported debugging through structured tests.
+        </p>{" "}
+        <p>
+          For further details on app-specific challenges, such as handling the
+          JavaScript Date object, see my original repo{" "}
+          <Underline>
             <a href="https://github.com/JamieBarlow/weekend-bankhol?tab=readme-ov-file#development-challenges-and-lessons-wrench">
               here
             </a>
-          </Circle>
+          </Underline>
           .
         </p>
       </div>
@@ -297,64 +224,66 @@ const projectData = [
     lessons: (
       <>
         <p>
-          While I gained a lot of experience working with the{" "}
-          <Underline>Date object</Underline> in JavaScript, I discovered that
-          there are JS date libraries which could simplify the process of
-          converting and working with dates, thereby speeding up production. For
-          example,{" "}
-          <Highlight color="hl_secondary">
-            <a href="https://date-fns.org/">date-fns</a>
-          </Highlight>{" "}
-          or{" "}
-          <Highlight color="hl_tertiary">
-            <a href="https://momentjs.com/">Moment.js</a>
-          </Highlight>
-          .
+          While the app gave me a lot of experience working with the{" "}
+          <Highlight>Date object</Highlight> in JavaScript, there are JS date
+          libraries which could simplify the process of converting and working
+          with dates, thereby speeding up production. For example,{" "}
+          <a href="https://date-fns.org/">date-fns</a> or{" "}
+          <a href="https://momentjs.com/">Moment.js</a>.
         </p>
         <p>
-          While my eventual unit <Underline>test coverage</Underline> was close
+          While my eventual unit <Highlight>test coverage</Highlight> was close
           to 100%, I learned first-hand that this is not the only metric for
           effective tests - there is always room to improve their quality and
           handling of edge cases. An app can also benefit from{" "}
-          <Highlight color="hl_accent">
-            integration and end-to-end testing
-          </Highlight>{" "}
-          where possible. In this case, I mocked integration testing using data
-          to ensure the app's output would be correct. I am looking to further
+          <Highlight>integration and end-to-end testing</Highlight> where
+          possible. In this case, I mocked integration testing using data to
+          ensure the app's output would be correct. I am looking to further
           explore the possibilities of integration and end-to-end testing using
           faking/stubbing tools such as{" "}
-          <Highlight color="hl_alt">
-            <a href="https://sinonjs.org/">Sinon.js</a>
-          </Highlight>
-          , and E2E testing suites such as{" "}
-          <Highlight color="hl_secondary">
-            <a href="https://www.cypress.io/">Cypress</a>
-          </Highlight>
-          , while also testing React components with{" "}
-          <Highlight color="hl_tertiary">
-            <a href="https://testing-library.com/docs/react-testing-library/intro/">
-              React Testing Library
-            </a>
-          </Highlight>
+          <a href="https://sinonjs.org/">Sinon.js</a>, and E2E testing suites
+          such as <a href="https://www.cypress.io/">Cypress</a>, while also
+          testing React components with{" "}
+          <a href="https://testing-library.com/docs/react-testing-library/intro/">
+            React Testing Library
+          </a>
           .
         </p>
       </>
     ),
-    images: {
-      header: "dd-calculator-v2",
-      features: "dd-v2-results",
-      tech: "dd-v2-compare",
-      challenges: [
-        "dd-v2-company",
-        "dd-v2-vitest-dashboard",
-        // "dd-v2",
-        "dd-v2-vitest-coverage",
-      ],
+    media: {
+      header: (
+        <ResponsiveImg
+          title="Direct Debits header"
+          fileName="dd-calculator-v2.png"
+        />
+      ),
+      features: (
+        <ResponsiveImg title="Direct Debits results" fileName="dd-v2-results" />
+      ),
+      tech: (
+        <ResponsiveImg
+          title="DD app version comparison"
+          fileName="dd-v2-compare"
+        />
+      ),
+      challenges: (
+        <ResponsiveImages
+          title="Challenges"
+          className="challenges-img"
+          collection={[
+            "dd-v2-company",
+            "dd-v2-vitest-dashboard",
+            // "dd-v2",
+            "dd-v2-vitest-coverage",
+          ]}
+        />
+      ),
     },
     otherProjects: [
       {
         title: "Schillinger Rhythm Generator",
-        previewImg: "rhythm-app",
+        previewImg: "rhythm-interface-preview",
         link: "schillingerRtm",
       },
       {
@@ -474,12 +403,10 @@ const projectData = [
           user's login status, and the option to delete a campground or review
           only if they are the author of that particular campground or review.
         </p>
-        <video muted autoplay loop class="demoVid--halfPage">
-          <source
-            src="../images/yelpcamp-deleteReview.webm"
-            type="video/webm"
-          />
-        </video>
+        <ResponsiveVideo
+          className="demoVid--halfPage"
+          fileName="yelpcamp-deleteReview"
+        />
         <p>
           I used <Highlight color="hl_secondary">Express</Highlight> for
           server-side routing, due to its wide support and flexibility. I was
@@ -564,12 +491,10 @@ const projectData = [
           , rather than directly in the database, which would have limited their
           file size.
         </p>
-        <video muted autoplay loop class="demoVid--halfPage">
-          <source
-            src="../images/yelpcamp-clusterInteractive.webm"
-            type="video/webm"
-          />
-        </video>
+        <ResponsiveVideo
+          className="demoVid--halfPage"
+          fileName="yelpcamp-clusterInteractive"
+        />
         <p>
           I used Mapbox's{" "}
           <a href="https://docs.mapbox.com/help/getting-started/geocoding/">
@@ -769,21 +694,39 @@ const projectData = [
         </p>
       </>
     ),
-    images: {
-      header: "yelpcamp-homepage2",
-      features: "yelpcamp-loginpage",
-      tech: "yelpcamp-campeditgroup",
-      challenges: [
-        "yelpcamp-review",
-        "yelpcamp-clustermap",
-        "yelpcamp-allcamps",
-        "yelpcamp-update",
-      ],
+    media: {
+      header: (
+        <ResponsiveImg title="YelpCamp header" fileName="yelpcamp-homepage2" />
+      ),
+      features: (
+        <ResponsiveImg
+          title="YelpCamp login page"
+          fileName="yelpcamp-loginpage"
+        />
+      ),
+      tech: (
+        <ResponsiveImg
+          title="YelpCamp edit UI"
+          fileName="yelpcamp-campeditgroup"
+        />
+      ),
+      challenges: (
+        <ResponsiveImages
+          title="Challenges"
+          className="challenges-img"
+          collection={[
+            "yelpcamp-review",
+            "yelpcamp-clustermap",
+            "yelpcamp-allcamps",
+            "yelpcamp-update",
+          ]}
+        />
+      ),
     },
     otherProjects: [
       {
         title: "Schillinger Rhythm Generator",
-        previewImg: "rhythm-app",
+        previewImg: "rhythm-interface-preview",
         link: "schillingerRtm",
       },
       {
@@ -857,9 +800,6 @@ const projectData = [
           an interesting way of conceptualising it and applying it to musical
           composition.
         </p>
-        <video muted autoplay loop class="demoVid--halfPage">
-          <source src="../images/rhythm-playback.webm" type="video/webm" />
-        </video>{" "}
         <p>
           How are the numerical patterns generated? Each individual number in
           the sequence defines the 'length' of a beat - for example:
@@ -1080,11 +1020,27 @@ const projectData = [
         </ul>
       </>
     ),
-    images: {
-      header: "rhythm-browser",
-      features: "rhythm-app",
-      tech: "rhythm-type1",
-      challenges: ["rhythm-symmetry", "rhythm-type2", "rhythm-notation"],
+    media: {
+      header: (
+        <ResponsiveImg
+          title="Schillinger Rhythm App header"
+          fileName="rhythm-interface-preview"
+        />
+      ),
+      features: (
+        <ResponsiveVideo
+          className="demoVid--halfPage"
+          fileName="rhythm-interaction.webm"
+        />
+      ),
+      tech: <ResponsiveImg title="Type 1 pattern" fileName="rhythm-type1" />,
+      challenges: (
+        <ResponsiveImages
+          title="Challenges"
+          className="challenges-img"
+          collection={["rhythm-symmetry", "rhythm-type2", "rhythm-notation"]}
+        />
+      ),
     },
     otherProjects: [
       {
@@ -1205,16 +1161,34 @@ const projectData = [
         </p>
       </>
     ),
-    images: {
-      header: "puzzle-pitch",
-      features: "puzzle-ampersand-shuffled",
-      tech: "puzzle-ampersand-complete",
-      challenges: ["puzzle-ampersand-words", "puzzle-ampersand-promo"],
+    media: {
+      header: (
+        <ResponsiveImg title="Sliding puzzle header" fileName="puzzle-pitch" />
+      ),
+      features: (
+        <ResponsiveImg
+          title="Sliding puzzle shuffled"
+          fileName="puzzle-ampersand-shuffled"
+        />
+      ),
+      tech: (
+        <ResponsiveImg
+          title="Puzzle complete"
+          fileName="puzzle-ampersand-complete"
+        />
+      ),
+      challenges: (
+        <ResponsiveImages
+          title="challenges"
+          className="challenges-img"
+          collection={["puzzle-ampersand-words", "puzzle-ampersand-promo"]}
+        />
+      ),
     },
     otherProjects: [
       {
         title: "Schillinger Rhythm Generator",
-        previewImg: "rhythm-app",
+        previewImg: "rhythm-interface-preview",
         link: "schillingerRtm",
       },
       {

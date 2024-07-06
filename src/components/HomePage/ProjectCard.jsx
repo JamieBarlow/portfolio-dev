@@ -10,12 +10,10 @@ export default function ProjectCard({
   pageLink,
   code,
   homeDescription,
-  images,
+  media,
   variation,
 }) {
-  const picL = `https://res.cloudinary.com/dakgl7s9n/image/upload/f_auto,q_auto:best,c_scale,w_800/portfolio/${images.header} 800w`;
-  const picM = `https://res.cloudinary.com/dakgl7s9n/image/upload/f_auto,q_auto:best,c_scale,w_800/portfolio/${images.header} 600w`;
-  const src = `/images/${images.header}`;
+  const previewImg = media.header;
   let className;
   switch (variation) {
     case "shadow":
@@ -30,7 +28,7 @@ export default function ProjectCard({
 
   return (
     <div className={className}>
-      <ProjectPreviewImg {...{ picL, picM, src, title, pageLink }} />
+      <ProjectPreviewImg {...{ previewImg, title, pageLink }} />
       <p className="projects__title">{title}</p>
       <div className="projects__languages">
         {stack.map((lang, index) => (

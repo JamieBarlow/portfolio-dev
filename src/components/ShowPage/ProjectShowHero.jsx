@@ -1,6 +1,7 @@
 import React, { useContext, useRef } from "react";
 import ButtonUnderline from "../common/ButtonUnderline";
 import { ObserverContext } from "../../context/ObserverContext";
+import ResponsiveImg from "../common/ResponsiveImg";
 
 export default function ProjectShowHero({
   title,
@@ -8,7 +9,7 @@ export default function ProjectShowHero({
   stack,
   live,
   code,
-  images,
+  media,
 }) {
   // Setup navbar observer
   const { setupNavbarIntersection } = useContext(ObserverContext);
@@ -53,26 +54,7 @@ export default function ProjectShowHero({
           </div>
         </div>
 
-        <div className="project__mainImg wrapper">
-          <picture>
-            <source
-              media="(min-width: 990px)"
-              srcSet={`https://res.cloudinary.com/dakgl7s9n/image/upload/f_auto,q_auto:best,c_scale,w_1400/portfolio/${images.header} 1400w`}
-            />
-            <source
-              media="(min-width: 768px)"
-              srcSet={`https://res.cloudinary.com/dakgl7s9n/image/upload/f_auto,q_auto:best,c_scale,w_800/portfolio/${images.header} 800w`}
-            />
-            <source
-              media="(min-width: 200px)"
-              srcSet={`https://res.cloudinary.com/dakgl7s9n/image/upload/f_auto,q_auto:best,c_scale,w_600/portfolio/${images.header} 600w`}
-            />
-            <img
-              src={`../images/${images.header}.png`}
-              alt={`${title} home page`}
-            />
-          </picture>
-        </div>
+        <div className="project__mainImg wrapper">{media.header}</div>
       </section>
     </>
   );

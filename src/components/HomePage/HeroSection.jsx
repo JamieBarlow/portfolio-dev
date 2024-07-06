@@ -3,6 +3,7 @@ import Button3D from "../common/Button3D";
 import { ObserverContext } from "../../context/ObserverContext";
 import ASCII from "./ASCII";
 import { motion } from "framer-motion";
+import ResponsiveVideo from "../common/ResponsiveVideo";
 
 export default function HeroSection() {
   const { setClicked, setupNavbarIntersection } = useContext(ObserverContext);
@@ -20,13 +21,7 @@ export default function HeroSection() {
         <div id="image-container">
           {/* <ASCII /> */}
           <div id="profilePic">
-            <video autoPlay loop muted playsInline class="ascii">
-              <source
-                src={`https://res.cloudinary.com/dakgl7s9n/video/upload/q_auto,w_600/v1719964605/portfolio/jamieASCII-1.webm`}
-                type="video/webm"
-              />
-              Your browser does not support the video tag.
-            </video>
+            <ResponsiveVideo className="ascii" fileName="jamieASCII-1.webm" />
           </div>
         </div>
         <div className="hero__text" ref={navRef}>

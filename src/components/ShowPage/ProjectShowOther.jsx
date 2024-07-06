@@ -28,7 +28,10 @@ export default function ProjectShowOther({ otherProjects }) {
                 </picture>
                 <div className="img-overlay img-overlay--blur">
                   <div className="img-overlay__button">
-                    <ButtonOutline href={project.link} variation="dark">
+                    <ButtonOutline
+                      href={`../projects/${project.link}`}
+                      variation="dark"
+                    >
                       Read More <ArrowIcon />
                     </ButtonOutline>
                   </div>

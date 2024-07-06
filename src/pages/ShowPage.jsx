@@ -40,9 +40,9 @@ export default function ShowPage({ pageVariants }) {
     description,
     challenges,
     lessons,
-    images,
     otherProjects,
     conversion,
+    media,
   } = projectInfo;
   return (
     <>
@@ -61,17 +61,13 @@ export default function ShowPage({ pageVariants }) {
           stack={stack}
           live={live}
           code={code}
-          images={images}
+          media={media}
         />
-        <ProjectShowPurpose purpose={purpose} images={images} title={title} />
+        <ProjectShowPurpose purpose={purpose} media={media} title={title} />
         <ProjectShowFeatures features={features} />
         <ProjectShowWebStack webStack={webStack} />
-        <ProjectShowImages images={images} title={title} />
-        <ProjectShowChallenges
-          challenges={challenges}
-          images={images}
-          title={title}
-        />
+        <ProjectShowImages media={media} />
+        <ProjectShowChallenges challenges={challenges} media={media} />
         <ProjectShowLessons lessons={lessons} />
         <ProjectShowOther otherProjects={otherProjects} />
         <Footer />
