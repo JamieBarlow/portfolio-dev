@@ -12,7 +12,7 @@ const Projects = () => {
     <section className="projects" ref={projectsSectionRef}>
       <div className="wrapper projects__wrapper">
         <div className="projects__header my-2">
-          <h2>Projects</h2>
+          <h2>My Work</h2>
           <div className="projects__contact fs--p py-2">
             <Button3D
               text="Contact Me"

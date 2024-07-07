@@ -21,7 +21,7 @@ export default function HomePage({ pageVariants }) {
 
   useEffect(() => {
     if (location.pathname === "/" && clicked) {
-      if (clicked === "Projects") {
+      if (clicked === "My Work") {
         smoothScrollToRef(projectsSectionRef);
       } else if (clicked === "Contact") {
         smoothScrollToRef(contactMeRef);

@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export default function SidebarPrev() {
   const links = [
     { href: "/", text: "Home" },
-    { href: "/", text: "Projects" },
+    { href: "/", text: "My Work" },
     { href: "/aboutMe", text: "About" },
     { href: "/", text: "Contact" },
   ];
@@ -109,7 +109,7 @@ export default function SidebarPrev() {
               current location */}
               {(location.pathname === "/" &&
                 (link.text === "Home" ||
-                  link.text === "Projects" ||
+                  link.text === "My Work" ||
                   link.text === "Contact")) ||
               (location.pathname === "/aboutMe" && link.text === "About") ? (
                 <a href={link.href} onClick={(e) => e.preventDefault()}>

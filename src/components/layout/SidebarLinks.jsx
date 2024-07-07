@@ -5,7 +5,7 @@ import { ObserverContext } from "../../context/ObserverContext";
 
 const links = [
   { href: "/", text: "Home" },
-  { href: "/", text: "Projects" },
+  { href: "/", text: "My Work" },
   { href: "/aboutMe", text: "About" },
   { href: "/", text: "Contact" },
 ];
@@ -73,7 +73,7 @@ export default function SidebarLinks({ className }) {
         >
           {(location.pathname === "/" &&
             (link.text === "Home" ||
-              link.text === "Projects" ||
+              link.text === "My Work" ||
               link.text === "Contact")) ||
           (location.pathname === "/aboutMe" && link.text === "About") ? (
             <a href={link.href} onClick={(e) => e.preventDefault()}>

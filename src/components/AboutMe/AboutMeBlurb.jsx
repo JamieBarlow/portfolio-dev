@@ -86,7 +86,7 @@ export default function AboutMeBlurb() {
             <LinkUnderline
               text="here"
               href="/"
-              onClick={() => setClicked("Projects")}
+              onClick={() => setClicked("My Work")}
             />
             . I'm excited to keep learning and to bring this to a career in
             tech.

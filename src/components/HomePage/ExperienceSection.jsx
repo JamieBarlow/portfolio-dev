@@ -8,7 +8,7 @@ export default function ExperienceSection() {
   const { setClicked } = useContext(ObserverContext);
 
   function handleClick() {
-    setClicked("Projects");
+    setClicked("My Work");
   }
   return (
     <section className="experience bg--blue text--light">
@@ -26,8 +26,7 @@ export default function ExperienceSection() {
           What I work with
         </h2>
         <h5 className="experience__subheader fw--light my-3">
-          I use the tools below regularly, and have been able to put my skills
-          into practice through a number of{" "}
+          I use the tools below regularly, and and you can see them in{" "}
           <RoughNotation
             style={{ cursor: "pointer" }}
             type="underline"
@@ -36,9 +35,10 @@ export default function ExperienceSection() {
             padding={[0, 0]}
           >
             <a className="fs--h5" onClick={handleClick}>
-              projects.
+              my work
             </a>
           </RoughNotation>{" "}
+          below.
           {/* <LinkUnderline
             text="projects."
             size="fs--h5"
