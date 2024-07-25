@@ -12,21 +12,21 @@ export default function AboutMeBlurb() {
       <div className="aboutMe__blurb wrapper">
         <div>
           <p>
-            I started my programming journey a while ago - as a restless
-            teenager, I was always looking for creative projects to get stuck
-            into, and computers seemed to offer a lot of fun possibilities -
-            whether it was tinkering with basic music software, or amateur
-            attempts at web dev.
+            I started my programming journey quite a while ago, but only
+            recently decided to make it a career. As someone always looking for
+            creative projects to get stuck into, computers seemed to offer many
+            possibilities - originally this was tinkering with music software,
+            or building review websites covering the (now officially ‘retro’)
+            PS2, hacked together using HTML tables (how everything on the web
+            was built back then) and the equally modern FrontPage Express
+            (WYSIWGY editor discontinued as of 2006).
           </p>
           <p>
-            A good number of friends and I shared a love of video games, so
-            naturally I went all-in and built a fan website offering reviews and
-            content on the PS2 - a state-of-the-art console with photo-realistic
-            graphics, if you can imagine it. I hacked together a layout with the
-            aid of HTML tables (how everything on the web was built back then)
-            and the equally modern FrontPage Express (WYSIWGY editor
-            discontinued as of 2006), along with some (probably very
-            cringeworthy) tributes to the review magazines we used to read.
+            It was a lot of fun in those early days, but my interests led me
+            elsewhere. I pursued Philosophy at university, earning a Masters
+            degree, and then built a career with charitable organizations like
+            Cancer Research UK. There, I established myself as a skilled trainer
+            and project manager in finance, contributing to a great cause.
           </p>
         </div>
         <motion.div
@@ -36,25 +36,25 @@ export default function AboutMeBlurb() {
           viewport={{ once: true, margin: "100px", amount: 0.3 }}
         >
           <p>
-            Despite all of this natural curiosity in the days of dial-up
-            internet, I didn't originally pursue coding as a career - I had a
-            number of interests which initially took me in other directions,
-            towards studying in the arts and working for charitable
-            organisations.
+            Over time, I felt an urge to return to something tech-related. To my
+            surprise, I discovered a lot of crossover between my academic and
+            professional experiences, and the world of programming. Both fields
+            require breaking down complex ideas and processes into their
+            component parts, much like understanding the logical flow of a piece
+            of software. Only computers tend to be a little less forgiving...
           </p>
           <p>
-            Years later, something 'clicked.' Picking up audio software, I
-            realised that I was making heavy use of something called a ‘logical
-            editor,’ writing scripts for software samplers, and diving deep into
-            'programming' tracks with sequencers or Elektron devices
-            (conditional trigs, anyone?). In my job, I gravitated towards
-            problem-solving through process automation and by writing programs
-            and macros (leading to my
+            In late 2021, I committed to training as a full-stack developer
+            alongside my charity career. This journey has been incredibly
+            rewarding, evolving from self-training through online courses and
+            mentorship to freelance projects and real-world solutions. One such
+            project is a{" "}
             <LinkUnderline
               text="Direct Debit Calendar app"
               href="../projects/directDebits"
             />
-            ).
+            , now in production, automating critical processes for my
+            organisation.
           </p>
         </motion.div>
         <motion.div
@@ -79,21 +79,39 @@ export default function AboutMeBlurb() {
           viewport={{ once: true, margin: "100px", amount: 0.5 }}
         >
           <p>
-            Since then, I've come full circle. I have been intensively
-            self-teaching programming (thanks to a wealth of online resources,
-            and mentors in the field) - you can see what I've been working on as
-            I learn
+            You can see some of my previous{" "}
             <LinkUnderline
-              text="here"
+              text="projects"
               href="/"
               onClick={() => setClicked("My Work")}
-            />
-            . I'm excited to keep learning and to bring this to a career in
-            tech.
+            />{" "}
+            and what I am working on now at my GitHub:
+            <LinkUnderline text="here." href="https://github.com/JamieBarlow" />
           </p>
           <p>
-            If you like my work and would like to contact me or build something
-            together, I'd love to hear from you:
+            Currently I’m designing and building a full-stack CRUD application
+            (at the request of numerous users) displaying information and
+            reviews for public bathrooms, with an emphasis on accessibility and
+            community collaboration using local knowledge. This makes use of the
+            MERN stack and the{" "}
+            <LinkUnderline
+              text="Overpass API"
+              href="https://wiki.openstreetmap.org/wiki/Overpass_API"
+            />{" "}
+            from{" "}
+            <LinkUnderline
+              text="Open Street Map"
+              href="https://www.openstreetmap.org/#map=6/54.910/-3.432"
+            />
+            , a fantastic community-driven source of geographical data.
+          </p>
+          <p>
+            I also enjoy deep-dives into web technology - check out my articles
+            on <LinkUnderline text="dev.to." href="https://dev.to/jaybarls" />{" "}
+          </p>
+          <p>
+            If my work resonates with you and you'd like to collaborate, I'd
+            love to hear from you:
           </p>
         </motion.div>
         <motion.div
