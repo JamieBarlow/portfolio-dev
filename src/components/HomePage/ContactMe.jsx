@@ -2,7 +2,7 @@ import React, { useState, useContext, useRef } from "react";
 import Button3D from "../common/Button3D";
 import { ObserverContext } from "../../context/ObserverContext";
 
-const ContactMe = () => {
+const ContactMe = ({ displayToast }) => {
   const { contactMeRef } = useContext(ObserverContext);
   const form = useRef(null);
   const initialFormData = {
@@ -39,13 +39,15 @@ const ContactMe = () => {
       const data = await response.json();
       console.log(data);
       if (response.ok) {
-        console.log("SUCCESS!", data);
-        alert("Email sent!");
+        displayToast("Email sent, thankyou!", "top-right", "success");
         resetForm();
-      } else {
-        console.log("FAILED...", data.error);
       }
     } catch (error) {
+      displayToast(
+        "Error sending email - please try my LinkedIn",
+        "top-right",
+        "error"
+      );
       console.log("FAILED...", error);
     }
   };
