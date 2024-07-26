@@ -25,6 +25,7 @@ export default function Brackets({ color, sides, children }) {
       padding={[5, 10]}
       brackets={bracketsSides}
       color={bracketsColor}
+      animate={false}
     >
       {children}
     </RoughNotation>

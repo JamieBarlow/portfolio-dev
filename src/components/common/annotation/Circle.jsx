@@ -11,6 +11,7 @@ export default function Circle({ color, children }) {
       color={circleColor}
       padding={[5, 5]}
       style={{ margin: "4px" }}
+      animate={false}
     >
       {children}
     </RoughNotation>

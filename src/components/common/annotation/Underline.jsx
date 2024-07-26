@@ -11,6 +11,7 @@ export default function Underline({ color, children }) {
       color={underlineColor}
       strokeWidth="1"
       padding={[2, 0]}
+      animate={false}
     >
       {children}
     </RoughNotation>

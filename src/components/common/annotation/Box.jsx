@@ -12,6 +12,7 @@ export default function Box({ color, children }) {
       padding={[2, 4]}
       style={{ margin: "4px" }}
       color={boxColor}
+      animate={false}
     >
       {children}
     </RoughNotation>

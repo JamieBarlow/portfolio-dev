@@ -327,12 +327,10 @@ const projectData = [
           <Highlight color="hl_primary">
             full CRUD (Create, Read, Update, Destroy) functionality
           </Highlight>
-          , and is built using the{" "}
-          <Highlight color="hl_secondary">MongoDB/Express/Node</Highlight>{" "}
-          stack, with <Highlight color="hl_tertiary">RESTful</Highlight>{" "}
-          architecture (exposing CRUD functionality to users with a uniform
-          interface). The app is styled using CSS and{" "}
-          <Highlight color="hl_muted">BootStrap</Highlight> components.
+          , and is built using the MongoDB/Express/Node stack, with{" "}
+          <Highlight>RESTful architecture</Highlight> (exposing CRUD
+          functionality to users with a uniform interface). The app is styled
+          using CSS and BootStrap components.
         </p>
         <p>
           YelpCamp has proved to be a fantastic first-hand learning exercise,
@@ -340,12 +338,12 @@ const projectData = [
           building and launching a live full-stack application. This includes
           building on core CRUD functionality with a number of extra
           technologies to enhance features like{" "}
-          <Underline>form validation</Underline>, user{" "}
-          <Underline>authentication</Underline>,{" "}
-          <Underline>authorization/permissions</Underline>, and multiple means
-          of dealing with common <Circle>security</Circle> issues, along with
-          additional UI features such as animated review ratings and{" "}
-          <Underline>geocoded</Underline> cluster maps.
+          <Highlight>form validation</Highlight>, user{" "}
+          <Highlight>authentication</Highlight>,{" "}
+          <Highlight>authorization/permissions</Highlight>, and multiple means
+          of dealing with common <Highlight>security</Highlight> issues, along
+          with additional UI features such as animated review ratings and{" "}
+          <Highlight>geocoded</Highlight> cluster maps.
         </p>
         <p>
           Experience with this app has definitely inspired, and will form the
@@ -356,26 +354,23 @@ const projectData = [
     features: (
       <ul>
         <li>
-          <Highlight color="hl_primary">Register / login</Highlight>{" "}
-          functionality, with server-side <Underline>authentication</Underline>{" "}
-          and specific <Underline>authorization</Underline> for campgrounds
-          linked to a user's id and session/cookie data;
+          Register / login functionality, with server-side authentication and
+          specific authorization for campgrounds linked to a user's id and
+          session/cookie data;
         </li>
         <li>
-          <Highlight color="hl_accent">CRUD</Highlight> (Create, Read,
-          Update/Edit, Destroy) functionality for campgrounds and reviews (for
-          logged in users), with data managed in{" "}
-          <Highlight color="hl_tertiary">MongoDB</Highlight>;
+          CRUD (Create, Read, Update/Edit, Destroy) functionality for
+          campgrounds and reviews (for logged in users), with data managed in
+          MongoDB;
         </li>
         <li>
           Flash success/error messages providing user feedback for login,
           registration, and create/edit/delete actions;
         </li>
         <li>
-          Client-side form <Underline>validation</Underline> using{" "}
-          <Highlight color="hl_muted">BootStrap</Highlight>, server-side data
-          validation with <Highlight color="hl_secondary">Express</Highlight>{" "}
-          (incl. custom error-handling middleware) and JOI;
+          Client-side form validation using BootStrap, server-side data
+          validation with Express (incl. custom error-handling middleware) and
+          JOI;
         </li>
         <li>Multiple image uploading functionality;</li>
         <li>Geocoded cluster map displaying all campgrounds.</li>
@@ -391,7 +386,7 @@ const projectData = [
         </p>
         <p>
           I used{" "}
-          <Highlight color="hl_primary">
+          <Highlight color="hl_accent">
             <a href="https://ejs.co/">EJS (Embedded JavaScript Templating)</a>
           </Highlight>{" "}
           to create page templates, with consistent 'partial' layout elements
@@ -457,9 +452,7 @@ const projectData = [
           those made via external API requests.
         </p>
         <p>
-          The course taught me some very useful fundamentals in terms of{" "}
-          <Underline>authenticating</Underline> a user from scratch, but to
-          simplify the process I used{" "}
+          To support user <Underline>authentication</Underline>, I used{" "}
           <Highlight>
             <a href="https://www.passportjs.org/">Passport.js</a>
           </Highlight>{" "}
@@ -516,13 +509,6 @@ const projectData = [
     challenges: (
       <>
         <p>
-          Apart from being the most complex and comprehensive app I have worked
-          on to-date, this was my first time working with a 'full-stack' of
-          tech, from front-end layout design, to server-side frameworks like
-          Express, and databases like MongoDB. This naturally taught me a great
-          deal about approaches to troubleshooting and problem-solving.
-        </p>
-        <p>
           The{" "}
           <Highlight>
             interdependence between the many changing parts of a full-stack
@@ -539,23 +525,20 @@ const projectData = [
           dependent on a specific data model, which had now been modified to
           handle file uploads. The isssue was initially difficult to diagnose,
           as it returned 'undefined' errors rather than standard validation
-          errors. This really highlighted the importance of{" "}
-          <Highlight color="hl_accent">testing and debugging</Highlight> at
-          every stage of development, as well as clear error handling. I found
-          that taking a modular approach to app-building made it far easier to
-          isolate the issue to specific files/functions, in tandem with Git
-          version control, which allowed me to identify the specific changes
-          triggering the issue.
+          errors.
         </p>
         <p>
+          This really highlighted the importance of{" "}
+          <Highlight>testing and debugging</Highlight> at every stage of
+          development, as well as clear <Highlight>error handling</Highlight>.
           As an 'unopinionated' framework, Express is very flexible to work
-          with, but with this naturally comes the potential for undesired
-          issues. Working with middleware required some careful consideration in
-          terms of program flow. Defining my own{" "}
-          <Highlight color="hl_secondary">error-handling middleware</Highlight>{" "}
-          was certainly very helpful for logging and debugging, but also
-          chaining these correctly was crucial - at one point, failing to use
-          'next()' in a simple logger caused a lot of extra problems!
+          with, but with this naturally there are more implementation decisions
+          to make, and more safeguards needed to avoid issues. Defining my own{" "}
+          <Highlight>error-handling middleware</Highlight> was certainly very
+          helpful for logging and debugging. I also found that taking a modular
+          approach to app-building made it far easier to isolate the issue to
+          specific files/functions, in tandem with Git version control, which
+          allowed me to identify the changes triggering specific issues.
         </p>
         <p>
           Building an app with a large number of features not only introduces
@@ -571,21 +554,6 @@ const projectData = [
           '0' star rating would fail validations, and some extra considerations
           needed when working with data models that included nested objects.
         </p>
-        <p>
-          This was my first time deploying an app to a 'live' production
-          environment outside of GitHub Pages, so I needed to familiarise myself
-          with the{" "}
-          <Highlight color="hl_tertiary">
-            <a href="https://www.heroku.com/">Heroku</a>
-          </Highlight>{" "}
-          ecosystem, including how to securely apply environment variables. I
-          also needed to consider the{" "}
-          <Highlight>
-            separation between development and production environments
-          </Highlight>
-          , in terms of securely handling 'real' user data, and testing before
-          deployment.
-        </p>
       </>
     ),
     lessons: (
@@ -596,14 +564,12 @@ const projectData = [
           application.
         </p>
         <p>
-          Overall, the project was a really good exercise in breaking an app
-          down into all of its component parts, while also understanding how
-          they interrelate. I learned how to approach app-building in a{" "}
-          <Highlight>modular</Highlight> way - through templating pages, and by
-          creating middleware that can be re-used throughout the app. This
-          avoids duplicating code, and makes things cleaner, easier to read and
-          maintain - really important for projects of any size! One approach
-          taken was using the{" "}
+          I learned the importance of app-building in a{" "}
+          <Highlight>modular</Highlight> way - whether it be using components or
+          page templating, and by creating middleware that can be re-used
+          throughout the app. This avoids duplicating code, and makes things
+          cleaner, easier to read and maintain - really important for projects
+          of any size! I adopted the{" "}
           <Highlight>
             <a href="https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller">
               MVC (Model-View-Controller)
@@ -614,32 +580,34 @@ const projectData = [
         </p>
         <p>
           YelpCamp taught me, first-hand, the benefits of using{" "}
-          <Highlight color="hl_secondary">
+          <Highlight>
             <a href="https://www.educative.io/answers/what-are-restful-routes-in-nodejs">
               RESTful routing patterns
             </a>
           </Highlight>{" "}
           as a blueprint for the app's CRUD functionality, making the app easier
-          to structure, understand, and ultimately, maintain. This was achieved
-          by linking each user interaction with an associated HTTP verb (e.g.
-          get, post, put, delete), which maps the client-side to an associated
-          server-side function.
+          to structure, reason with, and ultimately, maintain. This was achieved
+          partly by linking each user interaction with an associated HTTP verb
+          (e.g. get, post, put, delete), which maps the client-side to an
+          associated server-side function, and through clear and consistent API
+          endpoint naming conventions.
         </p>
         <p>
           In setting up login/register functionality for users, I learned about
-          ways to authenticate users by securely storing their password and
-          other data (with encryption), and using this to confirm their login. I
-          then considered authorization - in addition to requiring a login to
-          access certain content or functions in general, the app would need to
-          apply specific permissions depending on the user, and use server-side
-          security measures to restrict access, as well as hiding content.
+          ways to <Highlight>authenticate</Highlight> users by securely storing
+          their password and other data (with encryption), and using this to
+          confirm their login. I then considered authorization - in addition to
+          requiring a login to access certain content or functions in general,
+          the app would need to apply specific permissions depending on the
+          user, and use server-side security measures to restrict access, as
+          well as hiding content.
         </p>
         <p>
           To implement this authorization, I needed to make HTTP requests
           'stateful' using session and cookie data, which means allowing the app
           to remember the status of a logged in user and their permissions. This
-          is achieved server-side using{" "}
-          <Highlight color="hl_tertiary">session data</Highlight> (with{" "}
+          is achieved server-side using <Highlight>session data</Highlight>{" "}
+          (with{" "}
           <a href="https://www.npmjs.com/package/express-session">
             express-session
           </a>
@@ -651,15 +619,14 @@ const projectData = [
           middleware.
         </p>
         <p>
-          The project was a great introduction to{" "}
-          <Highlight color="hl_alt">data models and relationships</Highlight>.
-          In Mongo, I established a link between models for campgrounds,
-          campground authors, reviews and review authors, using referencing that
-          I built into each data 'schema.' This worked very effectively for a
-          'one to many' data relationship, such as campgrounds and their
-          associated reviews. In future I hope to explore the possibilities of
-          more complex 'two-way referencing,' as well as comparing with an
-          SQL-based approach.
+          The project offered great exposure to working with various{" "}
+          <Highlight>data models and relationships</Highlight>. In Mongo, I
+          established a link between models for campgrounds, campground authors,
+          reviews and review authors, using referencing that I built into each
+          data 'schema.' This worked very effectively for a 'one to many' data
+          relationship, such as campgrounds and their associated reviews. In
+          future I hope to explore the possibilities of more complex 'two-way
+          referencing,' as well as comparing with an SQL-based approach.
         </p>
         <p>
           I learned how to effectively <Highlight>'seed' my database</Highlight>{" "}
@@ -766,7 +733,7 @@ const projectData = [
         <p>
           Working in collaboration with a composer, teacher and specialist in
           the{" "}
-          <Highlight color="hl_accent">
+          <Highlight>
             <a href="https://en.wikipedia.org/wiki/Schillinger_System">
               Schillinger System
             </a>{" "}
@@ -794,11 +761,10 @@ const projectData = [
           Schillinger rhythm system - the 2 patterns will go in and out of
           phase, or sync, but return to their original relationship at certain
           intervals. Schillinger calls these{" "}
-          <Highlight color="hl_secondary">'interference patterns'</Highlight>,
-          referring to the relationship between simultaneous rhythmic patterns.
-          We hear many of these rhythms in nature, and this method is therefore
-          an interesting way of conceptualising it and applying it to musical
-          composition.
+          <Highlight>'interference patterns'</Highlight>, referring to the
+          relationship between simultaneous rhythmic patterns. We hear many of
+          these rhythms in nature, and this method is therefore an interesting
+          way of conceptualising it and applying it to musical composition.
         </p>
         <p>
           How are the numerical patterns generated? Each individual number in
@@ -878,8 +844,8 @@ const projectData = [
           for drawing the sequencer grid. The goal, working with my client, was
           to make the app simple and accessible while building out its core
           features, thereby shortening the production cycle and making this
-          quickly available for testing - therefore, web/browser-based tools
-          were chosen.
+          quickly available for prototyping and testing - therefore,
+          web/browser-based tools were chosen.
         </p>
         <p>
           For audio, I identified{" "}
@@ -896,13 +862,31 @@ const projectData = [
           methods for handling playback of samples in the form of sequences or
           patterns.
         </p>
+        <p>
+          The UI makes use of web components adapted from the{" "}
+          <Highlight color="hl_accent">
+            <a href="https://shoelace.style/">Shoelace</a>
+          </Highlight>{" "}
+          web components library, which I found integrated most effectively in
+          practice with the p5 canvas and p5.sound library, both of which affect
+          the rendering process. While developing this, I wrote an{" "}
+          <a href="https://dev.to/jaybarls/exploring-web-components-and-revisiting-some-js-fundamentals-57e1">
+            {" "}
+            article
+          </a>{" "}
+          introducing <Highlight color="hl_accent">
+            web components
+          </Highlight>{" "}
+          and presenting examples covering why they can sometimes offer a highly
+          flexible alternative to component-based frameworks.
+        </p>
       </>
     ),
     description: "",
     challenges: (
       <>
         <p>
-          Inconsistent <Underline>playback speed</Underline> - for a
+          Inconsistent <Highlight>playback speed</Highlight> - for a
           rhythm-based app this could be quite an issue! By default, the
           grid-based patterns do not play back 'on beat' but rather slow down or
           speed up erratically, like a drunken drummer. I therefore needed to
@@ -913,13 +897,13 @@ const projectData = [
         </p>
         <p>
           The{" "}
-          <Highlight>
+          <Underline>
             <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">
               Web Audio API
             </a>
-          </Highlight>
+          </Underline>
           , which is used for audio playback in the browser, comes with some{" "}
-          <Underline>policy restrictions</Underline> - understandably,
+          <Highlight>policy restrictions</Highlight> - understandably,
           auto-playback is restricted and the API therefore expects some form of
           explicit user interaction in order to allow permission to play audio.
           In practice, finding a way to consistently 'suspend' audio playback on
@@ -938,10 +922,10 @@ const projectData = [
           sequence length which is longer or shorter than the length of the
           numerical input pattern) - the 'interference' between the two is core
           to what makes Schillinger rhythms interesting, but also introduces
-          some very <Underline>complex logic</Underline>. If the two differ, the
-          visual sequencer pattern would also need to update dynamically on each
-          'cycle'. This involves accounting for a number of scenarios and{" "}
-          <Box color="ln_lightred">design decisions:</Box>
+          some very <Highlight>complex program logic</Highlight>. If the two
+          differ, the visual sequencer pattern would also need to update
+          dynamically on each 'cycle'. This involves accounting for a number of
+          scenarios and <Box color="ln_lightred">design decisions:</Box>
         </p>
         <ul>
           <li>
@@ -977,7 +961,7 @@ const projectData = [
       <>
         <p>
           This has been a great experience in{" "}
-          <Underline>collaboration</Underline>, working together to understand
+          <Highlight>collaboration</Highlight>, working together to understand
           the aims and ideas of the client, and communicating with them the
           technical challenges or steps needed to translate these into
           functioning code. I set out a plan covering the features that were in
@@ -988,16 +972,16 @@ const projectData = [
           One key takeaway from this project has been that there are many ways
           that a user can 'break' an app or interact with it in unexpected ways,
           so creating a robust UI/UX that allows for flexible interaction is
-          really important. This made me think about the importance of{" "}
-          <Underline>usability</Underline> in any application - making it simple
-          and intuitive, while not forcing the user to overthink. There are some
-          key principles in Steve Krug's{" "}
+          really important. This made me think more deeply about the importance
+          of <Highlight>usability</Highlight> in any application - making it
+          simple and intuitive, while not forcing the user to overthink. There
+          are some key principles in Steve Krug's{" "}
           <a href="https://www.amazon.co.uk/Dont-Make-Think-Revisited-Usability/dp/0321965515">
             Don't Make Me Think, Revisited: A Common Sense Approach to Web and
             Mobile Usability
           </a>{" "}
-          (strongly recommended!) which I intend to implement in future
-          iterations of this app, including:
+          (strongly recommended!) which I intend to put further into practice in
+          future iterations of this app, including:
         </p>{" "}
         <ul>
           <li>

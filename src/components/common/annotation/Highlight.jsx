@@ -10,6 +10,7 @@ export default function Highlight({ color, children }) {
       multiline="true"
       color={highlightColor}
       style={{ margin: 2 }}
+      animate={false}
     >
       {children}
     </RoughNotation>
