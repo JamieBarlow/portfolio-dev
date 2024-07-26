@@ -30,13 +30,14 @@ const ContactMe = () => {
   const sendEmail = async (e) => {
     e.preventDefault();
     try {
+      console.log(formData);
       const response = await fetch("/.netlify/functions/sendEmail", {
         method: "POST",
         body: JSON.stringify(formData),
         headers: { "Content-Type": "application/json" },
       });
-      console.log(response);
       const data = await response.json();
+      console.log(data);
       if (response.ok) {
         console.log("SUCCESS!", data);
         alert("Email sent!");
@@ -116,6 +117,7 @@ const ContactMe = () => {
               text="Send Message"
               size="fs--h5"
               type="submit"
+              isInternalLink={true}
               icon={<i className="fa-regular fa-paper-plane"></i>}
             />
           </div>
