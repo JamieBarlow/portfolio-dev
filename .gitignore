@@ -1,12 +1,3 @@
-*.sketch
-*.fig
-*.xd
-
-.DS_Store
-.prettierignore
-.env
-node_modules
-
 # Logs
 logs
 *.log
@@ -20,6 +11,8 @@ node_modules
 dist
 dist-ssr
 *.local
+.env
+.env.production
 
 # Editor directories and files
 .vscode/*
