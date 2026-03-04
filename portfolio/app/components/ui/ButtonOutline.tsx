@@ -1,7 +1,16 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
-export default function ButtonOutline({ href, variation, children }) {
+interface ButtonOutlineProps {
+  href: string;
+  variation?: string;
+  children: React.ReactNode;
+}
+
+export default function ButtonOutline({
+  href,
+  variation,
+  children,
+}: ButtonOutlineProps) {
   let className = "";
   switch (variation) {
     case "dark":
@@ -12,7 +21,7 @@ export default function ButtonOutline({ href, variation, children }) {
       break;
   }
   return (
-    <Link to={href} className={className}>
+    <Link href={href} className={className}>
       {children}
     </Link>
   );

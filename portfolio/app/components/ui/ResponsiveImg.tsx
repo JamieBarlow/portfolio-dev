@@ -1,4 +1,14 @@
-export default function ResponsiveImg({ title, fileName, className }) {
+interface ResponsiveImgProps {
+  title: string;
+  fileName: string;
+  className?: string;
+}
+
+export default function ResponsiveImg({
+  title,
+  fileName,
+  className,
+}: ResponsiveImgProps) {
   return (
     <picture className={className ? className : ""}>
       <source

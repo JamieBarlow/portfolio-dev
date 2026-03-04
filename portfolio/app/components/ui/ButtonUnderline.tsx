@@ -1,8 +1,19 @@
-import React from "react";
 import ArrowIcon from "./ArrowIcon";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
-export default function ButtonUnderline({ link, name, icon, variation }) {
+interface ButtonUnderlineProps {
+  link: string;
+  name: string;
+  icon: string;
+  variation?: string;
+}
+
+export default function ButtonUnderline({
+  link,
+  name,
+  icon,
+  variation,
+}: ButtonUnderlineProps) {
   let variationClass = "";
   switch (variation) {
     case "green":
@@ -11,7 +22,7 @@ export default function ButtonUnderline({ link, name, icon, variation }) {
   }
   return (
     <Link
-      to={link}
+      href={link}
       className={`underline underline--animated ${variationClass}`}
     >
       <div className="projects__link">

@@ -1,4 +1,9 @@
-export default function Pill({ variation, children }) {
+interface PillProps {
+  variation: string;
+  children: React.ReactNode;
+}
+
+export default function Pill({ variation, children }: PillProps) {
   let baseStyles = {
     fontSize: "var(--fs-p)",
     lineHeight: "1.625",

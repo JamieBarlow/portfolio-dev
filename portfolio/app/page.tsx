@@ -5,7 +5,7 @@ import { useEffect, useContext } from "react";
 import HeroSection from "./components/HomePage/HeroSection";
 import ExperienceSection from "./components/HomePage/ExperienceSection";
 import Divider from "./components/HomePage/Divider";
-// import ProjectsSection from "../components/HomePage/ProjectsSection";
+import ProjectsSection from "./components/HomePage/ProjectsSection";
 // import ContactMe from "../components/HomePage/ContactMe";
 // import Navbar from "../components/layout/Navbar";
 // import Footer from "../components/layout/Footer";
@@ -63,7 +63,7 @@ export default function Home() {
         <ExperienceSection />
         <Divider />
         <div id="projectsAnchor"></div>
-        {/* <ProjectsSection /> */}
+        <ProjectsSection />
         {/* <ContactMe displayToast={toastify} /> */}
         {/* <Footer /> */}
       </motion.main>

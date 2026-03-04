@@ -1,4 +1,14 @@
-export default function ResponsiveImages({ title, className, collection }) {
+interface ResponsiveImagesProps {
+  title: string;
+  className: string;
+  collection: string[];
+}
+
+export default function ResponsiveImages({
+  title,
+  className,
+  collection,
+}: ResponsiveImagesProps) {
   return (
     <>
       {collection.map((img, i) => (
