@@ -1,5 +1,12 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
+
+interface LinkUnderlineProps {
+  text: string;
+  onClick?: () => void;
+  variation?: string;
+  size?: string;
+  href: string;
+}
 
 export default function LinkUnderline({
   text,
@@ -7,9 +14,9 @@ export default function LinkUnderline({
   variation,
   size,
   href,
-}) {
+}: LinkUnderlineProps) {
   return (
-    <Link onClick={onClick} to={href}>
+    <Link onClick={onClick} href={href}>
       {" "}
       <span className={`underline hover--green ${size} ${variation}`}>
         {text}

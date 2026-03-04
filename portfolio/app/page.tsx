@@ -3,19 +3,14 @@
 import Image from "next/image";
 import { useEffect, useContext } from "react";
 import HeroSection from "./components/HomePage/HeroSection";
-// import ExperienceSection from "../components/HomePage/ExperienceSection";
-// import Divider from "../components/HomePage/Divider";
+import ExperienceSection from "./components/HomePage/ExperienceSection";
+import Divider from "./components/HomePage/Divider";
 // import ProjectsSection from "../components/HomePage/ProjectsSection";
 // import ContactMe from "../components/HomePage/ContactMe";
 // import Navbar from "../components/layout/Navbar";
 // import Footer from "../components/layout/Footer";
 import { ObserverContext } from "./context/ObserverContext";
-import {
-  motion,
-  VariableTransitions,
-  Variant,
-  VariantLabels,
-} from "framer-motion";
+import { motion } from "framer-motion";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/ReactToastify.css";
 import { Variants } from "framer-motion";
@@ -65,8 +60,8 @@ export default function Home() {
       >
         {/* <Navbar /> */}
         <HeroSection />
-        {/* <ExperienceSection /> */}
-        {/* <Divider /> */}
+        <ExperienceSection />
+        <Divider />
         <div id="projectsAnchor"></div>
         {/* <ProjectsSection /> */}
         {/* <ContactMe displayToast={toastify} /> */}
