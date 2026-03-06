@@ -5,7 +5,7 @@ interface Button3DProps {
   onClick?: () => void;
   size?: string;
   type?: "button" | "submit" | "reset" | undefined;
-  icon?: string;
+  icon?: React.ReactNode;
   href?: string;
   isInternalLink?: boolean;
 }
