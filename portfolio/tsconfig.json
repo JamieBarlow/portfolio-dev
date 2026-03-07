@@ -31,7 +31,8 @@
     "**/*.mts",
     "app/components/ui/Button3D.tsx",
     "app/components/ui/ResponsiveVideo.tsx",
-    "app/context/ObserverContext.jsx"
+    "app/context/ObserverContext.jsx",
+    "app/components/HomePage/ASCII.jsx"
   ],
   "exclude": ["node_modules"]
 }
