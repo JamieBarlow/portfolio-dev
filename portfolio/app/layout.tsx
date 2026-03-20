@@ -1,18 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Open_Sans, Inter } from "next/font/google";
 import "./globals.css";
 import { AnimatePresence } from "framer-motion";
 import ObserverProvider from "./context/ObserverContext";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const InterFont = Inter({
+  variable: "--inter",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const OpenSans = Open_Sans({
+  variable: "--open-sans",
   subsets: ["latin"],
 });
 
@@ -27,10 +27,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="en" className={`${OpenSans.variable} ${InterFont.variable}`}>
+      <body>
         <ObserverProvider>
           <Navbar />
           <AnimatePresence mode="wait">{children}</AnimatePresence>

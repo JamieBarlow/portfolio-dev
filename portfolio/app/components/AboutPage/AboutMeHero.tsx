@@ -2,6 +2,7 @@
 
 import { useContext, useRef } from "react";
 import { ObserverContext } from "@/app/context/ObserverContext";
+import ResponsiveImg from "../ui/ResponsiveImg";
 
 export default function AboutMeHero() {
   const { setupNavbarIntersection } = useContext(ObserverContext);
@@ -25,11 +26,7 @@ export default function AboutMeHero() {
         </h1>
       </div>
       <div className="aboutMe__intro my-0">
-        <img
-          className="aboutMe__heroImg my-2"
-          src="images/jamie-1.jpg"
-          alt="Profile Picture"
-        />
+        <ResponsiveImg fileName="jamie-1.jpg" alt="Profile image of Jamie" />
         <div className="aboutMe__greeting py-3">
           <h2 className="m-0 py-3 fw--semibold">Hi there, I'm Jamie.</h2>
           <h4 className="hero__description m-0 py-2">
