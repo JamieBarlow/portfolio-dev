@@ -3,13 +3,13 @@
 import { useEffect } from "react";
 import "./projects.css";
 import ProjectShowHero from "@/app/components/ProjectPage/ProjectShowHero";
-import ProjectShowPurpose from "../../components/ProjectPage/ProjectShowPurpose";
-import ProjectShowFeatures from "../../components/ProjectPage/ProjectShowFeatures";
-import ProjectShowWebStack from "../../components/ProjectPage/ProjectShowWebstack";
-import ProjectShowImages from "../../components/ProjectPage/ProjectShowImages";
-import ProjectShowChallenges from "../../components/ProjectPage/ProjectShowChallenges";
-import ProjectShowLessons from "../../components/ProjectPage/ProjectShowLessons";
-import ProjectShowOther from "../../components/ProjectPage/ProjectShowOther";
+import ProjectShowPurpose from "@/app/components/ProjectPage/ProjectShowPurpose";
+import ProjectShowFeatures from "@/app/components/ProjectPage/ProjectShowFeatures";
+import ProjectShowWebStack from "@/app/components/ProjectPage/ProjectShowWebstack";
+import ProjectShowImages from "@/app/components/ProjectPage/ProjectShowImages";
+import ProjectShowChallenges from "@/app/components/ProjectPage/ProjectShowChallenges";
+import ProjectShowLessons from "@/app/components/ProjectPage/ProjectShowLessons";
+import ProjectShowOther from "@/app/components/ProjectPage/ProjectShowOther";
 import { motion } from "framer-motion";
 import { pageVariants } from "../../context/animations";
 import { notFound } from "next/navigation";
@@ -64,13 +64,13 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           code={code}
           media={media}
         />
-        {/* <ProjectShowPurpose purpose={purpose} media={media} title={title} />
+        <ProjectShowPurpose purpose={purpose} media={media} />
         <ProjectShowFeatures features={features} />
         <ProjectShowWebStack webStack={webStack} />
         <ProjectShowImages media={media} />
         <ProjectShowChallenges challenges={challenges} media={media} />
         <ProjectShowLessons lessons={lessons} />
-        <ProjectShowOther otherProjects={otherProjects} /> */}
+        <ProjectShowOther otherProjects={otherProjects} />
       </motion.main>
     </>
   );

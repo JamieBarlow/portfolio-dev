@@ -1,7 +1,11 @@
-import React from "react";
-import ResponsiveImg from "../common/ResponsiveImg";
+import type { Project } from "@/app/pagedata/pageData";
 
-export default function ProjectShowPurpose({ purpose, media }) {
+type ProjectShowPurpose = Pick<Project, "purpose" | "media">;
+
+export default function ProjectShowPurpose({
+  purpose,
+  media,
+}: ProjectShowPurpose) {
   return (
     <section className="project__purpose wrapper my-3">
       <h3>The purpose</h3>

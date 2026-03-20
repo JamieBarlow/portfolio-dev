@@ -1,8 +1,10 @@
-import ButtonOutline from "../common/ButtonOutline";
-import ArrowIcon from "../common/ArrowIcon";
+import ButtonOutline from "../ui/ButtonOutline";
+import ArrowIcon from "../ui/ArrowIcon";
+import type { Project } from "@/app/pagedata/pageData";
 
-import React from "react";
-export default function ProjectShowOther({ otherProjects }) {
+type OtherProjects = Pick<Project, "otherProjects">;
+
+export default function ProjectShowOther({ otherProjects }: OtherProjects) {
   return (
     <section className="project__other wrapper">
       <h3>Other Projects</h3>

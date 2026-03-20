@@ -1,6 +1,11 @@
-import ResponsiveImages from "../common/ResponsiveImages";
+import type { Project } from "@/app/pagedata/pageData";
 
-export default function ProjectShowChallenges({ challenges, media }) {
+type ShowChallenges = Pick<Project, "challenges" | "media">;
+
+export default function ProjectShowChallenges({
+  challenges,
+  media,
+}: ShowChallenges) {
   return (
     <section className="project__challenges my-5 wrapper">
       <div>

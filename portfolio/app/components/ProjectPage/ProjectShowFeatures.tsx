@@ -1,6 +1,8 @@
-import React from "react";
+import type { Project } from "@/app/pagedata/pageData";
 
-export default function ProjectShowFeatures({ features }) {
+type FeaturesProps = Pick<Project, "features">;
+
+export default function ProjectShowFeatures({ features }: FeaturesProps) {
   return (
     <section className="card project__features wrapper">
       <h3>Features</h3>

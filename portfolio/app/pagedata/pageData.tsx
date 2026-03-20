@@ -34,12 +34,12 @@ export interface ProjectMedia {
 export type Project = ProjectHero & {
   pageLink: string;
   homeDescription?: React.ReactNode;
-  purpose?: React.ReactNode;
-  features?: React.ReactNode;
-  webStack?: React.ReactNode;
-  challenges?: React.ReactNode;
-  lessons?: React.ReactNode;
-  otherProjects?: otherProject[];
+  purpose: React.ReactNode;
+  features: React.ReactNode;
+  webStack: React.ReactNode;
+  challenges: React.ReactNode;
+  lessons: React.ReactNode;
+  otherProjects: otherProject[];
 };
 
 const projectData: Projects = [
