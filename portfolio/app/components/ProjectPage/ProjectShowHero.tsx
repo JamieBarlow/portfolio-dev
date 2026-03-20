@@ -1,7 +1,9 @@
-import React, { useContext, useRef } from "react";
-import ButtonUnderline from "../common/ButtonUnderline";
-import { ObserverContext } from "../../context/ObserverContext";
-import ResponsiveImg from "../common/ResponsiveImg";
+"use client";
+
+import { useContext, useRef } from "react";
+import ButtonUnderline from "../ui/ButtonUnderline";
+import { ObserverContext } from "@/app/context/ObserverContext";
+import type { ProjectHero } from "@/app/pagedata/pageData";
 
 export default function ProjectShowHero({
   title,
@@ -10,7 +12,7 @@ export default function ProjectShowHero({
   live,
   code,
   media,
-}) {
+}: ProjectHero) {
   // Setup navbar observer
   const { setupNavbarIntersection } = useContext(ObserverContext);
   const navRef = useRef(null);

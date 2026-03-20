@@ -13,31 +13,36 @@ interface otherProject {
   link: string;
 }
 
-export type projects = project[];
+export type Projects = Project[];
 
-export interface project {
+export interface ProjectHero {
   title: string;
-  stack: string[];
-  pageLink: string;
-  code: string;
-  live: string;
-  homeDescription: React.ReactNode;
   about: React.ReactNode;
-  purpose: React.ReactNode;
-  features: React.ReactNode;
-  webStack: React.ReactNode;
-  challenges: React.ReactNode;
-  lessons: React.ReactNode;
-  media: {
-    header: React.ReactNode;
-    features: React.ReactNode;
-    tech: React.ReactNode;
-    challenges: React.ReactNode;
-  };
-  otherProjects: otherProject[];
+  stack: string[];
+  live: string;
+  code: string;
+  media: ProjectMedia;
 }
 
-const projectData: projects = [
+export interface ProjectMedia {
+  header: React.ReactNode;
+  features: React.ReactNode;
+  tech: React.ReactNode;
+  challenges: React.ReactNode;
+}
+
+export type Project = ProjectHero & {
+  pageLink: string;
+  homeDescription?: React.ReactNode;
+  purpose?: React.ReactNode;
+  features?: React.ReactNode;
+  webStack?: React.ReactNode;
+  challenges?: React.ReactNode;
+  lessons?: React.ReactNode;
+  otherProjects?: otherProject[];
+};
+
+const projectData: Projects = [
   {
     title: "Direct Debit Processing Calendar",
     stack: [

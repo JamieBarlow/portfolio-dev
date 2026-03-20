@@ -4,7 +4,7 @@ import Link from "next/link";
 interface ButtonUnderlineProps {
   link: string;
   name: string;
-  icon: string;
+  icon?: string;
   variation?: string;
 }
 

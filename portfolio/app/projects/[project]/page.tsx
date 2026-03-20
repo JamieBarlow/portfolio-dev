@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import "./projects.css";
-import ProjectShowHero from "../../components/ProjectPage/ProjectShowHero";
+import ProjectShowHero from "@/app/components/ProjectPage/ProjectShowHero";
 import ProjectShowPurpose from "../../components/ProjectPage/ProjectShowPurpose";
 import ProjectShowFeatures from "../../components/ProjectPage/ProjectShowFeatures";
 import ProjectShowWebStack from "../../components/ProjectPage/ProjectShowWebstack";
@@ -56,7 +56,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         exit="exit"
       >
         <p>{title}</p>
-        {/* <ProjectShowHero
+        <ProjectShowHero
           title={title}
           about={about}
           stack={stack}
@@ -64,7 +64,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           code={code}
           media={media}
         />
-        <ProjectShowPurpose purpose={purpose} media={media} title={title} />
+        {/* <ProjectShowPurpose purpose={purpose} media={media} title={title} />
         <ProjectShowFeatures features={features} />
         <ProjectShowWebStack webStack={webStack} />
         <ProjectShowImages media={media} />
