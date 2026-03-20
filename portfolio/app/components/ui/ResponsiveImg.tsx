@@ -1,13 +1,15 @@
 interface ResponsiveImgProps {
-  title: string;
+  title?: string;
   fileName: string;
   className?: string;
+  alt?: string;
 }
 
 export default function ResponsiveImg({
   title,
   fileName,
   className,
+  alt = "",
 }: ResponsiveImgProps) {
   return (
     <picture className={className ? className : ""}>
@@ -23,7 +25,7 @@ export default function ResponsiveImg({
         media="(min-width: 200px)"
         srcSet={`https://res.cloudinary.com/dakgl7s9n/image/upload/f_auto,q_auto:best,c_scale,w_600/portfolio/${fileName} 600w`}
       />
-      <img src={`../images/${fileName}.png`} alt={`${title}`} />
+      <img src={`../images/${fileName}.png`} alt={`${alt ?? title}`} />
     </picture>
   );
 }

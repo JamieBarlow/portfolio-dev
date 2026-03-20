@@ -5,6 +5,7 @@ import Button3D from "../ui/Button3D";
 import LinkUnderline from "../ui/LinkUnderline";
 import { ObserverContext } from "@/app/context/ObserverContext";
 import { motion } from "framer-motion";
+import ResponsiveImg from "../ui/ResponsiveImg";
 
 export default function AboutMeBlurb() {
   const { setClicked, slideUpVariant, slideRightVariant, slideLeftVariant } =
@@ -67,10 +68,10 @@ export default function AboutMeBlurb() {
           viewport={{ once: true, margin: "100px", amount: 0.5 }}
         >
           <div>
-            <img src="../images/Guitar.png" alt="Playing guitar" />
+            <ResponsiveImg fileName="Guitar.png" alt="Jamie playing guitar" />
           </div>
           <div>
-            <img src="../images/jamie-2.jpg" alt="Playing piano" />
+            <ResponsiveImg fileName="Jamie-2.jpg" alt="Jamie playing piano" />
           </div>
         </motion.div>
 
