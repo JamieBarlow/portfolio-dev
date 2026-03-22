@@ -1,0 +1,59 @@
+{
+	"files": [
+		{
+			"path": "src/assets/css/style.css",
+			"bookmarks": [
+				{
+					"line": 381,
+					"column": 2,
+					"label": ""
+				},
+				{
+					"line": 1458,
+					"column": 2,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "public/js/asciiart_stillimage_example.js",
+			"bookmarks": [
+				{
+					"line": 68,
+					"column": 24,
+					"label": ""
+				},
+				{
+					"line": 102,
+					"column": 23,
+					"label": ""
+				},
+				{
+					"line": 156,
+					"column": 16,
+					"label": ""
+				},
+				{
+					"line": 321,
+					"column": 23,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "src/pagedata/pageData.jsx",
+			"bookmarks": [
+				{
+					"line": 253,
+					"column": 4,
+					"label": ""
+				},
+				{
+					"line": 1023,
+					"column": 11,
+					"label": ""
+				}
+			]
+		}
+	]
+}

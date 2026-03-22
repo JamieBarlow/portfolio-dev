@@ -2,9 +2,9 @@ import ButtonUnderline from "../ui/ButtonUnderline";
 import ProjectPreviewImg from "./ProjectPreviewImg";
 import Pill from "../ui/Pill";
 import { motion } from "framer-motion";
-import type { project } from "@/app/pagedata/pageData";
+import type { Project } from "@/app/pagedata/pageData";
 
-interface ProjectCardProps extends project {
+interface ProjectCardProps extends Project {
   variation?: string;
 }
 
