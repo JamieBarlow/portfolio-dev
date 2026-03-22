@@ -26,7 +26,12 @@ export default function AboutMeHero() {
         </h1>
       </div>
       <div className="aboutMe__intro my-0">
-        <ResponsiveImg fileName="jamie-1.jpg" alt="Profile image of Jamie" />
+        <ResponsiveImg
+          src="jamie-1.jpg"
+          alt="Profile image of Jamie"
+          width={300}
+          height={454}
+        />
         <div className="aboutMe__greeting py-3">
           <h2 className="m-0 py-3 fw--semibold">Hi there, I'm Jamie.</h2>
           <h4 className="hero__description m-0 py-2">

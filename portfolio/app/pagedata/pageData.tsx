@@ -289,28 +289,50 @@ const projectData: Projects = [
     media: {
       header: (
         <ResponsiveImg
-          title="Direct Debits header"
-          fileName="dd-calculator-v2.png"
+          alt="Direct Debits header"
+          src="dd-calculator-v2.png"
+          width={1332}
+          height={667}
         />
       ),
       features: (
-        <ResponsiveImg title="Direct Debits results" fileName="dd-v2-results" />
+        <ResponsiveImg
+          alt="Direct Debits results"
+          src="dd-v2-results"
+          width={1179}
+          height={819}
+        />
       ),
       tech: (
         <ResponsiveImg
-          title="DD app version comparison"
-          fileName="dd-v2-compare"
+          alt="DD app version comparison"
+          src="dd-v2-compare"
+          width={1011}
+          height={911}
         />
       ),
       challenges: (
         <ResponsiveImages
-          title="Challenges"
           className="challenges-img"
           collection={[
-            "dd-v2-company",
-            "dd-v2-vitest-dashboard",
-            // "dd-v2",
-            "dd-v2-vitest-coverage",
+            {
+              src: "dd-v2-company",
+              alt: "Company Holidays display",
+              width: 543,
+              height: 280,
+            },
+            {
+              src: "dd-v2-vitest-dashboard",
+              alt: "Vitest dashboard",
+              width: 329,
+              height: 233,
+            },
+            {
+              src: "dd-v2-vitest-coverage",
+              alt: "Vitest test coverage",
+              width: 752,
+              height: 391,
+            },
           ]}
         />
       ),
@@ -697,29 +719,57 @@ const projectData: Projects = [
     ),
     media: {
       header: (
-        <ResponsiveImg title="YelpCamp header" fileName="yelpcamp-homepage2" />
+        <ResponsiveImg
+          alt="YelpCamp header"
+          src="yelpcamp-homepage2"
+          width={1332}
+          height={667}
+        />
       ),
       features: (
         <ResponsiveImg
-          title="YelpCamp login page"
-          fileName="yelpcamp-loginpage"
+          alt="YelpCamp login page"
+          src="yelpcamp-loginpage"
+          width={1420}
+          height={753}
         />
       ),
       tech: (
         <ResponsiveImg
-          title="YelpCamp edit UI"
-          fileName="yelpcamp-campeditgroup"
+          alt="YelpCamp edit UI"
+          src="yelpcamp-campeditgroup"
+          width={1332}
+          height={667}
         />
       ),
       challenges: (
         <ResponsiveImages
-          title="Challenges"
           className="challenges-img"
           collection={[
-            "yelpcamp-review",
-            "yelpcamp-clustermap",
-            "yelpcamp-allcamps",
-            "yelpcamp-update",
+            {
+              src: "yelpcamp-review",
+              alt: "YelpCamp Review",
+              width: 752,
+              height: 544,
+            },
+            {
+              src: "yelpcamp-clustermap",
+              alt: "Cluster Map",
+              width: 797,
+              height: 588,
+            },
+            {
+              src: "yelpcamp-allcamps",
+              alt: "All Camps",
+              width: 1278,
+              height: 953,
+            },
+            {
+              src: "yelpcamp-update",
+              alt: "Update camp",
+              width: 1257,
+              height: 838,
+            },
           ]}
         />
       ),
@@ -1040,8 +1090,10 @@ const projectData: Projects = [
     media: {
       header: (
         <ResponsiveImg
-          title="Schillinger Rhythm App header"
-          fileName="rhythm-interface-preview"
+          alt="Schillinger Rhythm App header"
+          src="rhythm-interface-preview"
+          width={1175}
+          height={783}
         />
       ),
       features: (
@@ -1050,12 +1102,37 @@ const projectData: Projects = [
           fileName="rhythm-interaction.webm"
         />
       ),
-      tech: <ResponsiveImg title="Type 1 pattern" fileName="rhythm-type1" />,
+      tech: (
+        <ResponsiveImg
+          alt="Type 1 pattern"
+          src="rhythm-type1"
+          width={913}
+          height={583}
+        />
+      ),
       challenges: (
         <ResponsiveImages
-          title="Challenges"
           className="challenges-img"
-          collection={["rhythm-symmetry", "rhythm-type2", "rhythm-notation"]}
+          collection={[
+            {
+              src: "rhythm-symmetry",
+              alt: "Rhythm Symmetry",
+              width: 936,
+              height: 614,
+            },
+            {
+              src: "rhythm-type2",
+              alt: "Rhythm type 2",
+              width: 960,
+              height: 442,
+            },
+            {
+              src: "rhythm-notation",
+              alt: "Rhythm Notation",
+              width: 906,
+              height: 356,
+            },
+          ]}
         />
       ),
     },
@@ -1180,25 +1257,46 @@ const projectData: Projects = [
     ),
     media: {
       header: (
-        <ResponsiveImg title="Sliding puzzle header" fileName="puzzle-pitch" />
+        <ResponsiveImg
+          alt="Sliding puzzle header"
+          src="puzzle-pitch"
+          width={1560}
+          height={1145}
+        />
       ),
       features: (
         <ResponsiveImg
-          title="Sliding puzzle shuffled"
-          fileName="puzzle-ampersand-shuffled"
+          alt="Sliding puzzle shuffled"
+          src="puzzle-ampersand-shuffled"
+          width={670}
+          height={691}
         />
       ),
       tech: (
         <ResponsiveImg
-          title="Puzzle complete"
-          fileName="puzzle-ampersand-complete"
+          alt="Puzzle complete"
+          src="puzzle-ampersand-complete"
+          width={824}
+          height={823}
         />
       ),
       challenges: (
         <ResponsiveImages
-          title="challenges"
           className="challenges-img"
-          collection={["puzzle-ampersand-words", "puzzle-ampersand-promo"]}
+          collection={[
+            {
+              src: "puzzle-ampersand-words",
+              alt: "Puzzle",
+              width: 823,
+              height: 459,
+            },
+            {
+              src: "puzzle-ampersand-promo",
+              alt: "Puzzle promotion",
+              width: 1566,
+              height: 828,
+            },
+          ]}
         />
       ),
     },

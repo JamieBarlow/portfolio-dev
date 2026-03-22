@@ -68,10 +68,20 @@ export default function AboutMeBlurb() {
           viewport={{ once: true, margin: "100px", amount: 0.5 }}
         >
           <div>
-            <ResponsiveImg fileName="Guitar.png" alt="Jamie playing guitar" />
+            <ResponsiveImg
+              src="Guitar.png"
+              alt="Jamie playing guitar"
+              width={342}
+              height={190}
+            />
           </div>
           <div>
-            <ResponsiveImg fileName="Jamie-2.jpg" alt="Jamie playing piano" />
+            <ResponsiveImg
+              src="Jamie-2.jpg"
+              alt="Jamie playing piano"
+              width={622}
+              height={622}
+            />
           </div>
         </motion.div>
 
