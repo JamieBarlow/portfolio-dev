@@ -46,7 +46,7 @@ const ContactMe = ({ displayToast }: ContactMeProps) => {
     e.preventDefault();
     try {
       console.log(formData);
-      const response = await fetch("/.netlify/functions/sendEmail", {
+      const response = await fetch("/api/sendEmail", {
         method: "POST",
         body: JSON.stringify(formData),
         headers: { "Content-Type": "application/json" },
@@ -87,7 +87,7 @@ const ContactMe = ({ displayToast }: ContactMeProps) => {
         </div>
         <form
           className="contact__form"
-          action="/email"
+          // action="/email"
           method="POST"
           onSubmit={sendEmail}
           ref={form}

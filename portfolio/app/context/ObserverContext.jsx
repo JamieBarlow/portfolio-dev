@@ -1,6 +1,5 @@
 "use client";
 import { createContext, useState, useEffect, useRef } from "react";
-import { useLocation } from "react-router-dom";
 import { useInView } from "framer-motion";
 import { usePathname } from "next/navigation";
 

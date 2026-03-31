@@ -1,3 +1,4 @@
+import { Url } from "next/dist/shared/lib/router/router";
 import Link from "next/link";
 
 interface Button3DProps {
@@ -16,7 +17,7 @@ export default function Button3D({
   size,
   type = "button",
   icon,
-  href = "/",
+  href,
   isInternalLink,
 }: Button3DProps) {
   return (
@@ -27,7 +28,7 @@ export default function Button3D({
           {text}
         </a>
       ) : (
-        <Link className={`front ${size}`} onClick={onClick} href={href}>
+        <Link className={`front ${size}`} onClick={onClick} href={href ?? "/"}>
           {icon ? icon : null}
           {text}
         </Link>
