@@ -76,11 +76,11 @@ export default function SidebarLinks({ className }: SidebarLinksProps) {
           }}
           whileTap={{ scale: 0.95 }}
         >
-          {(location.pathname === "/" &&
+          {(location === "/" &&
             (link.text === "Home" ||
               link.text === "My Work" ||
               link.text === "Contact")) ||
-          (location.pathname === "/aboutMe" && link.text === "About") ? (
+          (location === "/aboutMe" && link.text === "About") ? (
             <a href={link.href} onClick={(e) => e.preventDefault()}>
               {link.text}
             </a>

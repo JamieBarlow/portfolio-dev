@@ -8,7 +8,7 @@ export default function Footer() {
   const { location } = useContext(ObserverContext);
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (location.pathname === "/") {
+    if (location === "/") {
       e.preventDefault();
       window.scroll({ top: 0, left: 0, behavior: "smooth" });
     }

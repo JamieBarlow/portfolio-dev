@@ -56,11 +56,11 @@ export default function ASCII() {
     p.preload = () => {
       images[0] = p.loadImage(
         `https://res.cloudinary.com/dakgl7s9n/image/upload/f_auto,q_auto:best,c_scale,w_${imgSize}/v1718175905/portfolio/jamie-1.jpg`,
-        handleImage
+        handleImage,
       );
       images[1] = p.loadImage(
         `https://res.cloudinary.com/dakgl7s9n/image/upload/f_auto,q_auto:best,c_scale,w_${imgSize}/v1718175905/portfolio/jamie-2.jpg`,
-        handleImage
+        handleImage,
       );
       function handleImage(img) {
         console.log(img);
@@ -121,7 +121,7 @@ export default function ASCII() {
             /* nothing to do */ break;
           default:
             console.log(
-              "[typeArray2d] bad number of arguments: " + arguments.length
+              "[typeArray2d] bad number of arguments: " + arguments.length,
             );
             return;
         }
@@ -157,7 +157,7 @@ export default function ASCII() {
             /*text*/ temp_ctx2d.fillText(
               _arr2d[temp_x][temp_y],
               offset_x + temp_x * dist_hor,
-              offset_y + temp_y * dist_ver
+              offset_y + temp_y * dist_ver,
             );
       };
       myAsciiArt.typeArray2d(ascii_arr, p);
@@ -166,7 +166,7 @@ export default function ASCII() {
       p.noTint();
     };
     p.windowResized = () => {
-      if (location.pathname === "/") {
+      if (location === "/") {
         p.resizeCanvas(600, 912);
         // images.forEach((img) => img.resize(600, 912));
         applyMediaQueryStyles();

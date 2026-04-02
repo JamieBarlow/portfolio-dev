@@ -9,9 +9,9 @@ export default function ProjectShowOther({ otherProjects }: OtherProjects) {
     <section className="project__other wrapper">
       <h3>Other Projects</h3>
       <div className="project__otherProjects my-3">
-        {otherProjects.map((project) => {
+        {otherProjects.map((project, index) => {
           return (
-            <div className="card otherProject">
+            <div className="card otherProject" key={index}>
               <h4 className="my-2">{project.title}</h4>
               <div className="projects__img">
                 <picture>

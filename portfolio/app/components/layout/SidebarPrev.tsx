@@ -120,11 +120,11 @@ export default function SidebarPrev() {
             >
               {/* Renders either an internal or external link depending on
               current location */}
-              {(location.pathname === "/" &&
+              {(location === "/" &&
                 (link.text === "Home" ||
                   link.text === "My Work" ||
                   link.text === "Contact")) ||
-              (location.pathname === "/aboutMe" && link.text === "About") ? (
+              (location === "/aboutMe" && link.text === "About") ? (
                 <a href={link.href} onClick={(e) => e.preventDefault()}>
                   {link.text}
                 </a>

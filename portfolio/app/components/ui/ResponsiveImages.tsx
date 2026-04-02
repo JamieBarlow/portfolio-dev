@@ -15,8 +15,8 @@ export default function ResponsiveImages({
 }: ResponsiveImagesProps) {
   return (
     <>
-      {collection.map((img) => (
-        <div>
+      {collection.map((img, index) => (
+        <div key={index}>
           <ResponsiveImg
             src={img.src}
             width={img.width}

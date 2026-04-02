@@ -89,24 +89,24 @@ const projectData: Projects = [
           on a processing calendar to schedule these processes accurately,
           accounting for working days, bank holidays, weekends, and office
           closures.
-          <p>
-            Previously, determining these dates was a manual, complex, and
-            error-prone task. This app{" "}
-            <Highlight color="hl_primary">automates</Highlight> the process,
-            reducing potential errors and risks such as missed or delayed
-            submissions, payment reconciliation issues, and reputational damage
-            from failing to meet terms of the{" "}
-            <Underline>
-              <a href="https://www.directdebit.co.uk/direct-debit-explained/direct-debit-guarantee/">
-                Direct Debit guarantee.
-              </a>
-            </Underline>
-          </p>
-          <p>
-            The app generates results in a format tailored for the Apps Support
-            team, allowing one-click copying to the clipboard and easy data
-            loading.
-          </p>
+        </p>
+        <p>
+          Previously, determining these dates was a manual, complex, and
+          error-prone task. This app{" "}
+          <Highlight color="hl_primary">automates</Highlight> the process,
+          reducing potential errors and risks such as missed or delayed
+          submissions, payment reconciliation issues, and reputational damage
+          from failing to meet terms of the{" "}
+          <Underline>
+            <a href="https://www.directdebit.co.uk/direct-debit-explained/direct-debit-guarantee/">
+              Direct Debit guarantee.
+            </a>
+          </Underline>
+        </p>
+        <p>
+          The app generates results in a format tailored for the Apps Support
+          team, allowing one-click copying to the clipboard and easy data
+          loading.
         </p>
       </>
     ),

@@ -1,4 +1,5 @@
 "use client";
+import { StrictMode } from "react";
 
 import { useEffect, useContext } from "react";
 import HeroSection from "./components/HomePage/HeroSection";
@@ -33,7 +34,7 @@ export default function Home() {
       }
       setClicked("");
     }
-  }, [location.pathname, clicked]);
+  }, [location, clicked]);
 
   const toastify: DisplayToast = (message, position, type) => {
     const options = {
