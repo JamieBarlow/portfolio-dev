@@ -55,7 +55,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         animate="animate"
         exit="exit"
       >
-        <p>{title}</p>
+        {/* <p>{title}</p> */}
         <ProjectShowHero
           title={title}
           about={about}

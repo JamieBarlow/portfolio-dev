@@ -91,10 +91,11 @@ const projectData: Projects = [
           closures.
           <p>
             Previously, determining these dates was a manual, complex, and
-            error-prone task. This app <Highlight>automates</Highlight> the
-            process, reducing potential errors and risks such as missed or
-            delayed submissions, payment reconciliation issues, and reputational
-            damage from failing to meet terms of the{" "}
+            error-prone task. This app{" "}
+            <Highlight color="hl_primary">automates</Highlight> the process,
+            reducing potential errors and risks such as missed or delayed
+            submissions, payment reconciliation issues, and reputational damage
+            from failing to meet terms of the{" "}
             <Underline>
               <a href="https://www.directdebit.co.uk/direct-debit-explained/direct-debit-guarantee/">
                 Direct Debit guarantee.
@@ -171,11 +172,11 @@ const projectData: Projects = [
           </Highlight>{" "}
           for familiar Bootstrap components. The unit tests were updated from
           Mocha/Chai to{" "}
-          <Highlight>
+          <Highlight color="hl_primary">
             <a href="https://vitest.dev/">Vitest</a>
           </Highlight>
           , benefiting from Vite integration and{" "}
-          <Highlight>
+          <Highlight color="hl_primary">
             <a href="https://jestjs.io/">Jest API</a>
           </Highlight>{" "}
           compatibility. This setup offers clear assertions, integrated mocking,
@@ -201,35 +202,38 @@ const projectData: Projects = [
           against non-working days from the API (weekends and bank holidays) and
           user-inputted company-specific holidays. If there's a clash, the app
           needs to shift the date and recalculate until no conflicts remain,
-          which involved some <Highlight>complex nested loops.</Highlight>
+          which involved some{" "}
+          <Highlight color="hl_primary">complex nested loops.</Highlight>
         </p>
         <p>
           Dates in each column are interdependent, and sometimes affected by
-          <Highlight>edge cases</Highlight> such as non-processing dates from
-          previous or subsequent years, which the app's logic also accounts for.
+          <Highlight color="hl_primary">edge cases</Highlight> such as
+          non-processing dates from previous or subsequent years, which the
+          app's logic also accounts for.
         </p>
         <p>
           Upgrading to a React application involved refactoring UI elements for
           modularity and dynamic rendering, and restructuring functionality to
           work with React's virtual DOM. This was a challenge but at the same
-          time, a great exercise in <Highlight>design thinking</Highlight> -
-          analysing the app's process flow, simplifying and breaking down
-          functions and UI elements further where necessary, improving clarity
-          and reusability.
+          time, a great exercise in{" "}
+          <Highlight color="hl_primary">design thinking</Highlight> - analysing
+          the app's process flow, simplifying and breaking down functions and UI
+          elements further where necessary, improving clarity and reusability.
         </p>
         <p>
           Refactoring was aided by existing unit tests, facilitating a
-          <Highlight>test-driven</Highlight> approach. React's modular structure
-          helped me to further isolate functions to components themselves,
-          rather than as side effects arising from other functions, allowing for
-          a clearer separation of concerns. The{" "}
+          <Highlight color="hl_primary">test-driven</Highlight> approach.
+          React's modular structure helped me to further isolate functions to
+          components themselves, rather than as side effects arising from other
+          functions, allowing for a clearer separation of concerns. The{" "}
           <Highlight color="hl_tertiary">React Context API</Highlight> provided
           clearer state management.
         </p>
         <p>
           Testing the 'copy to clipboard' function in Vitest involved some extra
           complexity without certain DOM elements in a testing environment. I
-          nonetheless managed this by <Highlight>mocking:</Highlight>
+          nonetheless managed this by{" "}
+          <Highlight color="hl_primary">mocking:</Highlight>
         </p>
         <ul>
           <li>The navigator object using 'vi' in Vitest;</li>
@@ -240,7 +244,7 @@ const projectData: Projects = [
         </ul>
         <p>
           To ensure consistent output, I standardized the{" "}
-          <Highlight>data structure</Highlight>
+          <Highlight color="hl_primary">data structure</Highlight>
           returned by functions. This made the app's output more predictable and
           supported debugging through structured tests.
         </p>{" "}
@@ -260,20 +264,23 @@ const projectData: Projects = [
       <>
         <p>
           While the app gave me a lot of experience working with the{" "}
-          <Highlight>Date object</Highlight> in JavaScript, there are JS date
-          libraries which could simplify the process of converting and working
-          with dates, thereby speeding up production. For example,{" "}
-          <a href="https://date-fns.org/">date-fns</a> or{" "}
+          <Highlight color="hl_primary">Date object</Highlight> in JavaScript,
+          there are JS date libraries which could simplify the process of
+          converting and working with dates, thereby speeding up production. For
+          example, <a href="https://date-fns.org/">date-fns</a> or{" "}
           <a href="https://momentjs.com/">Moment.js</a>.
         </p>
         <p>
-          While my eventual unit <Highlight>test coverage</Highlight> was close
-          to 100%, I learned first-hand that this is not the only metric for
+          While my eventual unit{" "}
+          <Highlight color="hl_primary">test coverage</Highlight> was close to
+          100%, I learned first-hand that this is not the only metric for
           effective tests - there is always room to improve their quality and
           handling of edge cases. An app can also benefit from{" "}
-          <Highlight>integration and end-to-end testing</Highlight> where
-          possible. In this case, I mocked integration testing using data to
-          ensure the app's output would be correct. I am looking to further
+          <Highlight color="hl_primary">
+            integration and end-to-end testing
+          </Highlight>{" "}
+          where possible. In this case, I mocked integration testing using data
+          to ensure the app's output would be correct. I am looking to further
           explore the possibilities of integration and end-to-end testing using
           faking/stubbing tools such as{" "}
           <a href="https://sinonjs.org/">Sinon.js</a>, and E2E testing suites
@@ -385,9 +392,9 @@ const projectData: Projects = [
             full CRUD (Create, Read, Update, Destroy) functionality
           </Highlight>
           , and is built using the MongoDB/Express/Node stack, with{" "}
-          <Highlight>RESTful architecture</Highlight> (exposing CRUD
-          functionality to users with a uniform interface). The app is styled
-          using CSS and BootStrap components.
+          <Highlight color="hl_primary">RESTful architecture</Highlight>{" "}
+          (exposing CRUD functionality to users with a uniform interface). The
+          app is styled using CSS and BootStrap components.
         </p>
         <p>
           YelpCamp has proved to be a fantastic first-hand learning exercise,
@@ -395,12 +402,13 @@ const projectData: Projects = [
           building and launching a live full-stack application. This includes
           building on core CRUD functionality with a number of extra
           technologies to enhance features like{" "}
-          <Highlight>form validation</Highlight>, user{" "}
-          <Highlight>authentication</Highlight>,{" "}
-          <Highlight>authorization/permissions</Highlight>, and multiple means
-          of dealing with common <Highlight>security</Highlight> issues, along
-          with additional UI features such as animated review ratings and{" "}
-          <Highlight>geocoded</Highlight> cluster maps.
+          <Highlight color="hl_primary">form validation</Highlight>, user{" "}
+          <Highlight color="hl_primary">authentication</Highlight>,{" "}
+          <Highlight color="hl_primary">authorization/permissions</Highlight>,
+          and multiple means of dealing with common{" "}
+          <Highlight color="hl_primary">security</Highlight> issues, along with
+          additional UI features such as animated review ratings and{" "}
+          <Highlight color="hl_primary">geocoded</Highlight> cluster maps.
         </p>
         <p>
           Experience with this app has definitely inspired, and will form the
@@ -510,7 +518,7 @@ const projectData: Projects = [
         </p>
         <p>
           To support user <Underline>authentication</Underline>, I used{" "}
-          <Highlight>
+          <Highlight color="hl_primary">
             <a href="https://www.passportjs.org/">Passport.js</a>
           </Highlight>{" "}
           middleware, which provides pre-defined 'strategies' for authenticating
@@ -551,7 +559,7 @@ const projectData: Projects = [
             <Underline>geocoding</Underline> API
           </a>{" "}
           to produce GeoJSON coordinates, and the{" "}
-          <Highlight>
+          <Highlight color="hl_primary">
             <a href="https://docs.mapbox.com/mapbox-gl-js/guides/">
               Mapbox GL JS
             </a>
@@ -566,7 +574,7 @@ const projectData: Projects = [
       <>
         <p>
           The{" "}
-          <Highlight>
+          <Highlight color="hl_primary">
             interdependence between the many changing parts of a full-stack
             application
           </Highlight>
@@ -585,22 +593,27 @@ const projectData: Projects = [
         </p>
         <p>
           This really highlighted the importance of{" "}
-          <Highlight>testing and debugging</Highlight> at every stage of
-          development, as well as clear <Highlight>error handling</Highlight>.
-          As an 'unopinionated' framework, Express is very flexible to work
-          with, but with this naturally there are more implementation decisions
-          to make, and more safeguards needed to avoid issues. Defining my own{" "}
-          <Highlight>error-handling middleware</Highlight> was certainly very
-          helpful for logging and debugging. I also found that taking a modular
-          approach to app-building made it far easier to isolate the issue to
-          specific files/functions, in tandem with Git version control, which
-          allowed me to identify the changes triggering specific issues.
+          <Highlight color="hl_primary">testing and debugging</Highlight> at
+          every stage of development, as well as clear{" "}
+          <Highlight color="hl_primary">error handling</Highlight>. As an
+          'unopinionated' framework, Express is very flexible to work with, but
+          with this naturally there are more implementation decisions to make,
+          and more safeguards needed to avoid issues. Defining my own{" "}
+          <Highlight color="hl_primary">error-handling middleware</Highlight>{" "}
+          was certainly very helpful for logging and debugging. I also found
+          that taking a modular approach to app-building made it far easier to
+          isolate the issue to specific files/functions, in tandem with Git
+          version control, which allowed me to identify the changes triggering
+          specific issues.
         </p>
         <p>
           Building an app with a large number of features not only introduces
           many different options, but adds complexity when bridging the gap
           between different tech that can achieve similar things. For example,
-          there are <Highlight>many ways to approach data validation</Highlight>
+          there are{" "}
+          <Highlight color="hl_primary">
+            many ways to approach data validation
+          </Highlight>
           . After adding both BootStrap validation and JOI server-side
           validation, there was some conflict - while my front-end markup did
           not define all fields as 'required', JOI still expected non-empty
@@ -621,12 +634,12 @@ const projectData: Projects = [
         </p>
         <p>
           I learned the importance of app-building in a{" "}
-          <Highlight>modular</Highlight> way - whether it be using components or
-          page templating, and by creating middleware that can be re-used
-          throughout the app. This avoids duplicating code, and makes things
-          cleaner, easier to read and maintain - really important for projects
-          of any size! I adopted the{" "}
-          <Highlight>
+          <Highlight color="hl_primary">modular</Highlight> way - whether it be
+          using components or page templating, and by creating middleware that
+          can be re-used throughout the app. This avoids duplicating code, and
+          makes things cleaner, easier to read and maintain - really important
+          for projects of any size! I adopted the{" "}
+          <Highlight color="hl_primary">
             <a href="https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller">
               MVC (Model-View-Controller)
             </a>
@@ -636,7 +649,7 @@ const projectData: Projects = [
         </p>
         <p>
           YelpCamp taught me, first-hand, the benefits of using{" "}
-          <Highlight>
+          <Highlight color="hl_primary">
             <a href="https://www.educative.io/answers/what-are-restful-routes-in-nodejs">
               RESTful routing patterns
             </a>
@@ -650,20 +663,20 @@ const projectData: Projects = [
         </p>
         <p>
           In setting up login/register functionality for users, I learned about
-          ways to <Highlight>authenticate</Highlight> users by securely storing
-          their password and other data (with encryption), and using this to
-          confirm their login. I then considered authorization - in addition to
-          requiring a login to access certain content or functions in general,
-          the app would need to apply specific permissions depending on the
-          user, and use server-side security measures to restrict access, as
-          well as hiding content.
+          ways to <Highlight color="hl_primary">authenticate</Highlight> users
+          by securely storing their password and other data (with encryption),
+          and using this to confirm their login. I then considered authorization
+          - in addition to requiring a login to access certain content or
+          functions in general, the app would need to apply specific permissions
+          depending on the user, and use server-side security measures to
+          restrict access, as well as hiding content.
         </p>
         <p>
           To implement this authorization, I needed to make HTTP requests
           'stateful' using session and cookie data, which means allowing the app
           to remember the status of a logged in user and their permissions. This
-          is achieved server-side using <Highlight>session data</Highlight>{" "}
-          (with{" "}
+          is achieved server-side using{" "}
+          <Highlight color="hl_primary">session data</Highlight> (with{" "}
           <a href="https://www.npmjs.com/package/express-session">
             express-session
           </a>
@@ -676,18 +689,22 @@ const projectData: Projects = [
         </p>
         <p>
           The project offered great exposure to working with various{" "}
-          <Highlight>data models and relationships</Highlight>. In Mongo, I
-          established a link between models for campgrounds, campground authors,
-          reviews and review authors, using referencing that I built into each
-          data 'schema.' This worked very effectively for a 'one to many' data
-          relationship, such as campgrounds and their associated reviews. In
-          future I hope to explore the possibilities of more complex 'two-way
-          referencing,' as well as comparing with an SQL-based approach.
+          <Highlight color="hl_primary">
+            data models and relationships
+          </Highlight>
+          . In Mongo, I established a link between models for campgrounds,
+          campground authors, reviews and review authors, using referencing that
+          I built into each data 'schema.' This worked very effectively for a
+          'one to many' data relationship, such as campgrounds and their
+          associated reviews. In future I hope to explore the possibilities of
+          more complex 'two-way referencing,' as well as comparing with an
+          SQL-based approach.
         </p>
         <p>
-          I learned how to effectively <Highlight>'seed' my database</Highlight>{" "}
-          in a testing environment, which I needed to do multiple times
-          throughout development as my app's data structure evolved. I used the{" "}
+          I learned how to effectively{" "}
+          <Highlight color="hl_primary">'seed' my database</Highlight> in a
+          testing environment, which I needed to do multiple times throughout
+          development as my app's data structure evolved. I used the{" "}
           <a href="https://unsplash.com/developers">Unsplash Source API</a> to
           fetch a series of images from a collection, and populated the rest of
           the data with randomised location names, descriptors, and geocoding
@@ -817,7 +834,7 @@ const projectData: Projects = [
         <p>
           Working in collaboration with a composer, teacher and specialist in
           the{" "}
-          <Highlight>
+          <Highlight color="hl_primary">
             <a href="https://en.wikipedia.org/wiki/Schillinger_System">
               Schillinger System
             </a>{" "}
@@ -832,11 +849,11 @@ const projectData: Projects = [
         <p>
           To demonstrate that varied and effective rhythms can be created
           mathematically from almost any{" "}
-          <Highlight>numerical pattern,</Highlight> the app is designed to take
-          user input in the form of a sequence of digits, which could be entered
-          manually (e.g. 1240652) or come from a less manual/predictable
-          'in-world' source, such as a barcode. You really can create a rhythm
-          from a can of beans (without needing to hit it)!
+          <Highlight color="hl_primary">numerical pattern,</Highlight> the app
+          is designed to take user input in the form of a sequence of digits,
+          which could be entered manually (e.g. 1240652) or come from a less
+          manual/predictable 'in-world' source, such as a barcode. You really
+          can create a rhythm from a can of beans (without needing to hit it)!
         </p>
         <p>
           User-generated beats are represented in the sequencer, against a
@@ -845,10 +862,11 @@ const projectData: Projects = [
           Schillinger rhythm system - the 2 patterns will go in and out of
           phase, or sync, but return to their original relationship at certain
           intervals. Schillinger calls these{" "}
-          <Highlight>'interference patterns'</Highlight>, referring to the
-          relationship between simultaneous rhythmic patterns. We hear many of
-          these rhythms in nature, and this method is therefore an interesting
-          way of conceptualising it and applying it to musical composition.
+          <Highlight color="hl_primary">'interference patterns'</Highlight>,
+          referring to the relationship between simultaneous rhythmic patterns.
+          We hear many of these rhythms in nature, and this method is therefore
+          an interesting way of conceptualising it and applying it to musical
+          composition.
         </p>
         <p>
           How are the numerical patterns generated? Each individual number in
@@ -887,9 +905,9 @@ const projectData: Projects = [
         <p>
           Once the pattern has been created, the app will ultimately allow the
           musician to alter it in a number of interesting and idea-inspiring
-          ways, or <Highlight>'mutations'</Highlight> (to be added).
-          Schillinger's 'interference patterns' work with symmetry, so the
-          ability to convert a pattern into a symmetrical one will be a key
+          ways, or <Highlight color="hl_primary">'mutations'</Highlight> (to be
+          added). Schillinger's 'interference patterns' work with symmetry, so
+          the ability to convert a pattern into a symmetrical one will be a key
           feature, alongside further 'preset' tweaking options:
         </p>
         <ul>
@@ -922,7 +940,7 @@ const projectData: Projects = [
       <>
         <p>
           The app was written in{" "}
-          <Highlight>
+          <Highlight color="hl_primary">
             JavaScript with <a href="https://p5js.org/">p5.js</a>
           </Highlight>{" "}
           for drawing the sequencer grid. The goal, working with my client, was
@@ -969,8 +987,8 @@ const projectData: Projects = [
     challenges: (
       <>
         <p>
-          Inconsistent <Highlight>playback speed</Highlight> - for a
-          rhythm-based app this could be quite an issue! By default, the
+          Inconsistent <Highlight color="hl_primary">playback speed</Highlight>{" "}
+          - for a rhythm-based app this could be quite an issue! By default, the
           grid-based patterns do not play back 'on beat' but rather slow down or
           speed up erratically, like a drunken drummer. I therefore needed to
           pass in a scheduled delay time to produce a clock time that would be
@@ -986,13 +1004,13 @@ const projectData: Projects = [
             </a>
           </Underline>
           , which is used for audio playback in the browser, comes with some{" "}
-          <Highlight>policy restrictions</Highlight> - understandably,
-          auto-playback is restricted and the API therefore expects some form of
-          explicit user interaction in order to allow permission to play audio.
-          In practice, finding a way to consistently 'suspend' audio playback on
-          page load across browsers (and therefore avoid error which break the
-          app) was unexpectedly challenging, but I was able to find a method
-          that mimics Google's autoplay policy.
+          <Highlight color="hl_primary">policy restrictions</Highlight> -
+          understandably, auto-playback is restricted and the API therefore
+          expects some form of explicit user interaction in order to allow
+          permission to play audio. In practice, finding a way to consistently
+          'suspend' audio playback on page load across browsers (and therefore
+          avoid error which break the app) was unexpectedly challenging, but I
+          was able to find a method that mimics Google's autoplay policy.
         </p>
         {/* <p>
           Clicking cells in the sequencer grid allows the user to update the
@@ -1005,8 +1023,9 @@ const projectData: Projects = [
           sequence length which is longer or shorter than the length of the
           numerical input pattern) - the 'interference' between the two is core
           to what makes Schillinger rhythms interesting, but also introduces
-          some very <Highlight>complex program logic</Highlight>. If the two
-          differ, the visual sequencer pattern would also need to update
+          some very{" "}
+          <Highlight color="hl_primary">complex program logic</Highlight>. If
+          the two differ, the visual sequencer pattern would also need to update
           dynamically on each 'cycle'. This involves accounting for a number of
           scenarios and <Box color="ln_lightred">design decisions:</Box>
         </p>
@@ -1044,21 +1063,22 @@ const projectData: Projects = [
       <>
         <p>
           This has been a great experience in{" "}
-          <Highlight>collaboration</Highlight>, working together to understand
-          the aims and ideas of the client, and communicating with them the
-          technical challenges or steps needed to translate these into
-          functioning code. I set out a plan covering the features that were in
-          scope for the project, and laid out the development stages needed to
-          build a successful app, working through them iteratively.
+          <Highlight color="hl_primary">collaboration</Highlight>, working
+          together to understand the aims and ideas of the client, and
+          communicating with them the technical challenges or steps needed to
+          translate these into functioning code. I set out a plan covering the
+          features that were in scope for the project, and laid out the
+          development stages needed to build a successful app, working through
+          them iteratively.
         </p>
         <p>
           One key takeaway from this project has been that there are many ways
           that a user can 'break' an app or interact with it in unexpected ways,
           so creating a robust UI/UX that allows for flexible interaction is
           really important. This made me think more deeply about the importance
-          of <Highlight>usability</Highlight> in any application - making it
-          simple and intuitive, while not forcing the user to overthink. There
-          are some key principles in Steve Krug's{" "}
+          of <Highlight color="hl_primary">usability</Highlight> in any
+          application - making it simple and intuitive, while not forcing the
+          user to overthink. There are some key principles in Steve Krug's{" "}
           <a href="https://www.amazon.co.uk/Dont-Make-Think-Revisited-Usability/dp/0321965515">
             Don't Make Me Think, Revisited: A Common Sense Approach to Web and
             Mobile Usability
