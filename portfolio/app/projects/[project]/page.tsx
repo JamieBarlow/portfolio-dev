@@ -1,6 +1,6 @@
 "use client";
+import { use } from "react";
 
-import { useEffect } from "react";
 import "./projects.css";
 import ProjectShowHero from "@/app/components/ProjectPage/ProjectShowHero";
 import ProjectShowPurpose from "@/app/components/ProjectPage/ProjectShowPurpose";
@@ -20,12 +20,8 @@ interface ProjectPageProps {
   params: Promise<{ project: string }>;
 }
 
-export default async function ProjectPage({ params }: ProjectPageProps) {
-  // Always render from top of page
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-  const { project } = await params;
+export default function ProjectPage({ params }: ProjectPageProps) {
+  const { project } = use(params);
   const projectInfo = projectData.find(
     (p) => p.pageLink === `projects/${project}`,
   );
@@ -55,7 +51,6 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         animate="animate"
         exit="exit"
       >
-        {/* <p>{title}</p> */}
         <ProjectShowHero
           title={title}
           about={about}
