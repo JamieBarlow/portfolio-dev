@@ -40,8 +40,10 @@ export default function ProjectShowHero({
             <div className="project__stackCol">
               <h4>Stack</h4>
               <ul className="project__stackList">
-                {stack.map((tech) => (
-                  <li className="pill">{tech}</li>
+                {stack.map((tech, index) => (
+                  <li className="pill" key={index}>
+                    {tech}
+                  </li>
                 ))}
               </ul>
             </div>

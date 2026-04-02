@@ -23,7 +23,7 @@ export default function Home() {
   } = useContext(ObserverContext);
 
   useEffect(() => {
-    if (location.pathname === "/" && clicked) {
+    if (location === "/" && clicked) {
       if (clicked === "My Work") {
         smoothScrollToRef(projectsSectionRef);
       } else if (clicked === "Contact") {
