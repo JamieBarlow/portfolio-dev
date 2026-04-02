@@ -812,7 +812,7 @@ footer svg:hover path {
   background-color: var(--vibrant-blue);
   margin-top: var(--4);
   padding: 20px 0;
-  background-image: url("/images/scribble.svg");
+  background-image: url("/scribble.svg");
   scroll-margin-top: 40px;
 }
 

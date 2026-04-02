@@ -41,6 +41,7 @@ export default function ProjectCard({
             whileInView={{ opacity: 1, x: 0, y: 0 }}
             transition={{ duration: 0.8, delay: index * 0.05 }}
             viewport={{ once: true, margin: "100px", amount: 0.3 }}
+            key={index}
           >
             <Pill variation="outline" key={index}>
               {lang}
