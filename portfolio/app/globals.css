@@ -1,4 +1,10 @@
-@import "tailwindcss";
+/* @import "tailwindcss"; */
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 
 :root {
   --background: #ffffff;
